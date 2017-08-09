@@ -1,44 +1,529 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>TPT元素说明(Version 92.1 Snapshot 95) &#8212; TPT_Element_Doc 1.0 文档</title>
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/translations.js"></script>
-    <link rel="index" title="索引" href="genindex.html" />
-    <link rel="search" title="搜索" href="search.html" />
-    <link rel="prev" title="Welcome to TPT_Element_Doc’s documentation!" href="index.html" />
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>TPT元素说明(Version 92.1 Snapshot 95) &mdash; TPT_Element_Doc 1.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="genindex.html"/>
+        <link rel="search" title="搜索" href="search.html"/>
+    <link rel="top" title="TPT_Element_Doc 1.0 文档" href="index.html"/>
+        <link rel="prev" title="Welcome to TPT_Element_Doc’s documentation!" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
    
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+  <div class="wy-grid-for-nav">
 
-  </head>
-  <body>
-  
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
+          
+            <a href="index.html" class="icon icon-home"> TPT_Element_Doc
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">TPT 元素说明</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">TPT元素说明(Version 92.1 Snapshot 95)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#instruction">Instruction前言</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#variable">Variable元素参数</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#type">Type值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#life">Life值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ctype">Ctype值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#x-y">X,Y值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vx-vy">V<sub>x</sub>,V<sub>y</sub>值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#temp">Temp值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flags">Flags值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tmp">Tmp值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tmp2">Tmp2值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dcolour">Dcolour值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pavg0">Pavg0值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pavg1">Pavg1值</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#wall">Wall墙类</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#erases-walls">橡皮擦(墙专用)【Erases Walls】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conductive-wall">墙(可导电)【Conductive Wall】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#e-wall">电控墙【E-wall】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#detector">探测器【Detector】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#streamline">风向计【Streamline】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fan">风扇【Fan】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#liquid-permeable">液体墙【Liquid Permeable】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#absorbing-wall">吸收墙【Absorbing Wall】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">墙(绝缘体)【Wall】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#non-permeable-wall">压力墙【Non-permeable Wall】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#powder-permeable-wall">粉末墙【Powder-Permeable Wall】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conductor">导体墙【Conductor】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#e-hole">电锁体【E-Hole】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gas-permeable-wall">气体墙【Gas permeable Wall】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gravity-wall">引力墙【Gravity Wall】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#energy-wall">能量墙【Energy Wall】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pressure-wall">气压墙【Pressure Wall】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eraser">橡皮擦【Eraser】</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#electronics">Electronics电子类</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#metl-metal-type-014">金属(METL)【Metal】 Type:014</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sprk-spark-type-015">电脉冲(SPRK)【Spark】 Type:015</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#p-pscn-p-type-silicon-type-035">P型硅(PSCN)【P-type Silicon】 Type:035</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#n-nscn-n-type-silicon-type-036">N型硅(NSCN)【N-type Silicon】 Type:036</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#insl-insulator-type-038">绝缘体(INSL)【Insulator】 Type:038</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ntct-negative-temperature-coefficient-thermistor-type-043">负温度系数热敏电阻(NTCT)【Negative Temperature Coefficient Thermistor】 Type:043</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ptct-positive-temperature-coefficient-thermistor-type-046">正温度系数热敏电阻(PTCT) 【Positive Temperature Coefficient Thermistor】 Type:046</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etrd-electrode-type-050">电极(ETRD)【Electrode】 Type:050</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#btry-battery-type-053">电池(BTRY)【Battery】 Type:053</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#swch-switch-type-056">开关(SWCH)【Switch】 Type:056</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#inwr-insulated-wire-type-062">绝缘线(INWR)【Insulated Wire】 Type:062</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tesc-tesla-coil-type-088">特斯拉线圈(TESC)【Tesla Coil】 Type:088</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#inst-instant-conductor-instantly-conducts-type-106">超导线(INST)【Instant Conductor (Instantly Conducts)】 Type:106</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wi-fi-wifi-wifi-type-124">Wi-Fi(WIFI)【WiFi】 Type:124</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a-aray-a-type-ray-emitter-type-126-b-bray-type-127">A射线发射器(ARAY)【A-type Ray Emitter】 Type:126 B射线(BRAY) Type:127</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emp-electromagnetic-pulse-type-134">电磁脉冲武器(EMP)【Electromagnetic Pulse】 Type:134</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wire-world-wwld-wireworld-wire-type-156">Wire World线(WWLD)【WireWorld Wire】 Type:156</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cray-c-ray-emitter-particle-ray-emitter-type-167">物质射线发射器(CRAY)【C-Ray Emitter(Particle Ray Emitter)】 Type:167</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tung-87-2-tungsten-type-171">钨(TUNG)(87.2版本后出现)【Tungsten】 Type:171</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dray-duplicator-ray-emitter-90-0beta-type-178">复印机(DRAY)【Duplicator Ray Emitter】(90.0beta版本后出现) Type:178</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#powered-material-49-0">Powered Material可控材料(49.0版本后出现)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#lcry-liquid-crystal-type-054">液晶(LCRY)【Liquid Crystal】 Type:054</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pcln-powered-clone-type-074">可控复制体(PCLN)【Powered Clone】 Type:074</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hswc-heat-switch-type-075">热开关(HSWC)【Heat Switch】 Type:075</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dlay-delay-type-079">延时计(DLAY)【Delay】 Type:079</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stor-store-type-083">堆栈(STOR)【Store】 Type:083</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pvod-powered-void-type-084">可控虚空(PVOD)【Powered Void】 Type:084</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pump-pressure-pump-type-097">压力泵(PUMP)【Pressure Pump】 Type:097</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pbcn-breakable-powered-clone-type-153">可控可破坏复制体(PBCN)【Breakable Powered Clone】 Type:153</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gpmp-gravity-pump-type-154">引力泵(GPMP)【Gravity Pump】 Type:154</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ppip-powered-pipe-type-161">可控动力管(PPIP)【Powered Pipe】 Type:161</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sensors-84-0">Sensors传感器(84.0版本后出现)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#invs-invisible-type-115">虚无(INVS)【Invisible】 Type:115</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dtec-detector-type-162">探测器(DTEC)【Detector】 Type:162</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tsns-temperature-sensor-type-164">温度传感器(TSNS)【Temperature Sensor】 Type:164</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#psns-pressure-sensor-type-172">压力传感器(PSNS)【Pressure Sensor】 Type:172</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lsns-life-sensor-type-185">衰减传感器(LSNS)【Life Sensor】 Type:185</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#force-74-0">Force动力材料(74.0版本后出现)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pipe-pipe-type-099">动力管(PIPE)【Pipe】 Type:099</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#acel-accelerator-type-137">加速器(ACEL)【Accelerator】 Type:137</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dcel-decelerator-type-138">减速器(DCEL)【Decelerator】 Type:138</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fray-force-ray-emitter-type-159">力射线发射器(FRAY)【Force Ray Emitter】 Type:159</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rpel-repeller-type-160">反射极(RPEL)【Repeller】 Type:160</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dmg-damage-type-163">压力炸弹(DMG)【Damage】 Type:163</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pstn-piston-type-168">活塞(PSTN)【Piston】 Type:168</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#frme-frame-type-169">支架(FRME)【Frame】 Type:169</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#explosives">Explosives爆炸物</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fire-fire-type-004">火焰(FIRE)【Fire】 Type:004</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gun-gunpowder-type-007">黑火药(GUN)【Gunpowder】 Type:007</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nitr-nitroglycerin-type-008">硝化甘油(NITR)【Nitroglycerin】 Type:008</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#c-4-c-4-c-4-type-011">C-4塑胶炸药(C-4)【C-4】 Type:011</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rbdm-rubidium-type-041">固态铷(RBDM)【Rubidium】 Type:041</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lrbd-liquid-rubidium-type-042">液态铷(LRBD)【Liquid Rubidium】 Type:042</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#thdr-thunder-type-048">电光火球/球状闪电(THDR)【Thunder】 Type:048</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#thrm-thermite-type-065">铝热剂(THRM)【Thermite】 Type:065</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cflm-sub-zero-flame-type-068">冷焰(CFLM)【Sub-zero Flame】 Type:068</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#firw-fireworks-type-069">烟花(FIRW)【Fireworks】 Type:069</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fuse-fuse-type-070">导火线(FUSE)【Fuse】 Type:070</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fsep-fuse-powder-type-071">导火线粉尘(FSEP)【Fuse powder】 Type:071</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ligh-lightning-type-087">闪电(LIGH)【Lightning】 Type:087</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dest-destructive-bomb-type-089">高爆炸药(DEST)【Destructive Bomb】 Type:089</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fwrk-original-fireworks-type-098">传统烟花(FWRK)【Original Fireworks】 Type:098</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bomb-bomb-type-129-embr-ember-type-147">炸药(BOMB)【Bomb】 Type:129 火花(EMBR)【Ember】 Type:147</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#c-5-c-5-c-5-type-130">C-5低温炸药(C-5)【C-5】 Type:130</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tnt-trinitrotoluene-type-139">三硝基甲苯(TNT)【Trinitrotoluene】 Type:139</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ignc-ignition-cord-type-140">导火索(IGNC)【Ignition Cord】 Type:140</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gbmb-gravity-bomb-type-157">引力炸弹(GBMB)【Gravity Bomb】 Type:157</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#gases">Gases气体</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#gas-gas-type-010">石油气(GAS)【Gas】 Type:010</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wtrv-water-vapor-type-023">水蒸气(WTRV)【Water Vapor】 Type:023</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#plsm-plasma-type-049">等离子体(PLSM)【Plasma】 Type:049</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nble-noble-gas-type-052">惰性气体(NBLE)【Noble Gas】 Type:052</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#smke-smoke-type-057">烟(SMKE)【Smoke】 Type:057</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#oxyg-oxygen-type-061">氧气(OXYG)【Oxygen】 Type:061</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#co2-carbon-dioxide-type-080">二氧化碳(CO2)【Carbon Dioxide】 Type:080</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#caus-caustic-gas-type-086">酸气(CAUS)【Caustic Gas】 Type:086</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fog-fog-type-092">雾(FOG)【Fog】 Type:092</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#boyl-boyle-type-141">波义耳气(BOYL)【Boyle】 Type:141</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hygn-hydrogen-type-148">氢气(HYGN)【Hydrogen】 Type:148</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rfrg-refrigerant-gas-type-183-rfrl-type-184">制冷气(RFRG)【Refrigerant Gas】 Type:183 制冷液(RFRL) Type:184</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#liquids">Liquids液体</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#watr-water-type-002">水(WATR)【Water】 Type:002</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#oil-oil-type-003">石油(OIL)【Oil】 Type:003</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lava-lava-type-006">岩浆(LAVA)【Lava】 Type:006</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#acid-acid-type-021">酸(ACID)【Acid】 Type:021</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dstw-distilled-water-type-025">蒸馏水(DSTW)【Distilled Water】 Type:025</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sltw-salt-water-type-027">盐水(SLTW)【Salt Water】 Type:027</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mwax-molten-wax-type-034">蜡油(MWAX)【Molten Wax】 Type:034</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ln2-liquid-nitrogen-type-037">液氮(LN2)【Liquid Nitrogen】 Type:037</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#desl-diesel-type-058">柴油(DESL)【Diesel】 Type:058</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#loxy-liquid-oxygen-type-060">液氧(LOXY)【Liquid Oxygen】 Type:060</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#glow-glow-type-066">荧光液(GLOW)【Glow】 Type:066</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bubw-bubbled-water-carbonated-water-type-082">苏打水(BUBW)【Bubbled Water(Carbonated Water)】 Type:082</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bizr-type-103-bizg-type-104-bizs-bizarretype-105">奇特液体(BIZR)Type:103奇特气体(BIZG)Type:104奇特固体(BIZS)【Bizarre】Type:105</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pste-paste-type-111-psts-type-112">浆糊(PSTE)【Paste】 Type:111 固体浆糊(PSTS) Type:112</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gel-gel-type-142">胶体(GEL)【Gel】 Type:142</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#soap-soap-type-149">肥皂(SOAP)【Soap】 Type:149</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#merc-mercury-type-152">水银(MERC)【Mercury】 Type:152</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#virs-virustype-174-vrss-type-175-vrsg-type-176">病毒(VIRS)【Virus】Type:174 病毒块(VRSS)Type:175 病毒气(VRSG)Type:176</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#powders">Powders粉末</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dust-dust-type-001">尘埃(DUST)【Dust】 Type:001</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stne-stone-type-005">石粉(STNE)【Stone】 Type:005</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#snow-snow-type-016">雪(SNOW)【Snow】 Type:016</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cnct-concrete-type-024">混凝土(CNCT)【Concrete】 Type:024</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#salt-salt-type-026">盐(SALT)【Salt】 Type:026</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#brmt-broken-metal-type-030">金属粉(BRMT)【Broken Metal】 Type:030</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sand-sand-type-044">沙子(SAND)【Sand】 Type:044</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bgla-broken-glass-type-047">碎玻璃(BGLA)【Broken Glass】 Type:047</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#yest-yeast-type-063-dyst-dead-yeast-type-064">酵母(YEST)【Yeast】 Type:063 菌尸(DYST)【Dead Yeast】 Type:064</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bcol-broken-coal-type-073">煤粉(BCOL)【Broken Coal】 Type:073</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#frzz-freeze-type-100">寒尘(FRZZ)【Freeze】 Type:100</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#grav-gravity-type-102">引力尘(GRAV)【Gravity】 Type:102</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#anar-anti-air-particle-type-113">反引力尘(ANAR)【Anti-Air Particle】 Type:113</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pqrt-broken-quartz-type-133">石英砂(PQRT)【Broken Quartz】 Type:133</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#brel-broken-electronics-type-135">电渣(BREL)【Broken Electronics】 Type:135</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clst-clay-dust-type-155">粘土砂(CLST)【Clay Dust】 Type:155</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sawd-sawdust-type-181">木屑(SAWD)【Sawdust】 Type:181</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#solids">Solids固体</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#goo-goo-type-012">粘土(GOO)【Goo】 Type:012</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ice-ice-type-013">冰(ICE)【Ice】 Type:013</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wood-wood-type-017">木材(WOOD)【Wood】 Type:017</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#plnt-plant-type-020">植物(PLNT)【Plant】 Type:020</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bmtl-breakable-metal-type-029">脆金属(BMTL)【Breakable Metal】 Type:029</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wax-wax-type-033">蜡(WAX)【Wax】 Type:033</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#glas-glass-type-045">玻璃(GLAS)【Glass】 Type:045</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nice-nitrogen-ice-type-051">氮冰(NICE)【Nitrogen Ice】 Type:051</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#coal-coal-type-059">煤(COAL)【Coal】 Type:059</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#brck-brick-type-067">砖块(BRCK)【Brick】 Type:067</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#iron-iron-type-076">铁(IRON)【Iron】 Type:076</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dric-dry-ice-type-081">干冰(DRIC)【Dry Ice】 Type:081</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#spng-sponge-type-090">海绵(SPNG)【Sponge】 Type:090</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rime-rime-type-091">霜(RIME)【Rime】 Type:091</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vine-vine-type-114">藤蔓(VINE)【Vine】 Type:114</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#shld-shieldtype-119-2-3-4-shd2-3-4-type-120-121-122">自修复膜(SHLD)【Shield】Type:119 修复膜2/3/4(SHD2/3/4)Type:120/121/122</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#filt-filter-type-125">滤镜(FILT)【Filter】 Type:125</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#qrtz-quartz-type-132">石英(QRTZ)【Quartz】 Type:132</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ttan-titanium-type-144">钛(TTAN)【Titanium】 Type:144</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gold-gold-type-170">金(GOLD)【Gold】 Type:170</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#crmc-ceramic-type-179">陶瓷(CRMC) 【Ceramic】 Type:179</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heac-rapid-heat-conductor-type-180">导热体(HEAC) 【Rapid Heat Conductor】 Type:180</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#radioactive">Radioactive放射性物质</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#neut-neutrons-type-018">中子(NEUT)【Neutrons】 Type:018</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#plut-plutonium-type-019">钚(PLUT)【Plutonium】 Type:019</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#phot-photons-type-031">光子(PHOT)【Photons】 Type:031</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#uran-uranium-type-032">铀(URAN)【Uranium】 Type:032</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#amtr-antimatter-type-072">反物质(AMTR)【Antimatter】 Type:072</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deut-deuterium-oxide-type-095">重水(DEUT)【Deuterium Oxide】 Type:095</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#warp-warp-type-096">迁跃粉(WARP)【Warp】 Type:096</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#z-isoz-isotope-z-type-107">同位素-Z(ISOZ)【Isotope-Z】 Type:107</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#z-iszs-solid-isoz-type-108">固态同位素-Z(ISZS)【Solid ISOZ】 Type:108</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sing-singularity-type-131">奇点(SING)【Singularity】 Type:131</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elec-electrons-type-136">电子(ELEC)【Electrons】 Type:136</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#exot-exotic-matter-type-145">奇异物质(EXOT)【Exotic Matter】 Type:145</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vibr-vibranium-type-165">振金(VIBR)【Vibranium】 Type:165</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bvbr-broken-vibranium-type-166">振金粉(BVBR)【Broken Vibranium】 Type:166</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prot-protons-type-173">质子(PROT)【Protons】 Type:173</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#grvt-90-0beta-graviton-type-177">引力子(GRVT)(90.0beta版本后出现)【Graviton】 Type:177</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#polo-polonium-type-182">钋(POLO)【Polonium】 Type:182</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#special">Special特殊</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#clne-clone-type-009">复制体(CLNE)【Clone】 Type:009</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#void-void-type-022">虚空(VOID)【Void】 Type:022</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dmnd-diamond-type-028">钻石(DMND)【Diamond】 Type:028</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vacu-vacuum-type-039">吸气孔(VACU)【Vacuum】 Type:039</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vent-air-vent-type-040">排气孔(VENT)【Air Vent】 Type:040</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stkm-stickman-type-055-spwn-type-118">火柴人(STKM)【Stickman】 Type:055 火柴人出生点(SPWN) Type:118</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conv-converter-type-085">转化器(CONV)【Converter】 Type:085</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bcln-breakable-clone-type-093">可破坏复制体(BCLN)【Breakable Clone】 Type:093</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prti-portal-in-type-109">传送门入口(PRTI)【Portal IN】 Type:109</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prto-portal-out-type-110">传送门出口(PRTO)【Portal OUT】 Type:110</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stk2-second-stickmantype-128-spwn2-type-117">火柴人二号(STK2)【Second Stickman】Type:128火柴人二号出生点(SPWN2) Type:117</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tron-tron-type-143">智能微粒(TRON)【Tron】 Type:143</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bhol-black-hole-type-150">黑洞(BHOL)【Black Hole】 Type:150</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#whol-white-hole-type-151">白洞(WHOL)【White Hole】 Type:151</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#figh-fighter-type-158">打手(FIGH)【Fighter】 Type:158</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Life生命游戏</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#gol-game-of-life-type-078-ctype-0">生命游戏(GOL)【Game of Life】 Type:078 Ctype:0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hlif-high-life-ctype-1">高等生命(HLIF)【High Life】 Ctype:1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#asim-assimilation-ctype-2">同化(ASIM)【Assimilation】 Ctype:2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#x2-2x2-2x2-ctype-3">2X2(2X2)【2X2】 Ctype:3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dani-day-and-night-ctype-4">日以继夜(DANI)【Day and Night】 Ctype:4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#amoe-amoeba-ctype-5">阿米巴(AMOE)【Amoeba】 Ctype:5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#move-move-ctype-6">移动(MOVE)【Move】 Ctype:6</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pgol-pseudo-ctype-7">假货(PGOL)【Pseudo】 Ctype:7</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dmoe-diamoeba-ctype-8">方片(DMOE)【Diamoeba】 Ctype:8</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ctype-9">34(34)【34】 Ctype:9</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#llif-long-life-ctype-10">长生(LLIF)【Long Life】 Ctype:10</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stan-stains-ctype-11">染色剂(STAN)【Stains】 Ctype:11</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#seed-seeds-ctype-12">种子(SEED)【Seeds】 Ctype:12</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#maze-maze-ctype-13">迷宫(MAZE)【Maze】 Ctype:13</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#coag-coagulations-ctype-14">凝固物(COAG)【Coagulations】 Ctype:14</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wall-walled-cities-ctype-15">城墙(WALL)【Walled cities】 Ctype:15</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gnar-gnarl-ctype-16">木节(GNAR)【Gnarl】 Ctype:16</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#repl-replicator-ctype-17">复制基因(REPL)【Replicator】 Ctype:17</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#myst-mystery-ctype-18">谜(MYST)【Mystery】 Ctype:18</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lote-living-on-the-edge-ctype-19">边缘人(LOTE)【Living on the Edge】 Ctype:19</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#frg2-like-frogs-rule-ctype-20">青蛙变体(FRG2)【Like Frogs Rule】 Ctype:20</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#star-star-wars-ctype-21">星球大战(STAR)【Star Wars】 Ctype:21</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#frog-frogs-ctype-22">青蛙(FROG)【Frogs】 Ctype:22</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bran-brian-6-ctype-23">布莱恩6号(BRAN)【Brian 6】 Ctype:23</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tools">Tools工具</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#heat-heat">升温笔(HEAT)【Heat】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cool-cool">降温笔(COOL)【Cool】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#air-air">加压笔(AIR)【Air】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vac-vacuum">减压笔(VAC)【Vacuum】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pgrv-positive-gravity-tool">引力笔(PGRV)【Positive Gravity Tool】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ngrv-negative-gravity-tool">斥力笔(NGRV)【Negative Gravity Tool】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mix-mix">混合工具(MIX)【Mix】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wind-wind">风(WIND)【Wind】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prop-edit-property-tool">属性笔(PROP)【Edit Property Tool】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sign">气泡【Sign】</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#secrets">Secrets隐藏元素</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#none-none-type-0">空白(NONE)【None】 Type:0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mort-mortvert-type-077">烟尘(MORT)【Mortvert】 Type:077</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#frzw-frozen-water-type-101">寒水(FRZW)【Frozen Water】 Type:101</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eqve-equal-velocity-type-116">速度尘(EQVE) 【Equal Velocity】 Type:116</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#laugh-out-loud-lolz-laugh-out-loud-type-123">大声笑！Laugh Out Loud！(LOLZ)【Laugh Out Loud】 Type:123</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#love-love-type-094">爱心(LOVE)【Love】 Type:094</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bran-brian-6-type-146">布莱恩6号(BRAN)【Brian 6】 Type:146</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#decoration-tools-49-0">Decoration tools装饰工具(49.0版本后出现)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#favorites">Favorites 收藏夹</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#search-for-element">Search for element 查找元素</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reference-more">Reference&amp;More 参考资料及延伸阅读</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-the-console">附1:控制台的基本用法(Using the console)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#set">Set命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#quit">Quit命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create">Create命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#delete">Delete命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bubble">Bubble命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reset">Reset命令</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#hud-heads-up-display">附2:HUD(heads-up-display)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">基本说明</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#debug-d">调试模式(Debug)【快捷键D】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">快捷键</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#display-modes">附3:显示模式(Display Modes)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#velocity-diaplay">气流显示模式(Velocity diaplay)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id5">快捷键</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">显示内容</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pressure-diaplay">气压显示模式(Pressure diaplay)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id7">快捷键</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">显示内容</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#persistent-diaplay">轨迹显示模式(Persistent diaplay)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id9">快捷键</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">显示内容</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#fire-diaplay">标准显示模式(Fire diaplay)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id11">快捷键</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id12">显示内容</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#blob-display">模糊显示模式(Blob display)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id13">快捷键</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id14">显示内容</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#heat-display">温度显示模式(Heat display)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id15">快捷键</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id16">显示内容</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id17">环境温度显示和物质温度显示</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#fancy-display">特效显示模式(Fancy display)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id18">快捷键</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id19">显示内容</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#nothing-display">无特效显示模式(Nothing display)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id20">快捷键</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id21">显示内容</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#heat-gradient-display">热传导显示模式(Heat gradient display)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id22">快捷键</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id23">显示内容</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#alternate-velocity-display">速压混合显示模式(Alternate velocity display)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id24">快捷键</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id25">显示内容</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#life-life-display">Life显示模式(Life display)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id26">快捷键</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id27">显示内容</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#grid">网格工具(Grid)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id28">快捷键</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id29">显示内容</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#hotkeys">附4:快捷键(Hotkeys)</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">TPT_Element_Doc</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>TPT元素说明(Version 92.1 Snapshot 95)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Main.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="tpt-version-92-1-snapshot-95">
 <h1>TPT元素说明(Version 92.1 Snapshot 95)<a class="headerlink" href="#tpt-version-92-1-snapshot-95" title="永久链接至标题">¶</a></h1>
@@ -2250,89 +2735,75 @@ VIBR)，之后删去剩余的奇异物质，冷却即可得到振金。</p>
 </div>
 
 
+           </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to TPT_Element_Doc’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Ike.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="index.html">TPT_Element_Doc</a></h1>
+
+    </section>
+
+  </div>
+  
 
 
+  
 
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            LANGUAGE:'zh_CN',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
 
+  
 
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
 
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
 
-
-<h3>导航</h3>
-<p class="caption"><span class="caption-text">TPT 元素说明</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">TPT元素说明(Version 92.1 Snapshot 95)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#instruction">Instruction前言</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#variable">Variable元素参数</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#wall">Wall墙类</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#electronics">Electronics电子类</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#powered-material-49-0">Powered Material可控材料(49.0版本后出现)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#sensors-84-0">Sensors传感器(84.0版本后出现)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#force-74-0">Force动力材料(74.0版本后出现)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#explosives">Explosives爆炸物</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#gases">Gases气体</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#liquids">Liquids液体</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#powders">Powders粉末</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#solids">Solids固体</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#radioactive">Radioactive放射性物质</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#special">Special特殊</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">Life生命游戏</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tools">Tools工具</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#secrets">Secrets隐藏元素</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#decoration-tools-49-0">Decoration tools装饰工具(49.0版本后出现)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#favorites">Favorites 收藏夹</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#search-for-element">Search for element 查找元素</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#reference-more">Reference&amp;More 参考资料及延伸阅读</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#using-the-console">附1:控制台的基本用法(Using the console)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#hud-heads-up-display">附2:HUD(heads-up-display)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#display-modes">附3:显示模式(Display Modes)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#hotkeys">附4:快捷键(Hotkeys)</a></li>
-</ul>
-</li>
-</ul>
-
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="index.html" title="上一章">Welcome to TPT_Element_Doc’s documentation!</a></li>
-  </ul></li>
-</ul>
-</div>
-<div id="searchbox" style="display: none" role="search">
-  <h3>快速搜索</h3>
-    <form class="search" action="search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="转向" /></div>
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &copy;2017, Ike.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.3</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
-      
-      |
-      <a href="_sources/Main.rst.txt"
-          rel="nofollow">Page source</a>
-    </div>
-
-    
-
-    
-  </body>
+</body>
 </html>
