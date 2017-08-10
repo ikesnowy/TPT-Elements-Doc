@@ -3,20 +3,13 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to TPT_Element_Doc's documentation!
+欢迎来到 TPT 元素说明！
 ===========================================
+
+你现在看到的是在线版，离线版(.docx)可以从\ `这个链接 <http://pan.baidu.com/s/1jILySZW>`__\ 下载。
 
 .. toctree::
    :maxdepth: 2
    :caption: TPT 元素说明
    
    Main
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

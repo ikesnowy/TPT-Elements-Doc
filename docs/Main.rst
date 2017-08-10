@@ -6,8 +6,7 @@ Instruction前言
 
 本文是针对TPT初学者的初级教程，包含TPT中各元素的性质、制作方法以及一些简单用途。
 
-你现在看到的是 Markdown 版，Version 92.1 Snapshot 95 之前仅有 Word
-版本。
+你现在看到的是在线版，离线版(.docx)可以前往\ `这个链接 <http://pan.baidu.com/s/1jILySZW>`__\ 下载。
 
 大部分元素均附有该元素的\ **Type**\ 值(TPT中各元素的唯一编码，一个Type值对应一种元素)。
 
@@ -42,39 +41,39 @@ Life值
 
 (用于记录时间/寿命/损耗的参数，一般单位为帧，但也可用于记录强度/状态)
 
-表示病毒(\ `*VIRS* <#病毒(VIRS)【Virus】Type:174%20病毒块(VRSS)Type:175%20病毒气(VRSG)Type:176>`__)的存在帧数。
+表示病毒(\ `*VIRS* <#virs-virustype-174-vrss-type-175-vrsg-type-176>`__)的存在帧数。
 
-表示酸(\ `*ACID* <#酸(ACID)【Acid】%20Type:021>`__)还能腐蚀多少物质。
+表示酸(\ `*ACID* <#acid-acid-type-021>`__)还能腐蚀多少物质。
 
-表示开关(\ `*SWCH* <#开关(SWCH)【Switch】%20Type:056>`__)的状态。
+表示开关(\ `*SWCH* <#swch-switch-type-056>`__)的状态。
 
-表示火柴人(\ `*STKM* <#火柴人(STKM)【Stickman】%20Type:055%20火柴人出生点(SPWN)%20Type:118>`__)的生命值。
+表示火柴人(\ `*STKM* <#stkm-stickman-type-055-spwn-type-118>`__)的生命值。
 
-表示燃烧时间(\ `*FIRE* <#火焰(FIRE)【Fire】%20Type:004>`__)。
+表示燃烧时间(\ `*FIRE* <#fire-fire-type-004>`__)。
 
-表示传送门(\ `*PRTI* <#传送门入口(PRTI)【Portal%20IN】%20Type:109>`__/`*PRTO* <#传送门出口(PRTO)【Portal%20OUT】%20Type:110>`__)产生的气压影响。
+表示传送门(\ `*PRTI* <#prti-portal-in-type-109>`__/`*PRTO* <#prto-portal-out-type-110>`__)产生的气压影响。
 
 Ctype值
 ~~~~~~~
 
 (用于记录物质，等于被记录物质的Type值)
 
-复制体(\ `*BCLN* <#可破坏复制体(BCLN)【Breakable%20Clone】%20Type:093>`__,\ `*PCLN* <#可控复制体(PCLN)【Powered%20Clone】%20Type:074>`__,\ `*PBCN* <#可控可破坏复制体(PBCN)【Breakable%20Powered%20Clone】%20Type:153>`__,\ `*CLNE* <#复制体(CLNE)【Clone】%20Type:009>`__):代表复制体正在复制的元素种类。
+复制体(\ `*BCLN* <#bcln-breakable-clone-type-093>`__,\ `*PCLN* <#pcln-powered-clone-type-074>`__,\ `*PBCN* <#pbcn-breakable-powered-clone-type-153>`__,\ `*CLNE* <#clne-clone-type-009>`__):代表复制体正在复制的元素种类。
 
-制造凝固物(\ `*ICE* <#冰(ICE)【Ice】%20Type:013>`__):比如将冰(\ `*ICE* <#冰(ICE)【Ice】%20Type:013>`__)的Ctype值改为中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)，熔化后会变为中子。
+制造凝固物(\ `*ICE* <#ice-ice-type-013>`__):比如将冰(\ `*ICE* <#ice-ice-type-013>`__)的Ctype值改为中子(\ `*NEUT* <#neut-neutrons-type-018>`__)，熔化后会变为中子。
 
-制造熔融物(\ `*LAVA* <#岩浆(LAVA)【Lava】%20Type:006>`__):比如将岩浆(\ `*LAVA* <#岩浆(LAVA)【Lava】%20Type:006>`__)的Ctype设置为钻石(\ `*DMND* <#钻石(DMND)【Diamond】%20Type:028>`__)即可得到熔融的钻石。
+制造熔融物(\ `*LAVA* <#lava-lava-type-006>`__):比如将岩浆(\ `*LAVA* <#lava-lava-type-006>`__)的Ctype设置为钻石(\ `*DMND* <#dmnd-diamond-type-028>`__)即可得到熔融的钻石。
 
-电脉冲(\ `*SPRK* <#电脉冲(SPRK)【Spark】%20Type:015>`__):Ctype表示它正流经物质的种类。
+电脉冲(\ `*SPRK* <#sprk-spark-type-015>`__):Ctype表示它正流经物质的种类。
 
-颜色(\ `*PHOT* <#光子(PHOT)【Photons】%20Type:031>`__,\ `*FILT* <#滤镜(FILT)【Filter】%20Type:125>`__,\ `*FWRK* <#传统烟花(FWRK)【Original%20Fireworks】%20Type:098>`__,\ `*GLOW* <#荧光液(GLOW)【Glow】%20Type:066>`__,\ `*BRAY* <#A射线发射器(ARAY)【A-type%20Ray%20Emitter】%20Type:126%20B射线(BRAY)%20Type:127>`__):用于储存这些物质的颜色数值。
+颜色(\ `*PHOT* <#phot-photons-type-031>`__,\ `*FILT* <#filt-filter-type-125>`__,\ `*FWRK* <#fwrk-original-fireworks-type-098>`__,\ `*GLOW* <#glow-glow-type-066>`__,\ `*BRAY* <#a-aray-a-type-ray-emitter-type-126-b-bray-type-127>`__):用于储存这些物质的颜色数值。
 
-动力管(\ `*PIPE* <#动力管(PIPE)【Pipe】%20Type:099>`__):用于修改其模式(红，绿，蓝以及未激活)。
+动力管(\ `*PIPE* <#pipe-pipe-type-099>`__):用于修改其模式(红，绿，蓝以及未激活)。
 
-石英(\ `*QRTZ* <#石英(QRTZ)【Quartz】%20Type:132>`__):用于记录石英的生长速度，改变其Ctype可改变其生长速度。
+石英(\ `*QRTZ* <#qrtz-quartz-type-132>`__):用于记录石英的生长速度，改变其Ctype可改变其生长速度。
 
 World
-wire线(\ `*WWLD* <#Wire%20World线(WWLD)【WireWorld%20Wire】%20Type:156>`__):改变其状态(头、尾、空)。
+wire线(\ `*WWLD* <#wire-world-wwld-wireworld-wire-type-156>`__):改变其状态(头、尾、空)。
 
 X,Y值
 ~~~~~
@@ -83,7 +82,7 @@ X,Y值
 
 用于改变物质的位置。
 
-通过把大量物质的坐标设为相同点可以制造出黑洞(\ `*BHOL* <#黑洞(BHOL)【Black%20Hole】%20Type:150>`__)。
+通过把大量物质的坐标设为相同点可以制造出黑洞(\ `*BHOL* <#bhol-black-hole-type-150>`__)。
 
 V\ :sub:`x`,V\ :sub:`y`\ 值
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -113,24 +112,24 @@ Tmp值
 
 (特征参数，根据元素种类有不同的作用)
 
-动力管(\ *`PIPE <#动力管(PIPE)【Pipe】%20Type:099>`__*):用于表示其内运送的元素种类。
+动力管(\ `*PIPE* <#pipe-pipe-type-099>`__):用于表示其内运送的元素种类。
 
-物质射线发射器(\ `*CRAY* <#物质射线发射器(CRAY)【C-Ray%20Emitter(Particle%20Ray%20Emitter)】%20Type:167>`__):用于表示射线长度。
+物质射线发射器(\ `*CRAY* <#cray-c-ray-emitter-particle-ray-emitter-type-167>`__):用于表示射线长度。
 
-生命元素(\ `*LIFE* <#life生命游戏>`__):用于某些生命元素的颜色表示。
+生命元素(\ `*LIFE* <#id2>`__):用于某些生命元素的颜色表示。
 
 Tmp2值
 ~~~~~~
 
 (特征参数2，与Tmp值作用相同)
 
-探测器(\ `*DTEC* <#探测器(DTEC)【Detector】%20Type:162>`__):用于调节侦测范围。
+探测器(\ `*DTEC* <#dtec-detector-type-162>`__):用于调节侦测范围。
 
-活塞(\ `*PSTN* <#活塞(PSTN)【Piston】%20Type:168>`__):用于调节活塞的最大长度。
+活塞(\ `*PSTN* <#pstn-piston-type-168>`__):用于调节活塞的最大长度。
 
-病毒(\ `*VIRS* <#病毒(VIRS)【Virus】Type:174%20病毒块(VRSS)Type:175%20病毒气(VRSG)Type:176>`__):用于记录被感染物质的Type值。
+病毒(\ `*VIRS* <#virs-virustype-174-vrss-type-175-vrsg-type-176>`__):用于记录被感染物质的Type值。
 
-奇异物质(\ `*EXOT* <#奇异物质(EXOT)【Exotic%20Matter】%20Type:145>`__):表示奇异物质最大所能接受的辐射量。
+奇异物质(\ `*EXOT* <#exot-exotic-matter-type-145>`__):表示奇异物质最大所能接受的辐射量。
 
 Dcolour值
 ~~~~~~~~~
@@ -146,14 +145,14 @@ Pavg0值
 
 (新的特征值)
 
-在堆栈(\ `*STOR* <#堆栈(STOR)【Store】%20Type:083>`__)中用于记录被吸收元素的tmp值。
+在堆栈(\ `*STOR* <#stor-store-type-083>`__)中用于记录被吸收元素的tmp值。
 
 Pavg1值
 ~~~~~~~
 
 (新的特征值)
 
-在堆栈(\ `*STOR* <#堆栈(STOR)【Store】%20Type:083>`__)中用于记录被吸收元素的ctype值。
+在堆栈(\ `*STOR* <#stor-store-type-083>`__)中用于记录被吸收元素的ctype值。
 
 Wall墙类
 --------
@@ -170,7 +169,7 @@ Wall墙类
 
 **描述:**\ 阻挡一切。导体。
 
-**特性:**\ 可以传导电脉冲(\ `*SPRK* <#电脉冲(SPRK)【Spark】%20Type:015>`__)；A射线发射器(\ `*ARAY* <#A射线发射器(ARAY)【A-type%20Ray%20Emitter】%20Type:126%20B射线(BRAY)%20Type:127>`__)的射线可以通过。
+**特性:**\ 可以传导电脉冲(\ `*SPRK* <#sprk-spark-type-015>`__)；A射线发射器(\ `*ARAY* <#a-aray-a-type-ray-emitter-type-126-b-bray-type-127>`__)的射线可以通过。
 
 电控墙【E-wall】
 ~~~~~~~~~~~~~~~~
@@ -213,7 +212,7 @@ Wall墙类
 
 **描述:**\ 阻挡一切(包括压力)。
 
-**特性:**\ 允许射线发射器(\ `*ARAY* <#A射线发射器(ARAY)【A-type%20Ray%20Emitter】%20Type:126%20B射线(BRAY)%20Type:127>`__)的射线通过。
+**特性:**\ 允许射线发射器(\ `*ARAY* <#a-aray-a-type-ray-emitter-type-126-b-bray-type-127>`__)的射线通过。
 
 压力墙【Non-permeable Wall】
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -228,7 +227,7 @@ Wall墙类
 导体墙【Conductor】
 ~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 允许所有物质通过，可以传导电脉冲(\ `*SPRK* <#电脉冲(SPRK)【Spark】%20Type:015>`__)。
+**描述:**\ 允许所有物质通过，可以传导电脉冲(\ `*SPRK* <#sprk-spark-type-015>`__)。
 
 电锁体【E-Hole】
 ~~~~~~~~~~~~~~~~
@@ -242,19 +241,19 @@ Wall墙类
 
 **描述:**\ 只允许气体和压力通过。
 
-**特性:**\ 火焰(\ `*FIRE* <#火焰(FIRE)【Fire】%20Type:004>`__\ 、\ `*CFLM* <#冷焰(CFLM)【Sub-zero%20Flame】%20Type:068>`__)也一样可以通过。
+**特性:**\ 火焰(\ `*FIRE* <#fire-fire-type-004>`__\ 、\ `*CFLM* <#cflm-sub-zero-flame-type-068>`__)也一样可以通过。
 
 引力墙【Gravity Wall】
 ~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 阻挡万有引力，允许其他一切物质通过。当火柴人【\ `*STKM* <#火柴人(STKM)【Stickman】%20Type:055%20火柴人出生点(SPWN)%20Type:118>`__/`*STK2* <#火柴人二号(STK2)【Second%20Stickman】Type:128火柴人二号出生点(SPWN2)%20Type:117>`__\ 】碰触它时会得到火箭鞋。
+**描述:**\ 阻挡万有引力，允许其他一切物质通过。当火柴人【\ `*STKM* <#stkm-stickman-type-055-spwn-type-118>`__/`*STK2* <#stk2-second-stickmantype-128-spwn2-type-117>`__\ 】碰触它时会得到火箭鞋。
 
 **特性:**\ 如果你用它画一个圈，那么圈内将不受万有引力影响。
 
 能量墙【Energy Wall】
 ~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 只允许压力和能量形式的粒子通过，例如光子(\ `*PHOT* <#光子(PHOT)【Photons】%20Type:031>`__)、中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)、电子(\ `*ELEC* <#电子(ELEC)【Electrons】%20Type:136>`__)以及射线发射器(\ `*ARAY* <#A射线发射器(ARAY)【A-type%20Ray%20Emitter】%20Type:126%20B射线(BRAY)%20Type:127>`__)的射线。
+**描述:**\ 只允许压力和能量形式的粒子通过，例如光子(\ `*PHOT* <#phot-photons-type-031>`__)、中子(\ `*NEUT* <#neut-neutrons-type-018>`__)、电子(\ `*ELEC* <#elec-electrons-type-136>`__)以及射线发射器(\ `*ARAY* <#a-aray-a-type-ray-emitter-type-126-b-bray-type-127>`__)的射线。
 
 气压墙【Pressure Wall】
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -276,11 +275,11 @@ Electronics电子类
 
 **描述:**\ 最基础的导体，可以熔化。
 
-**制取:**\ 铁(\ `*IRON* <#铁(IRON)【Iron】%20Type:076>`__)熔化后倒在煤(\ `*COAL* <#煤(COAL)【Coal】%20Type:059>`__)或者煤粉(\ `*BCOL* <#煤粉(BCOL)【Broken%20Coal】%20Type:073>`__)上并冷却可得到金属(METL)。
+**制取:**\ 铁(\ `*IRON* <#iron-iron-type-076>`__)熔化后倒在煤(\ `*COAL* <#coal-coal-type-059>`__)或者煤粉(\ `*BCOL* <#bcol-broken-coal-type-073>`__)上并冷却可得到金属(METL)。
 
 **熔点:**\ 999.85℃/1273k，变为Molten METL
 
-**特性:**\ 有电脉冲(\ `*SPRK* <#电脉冲(SPRK)【Spark】%20Type:015>`__)通过时会升温并产生少量压力。
+**特性:**\ 有电脉冲(\ `*SPRK* <#sprk-spark-type-015>`__)通过时会升温并产生少量压力。
 
 **导热率:**\ 251
 
@@ -298,7 +297,7 @@ Electronics电子类
 P型硅(PSCN)【P-type Silicon】 Type:035
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 可以传导电脉冲给任意导体，可以熔化。P型硅与N型硅(\ `*NSCN* <#N型硅(NSCN)【N-type%20Silicon】%20Type:036>`__)紧贴可以形成一个太阳能电池板(PN结)，有光子撞击P型硅的时候会产生电脉冲。另外，P型硅也可以用来激活动力材料及制作二极管。
+**描述:**\ 可以传导电脉冲给任意导体，可以熔化。P型硅与N型硅(\ `*NSCN* <#n-nscn-n-type-silicon-type-036>`__)紧贴可以形成一个太阳能电池板(PN结)，有光子撞击P型硅的时候会产生电脉冲。另外，P型硅也可以用来激活动力材料及制作二极管。
 
 **熔点:**\ 1413.85℃/1687k，变成Molten PSCN
 
@@ -309,7 +308,7 @@ P型硅(PSCN)【P-type Silicon】 Type:035
 N型硅(NSCN)【N-type Silicon】 Type:036
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 不能向P型硅(\ *PSCN*)传递电脉冲(即电脉冲只能从\ `*PSCN* <#P型硅(PSCN)【P-type%20Silicon】%20Type:035>`__\ 单向传导到NSCN)，可以熔化，可以与\ `*PSCN* <#P型硅(PSCN)【P-type%20Silicon】%20Type:035>`__\ 结合形成PN结使用。用于关闭一些可控材料和制作二极管。
+**描述:**\ 不能向P型硅(\ *PSCN*)传递电脉冲(即电脉冲只能从\ `*PSCN* <#p-pscn-p-type-silicon-type-035>`__\ 单向传导到NSCN)，可以熔化，可以与\ `*PSCN* <#p-pscn-p-type-silicon-type-035>`__\ 结合形成PN结使用。用于关闭一些可控材料和制作二极管。
 
 **熔点:**\ 1413.85℃/1687k，变成Molten NSCN
 
@@ -329,7 +328,7 @@ N型硅(NSCN)【N-type Silicon】 Type:036
 负温度系数热敏电阻(NTCT)【Negative Temperature Coefficient Thermistor】 Type:043
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 半导体，只有超过100℃时才导电，没有其他热源时会自动冷却(2.5k/帧)到22℃左右，可以用于给其他物质降温。可以熔化。可以通过P型硅/N型硅(\ `*PSCN* <#P型硅(PSCN)【P-type%20Silicon】%20Type:035>`__/`*NSCN* <#N型硅(NSCN)【N-type%20Silicon】%20Type:036>`__)输入/输出电脉冲，当一个像素的NTCT周围3x3的范围内有通电的金属(\ `*METL* <#金属(METL)【Metal】%20Type:014>`__)时其温度自动上升至199.85℃。
+**描述:**\ 半导体，只有超过100℃时才导电，没有其他热源时会自动冷却(2.5k/帧)到22℃左右，可以用于给其他物质降温。可以熔化。可以通过P型硅/N型硅(\ `*PSCN* <#p-pscn-p-type-silicon-type-035>`__/`*NSCN* <#n-nscn-n-type-silicon-type-036>`__)输入/输出电脉冲，当一个像素的NTCT周围3x3的范围内有通电的金属(\ `*METL* <#metl-metal-type-014>`__)时其温度自动上升至199.85℃。
 
 **熔点:**\ 1413.85℃/1687k，变成Molten NTCT
 
@@ -340,7 +339,7 @@ N型硅(NSCN)【N-type Silicon】 Type:036
 正温度系数热敏电阻(PTCT) 【Positive Temperature Coefficient Thermistor】 Type:046
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 半导体，只有低于100℃时才导电，也能自动冷却(2.5k/帧)到22℃左右，可以熔化。可以通过P型硅/N型硅(\ `*PSCN* <P型硅(PSCN)【P-type%20Silicon】%20Type:035>`__/`*NSCN* <#N型硅(NSCN)【N-type%20Silicon】%20Type:036>`__)输入/输出电脉冲，当一个像素的PTCT周围3x3的范围内有通电的金属(\ `*METL* <#金属(METL)【Metal】%20Type:014>`__)时温度自动上升至199.85℃。
+**描述:**\ 半导体，只有低于100℃时才导电，也能自动冷却(2.5k/帧)到22℃左右，可以熔化。可以通过P型硅/N型硅(\ `*PSCN* <p-pscn-p-type-silicon-type-035>`__/`*NSCN* <#n-nscn-n-type-silicon-type-036>`__)输入/输出电脉冲，当一个像素的PTCT周围3x3的范围内有通电的金属(\ `*METL* <#metl-metal-type-014>`__)时温度自动上升至199.85℃。
 
 **熔点:**\ 1140.85℃/1414k时变成Molten PTCT
 
@@ -351,9 +350,9 @@ N型硅(NSCN)【N-type Silicon】 Type:036
 电极(ETRD)【Electrode】 Type:050
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 一旦通电，相邻两个电极之间会产生等离子体(\ `*PLSM* <#等离子体(PLSM)【Plasma】%20Type:049>`__\ ，9000+℃)，每次持续20帧。
+**描述:**\ 一旦通电，相邻两个电极之间会产生等离子体(\ `*PLSM* <#plsm-plasma-type-049>`__\ ，9000+℃)，每次持续20帧。
 
-**其他:**\ 墙不会干扰等离子体的产生，不过有可能会隔开(视具体的墙而定)；如果两个电极之间有绝缘体(\ `*INSL* <#绝缘体(INSL)【Insulator】%20Type:038>`__)阻隔则不会产生等离子体。
+**其他:**\ 墙不会干扰等离子体的产生，不过有可能会隔开(视具体的墙而定)；如果两个电极之间有绝缘体(\ `*INSL* <#insl-insulator-type-038>`__)阻隔则不会产生等离子体。
 
 **元素参数:**\ life值为产生等离子体的持续时间(需要同时修改两边的电极)。
 
@@ -364,7 +363,7 @@ N型硅(NSCN)【N-type Silicon】 Type:036
 电池(BTRY)【Battery】 Type:053
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 固体，能提供稳定的电脉冲给导电元素，沸腾后变成等离子体(\ `*PLSM* <#等离子体(PLSM)【Plasma】%20Type:049>`__)。
+**描述:**\ 固体，能提供稳定的电脉冲给导电元素，沸腾后变成等离子体(\ `*PLSM* <#plsm-plasma-type-049>`__)。
 
 **沸点:**\ 1999.85℃/2273k
 
@@ -375,7 +374,7 @@ N型硅(NSCN)【N-type Silicon】 Type:036
 开关(SWCH)【Switch】 Type:056
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 仅当开关打开时导电。P型硅(\ `*PSCN* <#P型硅(PSCN)【P-type%20Silicon】%20Type:035>`__)输入电脉冲可以打开开关(变亮)，N型硅(\ `*NSCN* <#N型硅(NSCN)【N-type%20Silicon】%20Type:036>`__)输入电脉冲可以关闭开关(变暗)。
+**描述:**\ 仅当开关打开时导电。P型硅(\ `*PSCN* <#p-pscn-p-type-silicon-type-035>`__)输入电脉冲可以打开开关(变亮)，N型硅(\ `*NSCN* <#n-nscn-n-type-silicon-type-036>`__)输入电脉冲可以关闭开关(变暗)。
 
 **导热率:**\ 251
 
@@ -384,7 +383,7 @@ N型硅(NSCN)【N-type Silicon】 Type:036
 绝缘线(INWR)【Insulated Wire】 Type:062
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 只能在P型硅(\ *PSCN*)与N型硅(\ `*NSCN* <#N型硅(NSCN)【N-type%20Silicon】%20Type:036>`__)之间传递电脉冲(\ **双向**)，可以熔化。
+**描述:**\ 只能在P型硅(\ *PSCN*)与N型硅(\ `*NSCN* <#n-nscn-n-type-silicon-type-036>`__)之间传递电脉冲(\ **双向**)，可以熔化。
 
 **熔点:**\ 1413.85℃/1687k，变成Molten INWR
 
@@ -395,7 +394,7 @@ N型硅(NSCN)【N-type Silicon】 Type:036
 特斯拉线圈(TESC)【Tesla Coil】 Type:088
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 通电可以产生闪电(\ `*LIGH* <#闪电(LIGH)【Lightning】%20Type:087>`__\ ，高温，可以穿透一切，产生较大的压力并使一些导电材料产生电脉冲)。将它做成线圈状(默认状态下，先左键点击空白处，再缩小光标，右键，再缩小光标，左键……)效果更佳。
+**描述:**\ 通电可以产生闪电(\ `*LIGH* <#ligh-lightning-type-087>`__\ ，高温，可以穿透一切，产生较大的压力并使一些导电材料产生电脉冲)。将它做成线圈状(默认状态下，先左键点击空白处，再缩小光标，右键，再缩小光标，左键……)效果更佳。
 
 **元素参数:**\ Tmp值用于设定闪电的长度
 
@@ -406,7 +405,7 @@ N型硅(NSCN)【N-type Silicon】 Type:036
 超导线(INST)【Instant Conductor (Instantly Conducts)】 Type:106
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 导电速度和导电墙相同，只能通过P型硅(\ `*PSCN* <#P型硅(PSCN)【P-type%20Silicon】%20Type:035>`__)输入电脉冲，N型硅(\ `*NSCN* <#N型硅(NSCN)【N-type%20Silicon】%20Type:036>`__)输出电脉冲。
+**描述:**\ 导电速度和导电墙相同，只能通过P型硅(\ `*PSCN* <#p-pscn-p-type-silicon-type-035>`__)输入电脉冲，N型硅(\ `*NSCN* <#n-nscn-n-type-silicon-type-036>`__)输出电脉冲。
 
 不会被高压破坏，也不能熔融。
 
@@ -417,15 +416,15 @@ N型硅(NSCN)【N-type Silicon】 Type:036
 Wi-Fi(WIFI)【WiFi】 Type:124
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 能无线转移电脉冲，可使用大多数导电物质输入电脉冲(除了N型硅)，只能由N型硅(\ `*NSCN* <#N型硅(NSCN)【N-type%20Silicon】%20Type:036>`__)、绝缘线(\ `*INWR* <#绝缘线(INWR)【Insulated%20Wire】%20Type:062>`__)或P型硅(\ `*PSCN* <#P型硅(PSCN)【P-type%20Silicon】%20Type:035>`__)输出电脉冲。不导热。在高压下会损坏。89.0版本后传导电脉冲时会延迟一帧。
+**描述:**\ 能无线转移电脉冲，可使用大多数导电物质输入电脉冲(除了N型硅)，只能由N型硅(\ `*NSCN* <#n-nscn-n-type-silicon-type-036>`__)、绝缘线(\ `*INWR* <#inwr-insulated-wire-type-062>`__)或P型硅(\ `*PSCN* <#p-pscn-p-type-silicon-type-035>`__)输出电脉冲。不导热。在高压下会损坏。89.0版本后传导电脉冲时会延迟一帧。
 
 **频道:**
 
 Wi-Fi有99个频道，频道之间互不干扰，Wi-Fi只会向相同频道的Wi-Fi传输电脉冲。相邻频道之间相隔100℃(会变颜色)。在调试模式(Debug，热键“D”)下，相同频道的WIFI之间会出现连接线。
 
-可以使用升温笔/降温笔(\ `*HEAT* <#升温笔(HEAT)【Heat】>`__/`*COOL* <#降温笔(COOL)【Cool】>`__)来调整Wi-Fi的频道。
+可以使用升温笔/降温笔(\ `*HEAT* <#heat-heat>`__/`*COOL* <#cool-cool>`__)来调整Wi-Fi的频道。
 
-**压力极限:**\ 15pressure，会碎裂成金属粉(\ `*BRMT* <#金属粉(BRMT)【Broken%20Metal】%20Type:030>`__)
+**压力极限:**\ 15pressure，会碎裂成金属粉(\ `*BRMT* <#brmt-broken-metal-type-030>`__)
 
 **导热率:**\ 0
 
@@ -439,13 +438,13 @@ A射线发射器(ARAY)【A-type Ray Emitter】 Type:126 B射线(BRAY) Type:127
 
 其他模式:
 
-由P型硅(\ `*PSCN* <#P型硅(PSCN)【P-type%20Silicon】%20Type:035>`__)输入电脉冲时会产生另一种不能导电的射线，会清除其他的BRAY，并很快消失。
+由P型硅(\ `*PSCN* <#p-pscn-p-type-silicon-type-035>`__)输入电脉冲时会产生另一种不能导电的射线，会清除其他的BRAY，并很快消失。
 
-由超导线(\ `*INST* <#超导线(INST)【Instant%20Conductor%20(Instantly%20Conducts)】%20Type:106>`__)输入电脉冲时产生的射线具有穿透性，可以穿透多个导电材料。
+由超导线(\ `*INST* <#inst-instant-conductor-instantly-conducts-type-106>`__)输入电脉冲时产生的射线具有穿透性，可以穿透多个导电材料。
 
 **其他:**\ 在69版本之后，ARAY不再导热，其产生的B射线(BRAY)温度将会是ARAY的温度。这一特性被用来制作恒温器。
 
-**染色:**\ 射线(BRAY)经过滤镜(\ `*FILT* <#滤镜(FILT)【Filter】%20Type:125>`__)时会被染色，染色方式取决于滤镜的设定方式。
+**染色:**\ 射线(BRAY)经过滤镜(\ `*FILT* <#filt-filter-type-125>`__)时会被染色，染色方式取决于滤镜的设定方式。
 
 **导热率:**\ 0
 
@@ -454,7 +453,7 @@ A射线发射器(ARAY)【A-type Ray Emitter】 Type:126 B射线(BRAY) Type:127
 电磁脉冲武器(EMP)【Electromagnetic Pulse】 Type:134
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ EMP会随机摧毁所有正在工作(通电)的电子产品。有几率使受到EMP影响的Wi-Fi(\ `*WIFI* <#Wi-Fi(WIFI)【WiFi】%20Type:124>`__)的频道改变。同样的，延时计(\ `*DLAY* <#延时计(DLAY)【Delay】%20Type:079>`__)的延时时间也可能被随机改变。A射线发射器(\ `*ARAY* <#A射线发射器(ARAY)【A-type%20Ray%20Emitter】%20Type:126%20B射线(BRAY)%20Type:127>`__)、开关(\ `*SWCH* <#开关(SWCH)【Switch】%20Type:056>`__)、金属(\ `*METL* <#金属(METL)【Metal】%20Type:014>`__)、脆金属(\ `*BMTL* <#脆金属(BMTL)【Breakable%20Metal】%20Type:029>`__)、Wi-Fi(\ `*WIFI* <#Wi-Fi(WIFI)【WiFi】%20Type:124>`__)等可能会发热或损坏。
+**描述:**\ EMP会随机摧毁所有正在工作(通电)的电子产品。有几率使受到EMP影响的Wi-Fi(\ `*WIFI* <#wi-fi-wifi-wifi-type-124>`__)的频道改变。同样的，延时计(\ `*DLAY* <#dlay-delay-type-079>`__)的延时时间也可能被随机改变。A射线发射器(\ `*ARAY* <#a-aray-a-type-ray-emitter-type-126-b-bray-type-127>`__)、开关(\ `*SWCH* <#swch-switch-type-056>`__)、金属(\ `*METL* <#metl-metal-type-014>`__)、脆金属(\ `*BMTL* <#bmtl-breakable-metal-type-029>`__)、Wi-Fi(\ `*WIFI* <#wi-fi-wifi-wifi-type-124>`__)等可能会发热或损坏。
 
 (注:EMP是全屏幕有效的)
 
@@ -468,7 +467,7 @@ Wire World线(WWLD)【WireWorld Wire】 Type:156
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **描述:**\ 来自wire
-world，细胞自动机的一种，可以将电脉冲从P型硅(\ `*PSCN* <#P型硅(PSCN)【P-type%20Silicon】%20Type:035>`__)传导至N型硅(\ `*NSCN* <#N型硅(NSCN)【N-type%20Silicon】%20Type:036>`__)。难以摧毁(除了炸弹\ `*BOMB* <#炸药(BOMB)【Bomb】%20Type:129%20火花(EMBR)【Ember】%20Type:147>`__)。使用方法可以参考TPT吧中的帖子及维基百科中的有关内容。
+world，细胞自动机的一种，可以将电脉冲从P型硅(\ `*PSCN* <#p-pscn-p-type-silicon-type-035>`__)传导至N型硅(\ `*NSCN* <#n-nscn-n-type-silicon-type-036>`__)。难以摧毁(除了炸弹\ `*BOMB* <#bomb-bomb-type-129-embr-ember-type-147>`__)。使用方法可以参考TPT吧中的帖子及维基百科中的有关内容。
 
 **导热率:**\ 250
 
@@ -477,17 +476,17 @@ world，细胞自动机的一种，可以将电脉冲从P型硅(\ `*PSCN* <#P型
 物质射线发射器(CRAY)【C-Ray Emitter(Particle Ray Emitter)】 Type:167
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 又称C射线发射器，会沿着电脉冲的方向发射它第一个接触到的物质(设定方式类似于复制体\ `*CLNE* <#复制体(CLNE)【Clone】%20Type:009>`__)，通过修改Ctype值可以改变发射的粒子种类，修改Tmp(0~255)值可以修改粒子束长度。91.0beta版本后，物质射线发射器的Tmp2值有和复印机(\ `*DRAY* <#复印机(DRAY)【Duplicator%20Ray%20Emitter】(90.0beta版本后出现)%20Type:178>`__)类似的作用，可设定生成的粒子与自身之间的空隙。
+**描述:**\ 又称C射线发射器，会沿着电脉冲的方向发射它第一个接触到的物质(设定方式类似于复制体\ `*CLNE* <#clne-clone-type-009>`__)，通过修改Ctype值可以改变发射的粒子种类，修改Tmp(0~255)值可以修改粒子束长度。91.0beta版本后，物质射线发射器的Tmp2值有和复印机(\ `*DRAY* <#dray-duplicator-ray-emitter-90-0beta-type-178>`__)类似的作用，可设定生成的粒子与自身之间的空隙。
 
 **两种模式:**
 
-如果使用P型硅(\ `*PSCN* <#P型硅(PSCN)【P-type%20Silicon】%20Type:035>`__)输入电脉冲，它将会删除沿途阻挡的物质(除了钻石\ `*DMND* <#钻石(DMND)【Diamond】%20Type:028>`__)。
+如果使用P型硅(\ `*PSCN* <#p-pscn-p-type-silicon-type-035>`__)输入电脉冲，它将会删除沿途阻挡的物质(除了钻石\ `*DMND* <#dmnd-diamond-type-028>`__)。
 
-使用超导线(\ `*INST* <#超导线(INST)【Instant%20Conductor%20(Instantly%20Conducts)】%20Type:106>`__)输入电脉冲，在发射射线时会跳过任何阻挡的物质，直到到达TMP值上限。
+使用超导线(\ `*INST* <#inst-instant-conductor-instantly-conducts-type-106>`__)输入电脉冲，在发射射线时会跳过任何阻挡的物质，直到到达TMP值上限。
 
 (86.1版本前是无视Tmp上限的)
 
-**射线染色:**\ 在射线的路径上放置一块滤镜(\ `*FILT* <#滤镜(FILT)【Filter】%20Type:125>`__)，射线经过滤镜时会染上滤镜的颜色。
+**射线染色:**\ 在射线的路径上放置一块滤镜(\ `*FILT* <#filt-filter-type-125>`__)，射线经过滤镜时会染上滤镜的颜色。
 
 **导热率:**\ 0
 
@@ -498,9 +497,9 @@ world，细胞自动机的一种，可以将电脉冲从P型硅(\ `*PSCN* <#P型
 
 **描述:**\ 脆性金属，具有很高的熔点，但不耐压，通电后温度会不断上升至3324℃，同时白热化，可以用于加热或者制作灯泡。
 
-**制取:**\ 把金属粉(\ `*BRMT* <#金属粉(BRMT)【Broken%20Metal】%20Type:030>`__)加热至1000℃会变成钨(\ *TUNG*)(旧版本是熔化)。
+**制取:**\ 把金属粉(\ `*BRMT* <#brmt-broken-metal-type-030>`__)加热至1000℃会变成钨(\ *TUNG*)(旧版本是熔化)。
 
-**压力极限:**\ 当压强变化>1pressure时碎裂成金属粉(\ `*BRMT* <#金属粉(BRMT)【Broken%20Metal】%20Type:030>`__)。
+**压力极限:**\ 当压强变化>1pressure时碎裂成金属粉(\ `*BRMT* <#brmt-broken-metal-type-030>`__)。
 
 **熔点:**\ 3421.85℃/3695k
 
@@ -511,7 +510,7 @@ world，细胞自动机的一种，可以将电脉冲从P型硅(\ `*PSCN* <#P型
 复印机(DRAY)【Duplicator Ray Emitter】(90.0beta版本后出现) Type:178
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 又称D射线发射器，可使用P型硅(\ `*PSCN* <#P型硅(PSCN)【P-type%20Silicon】%20Type:035>`__)激活，会将沿电流方向对前方的所有粒子(不论种类是否相同)都复制一份，如果中途有阻碍则会直接删除挡路的粒子并继续复制。
+**描述:**\ 又称D射线发射器，可使用P型硅(\ `*PSCN* <#p-pscn-p-type-silicon-type-035>`__)激活，会将沿电流方向对前方的所有粒子(不论种类是否相同)都复制一份，如果中途有阻碍则会直接删除挡路的粒子并继续复制。
 
 **元素参数:**
 
@@ -527,14 +526,14 @@ tmp = 4, tmp2 = 1)
 Powered Material可控材料(49.0版本后出现)
 ----------------------------------------
 
-**操作技巧:**\ 大部分可控材料都是用P型硅(\ `*PSCN* <#P型硅(PSCN)【P-type%20Silicon】%20Type:035>`__)激活/输入，N型硅(\ `*NSCN* <#N型硅(NSCN)【N-type%20Silicon】%20Type:036>`__)关闭/输出。
+**操作技巧:**\ 大部分可控材料都是用P型硅(\ `*PSCN* <#p-pscn-p-type-silicon-type-035>`__)激活/输入，N型硅(\ `*NSCN* <#n-nscn-n-type-silicon-type-036>`__)关闭/输出。
 
 **元素参数:**\ 大部分可控材料都是life≥10=激活；life＜10=关闭。
 
 液晶(LCRY)【Liquid Crystal】 Type:054
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 液晶，激活时改变颜色。激活时允许光子(\ `*PHOT* <#光子(PHOT)【Photons】%20Type:031>`__)缓慢通过，极高温度(999.85℃/1273k)下会变成碎玻璃(\ `*BGLA* <#碎玻璃(BGLA)【Broken%20Glass】%20Type:047>`__)。激活后，部分通过它的质子(\ `*PROT* <#质子(PROT)【Protons】%20Type:173>`__)会被转变为光子(\ `*PHOT* <#光子(PHOT)【Photons】%20Type:031>`__)。
+**描述:**\ 液晶，激活时改变颜色。激活时允许光子(\ `*PHOT* <#phot-photons-type-031>`__)缓慢通过，极高温度(999.85℃/1273k)下会变成碎玻璃(\ `*BGLA* <#bgla-broken-glass-type-047>`__)。激活后，部分通过它的质子(\ `*PROT* <#prot-protons-type-173>`__)会被转变为光子(\ `*PHOT* <#phot-photons-type-031>`__)。
 
 **导热率:**\ 251
 
@@ -543,7 +542,7 @@ Powered Material可控材料(49.0版本后出现)
 可控复制体(PCLN)【Powered Clone】 Type:074
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 激活时变得和复制体(\ `*CLNE* <#复制体(CLNE)【Clone】%20Type:009>`__)一样，可以复制与之接触的物质。也可以通过修改Ctype值来改变复制的物质种类。
+**描述:**\ 激活时变得和复制体(\ `*CLNE* <#clne-clone-type-009>`__)一样，可以复制与之接触的物质。也可以通过修改Ctype值来改变复制的物质种类。
 
 **导热率:**\ 251
 
@@ -561,7 +560,7 @@ Powered Material可控材料(49.0版本后出现)
 延时计(DLAY)【Delay】 Type:079
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 当电脉冲通过延时计时会延迟X帧，X等于延时计的温度，不导热，可以使用升温笔(\ `*HEAT* <#升温笔(HEAT)【Heat】>`__)和降温笔(\ `*COOL* <#降温笔(COOL)【Cool】>`__)来改变温度，最低为1℃。
+**描述:**\ 当电脉冲通过延时计时会延迟X帧，X等于延时计的温度，不导热，可以使用升温笔(\ `*HEAT* <#heat-heat>`__)和降温笔(\ `*COOL* <#cool-cool>`__)来改变温度，最低为1℃。
 
 过程描述:
 
@@ -580,9 +579,9 @@ life值变为当前温度，颜色变亮
 堆栈(STOR)【Store】 Type:083
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 固体，吸收一个像素的与之接触的物质，修改它的Ctype值可以使它吸收特定的物质，用P型硅(\ `*PSCN* <#P型硅(PSCN)【P-type%20Silicon】%20Type:035>`__)或A射线发射器(\ `*ARAY* <#A射线发射器(ARAY)【A-type%20Ray%20Emitter】%20Type:126%20B射线(BRAY)%20Type:127>`__)的射线激活后释放，也可以传递给动力管(\ `*PIPE* <#动力管(PIPE)【Pipe】%20Type:099>`__)。
+**描述:**\ 固体，吸收一个像素的与之接触的物质，修改它的Ctype值可以使它吸收特定的物质，用P型硅(\ `*PSCN* <#p-pscn-p-type-silicon-type-035>`__)或A射线发射器(\ `*ARAY* <#a-aray-a-type-ray-emitter-type-126-b-bray-type-127>`__)的射线激活后释放，也可以传递给动力管(\ `*PIPE* <#pipe-pipe-type-099>`__)。
 
-91.0beta后，堆栈也可以将物质传递给传送门入口(\ `*PRTI* <#传送门入口(PRTI)【Portal%20IN】%20Type:109>`__)。
+91.0beta后，堆栈也可以将物质传递给传送门入口(\ `*PRTI* <#prti-portal-in-type-109>`__)。
 
 **元素参数:**
 
@@ -603,7 +602,7 @@ Pavg[1]值 = 被吸收元素的ctype值
 可控虚空(PVOD)【Powered Void】 Type:084
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 固体，一旦激活就如同虚空(\ `*VOID* <#虚空(VOID)【Void】%20Type:022>`__)一样，吸收一切物质。Tmp值为0时会只吸收Ctype值代表的物质，Tmp值为1时则不吸收Ctype代表的物质。
+**描述:**\ 固体，一旦激活就如同虚空(\ `*VOID* <#void-void-type-022>`__)一样，吸收一切物质。Tmp值为0时会只吸收Ctype值代表的物质，Tmp值为1时则不吸收Ctype代表的物质。
 
 **导热率:**\ 251
 
@@ -613,7 +612,7 @@ Pavg[1]值 = 被吸收元素的ctype值
 压力泵(PUMP)【Pressure Pump】 Type:097
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 不导热，激活时改变使周围压力值变为自身温度值，自身温度可用[升温/降温笔(\ `*HEAT* <#升温笔(HEAT)【Heat】>`__/`*COOL* <#降温笔(COOL)【Cool】>`__)控制。
+**描述:**\ 不导热，激活时改变使周围压力值变为自身温度值，自身温度可用[升温/降温笔(\ `*HEAT* <#heat-heat>`__/`*COOL* <#cool-cool>`__)控制。
 
 **导热率:**\ 0
 
@@ -624,7 +623,7 @@ Pavg[1]值 = 被吸收元素的ctype值
 可控可破坏复制体(PBCN)【Breakable Powered Clone】 Type:153
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 激活时和可破坏复制体(\ `*BCLN* <#可破坏复制体(BCLN)【Breakable%20Clone】%20Type:093>`__)相同，复制与之相接触的物质，但可以被破坏。
+**描述:**\ 激活时和可破坏复制体(\ `*BCLN* <#bcln-breakable-clone-type-093>`__)相同，复制与之相接触的物质，但可以被破坏。
 
 **压力极限:**\ 5pressure
 
@@ -635,7 +634,7 @@ Pavg[1]值 = 被吸收元素的ctype值
 引力泵(GPMP)【Gravity Pump】 Type:154
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 不导热，使用需开启牛顿万有引力(热键“N”)，激活时改变其万有引力为自身温度值，可以使用升温/降温笔(\ `*HEAT* <#升温笔(HEAT)【Heat】>`__/`*COOL* <#降温笔(COOL)【Cool】>`__)来改变自身温度。温度升高会使自身引力增加，吸引其他粒子，反之亦然。从91.0Snapshot21开始，光子(\ `*PHOT* <#光子(PHOT)【Photons】%20Type:031>`__)通过未通电的引力泵(\ `*GPMP* <#引力泵(GPMP)【Gravity%20Pump】%20Type:154>`__)会转变成引力子(\ `*GRVT* <#引力子(GRVT)(90.0beta版本后出现)【Graviton】%20Type:177>`__)，生成引力子的tmp值取决于引力泵的温度值。
+**描述:**\ 不导热，使用需开启牛顿万有引力(热键“N”)，激活时改变其万有引力为自身温度值，可以使用升温/降温笔(\ `*HEAT* <#heat-heat>`__/`*COOL* <#cool-cool>`__)来改变自身温度。温度升高会使自身引力增加，吸引其他粒子，反之亦然。从91.0Snapshot21开始，光子(\ `*PHOT* <#phot-photons-type-031>`__)通过未通电的引力泵(\ `*GPMP* <#gpmp-gravity-pump-type-154>`__)会转变成引力子(\ `*GRVT* <#grvt-90-0beta-graviton-type-177>`__)，生成引力子的tmp值取决于引力泵的温度值。
 
 **导热率:**\ 0
 
@@ -646,7 +645,7 @@ Pavg[1]值 = 被吸收元素的ctype值
 可控动力管(PPIP)【Powered Pipe】 Type:161
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 动力管(\ `*PIPE* <#动力管(PIPE)【Pipe】%20Type:099>`__)的可控形式，利用P型硅(\ `*PSCN* <#P型硅(PSCN)【P-type%20Silicon】%20Type:035>`__)激活时其中的物质将会运输，用N型硅(\ `*NSCN* <#N型硅(NSCN)【N-type%20Silicon】%20Type:036>`__)则会停止其中物质的运输，用超导线(\ `*INST* <#超导线(INST)【Instant%20Conductor%20(Instantly%20Conducts)】%20Type:106>`__)会使物质向反方向运输。当激活时，周围包裹的砖块(\ `*BRCK* <#砖块(BRCK)【Brick】%20Type:067>`__)会发出蓝光。其他使用方法请参考动力管(\ `*PIPE* <#动力管(PIPE)【Pipe】%20Type:099>`__)。
+**描述:**\ 动力管(\ `*PIPE* <#pipe-pipe-type-099>`__)的可控形式，利用P型硅(\ `*PSCN* <#p-pscn-p-type-silicon-type-035>`__)激活时其中的物质将会运输，用N型硅(\ `*NSCN* <#n-nscn-n-type-silicon-type-036>`__)则会停止其中物质的运输，用超导线(\ `*INST* <#inst-instant-conductor-instantly-conducts-type-106>`__)会使物质向反方向运输。当激活时，周围包裹的砖块(\ `*BRCK* <#brck-brick-type-067>`__)会发出蓝光。其他使用方法请参考动力管(\ `*PIPE* <#pipe-pipe-type-099>`__)。
 
 **导热率:**\ 0
 
@@ -659,7 +658,7 @@ Sensors传感器(84.0版本后出现)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **描述:**\ 88.
-1Beta版中移动到传感器一栏。当施加压力时隐形，使物质通过。在不施加压力时，光子(\ `*PHOT* <#光子(PHOT)【Photons】%20Type:031>`__)可以通过它并变成中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)，在4pressure左右时隐形。
+1Beta版中移动到传感器一栏。当施加压力时隐形，使物质通过。在不施加压力时，光子(\ `*PHOT* <#phot-photons-type-031>`__)可以通过它并变成中子(\ `*NEUT* <#neut-neutrons-type-018>`__)，在4pressure左右时隐形。
 
 **元素参数:** tmp值不为零时代表其压力阈值。隐形时tmp2=1，否则tmp2=0。
 
@@ -670,7 +669,7 @@ Sensors传感器(84.0版本后出现)
 探测器(DTEC)【Detector】 Type:162
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 83.0版本后出现，和使用复制体(\ `*CLNE* <#复制体(CLNE)【Clone】%20Type:009>`__)的方法差不多，放置好探测器后，将需要探测的物质与之直接接触就能设置它的探测目标，之后每当有相同的物质与之接触时它都会产生一个电脉冲，可以由金属或导电体输出(导电墙不行)。是探测墙的缩小化替代品。
+**描述:**\ 83.0版本后出现，和使用复制体(\ `*CLNE* <#clne-clone-type-009>`__)的方法差不多，放置好探测器后，将需要探测的物质与之直接接触就能设置它的探测目标，之后每当有相同的物质与之接触时它都会产生一个电脉冲，可以由金属或导电体输出(导电墙不行)。是探测墙的缩小化替代品。
 
 **元素参数:**\ Tmp2=侦测范围，最大25像素
 
@@ -681,7 +680,7 @@ Sensors传感器(84.0版本后出现)
 温度传感器(TSNS)【Temperature Sensor】 Type:164
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 不导热，可以用升温/降温笔(\ `*HEAT* <#升温笔(HEAT)【Heat】>`__/`*COOL* <#降温笔(COOL)【Cool】>`__)来改变自身温度，当周围(2x2)有温度比它高的物质时，温度传感器会发出电脉冲给周围的导电体(水\ `*WATR* <#水(WATR)【Water】%20Type:002>`__\ 、盐水\ `*SLTW* <#盐水(SLTW)【Salt%20Water】%20Type:027>`__\ 、热敏电阻\ `*NTCT* <#负温度系数热敏电阻(NTCT)【Negative%20Temperature%20Coefficient%20Thermistor】%20Type:043>`__\ &\ `*PTCT* <#正温度系数热敏电阻(PTCT)%20【Positive%20Temperature%20Coefficient%20Thermistor】%20Type:046>`__\ 、绝缘线\ `*INWR* <#绝缘线(INWR)【Insulated%20Wire】%20Type:062>`__)。
+**描述:**\ 不导热，可以用升温/降温笔(\ `*HEAT* <#heat-heat>`__/`*COOL* <#cool-cool>`__)来改变自身温度，当周围(2x2)有温度比它高的物质时，温度传感器会发出电脉冲给周围的导电体(水\ `*WATR* <#watr-water-type-002>`__\ 、盐水\ `*SLTW* <#sltw-salt-water-type-027>`__\ 、热敏电阻\ `*NTCT* <#ntct-negative-temperature-coefficient-thermistor-type-043>`__\ &\ `*PTCT* <#ptct-positive-temperature-coefficient-thermistor-type-046>`__\ 、绝缘线\ `*INWR* <#inwr-insulated-wire-type-062>`__)。
 
 **导热率:**\ 0
 
@@ -690,7 +689,7 @@ Sensors传感器(84.0版本后出现)
 压力传感器(PSNS)【Pressure Sensor】 Type:172
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 不导热，可以用升温/降温笔(\ `*HEAT* <#升温笔(HEAT)【Heat】>`__/`*COOL* <#降温笔(COOL)【Cool】>`__)来改变自身温度，当压力大于其温度值时，压力传感器会发出电脉冲给周围的导电体(水\ `*WATR* <#水(WATR)【Water】%20Type:002>`__\ 、盐水\ `*SLTW* <#盐水(SLTW)【Salt%20Water】%20Type:027>`__\ 、热敏电阻\ `*NTCT* <#负温度系数热敏电阻(NTCT)【Negative%20Temperature%20Coefficient%20Thermistor】%20Type:043>`__\ &\ `*PTCT* <#正温度系数热敏电阻(PTCT)%20【Positive%20Temperature%20Coefficient%20Thermistor】%20Type:046>`__\ 、绝缘线\ `*INWR* <#绝缘线(INWR)【Insulated%20Wire】%20Type:062>`__)。
+**描述:**\ 不导热，可以用升温/降温笔(\ `*HEAT* <#heat-heat>`__/`*COOL* <#cool-cool>`__)来改变自身温度，当压力大于其温度值时，压力传感器会发出电脉冲给周围的导电体(水\ `*WATR* <#watr-water-type-002>`__\ 、盐水\ `*SLTW* <#sltw-salt-water-type-027>`__\ 、热敏电阻\ `*NTCT* <#ntct-negative-temperature-coefficient-thermistor-type-043>`__\ &\ `*PTCT* <#ptct-positive-temperature-coefficient-thermistor-type-046>`__\ 、绝缘线\ `*INWR* <#inwr-insulated-wire-type-062>`__)。
 
 **导热率:**\ 0
 
@@ -699,7 +698,7 @@ Sensors传感器(84.0版本后出现)
 衰减传感器(LSNS)【Life Sensor】 Type:185
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 不导热，可以用升温/降温笔(\ `*HEAT* <#升温笔(HEAT)【Heat】>`__/`*COOL* <#降温笔(COOL)【Cool】>`__)来改变自身温度，当周围(2x2)有life值大于其温度值的粒子时，衰减传感器会发出电脉冲给周围的导电体(水\ `*WATR* <#水(WATR)【Water】%20Type:002>`__\ 、盐水\ `*SLTW* <#盐水(SLTW)【Salt%20Water】%20Type:027>`__\ 、热敏电阻\ `*NTCT* <#负温度系数热敏电阻(NTCT)【Negative%20Temperature%20Coefficient%20Thermistor】%20Type:043>`__\ &\ `*PTCT* <#正温度系数热敏电阻(PTCT)%20【Positive%20Temperature%20Coefficient%20Thermistor】%20Type:046>`__\ 、绝缘线\ `*INWR* <#绝缘线(INWR)【Insulated%20Wire】%20Type:062>`__)。Snapshot75
+**描述:**\ 不导热，可以用升温/降温笔(\ `*HEAT* <#heat-heat>`__/`*COOL* <#cool-cool>`__)来改变自身温度，当周围(2x2)有life值大于其温度值的粒子时，衰减传感器会发出电脉冲给周围的导电体(水\ `*WATR* <#watr-water-type-002>`__\ 、盐水\ `*SLTW* <#sltw-salt-water-type-027>`__\ 、热敏电阻\ `*NTCT* <#ntct-negative-temperature-coefficient-thermistor-type-043>`__\ &\ `*PTCT* <#ptct-positive-temperature-coefficient-thermistor-type-046>`__\ 、绝缘线\ `*INWR* <#inwr-insulated-wire-type-062>`__)。Snapshot75
 之后加入。
 
 **导热率:**\ 0
@@ -712,12 +711,12 @@ Force动力材料(74.0版本后出现)
 动力管(PIPE)【Pipe】 Type:099
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 可以用于向一个方向运输物质，自带动力，放置完毕后会在周围自动出现一圈砖块(\ `*BRCK* <#砖块(BRCK)【Brick】%20Type:067>`__)。不过在其中的东西可能会改一下名字(如:Molten
-`*PSCN* <#P型硅(PSCN)【P-type%20Silicon】%20Type:035>`__\ 会变成岩浆\ `*LAVA* <#岩浆(LAVA)【Lava】%20Type:006>`__)。
+**描述:**\ 可以用于向一个方向运输物质，自带动力，放置完毕后会在周围自动出现一圈砖块(\ `*BRCK* <#brck-brick-type-067>`__)。不过在其中的东西可能会改一下名字(如:Molten
+`*PSCN* <#p-pscn-p-type-silicon-type-035>`__\ 会变成岩浆\ `*LAVA* <#lava-lava-type-006>`__)。
 
-**使用方法:**\ 放置好动力管之后，在确定为\ **出口**\ 的地方擦去一部分砖块(\ `*BRCK* <#砖块(BRCK)【Brick】%20Type:067>`__)，之后动力管会自动开始形成，等到完全形成之后将另一头的砖块(\ `*BRCK* <#砖块(BRCK)【Brick】%20Type:067>`__)擦去即可使用。可以用于运输或制造一个单向门。
+**使用方法:**\ 放置好动力管之后，在确定为\ **出口**\ 的地方擦去一部分砖块(\ `*BRCK* <#brck-brick-type-067>`__)，之后动力管会自动开始形成，等到完全形成之后将另一头的砖块(\ `*BRCK* <#brck-brick-type-067>`__)擦去即可使用。可以用于运输或制造一个单向门。
 
-**压力极限:**\ 10pressure，变为金属粉(\ `*BRMT* <#金属粉(BRMT)【Broken%20Metal】%20Type:030>`__)。
+**压力极限:**\ 10pressure，变为金属粉(\ `*BRMT* <#brmt-broken-metal-type-030>`__)。
 
 **导热率:**\ 0
 
@@ -737,7 +736,7 @@ Force动力材料(74.0版本后出现)
 减速器(DCEL)【Decelerator】 Type:138
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 和加速器(\ `*ACEL* <#加速器(ACEL)【Accelerator】%20Type:137>`__)相反，但是只能减速能量粒子(光子\ `*PHOT* <#光子(PHOT)【Photons】%20Type:031>`__\ 、中子\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__\ 、电子\ `*ELEC* <#电子(ELEC)【Electrons】%20Type:136>`__\ 等)
+**描述:**\ 和加速器(\ `*ACEL* <#acel-accelerator-type-137>`__)相反，但是只能减速能量粒子(光子\ `*PHOT* <#phot-photons-type-031>`__\ 、中子\ `*NEUT* <#neut-neutrons-type-018>`__\ 、电子\ `*ELEC* <#elec-electrons-type-136>`__\ 等)
 
 **导热率:**\ 251
 
@@ -746,7 +745,7 @@ Force动力材料(74.0版本后出现)
 力射线发射器(FRAY)【Force Ray Emitter】 Type:159
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 又称F射线发射器。通电后，会沿着电流方向寻找物质并施加力(这与射线发射器\ `*ARAY* <#A射线发射器(ARAY)【A-type%20Ray%20Emitter】%20Type:126%20B射线(BRAY)%20Type:127>`__\ 的方向判定规则一样)，当物质温度大于动力射线发射器的温度时，物质将会被动力射线发射器给吸引，反之，则物质会被动力射线发射器推开。不导热，可以使用升温/降温笔(\ `*HEAT* <#升温笔(HEAT)【Heat】>`__/`*COOL* <#降温笔(COOL)【Cool】>`__)来改变自身温度。修改tmp值可以改变其作用范围，tmp值为零时作用范围为默认的10个像素。
+**描述:**\ 又称F射线发射器。通电后，会沿着电流方向寻找物质并施加力(这与射线发射器\ `*ARAY* <#a-aray-a-type-ray-emitter-type-126-b-bray-type-127>`__\ 的方向判定规则一样)，当物质温度大于动力射线发射器的温度时，物质将会被动力射线发射器给吸引，反之，则物质会被动力射线发射器推开。不导热，可以使用升温/降温笔(\ `*HEAT* <#heat-heat>`__/`*COOL* <#cool-cool>`__)来改变自身温度。修改tmp值可以改变其作用范围，tmp值为零时作用范围为默认的10个像素。
 
 **导热率:**\ 0
 
@@ -755,7 +754,7 @@ Force动力材料(74.0版本后出现)
 反射极(RPEL)【Repeller】 Type:160
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 不需通电，和动力射线发射器(\ `*FRAY* <#力射线发射器(FRAY)【Force%20Ray%20Emitter】%20Type:159>`__)一样，根据温度来吸引或推开物质，有效范围为20像素。
+**描述:**\ 不需通电，和动力射线发射器(\ `*FRAY* <#fray-force-ray-emitter-type-159>`__)一样，根据温度来吸引或推开物质，有效范围为20像素。
 
 **速度计算公式:**\ temp (℃)/10=vX=vY
 
@@ -768,7 +767,7 @@ Force动力材料(74.0版本后出现)
 压力炸弹(DMG)【Damage】 Type:163
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 对碰到它的物质表面产生一个破坏性的压力(除了钻石\ `*DMND* <#钻石(DMND)【Diamond】%20Type:028>`__)。
+**描述:**\ 对碰到它的物质表面产生一个破坏性的压力(除了钻石\ `*DMND* <#dmnd-diamond-type-028>`__)。
 
 **导热率:**\ 29
 
@@ -777,7 +776,7 @@ Force动力材料(74.0版本后出现)
 活塞(PSTN)【Piston】 Type:168
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 活塞，至少需要2像素才能起作用，当用P型硅(\ `*PSCN* <#P型硅(PSCN)【P-type%20Silicon】%20Type:035>`__)激活时，活塞会变长，碰到物质后它不会停止而是继续推动物质以上升，使用N型硅(\ `*NSCN* <#N型硅(NSCN)【N-type%20Silicon】%20Type:036>`__)激活可以使它缩短。通过使用支架(\ `*FRME* <#支架(FRME)【Frame】%20Type:169>`__)可以一次性推动更多物质。设置活塞的Tmp值可以改变活塞能推动的物质数量，Tmp2值可以设置活塞的最大长度。
+**描述:**\ 活塞，至少需要2像素才能起作用，当用P型硅(\ `*PSCN* <#p-pscn-p-type-silicon-type-035>`__)激活时，活塞会变长，碰到物质后它不会停止而是继续推动物质以上升，使用N型硅(\ `*NSCN* <#n-nscn-n-type-silicon-type-036>`__)激活可以使它缩短。通过使用支架(\ `*FRME* <#frme-frame-type-169>`__)可以一次性推动更多物质。设置活塞的Tmp值可以改变活塞能推动的物质数量，Tmp2值可以设置活塞的最大长度。
 
 91.0beta后，活塞的初始温度设为10.00°C/283.15k，其温度可以设定活塞每次伸长的长度，每10°C增加一格，例如设为300°C则每次激活都会伸长30格。
 
@@ -788,7 +787,7 @@ Force动力材料(74.0版本后出现)
 支架(FRME)【Frame】 Type:169
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 用于增加活塞一次性推动物质的数量，至少需要1像素厚度，最多能向一个方向延长15像素，用活塞(\ `*PSTN* <#活塞(PSTN)【Piston】%20Type:168>`__)推动其中一个像素就可以推动和收回整个支架(以及支架上方的物质)。如果某一个像素的支架被挡住(比如墙)，那么整个支架都不会移动。
+**描述:**\ 用于增加活塞一次性推动物质的数量，至少需要1像素厚度，最多能向一个方向延长15像素，用活塞(\ `*PSTN* <#pstn-piston-type-168>`__)推动其中一个像素就可以推动和收回整个支架(以及支架上方的物质)。如果某一个像素的支架被挡住(比如墙)，那么整个支架都不会移动。
 
 **注意事项:**\ 只有位于活塞上方第一层的支架能起作用，第二层之后的支架是不起支撑作用的(也就是说你不能建造一个树杈状的支架并整体移动它)。同时，如果你使用了两个以上的活塞来推动支架，那么在收回时它们会互相挡住。
 
@@ -804,11 +803,11 @@ Explosives爆炸物
 火焰(FIRE)【Fire】 Type:004
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 明火，用于点燃或加热，火焰本身温度升高至一定程度(2499.85℃/2773k左右)会变成等离子体(\ `*PLSM* <#等离子体(PLSM)【Plasma】%20Type:049>`__)。当火焰温度低于351.85℃/625k时会产生烟(\ `*SMKE* <#烟(SMKE)【Smoke】%20Type:057>`__)。
+**描述:**\ 明火，用于点燃或加热，火焰本身温度升高至一定程度(2499.85℃/2773k左右)会变成等离子体(\ `*PLSM* <#plsm-plasma-type-049>`__)。当火焰温度低于351.85℃/625k时会产生烟(\ `*SMKE* <#smke-smoke-type-057>`__)。
 
 **存在时间(life):**\ 100-200之间随机
 
-**元素参数:**\ TMP=3时燃烧产生蒸馏水(\ `*DSTW* <#蒸馏水(DSTW)【Distilled%20Water】%20Type:025>`__)
+**元素参数:**\ TMP=3时燃烧产生蒸馏水(\ `*DSTW* <#dstw-distilled-water-type-025>`__)
 
 **导热率:**\ 88
 
@@ -830,7 +829,7 @@ Explosives爆炸物
 
 **燃点:**\ 399.85℃/673k
 
-**描述:**\ 炸药，压力下(3Pressure左右)、电脉冲、明火都可以引起爆炸。爆炸点与压力有关，压力越小爆炸点越低。暴露在中子下产生石油气(\ `*GAS* <#石油气(GAS)【Gas】%20Type:010>`__)和柴油(\ `*DESL* <#柴油(DESL)【Diesel】%20Type:058>`__)。可以与粘土砂(\ `*CLST* <#粘土砂(CLST)【Clay%20Dust】%20Type:155>`__)混合形成三硝基甲苯(\ `*TNT* <#三硝基甲苯(TNT)【Trinitrotoluene】%20Type:139>`__)。
+**描述:**\ 炸药，压力下(3Pressure左右)、电脉冲、明火都可以引起爆炸。爆炸点与压力有关，压力越小爆炸点越低。暴露在中子下产生石油气(\ `*GAS* <#gas-gas-type-010>`__)和柴油(\ `*DESL* <#desl-diesel-type-058>`__)。可以与粘土砂(\ `*CLST* <#clst-clay-dust-type-155>`__)混合形成三硝基甲苯(\ `*TNT* <#tnt-trinitrotoluene-type-139>`__)。
 
 **导热率:**\ 50
 
@@ -841,7 +840,7 @@ C-4塑胶炸药(C-4)【C-4】 Type:011
 
 **爆炸点:**\ 399.85℃/673k
 
-**描述:**\ 压力敏感型炸药，暴露在高压(3Pressure左右)下、电脉冲或者达到爆炸点都可以引发爆炸。暴露在中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)下会变成粘土(\ `*GOO* <#粘土(GOO)【Goo】%20Type:012>`__)。
+**描述:**\ 压力敏感型炸药，暴露在高压(3Pressure左右)下、电脉冲或者达到爆炸点都可以引发爆炸。暴露在中子(\ `*NEUT* <#neut-neutrons-type-018>`__)下会变成粘土(\ `*GOO* <#goo-goo-type-012>`__)。
 
 **导热率:**\ 88
 
@@ -852,7 +851,7 @@ C-4塑胶炸药(C-4)【C-4】 Type:011
 
 **熔点:**\ 38.85℃/312k
 
-**描述:**\ 低熔点，遇水爆炸，可与水(\ `*WATR* <#水(WATR)【Water】%20Type:002>`__)、蒸馏水(\ `*DSTW* <#蒸馏水(DSTW)【Distilled%20Water】%20Type:025>`__)、盐水(\ `*SLTW* <#盐水(SLTW)【Salt%20Water】%20Type:027>`__)、苏打水(\ `*BUBW* <#苏打水(BUBW)【Bubbled%20Water(Carbonated%20Water)】%20Type:082>`__)、酸(\ `*ACID* <#酸(ACID)【Acid】%20Type:021>`__)、火焰(\ `*FIRE* <#火焰(FIRE)【Fire】%20Type:004>`__)反应，可以导电而不爆炸。
+**描述:**\ 低熔点，遇水爆炸，可与水(\ `*WATR* <#watr-water-type-002>`__)、蒸馏水(\ `*DSTW* <#dstw-distilled-water-type-025>`__)、盐水(\ `*SLTW* <#sltw-salt-water-type-027>`__)、苏打水(\ `*BUBW* <#bubw-bubbled-water-carbonated-water-type-082>`__)、酸(\ `*ACID* <#acid-acid-type-021>`__)、火焰(\ `*FIRE* <#fire-fire-type-004>`__)反应，可以导电而不爆炸。
 
 **导热率:**\ 240
 
@@ -883,10 +882,10 @@ C-4塑胶炸药(C-4)【C-4】 Type:011
 铝热剂(THRM)【Thermite】 Type:065
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 只能与火焰(\ `*FIRE* <#火焰(FIRE)【Fire】%20Type:004>`__)、等离子体(\ `*PLSM* <#等离子体(PLSM)【Plasma】%20Type:049>`__)、岩浆(\ `*LAVA* <#岩浆(LAVA)【Lava】%20Type:006>`__)、生命(\ `*LIFE* <#life生命游戏>`__)反应，产生巨大的热量(点燃时产生3000℃高温)。最后生成的Molten
-Thermite冷却后产生脆金属(\ `*BMTL* <#脆金属(BMTL)【Breakable%20Metal】%20Type:029>`__)。
+**描述:**\ 只能与火焰(\ `*FIRE* <#fire-fire-type-004>`__)、等离子体(\ `*PLSM* <#plsm-plasma-type-049>`__)、岩浆(\ `*LAVA* <#lava-lava-type-006>`__)、生命(\ `*LIFE* <#id2>`__)反应，产生巨大的热量(点燃时产生3000℃高温)。最后生成的Molten
+Thermite冷却后产生脆金属(\ `*BMTL* <#bmtl-breakable-metal-type-029>`__)。
 
-**制取方法:**\ 将金属粉(\ `*BRMT* <#金属粉(BRMT)【Broken%20Metal】%20Type:030>`__)与电渣(\ `*BREL* <#电渣(BREL)【Broken%20Electronics】%20Type:135>`__)共热至250℃/523.15k以上能制得铝热剂(THRM)。
+**制取方法:**\ 将金属粉(\ `*BRMT* <#brmt-broken-metal-type-030>`__)与电渣(\ `*BREL* <#brel-broken-electronics-type-135>`__)共热至250℃/523.15k以上能制得铝热剂(THRM)。
 
 **导热率:**\ 211
 
@@ -895,7 +894,7 @@ Thermite冷却后产生脆金属(\ `*BMTL* <#脆金属(BMTL)【Breakable%20Metal
 冷焰(CFLM)【Sub-zero Flame】 Type:068
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 绝对零度(-273.15℃)的火焰，可以引爆C-5低温炸药(\ `*C-5* <#C-5低温炸药(C-5)【C-5】%20Type:130>`__)。
+**描述:**\ 绝对零度(-273.15℃)的火焰，可以引爆C-5低温炸药(\ `*C-5* <#c-5-c-5-c-5-type-130>`__)。
 
 **导热率:**\ 88
 
@@ -915,7 +914,7 @@ Thermite冷却后产生脆金属(\ `*BMTL* <#脆金属(BMTL)【Breakable%20Metal
 导火线(FUSE)【Fuse】 Type:070
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 高温下或通电能缓慢燃烧，燃烧温度4000-6000℃左右，在2.71pressure下碎裂成导火索粉尘(\ `*FSEP* <#导火线粉尘(FSEP)【Fuse%20powder】%20Type:071>`__)
+**描述:**\ 高温下或通电能缓慢燃烧，燃烧温度4000-6000℃左右，在2.71pressure下碎裂成导火索粉尘(\ `*FSEP* <#fsep-fuse-powder-type-071>`__)
 
 **元素参数:**\ Tmp小于40时碎裂
 
@@ -928,7 +927,7 @@ Thermite冷却后产生脆金属(\ `*BMTL* <#脆金属(BMTL)【Breakable%20Metal
 导火线粉尘(FSEP)【Fuse powder】 Type:071
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 燃烧缓慢，需要较高温度才能点燃，比如使用等离子体(\ `*PLSM* <#等离子体(PLSM)【Plasma】%20Type:049>`__)或者电脉冲(\ `*SPRK* <#电脉冲(SPRK)【Spark】%20Type:015>`__)。燃烧时温度很高(3000+℃)，因此燃烧时火焰是等离子体。
+**描述:**\ 燃烧缓慢，需要较高温度才能点燃，比如使用等离子体(\ `*PLSM* <#plsm-plasma-type-049>`__)或者电脉冲(\ `*SPRK* <#sprk-spark-type-015>`__)。燃烧时温度很高(3000+℃)，因此燃烧时火焰是等离子体。
 
 **燃点:**\ 400℃/673.15k
 
@@ -939,7 +938,7 @@ Thermite冷却后产生脆金属(\ `*BMTL* <#脆金属(BMTL)【Breakable%20Metal
 闪电(LIGH)【Lightning】 Type:087
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 仿真的闪电，改变笔刷大小可以调整闪电大小和威力，可以穿过墙。物质射线发射器(\ `*CRAY* <#物质射线发射器(CRAY)【C-Ray%20Emitter(Particle%20Ray%20Emitter)】%20Type:167>`__)复制的闪电默认
+**描述:**\ 仿真的闪电，改变笔刷大小可以调整闪电大小和威力，可以穿过墙。物质射线发射器(\ `*CRAY* <#cray-c-ray-emitter-particle-ray-emitter-type-167>`__)复制的闪电默认
 Life 值为30。
 
 参数设定:
@@ -967,7 +966,7 @@ Life 值为30。
 高爆炸药(DEST)【Destructive Bomb】 Type:089
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 升级版炸药(\ `*BOMB* <#炸药(BOMB)【Bomb】%20Type:129%20火花(EMBR)【Ember】%20Type:147>`__)，只有钻石(\ `*DMND* <#钻石(DMND)【Diamond】%20Type:028>`__)、复制体(\ `*CLNE* <#复制体(CLNE)【Clone】%20Type:009>`__)、可破坏复制体(\ `*BCLN* <#可破坏复制体(BCLN)【Breakable%20Clone】%20Type:093>`__)、可控复制体(\ `*PCLN* <#可控复制体(PCLN)【Powered%20Clone】%20Type:074>`__)、可控可破坏复制体(\ `*PBCN* <#可控可破坏复制体(PBCN)【Breakable%20Powered%20Clone】%20Type:153>`__)和墙(\ `*Wall* <#wall墙类>`__)等可以与其直接接触且不触发爆炸。产生高温高压，和重水(\ `*DEUT* <#重水(DEUT)【Deuterium%20Oxide】%20Type:095>`__)或钚(\ `*PLUT* <#钚(PLUT)【Plutonium】%20Type:019>`__)接触会触发其裂变反应。
+**描述:**\ 升级版炸药(\ `*BOMB* <#bomb-bomb-type-129-embr-ember-type-147>`__)，只有钻石(\ `*DMND* <#dmnd-diamond-type-028>`__)、复制体(\ `*CLNE* <#clne-clone-type-009>`__)、可破坏复制体(\ `*BCLN* <#bcln-breakable-clone-type-093>`__)、可控复制体(\ `*PCLN* <#pcln-powered-clone-type-074>`__)、可控可破坏复制体(\ `*PBCN* <#pbcn-breakable-powered-clone-type-153>`__)和墙(\ `*Wall* <#wall墙类>`__)等可以与其直接接触且不触发爆炸。产生高温高压，和重水(\ `*DEUT* <#deut-deuterium-oxide-type-095>`__)或钚(\ `*PLUT* <#plut-plutonium-type-019>`__)接触会触发其裂变反应。
 
 **元素参数:**\ 当高爆炸药被触发后，life值会变为37并随帧数而减少，减至0是高爆炸药消失，通过修改其life值可以修改其爆炸的持续时间。
 
@@ -980,9 +979,9 @@ Life 值为30。
 
 **燃点:**\ 126.85℃/400k
 
-**描述:**\ 由中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)或者达到燃点时激发，比烟花(\ `*FIRW* <#烟花(FIRW)【Fireworks】%20Type:069>`__)升的更高，但火焰苍白。
+**描述:**\ 由中子(\ `*NEUT* <#neut-neutrons-type-018>`__)或者达到燃点时激发，比烟花(\ `*FIRW* <#firw-fireworks-type-069>`__)升的更高，但火焰苍白。
 
-**制取方法:**\ 尘埃(\ `*DUST* <#尘埃(DUST)【Dust】%20Type:001>`__)在中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)轰击下可以转变为传统烟花(FWRK)。
+**制取方法:**\ 尘埃(\ `*DUST* <#dust-dust-type-001>`__)在中子(\ `*NEUT* <#neut-neutrons-type-018>`__)轰击下可以转变为传统烟花(FWRK)。
 
 **导热率:**\ 100
 
@@ -1000,7 +999,7 @@ Life 值为30。
 C-5低温炸药(C-5)【C-5】 Type:130
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 在压力、冷焰(\ `*CLFM* <#冷焰(CFLM)【Sub-zero%20Flame】%20Type:068>`__)、液氧(\ `*LOXY* <#液氧(LOXY)【Liquid%20Oxygen】%20Type:060>`__)、液氮(\ `*LN2* <#液氮(LN2)【Liquid%20Nitrogen】%20Type:037>`__)、冷焰(\ `*CFLM* <#冷焰(CFLM)【Sub-zero%20Flame】%20Type:068>`__)、智能微粒(\ `*TRON* <#智能微粒(TRON)【Tron】%20Type:143>`__)，以及其他温度低于-174℃的液体接触时爆炸。对压力不敏感。在Snapshot72之后的版本中，通过C-5的光子(\ `*PHOT* <#光子(PHOT)【Photons】%20Type:031>`__)波长将会减半(频率加倍)。
+**描述:**\ 在压力、冷焰(\ `*CLFM* <#cflm-sub-zero-flame-type-068>`__)、液氧(\ `*LOXY* <#loxy-liquid-oxygen-type-060>`__)、液氮(\ `*LN2* <#ln2-liquid-nitrogen-type-037>`__)、冷焰(\ `*CFLM* <#cflm-sub-zero-flame-type-068>`__)、智能微粒(\ `*TRON* <#tron-tron-type-143>`__)，以及其他温度低于-174℃的液体接触时爆炸。对压力不敏感。在Snapshot72之后的版本中，通过C-5的光子(\ `*PHOT* <#phot-photons-type-031>`__)波长将会减半(频率加倍)。
 
 **导热率:**\ 88
 
@@ -1011,7 +1010,7 @@ C-5低温炸药(C-5)【C-5】 Type:130
 
 **爆炸点:**\ 399.85℃/673k
 
-**描述:**\ 69.0beta版之后出现，和C-4塑胶炸药(\ `*C-4* <#C-4塑胶炸药(C-4)【C-4】%20Type:011>`__)相似，但产生的压力更高且火焰更少。爆炸时产生的高热(1000+℃)足以融化金属(\ `*METL* <#金属(METL)【Metal】%20Type:014>`__)。它只能用明火点燃。爆炸时会产生类似炸药(\ `*BOMB* <#炸药(BOMB)【Bomb】%20Type:129%20火花(EMBR)【Ember】%20Type:147>`__)爆炸时的火花(\ `*EMBR* <#炸药(BOMB)【Bomb】%20Type:129%20火花(EMBR)【Ember】%20Type:147>`__)
+**描述:**\ 69.0beta版之后出现，和C-4塑胶炸药(\ `*C-4* <#c-4-c-4-c-4-type-011>`__)相似，但产生的压力更高且火焰更少。爆炸时产生的高热(1000+℃)足以融化金属(\ `*METL* <#metl-metal-type-014>`__)。它只能用明火点燃。爆炸时会产生类似炸药(\ `*BOMB* <#bomb-bomb-type-129-embr-ember-type-147>`__)爆炸时的火花(\ `*EMBR* <#bomb-bomb-type-129-embr-ember-type-147>`__)
 。
 
 **导热率:**\ 88
@@ -1023,7 +1022,7 @@ C-5低温炸药(C-5)【C-5】 Type:130
 
 **燃点:**\ 399.85℃/673k
 
-**描述:**\ 70.0版本后加入，电脉冲或者明火或者达到燃烧点都能点燃它，能缓慢燃烧，在水中也可以燃烧。通过改变其Tmp值可以改变它的燃烧速度。Tmp值越高燃烧时间越长。中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)可以穿过导火索但会使导火索朝中子来源方向运动。
+**描述:**\ 70.0版本后加入，电脉冲或者明火或者达到燃烧点都能点燃它，能缓慢燃烧，在水中也可以燃烧。通过改变其Tmp值可以改变它的燃烧速度。Tmp值越高燃烧时间越长。中子(\ `*NEUT* <#neut-neutrons-type-018>`__)可以穿过导火索但会使导火索朝中子来源方向运动。
 
 **导热率:**\ 88
 
@@ -1052,7 +1051,7 @@ Gases气体
 
 **液化压力:**\ 6pressure
 
-**制取方法:**\ 中子轰击石油(\ `*OIL* <#石油(OIL)【Oil】%20Type:003>`__)或柴油(\ `*DESL* <#柴油(DESL)【Diesel】%20Type:058>`__)。在低压/加热下石油会变成石油气。
+**制取方法:**\ 中子轰击石油(\ `*C-4* <#oil-oil-type-003>`__)或柴油(\ `*DESL* <#desl-diesel-type-058>`__)。在低压/加热下石油会变成石油气。
 
 **导热率:**\ 42
 
@@ -1061,7 +1060,7 @@ Gases气体
 水蒸气(WTRV)【Water Vapor】 Type:023
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-[**描述:**\ 水蒸气，水加热到100℃以上或者盐水加热到109.85℃以上时产生。当水受强热时，水蒸气产生时会附带较大压力，水蒸气冷却后变成蒸馏水(\ `*DSTW* <#蒸馏水(DSTW)【Distilled%20Water】%20Type:025>`__)。水蒸气遇到酸(\ `*ACID* <#酸(ACID)【Acid】%20Type:021>`__)会变成酸气(\ `*CAUS* <#酸气(CAUS)【Caustic%20Gas】%20Type:086>`__)。
+[**描述:**\ 水蒸气，水加热到100℃以上或者盐水加热到109.85℃以上时产生。当水受强热时，水蒸气产生时会附带较大压力，水蒸气冷却后变成蒸馏水(\ `*DSTW* <#dstw-distilled-water-type-025>`__)。水蒸气遇到酸(\ `*ACID* <#acid-acid-type-021>`__)会变成酸气(\ `*CAUS* <#caus-caustic-gas-type-086>`__)。
 
 **液化点:**\ 371℃/97.85k
 
@@ -1072,7 +1071,7 @@ Gases气体
 等离子体(PLSM)【Plasma】 Type:049
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 炽热的气体，9725.85℃，基本和火焰(\ `*FIRE* <#火焰(FIRE)【Fire】%20Type:004>`__)相同。
+**描述:**\ 炽热的气体，9725.85℃，基本和火焰(\ `*FIRE* <#fire-fire-type-004>`__)相同。
 
 **存在时间(life)**:200以内随机
 
@@ -1083,9 +1082,9 @@ Gases气体
 惰性气体(NBLE)【Noble Gas】 Type:052
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 通电后能电离成等离子体(\ `*PLSM* <#等离子体(PLSM)【Plasma】%20Type:049>`__)，但只有1600℃左右，不断通电能增大其温度。冷却后等离子体将变回惰性气体。
+**描述:**\ 通电后能电离成等离子体(\ `*PLSM* <#plsm-plasma-type-049>`__)，但只有1600℃左右，不断通电能增大其温度。冷却后等离子体将变回惰性气体。
 
-**聚变:**\ 高温(大于5000℃)高压(100pressure)下，惰性气体将聚变产生等离子体(\ `*PLSM* <#等离子体(PLSM)【Plasma】%20Type:049>`__)、一份中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)、一份光子(\ `*PHOT* <#光子(PHOT)【Photons】%20Type:031>`__)(红色)、一份二氧化碳(\ `*CO2* <#二氧化碳(CO2)【Carbon%20Dioxide】%20Type:080>`__)。同时聚变会产生50pressure的压力和9000℃的高温。
+**聚变:**\ 高温(大于5000℃)高压(100pressure)下，惰性气体将聚变产生等离子体(\ `*PLSM* <#plsm-plasma-type-049>`__)、一份中子(\ `*NEUT* <#neut-neutrons-type-018>`__)、一份光子(\ `*PHOT* <#phot-photons-type-031>`__)(红色)、一份二氧化碳(\ `*CO2* <#co2-carbon-dioxide-type-080>`__)。同时聚变会产生50pressure的压力和9000℃的高温。
 
 **导热率:**\ 106
 
@@ -1094,7 +1093,7 @@ Gases气体
 烟(SMKE)【Smoke】 Type:057
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 火焰冷却到较低温度时会产生烟。可以燃烧。烟接触较热物质时会产生轻微压力。烟可以被植物(\ `*PLNT* <#植物(PLNT)【Plant】%20Type:020>`__)吸收产生氧气(\ `*OXYG* <#氧气(OXYG)【Oxygen】%20Type:061>`__)。
+**描述:**\ 火焰冷却到较低温度时会产生烟。可以燃烧。烟接触较热物质时会产生轻微压力。烟可以被植物(\ `*PLNT* <#plnt-plant-type-020>`__)吸收产生氧气(\ `*OXYG* <#oxyg-oxygen-type-061>`__)。
 
 **燃点:**\ 351.85℃/625k
 
@@ -1105,10 +1104,10 @@ Gases气体
 氧气(OXYG)【Oxygen】 Type:061
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 高度易燃的气体，可以被火焰(\ `*FIRE* <#火焰(FIRE)【Fire】%20Type:004>`__)点燃，在低温或高压(大于100Pressure)下会液化成液氧(\ `*LOXY* <#液氧(LOXY)【Liquid%20Oxygen】%20Type:060>`__)。烟(\ `*SMKE* <#烟(SMKE)【Smoke】%20Type:057>`__)或者二氧化碳(\ `*CO2* <#二氧化碳(CO2)【Carbon%20Dioxide】%20Type:080>`__)被植物(\ `*PLNT* <#植物(PLNT)【Plant】%20Type:020>`__)吸收后能产生氧气用来模拟光合作用。
+**描述:**\ 高度易燃的气体，可以被火焰(\ `*FIRE* <#fire-fire-type-004>`__)点燃，在低温或高压(大于100Pressure)下会液化成液氧(\ `*LOXY* <#loxy-liquid-oxygen-type-060>`__)。烟(\ `*SMKE* <#smke-smoke-type-057>`__)或者二氧化碳(\ `*CO2* <#co2-carbon-dioxide-type-080>`__)被植物(\ `*PLNT* <#plnt-plant-type-020>`__)吸收后能产生氧气用来模拟光合作用。
 
 **聚变:**\ 氧气暴露在高引力、高温度(9700℃/9973.15k以上)和压力(250pressure以上)下时会聚变成熔融态的脆金属(Molten
-`*BMTL* <#脆金属(BMTL)【Breakable%20Metal】%20Type:029>`__)，同时产生光子(\ `*PHOT* <#光子(PHOT)【Photons】%20Type:031>`__)、等离子体(\ `*PLSM* <#等离子体(PLSM)【Plasma】%20Type:049>`__)、引力子(\ `*GRVT* <#引力子(GRVT)(90.0beta版本后出现)【Graviton】%20Type:177>`__)。
+`*BMTL* <#bmtl-breakable-metal-type-029>`__)，同时产生光子(\ `*PHOT* <#phot-photons-type-031>`__)、等离子体(\ `*PLSM* <#plsm-plasma-type-049>`__)、引力子(\ `*GRVT* <#grvt-90-0beta-graviton-type-177>`__)。
 
 **液化点**:-183.15℃/90k
 
@@ -1119,9 +1118,9 @@ Gases气体
 二氧化碳(CO2)【Carbon Dioxide】 Type:080
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 高密度气体。真空中会下沉。与水反应生成苏打水(\ `*BUBW* <#苏打水(BUBW)【Bubbled%20Water(Carbonated%20Water)】%20Type:082>`__)，低温下会变成干冰(\ `*DRIC* <#干冰(DRIC)【Dry%20Ice】%20Type:081>`__)。不支持燃烧，可用于灭火。被植物(\ `*PLNT* <#植物(PLNT)【Plant】%20Type:020>`__)吸收后形成氧气(\ `*OXYG* <#氧气(OXYG)【Oxygen】%20Type:061>`__)。
+**描述:**\ 高密度气体。真空中会下沉。与水反应生成苏打水(\ `*BUBW* <#bubw-bubbled-water-carbonated-water-type-082>`__)，低温下会变成干冰(\ `*DRIC* <#dric-dry-ice-type-081>`__)。不支持燃烧，可用于灭火。被植物(\ `*PLNT* <#plnt-plant-type-020>`__)吸收后形成氧气(\ `*OXYG* <#oxyg-oxygen-type-061>`__)。
 
-**聚变:**\ 二氧化碳在高温(9500℃以上)、高压(200Pressure以上)下会发生聚变，产生等离子体(\ `*PLSM* <#等离子体(PLSM)【Plasma】%20Type:049>`__)、极度高温高压的冲击波、一份中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)、一份电子(\ `*ELEC* <#电子(ELEC)【Electrons】%20Type:136>`__)和一份氧气(\ `*OXYG* <#氧气(OXYG)【Oxygen】%20Type:061>`__)。
+**聚变:**\ 二氧化碳在高温(9500℃以上)、高压(200Pressure以上)下会发生聚变，产生等离子体(\ `*PLSM* <#plsm-plasma-type-049>`__)、极度高温高压的冲击波、一份中子(\ `*NEUT* <#neut-neutrons-type-018>`__)、一份电子(\ `*ELEC* <#elec-electrons-type-136>`__)和一份氧气(\ `*OXYG* <#oxyg-oxygen-type-061>`__)。
 
 **凝固点:**-78.5℃/194.65k
 
@@ -1141,9 +1140,9 @@ Gases气体
 雾(FOG)【Fog】 Type:092
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 雾，原为隐藏元素，88.1版本后可以直接制造，升温时(到达100℃/373.15k)会变成水蒸气(\ `*WTRV* <#水蒸气(WTRV)【Water%20Vapor】%20Type:023>`__)。
+**描述:**\ 雾，原为隐藏元素，88.1版本后可以直接制造，升温时(到达100℃/373.15k)会变成水蒸气(\ `*WTRV* <#wtrv-water-vapor-type-023>`__)。
 
-**制取方法:**\ 波义尔气(\ `*BOYL* <#波义耳气(BOYL)【Boyle】%20Type:141>`__)和水(\ `*WATR* <#水(WATR)【Water】%20Type:002>`__)或者氧气(\ `*OXYG* <#氧气(OXYG)【Oxygen】%20Type:061>`__)混合时能产生雾(FOG)。霜(\ `*RIME* <#霜(RIME)【Rime】%20Type:091>`__)受到电脉冲刺激会形成雾(FOG)。
+**制取方法:**\ 波义尔气(\ `*BOYL* <#boyl-boyle-type-141>`__)和水(\ `*WATR* <#watr-water-type-002>`__)或者氧气(\ `*OXYG* <#oxyg-oxygen-type-061>`__)混合时能产生雾(FOG)。霜(\ `*RIME* <#rime-rime-type-091>`__)受到电脉冲刺激会形成雾(FOG)。
 
 **导热率:**\ 100
 
@@ -1152,7 +1151,7 @@ Gases气体
 波义耳气(BOYL)【Boyle】 Type:141
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 不可燃气体，热胀冷缩。也可用于核反应堆，在容器内放入铀(\ `*URAN* <#铀(URAN)【Uranium】%20Type:032>`__)和波义尔气，铀会在压力下产生大量热，而热量又使波义尔气膨胀产生更高压力，因此这个反应就能一直进行下去。波义耳气和氧气(\ `*OXYG* <#氧气(OXYG)【Oxygen】%20Type:061>`__)反应能生成水(\ `*WATR* <#水(WATR)【Water】%20Type:002>`__)，和水反应能生成雾(\ `*FOG* <#雾(FOG)【Fog】%20Type:092>`__)。
+**描述:**\ 不可燃气体，热胀冷缩。也可用于核反应堆，在容器内放入铀(\ `*URAN* <#uran-uranium-type-032>`__)和波义尔气，铀会在压力下产生大量热，而热量又使波义尔气膨胀产生更高压力，因此这个反应就能一直进行下去。波义耳气和氧气(\ `*OXYG* <#oxyg-oxygen-type-061>`__)反应能生成水(\ `*WATR* <#watr-water-type-002>`__)，和水反应能生成雾(\ `*FOG* <#fog-fog-type-092>`__)。
 
 **导热率:**\ 42
 
@@ -1161,11 +1160,11 @@ Gases气体
 氢气(HYGN)【Hydrogen】 Type:148
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 可以用火焰(\ `*FIRE* <#火焰(FIRE)【Fire】%20Type:004>`__)点燃，能与氧气(\ `*OXYG* <#氧气(OXYG)【Oxygen】%20Type:061>`__)燃烧形成水蒸气(\ `*WTRV* <#水蒸气(WTRV)【Water%20Vapor】%20Type:023>`__)。氢气没有气压，因此在温度小于零时能触碰石英(\ `*QRTZ* <#石英(QRTZ)【Quartz】%20Type:132>`__)而不使其破碎。
+**描述:**\ 可以用火焰(\ `*FIRE* <#fire-fire-type-004>`__)点燃，能与氧气(\ `*OXYG* <#oxyg-oxygen-type-061>`__)燃烧形成水蒸气(\ `*WTRV* <#wtrv-water-vapor-type-023>`__)。氢气没有气压，因此在温度小于零时能触碰石英(\ `*QRTZ* <#qrtz-quartz-type-132>`__)而不使其破碎。
 
-**聚变:**\ 高温(2000℃)高压(50pressure)下，产生等离子体(\ `*PLSM* <#等离子体(PLSM)【Plasma】%20Type:049>`__)并释放一份中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)，一份光子(\ `*PHOT* <#光子(PHOT)【Photons】%20Type:031>`__)(黄色)和1(或2)份惰性气体(\ `*NBLE* <#惰性气体(NBLE)【Noble%20Gas】%20Type:052>`__)。同时产生50pressure的压力和4000℃的高温。
+**聚变:**\ 高温(2000℃)高压(50pressure)下，产生等离子体(\ `*PLSM* <#plsm-plasma-type-049>`__)并释放一份中子(\ `*NEUT* <#neut-neutrons-type-018>`__)，一份光子(\ `*PHOT* <#phot-photons-type-031>`__)(黄色)和1(或2)份惰性气体(\ `*NBLE* <#nble-noble-gas-type-052>`__)。同时产生50pressure的压力和4000℃的高温。
 
-**制取方法:**\ 中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)+电子(\ `*ELEC* <#电子(ELEC)【Electrons】%20Type:136>`__)=氢气(HYGN)
+**制取方法:**\ 中子(\ `*NEUT* <#neut-neutrons-type-018>`__)+电子(\ `*ELEC* <#elec-electrons-type-136>`__)=氢气(HYGN)
 
 **导热率:**\ 251
 
@@ -1174,9 +1173,9 @@ Gases气体
 制冷气(RFRG)【Refrigerant Gas】 Type:183 制冷液(RFRL) Type:184
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 制冷气，当周围环境压力变大时(>2pressure)会液化成制冷液(RFRL)并把热量传导给别的物质。遇到中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)会释放出石油气(\ `*GAS* <#石油气(GAS)【Gas】%20Type:010>`__)和酸气(\ `*CAUS* <#酸气(CAUS)【Caustic%20Gas】%20Type:086>`__)。(产生两种气体的可能性分别为一半一半)
+**描述:**\ 制冷气，当周围环境压力变大时(>2pressure)会液化成制冷液(RFRL)并把热量传导给别的物质。遇到中子(\ `*NEUT* <#neut-neutrons-type-018>`__)会释放出石油气(\ `*GAS* <#gas-gas-type-010>`__)和酸气(\ `*CAUS* <#caus-caustic-gas-type-086>`__)。(产生两种气体的可能性分别为一半一半)
 
-**制取方法:**\ 石油气(\ `*GAS* <#石油气(GAS)【Gas】%20Type:010>`__)+酸气(\ `*CAUS* <#酸气(CAUS)【Caustic%20Gas】%20Type:086>`__)+压力(>3pressure)=制冷气(RFRG)
+**制取方法:**\ 石油气(\ `*GAS* <#gas-gas-type-010>`__)+酸气(\ `*CAUS* <#caus-caustic-gas-type-086>`__)+压力(>3pressure)=制冷气(RFRG)
 
 **导热率:**\ 3
 
@@ -1188,7 +1187,7 @@ Liquids液体
 水(WATR)【Water】 Type:002
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 能导电的水，蒸馏水(\ `*DSTW* <#蒸馏水(DSTW)【Distilled%20Water】%20Type:025>`__)与大多数物质接触后都会变成这种水，植物(\ `*PLNT* <#植物(PLNT)【Plant】%20Type:020>`__)可以吸收这种水生长。
+**描述:**\ 能导电的水，蒸馏水(\ `*DSTW* <#dstw-distilled-water-type-025>`__)与大多数物质接触后都会变成这种水，植物(\ `*PLNT* <#plnt-plant-type-020>`__)可以吸收这种水生长。
 
 **沸点:**\ 99.85℃/373.0k
 
@@ -1201,7 +1200,7 @@ Liquids液体
 石油(OIL)【Oil】 Type:003
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 液体，易燃，较低压力/加热下会变成石油气(\ `*GAS* <#石油气(GAS)【Gas】%20Type:010>`__)。
+**描述:**\ 液体，易燃，较低压力/加热下会变成石油气(\ `*GAS* <#gas-gas-type-010>`__)。
 
 **沸点:**\ 59.85℃/333k
 
@@ -1221,7 +1220,7 @@ Liquids液体
 酸(ACID)【Acid】 Type:021
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 可以腐蚀几乎所有物质，除了:岩浆(\ `*LAVA* <#岩浆(LAVA)【Lava】%20Type:006>`__)、液氮(\ `*LN2* <#液氮(LN2)【Liquid%20Nitrogen】%20Type:037>`__)、放射性元素、特殊元素、爆炸物、玻璃(\ `*GLAS* <#玻璃(GLAS)【Glass】%20Type:045>`__)、石英(\ `*QRTZ* <#石英(QRTZ)【Quartz】%20Type:132>`__)、石英砂(\ `*PQRT* <#石英砂(PQRT)【Broken%20Quartz】%20Type:133>`__)、钻石(\ `*DMND* <#钻石(DMND)【Diamond】%20Type:028>`__)、金(\ `*GOLD* <#金(GOLD)【Gold】%20Type:170>`__)等。可燃，可以由明火、电脉冲、岩浆点燃，生成酸气(\ `*CAUS* <#酸气(CAUS)【Caustic%20Gas】%20Type:086>`__)。
+**描述:**\ 可以腐蚀几乎所有物质，除了:岩浆(\ `*LAVA* <#lava-lava-type-006>`__)、液氮(\ `*LN2* <#ln2-liquid-nitrogen-type-037>`__)、放射性元素、特殊元素、爆炸物、玻璃(\ `*GLAS* <#glas-glass-type-045>`__)、石英(\ `*QRTZ* <#qrtz-quartz-type-132>`__)、石英砂(\ `*PQRT* <#pqrt-broken-quartz-type-133>`__)、钻石(\ `*DMND* <#dmnd-diamond-type-028>`__)、金(\ `*GOLD* <#gold-gold-type-170>`__)等。可燃，可以由明火、电脉冲、岩浆点燃，生成酸气(\ `*CAUS* <#caus-caustic-gas-type-086>`__)。
 
 **导热率:**\ 34
 
@@ -1230,7 +1229,7 @@ Liquids液体
 蒸馏水(DSTW)【Distilled Water】 Type:025
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 不导电的理论纯水，由水蒸气冷凝或中子轰击水(\ `*WATR* <#水(WATR)【Water】%20Type:002>`__)获得。植物(\ `*PLNT* <#植物(PLNT)【Plant】%20Type:020>`__)不能吸收这种水。
+**描述:**\ 不导电的理论纯水，由水蒸气冷凝或中子轰击水(\ `*WATR* <#watr-water-type-002>`__)获得。植物(\ `*PLNT* <#plnt-plant-type-020>`__)不能吸收这种水。
 
 **沸点:**\ 99.85℃/373.0k
 
@@ -1243,7 +1242,7 @@ Liquids液体
 盐水(SLTW)【Salt Water】 Type:027
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-[**描述:**\ 盐(\ `*SALT* <#盐(SALT)【Salt】%20Type:026>`__)+水(\ `*WATR* <#水(WATR)【Water】%20Type:002>`__)的产物，能更快的导电(比\ `*WATR* <#水(WATR)【Water】%20Type:002>`__\ 快)，具有更高沸点和更低的凝固点，沸腾后产生水蒸气(\ `*WTRV* <#水蒸气(WTRV)【Water%20Vapor】%20Type:023>`__)+盐(\ `*SALT* <#盐(SALT)【Salt】%20Type:026>`__)。同时它还会使植物(\ `*PLNT* <#植物(PLNT)【Plant】%20Type:020>`__)死亡和使石英(\ `*QRTZ* <#石英(QRTZ)【Quartz】%20Type:132>`__)缓慢生长.
+**描述:**\ 盐(\ `*SALT* <#salt-salt-type-026>`__)+水(\ `*WATR* <#watr-water-type-002>`__)的产物，能更快的导电(比\ `*WATR* <#watr-water-type-002>`__\ 快)，具有更高沸点和更低的凝固点，沸腾后产生水蒸气(\ `*WTRV* <#wtrv-water-vapor-type-023>`__)+盐(\ `*SALT* <#salt-salt-type-026>`__)。同时它还会使植物(\ `*PLNT* <#plnt-plant-type-020>`__)死亡和使石英(\ `*QRTZ* <#qrtz-quartz-type-132>`__)缓慢生长.
 
 **沸点:**\ 109.85℃/383k
 
@@ -1256,7 +1255,7 @@ Liquids液体
 蜡油(MWAX)【Molten Wax】 Type:034
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 融化的蜡(\ `*WAX* <#蜡(WAX)【Wax】%20Type:033>`__)，可以燃烧，45℃时凝固成蜡(\ `*WAX* <#蜡(WAX)【Wax】%20Type:033>`__)。
+**描述:**\ 融化的蜡(\ `*WAX* <#wax-wax-type-033>`__)，可以燃烧，45℃时凝固成蜡(\ `*WAX* <#wax-wax-type-033>`__)。
 
 **燃点:**\ 399.85℃/673k
 
@@ -1295,7 +1294,7 @@ Liquids液体
 液氧(LOXY)【Liquid Oxygen】 Type:060
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 点燃时产生2000℃/1726.85k的等离子体(\ `*PLSM* <#等离子体(PLSM)【Plasma】%20Type:049>`__)，升温时转变成氧气(\ `*OXYG* <#氧气(OXYG)【Oxygen】%20Type:061>`__)。
+**描述:**\ 点燃时产生2000℃/1726.85k的等离子体(\ `*PLSM* <#plsm-plasma-type-049>`__)，升温时转变成氧气(\ `*OXYG* <#oxyg-oxygen-type-061>`__)。
 
 **沸点:**-183.05℃/90.1k
 
@@ -1306,7 +1305,7 @@ Liquids液体
 荧光液(GLOW)【Glow】 Type:066
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 荧光液，状态、压力或温度变化时改变颜色，与水混合产生重水(\ `*DEUT* <#重水(DEUT)【Deuterium%20Oxide】%20Type:095>`__)。光子(\ `*PHOT* <#光子(PHOT)【Photons】%20Type:031>`__)接触到它会增殖。
+**描述:**\ 荧光液，状态、压力或温度变化时改变颜色，与水混合产生重水(\ `*DEUT* <#deut-deuterium-oxide-type-095>`__)。光子(\ `*PHOT* <#phot-photons-type-031>`__)接触到它会增殖。
 
 颜色表:
 
@@ -1339,7 +1338,7 @@ Liquids液体
 苏打水(BUBW)【Bubbled Water(Carbonated Water)】 Type:082
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 和其他物质接触时会释放出二氧化碳(\ `*CO2* <#二氧化碳(CO2)【Carbon%20Dioxide】%20Type:080>`__)并产生压力。
+**描述:**\ 和其他物质接触时会释放出二氧化碳(\ `*CO2* <#co2-carbon-dioxide-type-080>`__)并产生压力。
 
 **沸点:**\ 99.85℃/373.0k
 
@@ -1352,7 +1351,7 @@ Liquids液体
 奇特液体(BIZR)Type:103奇特气体(BIZG)Type:104奇特固体(BIZS)【Bizarre】Type:105
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 与一般物理规律相反的液体，高温时凝固，低温时汽化，用颜色工具改变它的颜色后，它将把其他与之相遇的物质染成它的颜色。同时，它还能将光子(\ `*PHOT* <#光子(PHOT)【Photons】%20Type:031>`__)转换成电子(\ `*ELEC* <#电子(ELEC)【Electrons】%20Type:136>`__)。
+**描述:**\ 与一般物理规律相反的液体，高温时凝固，低温时汽化，用颜色工具改变它的颜色后，它将把其他与之相遇的物质染成它的颜色。同时，它还能将光子(\ `*PHOT* <#phot-photons-type-031>`__)转换成电子(\ `*ELEC* <#elec-electrons-type-136>`__)。
 
 **沸点:**-173.15℃/100k
 
@@ -1365,7 +1364,7 @@ Liquids液体
 浆糊(PSTE)【Paste】 Type:111 固体浆糊(PSTS) Type:112
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 胶体，在压力下变硬。高温下变成砖块(\ `*BRCK* <#砖块(BRCK)【Brick】%20Type:067>`__)。
+**描述:**\ 胶体，在压力下变硬。高温下变成砖块(\ `*BRCK* <#brck-brick-type-067>`__)。
 
 **烧制温度:**\ 473.85℃/747k
 
@@ -1378,7 +1377,7 @@ Liquids液体
 胶体(GEL)【Gel】 Type:142
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 75.0版本后加入，能够吸收水分，之后颜色会变深、变得不那么粘稠而且导热系数会增加。当碰到海绵(\ `*SPNG* <#海绵(SPNG)【Sponge】%20Type:090>`__)时，水会从胶体中移动到海绵里。碰到浆糊(\ `*PSTE* <#浆糊(PSTE)【Paste】%20Type:111%20固体浆糊(PSTS)%20Type:112>`__)时，水会从浆糊中转移到胶体中，浆糊会变成粘土砂(\ `*CLST* <#粘土砂(CLST)【Clay%20Dust】%20Type:155>`__)。有气体接触胶体表面时，胶体会无序的扩散到气体中，可用于气体的干燥。
+**描述:**\ 75.0版本后加入，能够吸收水分，之后颜色会变深、变得不那么粘稠而且导热系数会增加。当碰到海绵(\ `*SPNG* <#spng-sponge-type-090>`__)时，水会从胶体中移动到海绵里。碰到浆糊(\ `*PSTE* <#pste-paste-type-111-psts-type-112>`__)时，水会从浆糊中转移到胶体中，浆糊会变成粘土砂(\ `*CLST* <#clst-clay-dust-type-155>`__)。有气体接触胶体表面时，胶体会无序的扩散到气体中，可用于气体的干燥。
 
 **导热率:**\ 29
 
@@ -1387,7 +1386,7 @@ Liquids液体
 肥皂(SOAP)【Soap】 Type:149
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 0.5pressure时产生肥皂泡，可以洗去染色。肥皂泡在-25℃/248.15k时会凝固。89.0版本之后可用于治愈病毒(\ `*VIRS* <#病毒(VIRS)【Virus】Type:174%20病毒块(VRSS)Type:175%20病毒气(VRSG)Type:176>`__)的感染，使其变为原来的物质或直接消失。
+**描述:**\ 0.5pressure时产生肥皂泡，可以洗去染色。肥皂泡在-25℃/248.15k时会凝固。89.0版本之后可用于治愈病毒(\ `*VIRS* <#virs-virustype-174-vrss-type-175-vrsg-type-176>`__)的感染，使其变为原来的物质或直接消失。
 
 **导热率:**\ 29
 
@@ -1396,7 +1395,7 @@ Liquids液体
 水银(MERC)【Mercury】 Type:152
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 液体，体积随温度变化，可以导电。水银是TPT里最重的液体，甚至可以让尘埃(\ `*DUST* <#尘埃(DUST)【Dust】%20Type:001>`__)浮起来。不可摧毁，不能燃烧，不会蒸发。它对火柴人(\ `*STKM* <#火柴人(STKM)【Stickman】%20Type:055%20火柴人出生点(SPWN)%20Type:118>`__)没有毒性。
+**描述:**\ 液体，体积随温度变化，可以导电。水银是TPT里最重的液体，甚至可以让尘埃(\ `*DUST* <#dust-dust-type-001>`__)浮起来。不可摧毁，不能燃烧，不会蒸发。它对火柴人(\ `*STKM* <#stkm-stickman-type-055-spwn-type-118>`__)没有毒性。
 
 **元素参数:**\ Tmp值过高时会增大自身体积。
 
@@ -1407,7 +1406,7 @@ Liquids液体
 病毒(VIRS)【Virus】Type:174 病毒块(VRSS)Type:175 病毒气(VRSG)Type:176
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 89.0版本后加入，会将其碰触到的所有物质变成病毒(VIRS)，同样不会感染钻石(\ `*DMND* <#钻石(DMND)【Diamond】%20Type:028>`__)，一段时间后会自己死亡。肥皂(\ `*SOAP* <#肥皂(SOAP)【Soap】%20Type:149>`__)可以治愈病毒(VIRS)并使物质恢复。质子(\ `*PROT* <#质子(PROT)【Protons】%20Type:173>`__)可以使病毒(VIRS)不会自动死亡。只能被等离子体(\ `*PLSM* <#等离子体(PLSM)【Plasma】%20Type:049>`__)点燃。
+**描述:**\ 89.0版本后加入，会将其碰触到的所有物质变成病毒(VIRS)，同样不会感染钻石(\ `*DMND* <#dmnd-diamond-type-028>`__)，一段时间后会自己死亡。肥皂(\ `*SOAP* <#soap-soap-type-149>`__)可以治愈病毒(VIRS)并使物质恢复。质子(\ `*PROT* <#prot-protons-type-173>`__)可以使病毒(VIRS)不会自动死亡。只能被等离子体(\ `*PLSM* <#plsm-plasma-type-049>`__)点燃。
 
 **沸点:**\ 399.85℃/673k变成病毒气(VRSG)
 
@@ -1425,7 +1424,7 @@ Powders粉末
 尘埃(DUST)【Dust】 Type:001
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 轻粉末，难燃烧且火焰微弱。火柴人(\ `*STKM* <#火柴人(STKM)【Stickman】%20Type:055%20火柴人出生点(SPWN)%20Type:118>`__)一开始就能产生尘埃。
+**描述:**\ 轻粉末，难燃烧且火焰微弱。火柴人(\ `*STKM* <#stkm-stickman-type-055-spwn-type-118>`__)一开始就能产生尘埃。
 
 **元素参数:**\ 点燃后默认燃烧10帧，修改life值可以改变其燃烧时间
 
@@ -1436,7 +1435,7 @@ Powders粉末
 石粉(STNE)【Stone】 Type:005
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 重粉末，能熔化成为岩浆(\ `*LAVA* <#岩浆(LAVA)【Lava】%20Type:006>`__)。
+**描述:**\ 重粉末，能熔化成为岩浆(\ `*LAVA* <#lava-lava-type-006>`__)。
 
 **熔点:**\ 709.85℃/983k
 
@@ -1447,7 +1446,7 @@ Powders粉末
 雪(SNOW)【Snow】 Type:016
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 轻粉末，冰(\ `*ICE* <#冰(ICE)【Ice】%20Type:013>`__)在压力下破坏形成雪，加热后变成水(\ `*WATR* <#水(WATR)【Water】%20Type:002>`__)。可以使中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)减速。
+**描述:**\ 轻粉末，冰(\ `*ICE* <#ice-ice-type-013>`__)在压力下破坏形成雪，加热后变成水(\ `*WATR* <#watr-water-type-002>`__)。可以使中子(\ `*NEUT* <#neut-neutrons-type-018>`__)减速。
 
 **熔点:**-0.15℃/273k
 
@@ -1469,7 +1468,7 @@ Powders粉末
 盐(SALT)【Salt】 Type:026
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 能溶于水(\ `*WATR* <#水(WATR)【Water】%20Type:002>`__)形成盐水(\ `*SLTW* <#盐水(SLTW)【Salt%20Water】%20Type:027>`__)，较高温度下能熔化，能腐蚀铁(\ `*IRON* <#铁(IRON)【Iron】%20Type:076>`__)变成脆金属(\ `*BMTL* <#脆金属(BMTL)【Breakable%20Metal】%20Type:029>`__)和金属粉(\ `*BRMT* <#金属粉(BRMT)【Broken%20Metal】%20Type:030>`__)。
+**描述:**\ 能溶于水(\ `*WATR* <#watr-water-type-002>`__)形成盐水(\ `*SLTW* <#sltw-salt-water-type-027>`__)，较高温度下能熔化，能腐蚀铁(\ `*IRON* <#iron-iron-type-076>`__)变成脆金属(\ `*BMTL* <#bmtl-breakable-metal-type-029>`__)和金属粉(\ `*BRMT* <#brmt-broken-metal-type-030>`__)。
 
 **熔点:**\ 899.85℃/1173k
 
@@ -1480,8 +1479,8 @@ Powders粉末
 金属粉(BRMT)【Broken Metal】 Type:030
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 重粉末，能导电。如果脆金属(\ `*BMTL* <#脆金属(BMTL)【Breakable%20Metal】%20Type:029>`__)熔化后缓慢冷却就会形成金属粉。在电脉冲(\ `*SPRK* <#电脉冲(SPRK)【Spark】%20Type:015>`__)通过时会升温。被腐蚀的铁(\ `*IRON* <#铁(IRON)【Iron】%20Type:076>`__)或者脆金属也能形成金属粉。另一种方式是将脆金属暴露在高压下使之碎裂。燃烧铝热剂能形成熔融态的脆金属(Molten
-`*BMTL* <#脆金属(BMTL)【Breakable%20Metal】%20Type:029>`__)。
+**描述:**\ 重粉末，能导电。如果脆金属(\ `*BMTL* <#bmtl-breakable-metal-type-029>`__)熔化后缓慢冷却就会形成金属粉。在电脉冲(\ `*SPRK* <#sprk-spark-type-015>`__)通过时会升温。被腐蚀的铁(\ `*IRON* <#iron-iron-type-076>`__)或者脆金属也能形成金属粉。另一种方式是将脆金属暴露在高压下使之碎裂。燃烧铝热剂能形成熔融态的脆金属(Molten
+`*BMTL* <#bmtl-breakable-metal-type-029>`__)。
 
 **导热率:**\ 211
 
@@ -1490,7 +1489,7 @@ Powders粉末
 沙子(SAND)【Sand】 Type:044
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 重粉末，熔化后冷却能形成玻璃(\ `*GLAS* <#玻璃(GLAS)【Glass】%20Type:045>`__)。
+**描述:**\ 重粉末，熔化后冷却能形成玻璃(\ `*GLAS* <#glas-glass-type-045>`__)。
 
 **熔点:**\ 1699.85℃/1973k
 
@@ -1501,11 +1500,11 @@ Powders粉末
 碎玻璃(BGLA)【Broken Glass】 Type:047
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 碎玻璃，熔化后能重新变回玻璃(\ `*GLAS* <#玻璃(GLAS)【Glass】%20Type:045>`__)。光子(\ `*PHOT* <#光子(PHOT)【Photons】%20Type:031>`__)不能通过碎玻璃并且会被散射。
+**描述:**\ 碎玻璃，熔化后能重新变回玻璃(\ `*GLAS* <#glas-glass-type-045>`__)。光子(\ `*PHOT* <#phot-photons-type-031>`__)不能通过碎玻璃并且会被散射。
 
 **熔点:**\ 1699.85℃/1973k
 
-**制取方法:**\ 给玻璃(\ `*GLAS* <#玻璃(GLAS)【Glass】%20Type:045>`__)加压或者加热液晶(\ `*LCRY* <#液晶(LCRY)【Liquid%20Crystal】%20Type:054>`__)可以得到碎玻璃。
+**制取方法:**\ 给玻璃(\ `*GLAS* <#glas-glass-type-045>`__)加压或者加热液晶(\ `*LCRY* <#lcry-liquid-crystal-type-054>`__)可以得到碎玻璃。
 
 **导热率:**\ 150
 
@@ -1514,7 +1513,7 @@ Powders粉末
 酵母(YEST)【Yeast】 Type:063 菌尸(DYST)【Dead Yeast】 Type:064
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 酵母，在特定温度范围(29.85℃/303k~43.85℃/317k,不包括边界值)会繁殖。被中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)轰击或者温度太高(99.85℃/373k以上)会死掉变成菌尸(DYST)。菌尸在更高温度(199.85℃/473k以上)下会变成尘埃(\ `*DUST* <#尘埃(DUST)【Dust】%20Type:001>`__)。在任何温度下，酵母(YEST)触碰到菌尸(DYST)都会死亡。
+**描述:**\ 酵母，在特定温度范围(29.85℃/303k~43.85℃/317k,不包括边界值)会繁殖。被中子(\ `*NEUT* <#neut-neutrons-type-018>`__)轰击或者温度太高(99.85℃/373k以上)会死掉变成菌尸(DYST)。菌尸在更高温度(199.85℃/473k以上)下会变成尘埃(\ `*DUST* <#dust-dust-type-001>`__)。在任何温度下，酵母(YEST)触碰到菌尸(DYST)都会死亡。
 
 **元素参数:**\ 菌尸(DYST)可以燃烧20帧(暂停时修改火焰温度即可点燃)
 
@@ -1534,13 +1533,13 @@ Powders粉末
 寒尘(FRZZ)【Freeze】 Type:100
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 轻粉末，很冷，能立即冻住水。能将水(\ `*WATR* <#水(WATR)【Water】%20Type:002>`__)转变成寒水(\ `*FRZW* <#寒水(FRZW)【Frozen%20Water】%20Type:101>`__)，温度低于-223.15℃/50k时变为可以自动降温的冰(\ `*ICE* <#冰(ICE)【Ice】%20Type:013>`__)，当温度高于零度时变成寒水。寒水能将其他水变成寒水。
+**描述:**\ 轻粉末，很冷，能立即冻住水。能将水(\ `*WATR* <#watr-water-type-002>`__)转变成寒水(\ `*FRZW* <#frzw-frozen-water-type-101>`__)，温度低于-223.15℃/50k时变为可以自动降温的冰(\ `*ICE* <#ice-ice-type-013>`__)，当温度高于零度时变成寒水。寒水能将其他水变成寒水。
 
 **熔点:**\ 0℃/273.15k
 
 **转变温度:**-223.15℃/50k
 
-**压力极限:**\ 1.8pressure，变为雪(\ `*SNOW* <#雪(SNOW)【Snow】%20Type:016>`__)
+**压力极限:**\ 1.8pressure，变为雪(\ `*SNOW* <#snow-snow-type-016>`__)
 
 **导热率:**\ 46
 
@@ -1549,7 +1548,7 @@ Powders粉末
 引力尘(GRAV)【Gravity】 Type:102
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 十分轻的粉末，随着速度改变颜色。接触火焰(\ `*FIRE* <#火焰(FIRE)【Fire】%20Type:004>`__)时燃烧。
+**描述:**\ 十分轻的粉末，随着速度改变颜色。接触火焰(\ `*FIRE* <#fire-fire-type-004>`__)时燃烧。
 
 **导热率:**\ 70
 
@@ -1558,7 +1557,7 @@ Powders粉末
 反引力尘(ANAR)【Anti-Air Particle】 Type:113
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 十分轻的粉尘，它遵循相反的引力/压力/速度定律，遇到冷焰(\ `*CFLM* <#冷焰(CFLM)【Sub-zero%20Flame】%20Type:068>`__)时燃烧。
+**描述:**\ 十分轻的粉尘，它遵循相反的引力/压力/速度定律，遇到冷焰(\ `*CFLM* <#cflm-sub-zero-flame-type-068>`__)时燃烧。
 
 **导热率:**\ 70
 
@@ -1567,7 +1566,7 @@ Powders粉末
 石英砂(PQRT)【Broken Quartz】 Type:133
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 石英砂，可以熔化。能够像石英(\ `*QRTZ* <#石英(QRTZ)【Quartz】%20Type:132>`__)一样散射光子(\ `*PHOT* <#光子(PHOT)【Photons】%20Type:031>`__)。
+**描述:**\ 石英砂，可以熔化。能够像石英(\ `*QRTZ* <#qrtz-quartz-type-132>`__)一样散射光子(\ `*PHOT* <#phot-photons-type-031>`__)。
 
 **熔点:**\ 2300℃/2573.15k
 
@@ -1578,7 +1577,7 @@ Powders粉末
 电渣(BREL)【Broken Electronics】 Type:135
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 使用电磁脉冲武器(\ `*EMP* <#电磁脉冲武器(EMP)【Electromagnetic%20Pulse】%20Type:134>`__)摧毁电子设备留下的物质，不能重铸。能导电。在10pressure以上压力下通电会不断升温，在30pressure以上压力下通电会形成奇异物质(\ `*EXOT* <#奇异物质(EXOT)【Exotic%20Matter】%20Type:145>`__)。
+**描述:**\ 使用电磁脉冲武器(\ `*EMP* <#emp-electromagnetic-pulse-type-134>`__)摧毁电子设备留下的物质，不能重铸。能导电。在10pressure以上压力下通电会不断升温，在30pressure以上压力下通电会形成奇异物质(\ `*EXOT* <#exot-exotic-matter-type-145>`__)。
 
 **导热率:**\ 211
 
@@ -1587,7 +1586,7 @@ Powders粉末
 粘土砂(CLST)【Clay Dust】 Type:155
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 和水结合时产生浆糊(\ `*PSTE* <#浆糊(PSTE)【Paste】%20Type:111%20固体浆糊(PSTS)%20Type:112>`__)。它能自然的结合在一起，温度越低越牢固，在大约-70℃时冻结，顶部就像混凝土一样牢固。
+**描述:**\ 和水结合时产生浆糊(\ `*PSTE* <#pste-paste-type-111-psts-type-112>`__)。它能自然的结合在一起，温度越低越牢固，在大约-70℃时冻结，顶部就像混凝土一样牢固。
 
 **熔点:**\ 982.85℃/1256k
 
@@ -1598,7 +1597,7 @@ Powders粉末
 木屑(SAWD)【Sawdust】 Type:181
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 很轻的粉末，能够浮在水上。可以通过中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)撞击煤粉(\ `*BCOL* <#煤粉(BCOL)【Broken%20Coal】%20Type:073>`__)或用高速(\ :math:`v_{x}^{2} + v_{y}^{2} > 5`)粒子撞击木头(\ `*WOOD* <#木材(WOOD)【Wood】%20Type:017>`__)得到。中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)可以穿过这种元素。同时其他粉末元素不能穿过它，例如你可以在一堆木屑中间放置其他粉末而不用担心它们会掉下来。
+**描述:**\ 很轻的粉末，能够浮在水上。可以通过中子(\ `*NEUT* <#neut-neutrons-type-018>`__)撞击煤粉(\ `*BCOL* <#bcol-broken-coal-type-073>`__)或用高速(\ :math:`v_{x}^{2} + v_{y}^{2} > 5`)粒子撞击木头(\ `*WOOD* <#wood-wood-type-017>`__)得到。中子(\ `*NEUT* <#neut-neutrons-type-018>`__)可以穿过这种元素。同时其他粉末元素不能穿过它，例如你可以在一堆木屑中间放置其他粉末而不用担心它们会掉下来。
 
 **导热率:**\ 70
 
@@ -1610,7 +1609,7 @@ Solids固体
 粘土(GOO)【Goo】 Type:012
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 固体，在压力下会变形消失。中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)同样可以使粘土轻微变形。
+**描述:**\ 固体，在压力下会变形消失。中子(\ `*NEUT* <#neut-neutrons-type-018>`__)同样可以使粘土轻微变形。
 
 **压力极限:**\ 1pressure
 
@@ -1621,7 +1620,7 @@ Solids固体
 冰(ICE)【Ice】 Type:013
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 固体，冷冻的水，在压力下会破碎变成雪(\ `*SNOW* <#雪(SNOW)【Snow】%20Type:016>`__)。可以熔化。可以使中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)减速。
+**描述:**\ 固体，冷冻的水，在压力下会破碎变成雪(\ `*SNOW* <#snow-snow-type-016>`__)。可以熔化。可以使中子(\ `*NEUT* <#neut-neutrons-type-018>`__)减速。
 
 **熔点:**\ 0℃/273.15k
 
@@ -1634,7 +1633,7 @@ Solids固体
 木材(WOOD)【Wood】 Type:017
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 固体，可燃物，允许中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)通过。以一般速度燃烧。
+**描述:**\ 固体，可燃物，允许中子(\ `*NEUT* <#neut-neutrons-type-018>`__)通过。以一般速度燃烧。
 
 **燃点:**\ 599.85℃/873k
 
@@ -1645,7 +1644,7 @@ Solids固体
 植物(PLNT)【Plant】 Type:020
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 植物，吸收水分生长。可燃物。在中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)轰击下变成木材(\ `*WOOD* <#木材(WOOD)【Wood】%20Type:017>`__)。盐水(\ `*SLTW* <#盐水(SLTW)【Salt%20Water】%20Type:027>`__)会破坏植物。可以吸收二氧化碳(\ `*CO2* <#二氧化碳(CO2)【Carbon%20Dioxide】%20Type:080>`__)或者烟(\ `*SMKE* <#烟(SMKE)【Smoke】%20Type:057>`__)并产生氧气，以模拟光合作用。火柴人(\ `*STKM* <#火柴人(STKM)【Stickman】%20Type:055%20火柴人出生点(SPWN)%20Type:118>`__/`*STK2* <#火柴人二号(STK2)【Second%20Stickman】Type:128火柴人二号出生点(SPWN2)%20Type:117>`__)可以吃(走近)植物来增加生命值。
+**描述:**\ 植物，吸收水分生长。可燃物。在中子(\ `*NEUT* <#neut-neutrons-type-018>`__)轰击下变成木材(\ `*WOOD* <#wood-wood-type-017>`__)。盐水(\ `*SLTW* <#sltw-salt-water-type-027>`__)会破坏植物。可以吸收二氧化碳(\ `*CO2* <#co2-carbon-dioxide-type-080>`__)或者烟(\ `*SMKE* <#smke-smoke-type-057>`__)并产生氧气，以模拟光合作用。火柴人(\ `*STKM* <#stkm-stickman-type-055-spwn-type-118>`__/`*STK2* <#stk2-second-stickmantype-128-spwn2-type-117>`__)可以吃(走近)植物来增加生命值。
 
 **燃点:**\ 299.85℃/573k
 
@@ -1656,13 +1655,13 @@ Solids固体
 脆金属(BMTL)【Breakable Metal】 Type:029
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 可以破坏的金属。在一定压力下破坏，高温下熔化。在电脉冲通过时会升温。经常用作可破坏建筑的建筑材料。仅能允许一半的光子(\ `*PHOT* <#光子(PHOT)【Photons】%20Type:031>`__)通过。
+**描述:**\ 可以破坏的金属。在一定压力下破坏，高温下熔化。在电脉冲通过时会升温。经常用作可破坏建筑的建筑材料。仅能允许一半的光子(\ `*PHOT* <#phot-photons-type-031>`__)通过。
 
 **熔点:**\ 999.85℃/1273k
 
 **压力极限:**\ 1pressure
 
-**制取方法:**\ 氧气(\ `*OXYG* <#氧气(OXYG)【Oxygen】%20Type:061>`__)+最高的温度、压力+引力。
+**制取方法:**\ 氧气(\ `*OXYG* <#oxyg-oxygen-type-061>`__)+最高的温度、压力+引力。
 
 **导热率:**\ 251
 
@@ -1671,7 +1670,7 @@ Solids固体
 蜡(WAX)【Wax】 Type:033
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 蜡，加热会融化。反射中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)，在光子(\ `*PHOT* <#光子(PHOT)【Photons】%20Type:031>`__)作用下会融化。可燃。
+**描述:**\ 蜡，加热会融化。反射中子(\ `*NEUT* <#neut-neutrons-type-018>`__)，在光子(\ `*PHOT* <#phot-photons-type-031>`__)作用下会融化。可燃。
 
 **熔点:**\ 45.85℃/319k
 
@@ -1682,7 +1681,7 @@ Solids固体
 玻璃(GLAS)【Glass】 Type:045
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 固体，当压力变化>0.25pressure时会破碎，可以熔化。光子(\ `*PHOT* <#光子(PHOT)【Photons】%20Type:031>`__)可以通过玻璃并分散成不同波长的光。玻璃不能被酸(\ `*ACID* <#酸(ACID)【Acid】%20Type:021>`__/`*CAUS* <#酸气(CAUS)【Caustic%20Gas】%20Type:086>`__)腐蚀。中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)通过玻璃时会产生单色光子(\ `*PHOT* <#光子(PHOT)【Photons】%20Type:031>`__)。电子(\ `*ELEC* <#电子(ELEC)【Electrons】%20Type:136>`__)与玻璃接触时会生成无害的火花(\ `*EMBR* <#炸药(BOMB)【Bomb】%20Type:129%20火花(EMBR)【Ember】%20Type:147>`__)。
+**描述:**\ 固体，当压力变化>0.25pressure时会破碎，可以熔化。光子(\ `*PHOT* <#phot-photons-type-031>`__)可以通过玻璃并分散成不同波长的光。玻璃不能被酸(\ `*ACID* <#acid-acid-type-021>`__/`*CAUS* <#caus-caustic-gas-type-086>`__)腐蚀。中子(\ `*NEUT* <#neut-neutrons-type-018>`__)通过玻璃时会产生单色光子(\ `*PHOT* <#phot-photons-type-031>`__)。电子(\ `*ELEC* <#elec-electrons-type-136>`__)与玻璃接触时会生成无害的火花(\ `*EMBR* <#bomb-bomb-type-129-embr-ember-type-147>`__)。
 
 **熔点:**\ 1699.85℃/1973k
 
@@ -1704,7 +1703,7 @@ Solids固体
 煤(COAL)【Coal】 Type:059
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 煤，只能用明火点燃，可以缓慢燃烧。加热时会慢慢白热化，停止加热后会自身冷却变为浅灰色。这个性质在煤粉(\ `*BCOL* <#煤粉(BCOL)【Broken%20Coal】%20Type:073>`__)中也同样存在。被中子轰击时会变成木材(\ `*WOOD* <#木材(WOOD)【Wood】%20Type:017>`__)，会吸收光子。在4.31pressure以上压力下会碎裂变成煤粉(\ `*BCOL* <#煤粉(BCOL)【Broken%20Coal】%20Type:073>`__)。
+**描述:**\ 煤，只能用明火点燃，可以缓慢燃烧。加热时会慢慢白热化，停止加热后会自身冷却变为浅灰色。这个性质在煤粉(\ `*BCOL* <#bcol-broken-coal-type-073>`__)中也同样存在。被中子轰击时会变成木材(\ `*WOOD* <#wood-wood-type-017>`__)，会吸收光子。在4.31pressure以上压力下会碎裂变成煤粉(\ `*BCOL* <#bcol-broken-coal-type-073>`__)。
 
 **元素参数:**\ life小于100时燃烧，Tmp小于40时碎裂
 
@@ -1717,11 +1716,11 @@ Solids固体
 砖块(BRCK)【Brick】 Type:067
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 可破坏的建筑材料。是石粉的固体形式，不能导电，可以熔化。在一定压力下会碎裂成石粉(\ `*STNE* <#石粉(STNE)【Stone】%20Type:005>`__)。
+**描述:**\ 可破坏的建筑材料。是石粉的固体形式，不能导电，可以熔化。在一定压力下会碎裂成石粉(\ `*STNE* <#stne-stone-type-005>`__)。
 
-**元素参数:**\ 修改其Tmp值为1可以制得像可控动力管(\ `*PPIP* <#可控动力管(PPIP)【Powered%20Pipe】%20Type:161>`__)那样的蓝光砖块。
+**元素参数:**\ 修改其Tmp值为1可以制得像可控动力管(\ `*PPIP* <#ppip-powered-pipe-type-161>`__)那样的蓝光砖块。
 
-**制取方法:**\ 浆糊(\ `*PSTE* <#浆糊(PSTE)【Paste】%20Type:111%20固体浆糊(PSTS)%20Type:112>`__)加热至480℃/753.15k可以转化成砖块。
+**制取方法:**\ 浆糊(\ `*PSTE* <#pste-paste-type-111-psts-type-112>`__)加热至480℃/753.15k可以转化成砖块。
 
 **压力极限:**\ 8.8pressure
 
@@ -1734,7 +1733,7 @@ Solids固体
 铁(IRON)【Iron】 Type:076
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 会被以下物质腐蚀:盐(\ `*SALT* <#盐(SALT)【Salt】%20Type:026>`__)、盐水(\ `*SLTW* <#盐水(SLTW)【Salt%20Water】%20Type:027>`__)、氧气(\ `*OXYG* <#氧气(OXYG)【Oxygen】%20Type:061>`__)、水(\ `*WATR* <#水(WATR)【Water】%20Type:002>`__)、液氧(\ `*LOXY* <#液氧(LOXY)【Liquid%20Oxygen】%20Type:060>`__)，腐蚀后变成脆金属(\ `*BMTL* <#脆金属(BMTL)【Breakable%20Metal】%20Type:029>`__)。可用于电解水。
+**描述:**\ 会被以下物质腐蚀:盐(\ `*SALT* <#salt-salt-type-026>`__)、盐水(\ `*SLTW* <#sltw-salt-water-type-027>`__)、氧气(\ `*OXYG* <#oxyg-oxygen-type-061>`__)、水(\ `*WATR* <#watr-water-type-002>`__)、液氧(\ `*LOXY* <#loxy-liquid-oxygen-type-060>`__)，腐蚀后变成脆金属(\ `*BMTL* <#bmtl-breakable-metal-type-029>`__)。可用于电解水。
 
 **熔点:**\ 1413.85℃/1687k
 
@@ -1745,7 +1744,7 @@ Solids固体
 干冰(DRIC)【Dry Ice】 Type:081
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 干冰，当二氧化碳(\ `*CO2* <#二氧化碳(CO2)【Carbon%20Dioxide】%20Type:080>`__)温度为-78.5℃以下时形成。
+**描述:**\ 干冰，当二氧化碳(\ `*CO2* <#co2-carbon-dioxide-type-080>`__)温度为-78.5℃以下时形成。
 
 **升华点:**-77.5℃/195.65k
 
@@ -1756,7 +1755,7 @@ Solids固体
 海绵(SPNG)【Sponge】 Type:090
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 可以从多种元素中(水\ `*WATR* <#水(WATR)【Water】%20Type:002>`__\ 、盐水\ `*SLTW* <#盐水(SLTW)【Salt%20Water】%20Type:027>`__\ 、蒸馏水\ `*DSTW* <#蒸馏水(DSTW)【Distilled%20Water】%20Type:025>`__\ 、寒水\ `*FRZW* <#寒水(FRZW)【Frozen%20Water】%20Type:101>`__\ 、苏打水\ `*BUBW* <#苏打水(BUBW)【Bubbled%20Water(Carbonated%20Water)】%20Type:082>`__\ 、胶体\ `*PSTE* <#浆糊(PSTE)【Paste】%20Type:111%20固体浆糊(PSTS)%20Type:112>`__)吸水，吸水之后颜色变暗。暴露在明火下或温度达到燃点时燃烧。高压下或灼烧时会释放出吸收的水。
+**描述:**\ 可以从多种元素中(水\ `*WATR* <#watr-water-type-002>`__\ 、盐水\ `*SLTW* <#sltw-salt-water-type-027>`__\ 、蒸馏水\ `*DSTW* <#dstw-distilled-water-type-025>`__\ 、寒水\ `*FRZW* <#frzw-frozen-water-type-101>`__\ 、苏打水\ `*BUBW* <#bubw-bubbled-water-carbonated-water-type-082>`__\ 、胶体\ `*PSTE* <#pste-paste-type-111-psts-type-112>`__)吸水，吸水之后颜色变暗。暴露在明火下或温度达到燃点时燃烧。高压下或灼烧时会释放出吸收的水。
 
 **燃点:**\ 2456.85℃/2730k
 
@@ -1767,7 +1766,7 @@ Solids固体
 霜(RIME)【Rime】 Type:091
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 霜，原为隐藏元素，可以通电升华成雾(\ `*FOG* <#雾(FOG)【Fog】%20Type:092>`__)。
+**描述:**\ 霜，原为隐藏元素，可以通电升华成雾(\ `*FOG* <#fog-fog-type-092>`__)。
 
 **熔点:**\ 0℃/273.15k
 
@@ -1780,7 +1779,7 @@ Solids固体
 藤蔓(VINE)【Vine】 Type:114
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 藤蔓，吸水生长，中心部分是植物(\ `*PLNT* <#植物(PLNT)【Plant】%20Type:020>`__)，暴露在中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)下会变成木材(\ `*WOOD* <#木材(WOOD)【Wood】%20Type:017>`__)并向中子方向生长。藤蔓以一种半随机方式生长，形状有点像草。
+**描述:**\ 藤蔓，吸水生长，中心部分是植物(\ `*PLNT* <#plnt-plant-type-020>`__)，暴露在中子(\ `*NEUT* <#neut-neutrons-type-018>`__)下会变成木材(\ `*WOOD* <#wood-wood-type-017>`__)并向中子方向生长。藤蔓以一种半随机方式生长，形状有点像草。
 
 **燃点:**\ 299.85℃/573k
 
@@ -1800,7 +1799,7 @@ Solids固体
 滤镜(FILT)【Filter】 Type:125
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 颜色会随温度改变(由冷到热依次:深蓝、浅蓝、绿色、橙色、棕色、红色)，可以改变光子(\ `*PHOT* <#光子(PHOT)【Photons】%20Type:031>`__)的颜色。改变Tmp值可以改变作用模式，如下:
+**描述:**\ 颜色会随温度改变(由冷到热依次:深蓝、浅蓝、绿色、橙色、棕色、红色)，可以改变光子(\ `*PHOT* <#phot-photons-type-031>`__)的颜色。改变Tmp值可以改变作用模式，如下:
 
 +-----------+------------------------------------+
 | Tmp值     | 作用模式                           |
@@ -1826,7 +1825,7 @@ Solids固体
 | 9         | 随机模式                           |
 +-----------+------------------------------------+
 
-当射线(\ `*BRAY* <#A射线发射器(ARAY)【A-type%20Ray%20Emitter】%20Type:126%20B射线(BRAY)%20Type:127>`__)经过时同样也会染上滤镜的颜色。
+当射线(\ `*BRAY* <#a-aray-a-type-ray-emitter-type-126-b-bray-type-127>`__)经过时同样也会染上滤镜的颜色。
 
 滤镜不会受到环境温度的影响(即不受热辐射的影响)。
 
@@ -1837,7 +1836,7 @@ Solids固体
 石英(QRTZ)【Quartz】 Type:132
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 接近绝对零度时会变得很脆并碎裂成石英砂(\ `*PQRT* <#石英砂(PQRT)【Broken%20Quartz】%20Type:133>`__)，允许一部分光子(\ `*PHOT* <#光子(PHOT)【Photons】%20Type:031>`__)通过并散射掉另一部分。高温时缓慢熔化。遇到盐水(\ `*SLTW* <#盐水(SLTW)【Salt%20Water】%20Type:027>`__)时会缓慢生长，修改Ctype值可以改变其生长速度。在压力下能够导电。
+**描述:**\ 接近绝对零度时会变得很脆并碎裂成石英砂(\ `*PQRT* <#pqrt-broken-quartz-type-133>`__)，允许一部分光子(\ `*PHOT* <#phot-photons-type-031>`__)通过并散射掉另一部分。高温时缓慢熔化。遇到盐水(\ `*SLTW* <#sltw-salt-water-type-027>`__)时会缓慢生长，修改Ctype值可以改变其生长速度。在压力下能够导电。
 
 **熔点:**\ 2300℃/2573.15k
 
@@ -1850,7 +1849,7 @@ Solids固体
 钛(TTAN)【Titanium】 Type:144
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 金属固体，坚固的材料。熔点很高，能导电。通电时允许压力通过。中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)通过时会被吸收50%。未通电时不传导压力，不论任何厚度都可以阻隔压力。
+**描述:**\ 金属固体，坚固的材料。熔点很高，能导电。通电时允许压力通过。中子(\ `*NEUT* <#neut-neutrons-type-018>`__)通过时会被吸收50%。未通电时不传导压力，不论任何厚度都可以阻隔压力。
 
 **熔点:**\ 1667.85℃/1941k
 
@@ -1861,7 +1860,7 @@ Solids固体
 金(GOLD)【Gold】 Type:170
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 金属，十分牢固，具有高熔点，抗腐蚀(但通电时会受到酸的腐蚀)，可以保护铁(\ `*IRON* <#铁(IRON)【Iron】%20Type:076>`__)免受腐蚀。和钛(\ `*TTAN* <#钛(TTAN)【Titanium】%20Type:144>`__)一样，当中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)通过时会损失一半。具有良好的导电性，比一般导体导电速度快50%(只有超导线\ `*INST* <#超导线(INST)【Instant%20Conductor%20(Instantly%20Conducts)】%20Type:106>`__\ 和电极\ `*ETRD* <#电极(ETRD)【Electrode】%20Type:050>`__\ 比它快)，可以允许电脉冲(\ `*SPRK* <#电脉冲(SPRK)【Spark】%20Type:015>`__)穿过3像素的空隙传导。
+**描述:**\ 金属，十分牢固，具有高熔点，抗腐蚀(但通电时会受到酸的腐蚀)，可以保护铁(\ `*IRON* <#iron-iron-type-076>`__)免受腐蚀。和钛(\ `*TTAN* <#ttan-titanium-type-144>`__)一样，当中子(\ `*NEUT* <#neut-neutrons-type-018>`__)通过时会损失一半。具有良好的导电性，比一般导体导电速度快50%(只有超导线\ `*INST* <#inst-instant-conductor-instantly-conducts-type-106>`__\ 和电极\ `*ETRD* <#etrd-electrode-type-050>`__\ 比它快)，可以允许电脉冲(\ `*SPRK* <#sprk-spark-type-015>`__)穿过3像素的空隙传导。
 
 **熔点:**\ 1063.85℃/1337k
 
@@ -1872,9 +1871,9 @@ Solids固体
 陶瓷(CRMC) 【Ceramic】 Type:179
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述：**\ 91.0beta后加入，固体，受压时熔点会增加。允许中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)、引力子(\ `*GRVT* <#引力子(GRVT)(90.0beta版本后出现)【Graviton】%20Type:177>`__)以及质子(\ `*PROT* <#质子(PROT)【Protons】%20Type:173>`__)通过，会轻微散射光子(\ `*PHOT* <#光子(PHOT)【Photons】%20Type:031>`__)。在一定的负压下(\ :math:`\leq`-30pressure)会转变成粘土砂(`*CLST* <#粘土砂(CLST)【Clay%20Dust】%20Type:155>`__)。
+**描述：**\ 91.0beta后加入，固体，受压时熔点会增加。允许中子(\ `*NEUT* <#neut-neutrons-type-018>`__)、引力子(\ `*GRVT* <#grvt-90-0beta-graviton-type-177>`__)以及质子(\ `*PROT* <#prot-protons-type-173>`__)通过，会轻微散射光子(\ `*PHOT* <#phot-photons-type-031>`__)。在一定的负压下(\ :math:`\leq`-30pressure)会转变成粘土砂(`*CLST* <#clst-clay-dust-type-155>`__)。
 
-**制取方法:**\ 熔融的石英(\ `*QRTZ* <#石英(QRTZ)【Quartz】%20Type:132>`__)+熔融的粘土砂(\ `*CLST* <#粘土砂(CLST)【Clay%20Dust】%20Type:155>`__)。
+**制取方法:**\ 熔融的石英(\ `*QRTZ* <#qrtz-quartz-type-132>`__)+熔融的粘土砂(\ `*CLST* <#clst-clay-dust-type-155>`__)。
 
 **熔点：**\ 0 pressure，2614.00℃/2887.15k，压力每升高1熔点升高10°C。
 
@@ -1886,7 +1885,7 @@ Solids固体
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **描述：**
-Snapshot79之后加入，理想的导热体，拥有最高的导热值(251)。不能被酸腐蚀，也不可以用常规方法熔化。使用闪电(\ `*LIGH* <#闪电(LIGH)【Lightning】%20Type:087>`__)可以熔化导热体。
+Snapshot79之后加入，理想的导热体，拥有最高的导热值(251)。不能被酸腐蚀，也不可以用常规方法熔化。使用闪电(\ `*LIGH* <#ligh-lightning-type-087>`__)可以熔化导热体。
 
 **熔点：**\ 1614.00℃/1887.15k
 
@@ -1900,31 +1899,31 @@ Radioactive放射性物质
 中子(NEUT)【Neutrons】 Type:018
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 不受重力影响的粒子，可以随意移动。可以由钚(\ `*PLUT* <#钚(PLUT)【Plutonium】%20Type:019>`__)或重水(\ `*DEUT* <#重水(DEUT)【Deuterium%20Oxide】%20Type:095>`__)裂变产生。中子受万有引力的作用。可以与某些物质作用，如:
+**描述:**\ 不受重力影响的粒子，可以随意移动。可以由钚(\ `*PLUT* <#plut-plutonium-type-019>`__)或重水(\ `*DEUT* <#deut-deuterium-oxide-type-095>`__)裂变产生。中子受万有引力的作用。可以与某些物质作用，如:
 
-使钚(\ `*PLUT* <#钚(PLUT)【Plutonium】%20Type:019>`__)裂变
+使钚(\ `*PLUT* <#plut-plutonium-type-019>`__)裂变
 
-使重水(\ `*DEUT* <#重水(DEUT)【Deuterium%20Oxide】%20Type:095>`__)裂变
+使重水(\ `*DEUT* <#deut-deuterium-oxide-type-095>`__)裂变
 
-使黑火药(\ `*GUN* <#黑火药(GUN)【Gunpowder】%20Type:007>`__)变成尘埃(\ `*DUST* <#尘埃(DUST)【Dust】%20Type:001>`__)
+使黑火药(\ `*GUN* <#gun-gunpowder-type-007>`__)变成尘埃(\ `*DUST* <#dust-dust-type-001>`__)
 
-使植物(\ `*PLNT* <#植物(PLNT)【Plant】%20Type:020>`__)变成木材(\ `*WOOD* <#木材(WOOD)【Wood】%20Type:017>`__)
+使植物(\ `*PLNT* <#plnt-plant-type-020>`__)变成木材(\ `*WOOD* <#wood-wood-type-017>`__)
 
-使尘埃(\ `*DUST* <#尘埃(DUST)【Dust】%20Type:001>`__)变成传统烟花(\ `*FWRK* <#传统烟花(FWRK)【Original%20Fireworks】%20Type:098>`__)
+使尘埃(\ `*DUST* <#dust-dust-type-001>`__)变成传统烟花(\ `*FWRK* <#fwrk-original-fireworks-type-098>`__)
 
-使硝化甘油(\ `*NITR* <#硝化甘油(NITR)【Nitroglycerin】%20Type:008>`__)变成石油气(\ `*GAS* <#石油气(GAS)【Gas】%20Type:010>`__)
+使硝化甘油(\ `*NITR* <#nitr-nitroglycerin-type-008>`__)变成石油气(\ `*GAS* <#gas-gas-type-010>`__)
 
-使C-4塑胶炸药(\ `*C-4* <#C-4塑胶炸药(C-4)【C-4】%20Type:011>`__)变成粘土(\ `*GOO* <#粘土(GOO)【Goo】%20Type:012>`__)
+使C-4塑胶炸药(\ `*C-4* <#c-4-c-4-c-4-type-011>`__)变成粘土(\ `*GOO* <#goo-goo-type-012>`__)
 
-使水(\ `*WATR* <#水(WATR)【Water】%20Type:002>`__)变成蒸馏水(\ `*DSTW* <#蒸馏水(DSTW)【Distilled%20Water】%20Type:025>`__)
+使水(\ `*WATR* <#watr-water-type-002>`__)变成蒸馏水(\ `*DSTW* <#dstw-distilled-water-type-025>`__)
 
-使酸(\ `*ACID* <#酸(ACID)【Acid】%20Type:021>`__)变成同位素-Z(\ `*ISOZ* <#同位素-Z(ISOZ)【Isotope-Z】%20Type:107>`__)
+使酸(\ `*ACID* <#acid-acid-type-021>`__)变成同位素-Z(\ `*ISOZ* <#z-isoz-isotope-z-type-107>`__)
 
-使柴油(\ `*DESL* <#柴油(DESL)【Diesel】%20Type:058>`__)变成石油气
+使柴油(\ `*DESL* <#desl-diesel-type-058>`__)变成石油气
 
-使酵母(\ `*YEST* <#酵母(YEST)【Yeast】%20Type:063%20菌尸(DYST)【Dead%20Yeast】%20Type:064>`__)变成菌尸(\ `*DYST* <#酵母(YEST)【Yeast】%20Type:063%20菌尸(DYST)【Dead%20Yeast】%20Type:064>`__)
+使酵母(\ `*YEST* <#yest-yeast-type-063-dyst-dead-yeast-type-064>`__)变成菌尸(\ `*DYST* <#yest-yeast-type-063-dyst-dead-yeast-type-064>`__)
 
-使煤(\ `*COAL* <#煤(COAL)【Coal】%20Type:059>`__)变成木材(\ `*WOOD* <#木材(WOOD)【Wood】%20Type:017>`__)
+使煤(\ `*COAL* <#coal-coal-type-059>`__)变成木材(\ `*WOOD* <#wood-wood-type-017>`__)
 
 **存在时间(life):**\ 1000以内数值随机。
 
@@ -1935,8 +1934,8 @@ Radioactive放射性物质
 钚(PLUT)【Plutonium】 Type:019
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 裂变，在压力下、被闪电击中或大量的中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)轰击时更不稳定。反应产物是铀(\ `*URAN* <#铀(URAN)【Uranium】%20Type:032>`__)、中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)、熔融态的钚(Molten
-PLUT)，并带来最高的温度和少量的火焰。冷却之后将会形成石粉(\ `*STNE* <#石粉(STNE)【Stone】%20Type:005>`__)。会杀死火柴人(\ `*STKM* <#火柴人(STKM)【Stickman】%20Type:055%20火柴人出生点(SPWN)%20Type:118>`__)。
+**描述:**\ 裂变，在压力下、被闪电击中或大量的中子(\ `*NEUT* <#neut-neutrons-type-018>`__)轰击时更不稳定。反应产物是铀(\ `*URAN* <#uran-uranium-type-032>`__)、中子(\ `*NEUT* <#neut-neutrons-type-018>`__)、熔融态的钚(Molten
+PLUT)，并带来最高的温度和少量的火焰。冷却之后将会形成石粉(\ `*STNE* <#stne-stone-type-005>`__)。会杀死火柴人(\ `*STKM* <#stkm-stickman-type-055-spwn-type-118>`__)。
 
 **导热率:**\ 251
 
@@ -1945,9 +1944,9 @@ PLUT)，并带来最高的温度和少量的火焰。冷却之后将会形成石
 光子(PHOT)【Photons】 Type:031
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 沿直线传播，不受重力影响，受牛顿万有引力影响。可以被反射，或散射。用于点燃物质或传递热量。经过滤镜(\ `*FILT* <#滤镜(FILT)【Filter】%20Type:125>`__)时会改变颜色，经过棱镜时会色散。透过非隐形状态下的虚无(\ `*INVS* <#虚无(INVS)【Invisible】%20Type:115>`__)时会转变成中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)。透过奇特气体/液体/固体(\ `*BIZG/BIZR/BIZS* <#奇特液体(BIZR)Type:103奇特气体(BIZG)Type:104奇特固体(BIZS)【Bizarre】Type:105>`__)时会转换成电子(\ `*ELEC* <#电子(ELEC)【Electrons】%20Type:136>`__)。
+**描述:**\ 沿直线传播，不受重力影响，受牛顿万有引力影响。可以被反射，或散射。用于点燃物质或传递热量。经过滤镜(\ `*FILT* <#filt-filter-type-125>`__)时会改变颜色，经过棱镜时会色散。透过非隐形状态下的虚无(\ `*INVS* <#invs-invisible-type-115>`__)时会转变成中子(\ `*NEUT* <#neut-neutrons-type-018>`__)。透过奇特气体/液体/固体(\ `*BIZG/BIZR/BIZS* <#bizr-type-103-bizg-type-104-bizs-bizarretype-105>`__)时会转换成电子(\ `*ELEC* <#elec-electrons-type-136>`__)。
 
-**相关反应:**\ 光子(PHOT)+氢气(\ `*HYGH* <#氢气(HYGN)【Hydrogen】%20Type:148>`__)=质子(\ `*PROT* <#质子(PROT)【Protons】%20Type:173>`__)+电子(\ `*ELEC* <#电子(ELEC)【Electrons】%20Type:136>`__)
+**相关反应:**\ 光子(PHOT)+氢气(\ `*HYGH* <#hygn-hydrogen-type-148>`__)=质子(\ `*PROT* <#prot-protons-type-173>`__)+电子(\ `*ELEC* <#elec-electrons-type-136>`__)
 
 存在时间(life):680帧
 
@@ -1976,9 +1975,9 @@ PLUT)，并带来最高的温度和少量的火焰。冷却之后将会形成石
 重水(DEUT)【Deuterium Oxide】 Type:095
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 热胀冷缩，受热时膨胀颜色变暗，受冷时收缩颜色变浅。只能通过中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)、闪电(\ `*LIGH* <#闪电(LIGH)【Lightning】%20Type:087>`__/`*THDR* <#电光火球/球状闪电(THDR)【Thunder】%20Type:048>`__)或高爆炸药(\ `*DEST* <#高爆炸药(DEST)【Destructive%20Bomb】%20Type:089>`__)激发，会产生大量的中子和高压。受热时最多可以膨胀6000倍，在负压下不能进行裂变反应。电子(\ `*ELEC* <#电子(ELEC)【Electrons】%20Type:136>`__)能使重水降温直到绝对零度。也可以通过施加引力来压缩重水。
+**描述:**\ 热胀冷缩，受热时膨胀颜色变暗，受冷时收缩颜色变浅。只能通过中子(\ `*NEUT* <#neut-neutrons-type-018>`__)、闪电(\ `*LIGH* <#ligh-lightning-type-087>`__/`*THDR* <#thdr-thunder-type-048>`__)或高爆炸药(\ `*DEST* <#dest-destructive-bomb-type-089>`__)激发，会产生大量的中子和高压。受热时最多可以膨胀6000倍，在负压下不能进行裂变反应。电子(\ `*ELEC* <#elec-electrons-type-136>`__)能使重水降温直到绝对零度。也可以通过施加引力来压缩重水。
 
-**制取:**\ 荧光液(\ `*GLOW* <#荧光液(GLOW)【Glow】%20Type:066>`__)+水(\ `*WATR* <#水(WATR)【Water】%20Type:002>`__)=重水(DEUT)
+**制取:**\ 荧光液(\ `*GLOW* <#glow-glow-type-066>`__)+水(\ `*WATR* <#watr-water-type-002>`__)=重水(DEUT)
 
 **元素参数:**\ life值代表压缩程度，数值越大，压缩程度越高
 
@@ -1989,7 +1988,7 @@ PLUT)，并带来最高的温度和少量的火焰。冷却之后将会形成石
 迁跃粉(WARP)【Warp】 Type:096
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 不可见的气体，会随机将接触到的物质传送出去(除了钻石\ `*DMND* <#钻石(DMND)【Diamond】%20Type:028>`__\ 、火柴人\ `*STKM* <#火柴人(STKM)【Stickman】%20Type:055%20火柴人出生点(SPWN)%20Type:118>`__/`*STK2* <#火柴人二号(STK2)【Second%20Stickman】Type:128火柴人二号出生点(SPWN2)%20Type:117>`__\ 、复制体\ `*CLNE* <#复制体(CLNE)【Clone】%20Type:009>`__/`*BCLN* <#可破坏复制体(BCLN)【Breakable%20Clone】%20Type:093>`__/`*PCLN* <#可控复制体(PCLN)【Powered%20Clone】%20Type:074>`__)，运动方式和中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)类似，存在时间很短，只有几秒钟。
+**描述:**\ 不可见的气体，会随机将接触到的物质传送出去(除了钻石\ `*DMND* <#dmnd-diamond-type-028>`__\ 、火柴人\ `*STKM* <#stkm-stickman-type-055-spwn-type-118>`__/`*STK2* <#stk2-second-stickmantype-128-spwn2-type-117>`__\ 、复制体\ `*CLNE* <#clne-clone-type-009>`__/`*BCLN* <#bcln-breakable-clone-type-093>`__/`*PCLN* <#pcln-powered-clone-type-074>`__)，运动方式和中子(\ `*NEUT* <#neut-neutrons-type-018>`__)类似，存在时间很短，只有几秒钟。
 
 **导热率:**\ 100
 
@@ -1998,11 +1997,11 @@ PLUT)，并带来最高的温度和少量的火焰。冷却之后将会形成石
 同位素-Z(ISOZ)【Isotope-Z】 Type:107
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 放射性液体，可以被光子(\ `*PHOT* <#光子(PHOT)【Photons】%20Type:031>`__)或负压激发，会释放出更多的光子。
+**描述:**\ 放射性液体，可以被光子(\ `*PHOT* <#phot-photons-type-031>`__)或负压激发，会释放出更多的光子。
 
 **凝固点:**-113.15℃/160k
 
-**制取方法:**\ 酸(\ `*ACID* <#酸(ACID)【Acid】%20Type:021>`__)被中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)轰击后会形成同位素-Z
+**制取方法:**\ 酸(\ `*ACID* <#acid-acid-type-021>`__)被中子(\ `*NEUT* <#neut-neutrons-type-018>`__)轰击后会形成同位素-Z
 
 **导热率:**\ 29
 
@@ -2011,7 +2010,7 @@ PLUT)，并带来最高的温度和少量的火焰。冷却之后将会形成石
 固态同位素-Z(ISZS)【Solid ISOZ】 Type:108
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 会随时间流逝慢慢衰减成光子(\ `*PHOT* <#光子(PHOT)【Photons】%20Type:031>`__)，负压会加快衰变速度，和钚(\ *PLUT*)的性质相反。可以熔化成液态，这通常会在衰变过程中发生。
+**描述:**\ 会随时间流逝慢慢衰减成光子(\ `*PHOT* <#phot-photons-type-031>`__)，负压会加快衰变速度，和钚(\ *PLUT*)的性质相反。可以熔化成液态，这通常会在衰变过程中发生。
 
 **熔点:**\ 26.85℃/300k
 
@@ -2022,7 +2021,7 @@ PLUT)，并带来最高的温度和少量的火焰。冷却之后将会形成石
 奇点(SING)【Singularity】 Type:131
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 会产生超低压的粉末，可以破坏其它物质，本质上是粉末状的黑洞。吃下过多的物质之后，奇点会爆炸，产生中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)和电子(\ `*ELEC* <#电子(ELEC)【Electrons】%20Type:136>`__)。使用控制台可以立即使奇点爆炸(set
+**描述:**\ 会产生超低压的粉末，可以破坏其它物质，本质上是粉末状的黑洞。吃下过多的物质之后，奇点会爆炸，产生中子(\ `*NEUT* <#neut-neutrons-type-018>`__)和电子(\ `*ELEC* <#elec-electrons-type-136>`__)。使用控制台可以立即使奇点爆炸(set
 life sing 0 :: set Tmp sing 255)。关闭空气压力会导致奇点直接消失。
 
 **导热率:**\ 70
@@ -2032,7 +2031,7 @@ life sing 0 :: set Tmp sing 255)。关闭空气压力会导致奇点直接消失
 电子(ELEC)【Electrons】 Type:136
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 一种能量粒子，有和中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)一样的运动方式，但是速度不会渐渐变慢。电子会给触碰到的导电物质一个电脉冲。和中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)接触会形成氢气。电子也可以用于电解水。在Snapshot中，电子接触荧光液(\ `*GLOW* <#荧光液(GLOW)【Glow】%20Type:066>`__)后会转变成光子(\ `*PHOT* <#光子(PHOT)【Photons】%20Type:031>`__)。
+**描述:**\ 一种能量粒子，有和中子(\ `*NEUT* <#neut-neutrons-type-018>`__)一样的运动方式，但是速度不会渐渐变慢。电子会给触碰到的导电物质一个电脉冲。和中子(\ `*NEUT* <#neut-neutrons-type-018>`__)接触会形成氢气。电子也可以用于电解水。在Snapshot中，电子接触荧光液(\ `*GLOW* <#glow-glow-type-066>`__)后会转变成光子(\ `*PHOT* <#phot-photons-type-031>`__)。
 
 存活时间(Life):680帧
 
@@ -2047,17 +2046,17 @@ life sing 0 :: set Tmp sing 255)。关闭空气压力会导致奇点直接消失
 
 **1. 制作方法**
 
-将电渣(\ `*BREL* <#电渣(BREL)【Broken%20Electronics】%20Type:135>`__)持续通电并加压到最大压力，加热到9000℃以上即可得到奇异物质。
+将电渣(\ `*BREL* <#brel-broken-electronics-type-135>`__)持续通电并加压到最大压力，加热到9000℃以上即可得到奇异物质。
 
 **2. 性质**
 
-奇异物质具有岩浆(\ `*LAVA* <#岩浆(LAVA)【Lava】%20Type:006>`__)的密度和压力以及冰(\ `*ICE* <#冰(ICE)【Ice】%20Type:013>`__)的一些性质。冷却下来之后，奇异物质会以常温的一半速度闪烁，如果奇异物质没有被电子激发，且温度低于常温，那么它会产生负压；当温度高于常温时，它会逐渐递增的释放正压。奇异物质也能冷却(0℃)并变成固体，但受到大量电子冲击时依然会发生猛烈的爆炸。
+奇异物质具有岩浆(\ `*LAVA* <#lava-lava-type-006>`__)的密度和压力以及冰(\ `*ICE* <#ice-ice-type-013>`__)的一些性质。冷却下来之后，奇异物质会以常温的一半速度闪烁，如果奇异物质没有被电子激发，且温度低于常温，那么它会产生负压；当温度高于常温时，它会逐渐递增的释放正压。奇异物质也能冷却(0℃)并变成固体，但受到大量电子冲击时依然会发生猛烈的爆炸。
 
-**3. 与电子(\ `*ELEC* <#电子(ELEC)【Electrons】%20Type:136>`__)的反应**
+**3. 与电子(\ `*ELEC* <#elec-electrons-type-136>`__)的反应**
 
 在电子的轰击下，它会发出彩虹色的光并产生压力，产生的压力取决于它受到电子轰击的数量，并按一定比率散发到环境当中去，同时，当环境压力等于奇异物质的压力时它会立即停止产生压力。当奇异物质受到电子轰击超过一定限度(Tmp2值+1000)时，它将转变成拥有极高压力和温度的迁跃粉(\ `*WARP* <#warp迁跃粉warpwarp-type096>`__)。
 
-**4. 与中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)的反应**
+**4. 与中子(\ `*NEUT* <#neut-neutrons-type-018>`__)的反应**
 
 当奇异物质被中子轰击时，它会很快失去颜色，但保留闪烁，如果中子太多，那么奇异物质就会变成与之直接相接触的物质(除了光子、中子、电子和墙)。
 
@@ -2097,16 +2096,16 @@ Tmp值-可吸收能量总数。
 **4、制作方法**
 
 将奇异物质和熔融态的钛(Molten
-`*TTAN* <#钛(TTAN)【Titanium】%20Type:144>`__)混合在一起，会形成熔融态的振金(Molten
+`*TTAN* <#ttan-titanium-type-144>`__)混合在一起，会形成熔融态的振金(Molten
 VIBR)，之后删去剩余的奇异物质，冷却即可得到振金。
 
 **5、其它性质**
 
 和奇异物质接触会使振金变成奇异物质。
 
-当接触到反引力尘(\ `*ANAR* <#反引力尘(ANAR)【Anti-Air%20Particle】%20Type:113>`__)时会变成振金粉(\ `*BVBR* <#振金粉(BVBR)【Broken%20Vibranium】%20Type:166>`__)同时形成负压驱散反引力尘。
+当接触到反引力尘(\ `*ANAR* <#anar-anti-air-particle-type-113>`__)时会变成振金粉(\ `*BVBR* <#bvbr-broken-vibranium-type-166>`__)同时形成负压驱散反引力尘。
 
-振金到达极限时如果用冷焰(\ `*CFLM* <#冷焰(CFLM)【Sub-zero%20Flame】%20Type:068>`__)灼烧会变为蓝光，之后会恢复原状。
+振金到达极限时如果用冷焰(\ `*CFLM* <#cflm-sub-zero-flame-type-068>`__)灼烧会变为蓝光，之后会恢复原状。
 
 **导热率:**\ 251
 
@@ -2124,49 +2123,49 @@ VIBR)，之后删去剩余的奇异物质，冷却即可得到振金。
 质子(PROT)【Protons】 Type:173
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 不能穿透绝缘体(\ `*INSL* <#绝缘体(INSL)【Insulator】%20Type:038>`__)、虚空(\ `*VOID* <#虚空(VOID)【Void】%20Type:022>`__/`*PVOD* <#pvod可控虚空pvodpowered-void-type084>`__)、钻石(\ `*DMND* <#钻石(DMND)【Diamond】%20Type:028>`__)、振金(\ `*VIBR* <#振金(VIBR)【Vibranium】%20Type:165>`__)以及墙，会清除碰到电脉冲。
+**描述:**\ 不能穿透绝缘体(\ `*INSL* <#insl-insulator-type-038>`__)、虚空(\ `*VOID* <#void-void-type-022>`__/`*PVOD* <#pvod可控虚空pvodpowered-void-type084>`__)、钻石(\ `*DMND* <#dmnd-diamond-type-028>`__)、振金(\ `*VIBR* <#vibr-vibranium-type-165>`__)以及墙，会清除碰到电脉冲。
 
 **性质:**
 
 1. 当质子的温度＞500℃时可以引爆爆炸物。
 
-2. 防止不易导电的导体导电(比如奇异物质\ `*EXOT* <#奇异物质(EXOT)【Exotic%20Matter】%20Type:145>`__)。
+2. 防止不易导电的导体导电(比如奇异物质\ `*EXOT* <#exot-exotic-matter-type-145>`__)。
 
-3. 当自身温度大于不导热物质的温度时，会使不导热物质的温度变为自身温度(如\ `*CRAY* <#物质射线发射器(CRAY)【C-Ray%20Emitter(Particle%20Ray%20Emitter)】%20Type:167>`__\ 、\ `*PRTI* <#传送门入口(PRTI)【Portal%20IN】%20Type:109>`__\ 、\ `*PRTO* <#传送门出口(PRTO)【Portal%20OUT】%20Type:110>`__)，对\ `*WIFI* <#Wi-Fi(WIFI)【WiFi】%20Type:124>`__\ 的温度改变由质子自身的温度决定：如果质子温度超过200°C则将\ `*WIFI* <#Wi-Fi(WIFI)【WiFi】%20Type:124>`__\ 温度升高1000°C；若在100~200°C间则升高100°C；在-100~0°C间则降低100°C；在-200~-100°C间则降低1000°C。
+3. 当自身温度大于不导热物质的温度时，会使不导热物质的温度变为自身温度(如\ `*CRAY* <#cray-c-ray-emitter-particle-ray-emitter-type-167>`__\ 、\ `*PRTI* <#prti-portal-in-type-109>`__\ 、\ `*PRTO* <#prto-portal-out-type-110>`__)，对\ `*WIFI* <#wi-fi-wifi-wifi-type-124>`__\ 的温度改变由质子自身的温度决定：如果质子温度超过200°C则将\ `*WIFI* <#wi-fi-wifi-wifi-type-124>`__\ 温度升高1000°C；若在100~200°C间则升高100°C；在-100~0°C间则降低100°C；在-200~-100°C间则降低1000°C。
 
 4. 如果它不在某一物质内部的话，会缓慢消失(680帧)。
 
 5. 当质子与其他质子对撞时会产生新物质，物质种类由两者的速度和(tmp值)决定：
 
-+--------------------------------------------------+-------------------------------------------------------------------------+
-| 平方和                                           | 产生物质                                                                |
-+==================================================+=========================================================================+
-| >500000                                          | 奇点(\ `*SING* <#奇点(SING)【Singularity】%20Type:131>`__)              |
-+--------------------------------------------------+-------------------------------------------------------------------------+
-| >700                                             | 钚(\ `*PLUT* <#钚(PLUT)【Plutonium】%20Type:019>`__)                    |
-+--------------------------------------------------+-------------------------------------------------------------------------+
-| >420                                             | 铀(\ `*URAN* <#铀(URAN)【Uranium】%20Type:032>`__)                      |
-+--------------------------------------------------+-------------------------------------------------------------------------+
-| >310                                             | 钋(\ `*POLO* <#钋(POLO)【Polonium】%20Type:182>`__)                     |
-+--------------------------------------------------+-------------------------------------------------------------------------+
-| >250                                             | 等离子体(\ `*PLSM* <#等离子体(PLSM)【Plasma】%20Type:049>`__)           |
-+--------------------------------------------------+-------------------------------------------------------------------------+
-| >100                                             | 氧气(\ `*OXYG* <#氧气(OXYG)【Oxygen】%20Type:061>`__)                   |
-+--------------------------------------------------+-------------------------------------------------------------------------+
-| >50                                              | 二氧化碳(\ `*CO2* <#二氧化碳(CO2)【Carbon%20Dioxide】%20Type:080>`__)   |
-+--------------------------------------------------+-------------------------------------------------------------------------+
-| >10                                              | 惰性气体(\ `*NBLE* <#惰性气体(NBLE)【Noble%20Gas】%20Type:052>`__)      |
-+--------------------------------------------------+-------------------------------------------------------------------------+
-| <10                                              | 不反应                                                                  |
-+--------------------------------------------------+-------------------------------------------------------------------------+
-| 只有两个质子速度方向几乎完全相反时才算作对撞。   |                                                                         |
-+--------------------------------------------------+-------------------------------------------------------------------------+
++--------------------------------------------------+--------------------------------------------------------+
+| 平方和                                           | 产生物质                                               |
++==================================================+========================================================+
+| >500000                                          | 奇点(\ `*SING* <#sing-singularity-type-131>`__)        |
++--------------------------------------------------+--------------------------------------------------------+
+| >700                                             | 钚(\ `*PLUT* <#plut-plutonium-type-019>`__)            |
++--------------------------------------------------+--------------------------------------------------------+
+| >420                                             | 铀(\ `*URAN* <#uran-uranium-type-032>`__)              |
++--------------------------------------------------+--------------------------------------------------------+
+| >310                                             | 钋(\ `*POLO* <#polo-polonium-type-182>`__)             |
++--------------------------------------------------+--------------------------------------------------------+
+| >250                                             | 等离子体(\ `*PLSM* <#plsm-plasma-type-049>`__)         |
++--------------------------------------------------+--------------------------------------------------------+
+| >100                                             | 氧气(\ `*OXYG* <#oxyg-oxygen-type-061>`__)             |
++--------------------------------------------------+--------------------------------------------------------+
+| >50                                              | 二氧化碳(\ `*CO2* <#co2-carbon-dioxide-type-080>`__)   |
++--------------------------------------------------+--------------------------------------------------------+
+| >10                                              | 惰性气体(\ `*NBLE* <#nble-noble-gas-type-052>`__)      |
++--------------------------------------------------+--------------------------------------------------------+
+| <10                                              | 不反应                                                 |
++--------------------------------------------------+--------------------------------------------------------+
+| 只有两个质子速度方向几乎完全相反时才算作对撞。   |                                                        |
++--------------------------------------------------+--------------------------------------------------------+
 
 **相关反应:**
 
-质子+电子(\ `*ELEC* <#电子(ELEC)【Electrons】%20Type:136>`__)=氢气(\ `*HYGH* <#氢气(HYGN)【Hydrogen】%20Type:148>`__)；质子+虚无(\ `*INVS* <#虚无(INVS)【Invisible】%20Type:115>`__)=中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)；质子+液晶(\ `*LCRY* <#液晶(LCRY)【Liquid%20Crystal】%20Type:054>`__)=光子(\ `*PHOT* <#光子(PHOT)【Photons】%20Type:031>`__)
+质子+电子(\ `*ELEC* <#elec-electrons-type-136>`__)=氢气(\ `*HYGH* <#hygn-hydrogen-type-148>`__)；质子+虚无(\ `*INVS* <#invs-invisible-type-115>`__)=中子(\ `*NEUT* <#neut-neutrons-type-018>`__)；质子+液晶(\ `*LCRY* <#lcry-liquid-crystal-type-054>`__)=光子(\ `*PHOT* <#phot-photons-type-031>`__)
 
-**其他:**\ 与重水(\ `*DEUT* <#重水(DEUT)【Deuterium%20Oxide】%20Type:095>`__)反应生成质子；碰到奇异物质(\ `*EXOT* <#奇异物质(EXOT)【Exotic%20Matter】%20Type:145>`__)会使其不断降温并最终生成冷焰(\ `*CFLM* <#冷焰(CFLM)【Sub-zero%20Flame】%20Type:068>`__)。
+**其他:**\ 与重水(\ `*DEUT* <#deut-deuterium-oxide-type-095>`__)反应生成质子；碰到奇异物质(\ `*EXOT* <#exot-exotic-matter-type-145>`__)会使其不断降温并最终生成冷焰(\ `*CFLM* <#cflm-sub-zero-flame-type-068>`__)。
 
 **导热率:**\ 61
 
@@ -2186,12 +2185,12 @@ VIBR)，之后删去剩余的奇异物质，冷却即可得到振金。
 钋(POLO)【Polonium】 Type:182
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 高放射性物质，自身会释放出中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)(最多
+**描述:**\ 高放射性物质，自身会释放出中子(\ `*NEUT* <#neut-neutrons-type-018>`__)(最多
 5 次)，吸收 10
-个质子(\ `*PROT* <#质子(PROT)【Protons】%20Type:173>`__)之后变为钚(\ `*PLUT* <#钚(PLUT)【Plutonium】%20Type:019>`__)。自身温度低于115℃时会自动上升。
+个质子(\ `*PROT* <#prot-protons-type-173>`__)之后变为钚(\ `*PLUT* <#plut-plutonium-type-019>`__)。自身温度低于115℃时会自动上升。
 
 **参数:**\ Tmp2 > 10
-后变为钚(\ `*PLUT* <#钚(PLUT)【Plutonium】%20Type:019>`__)。Tmp值大于等于5之后不再释放中子(\ `*NEUT* <#中子(NEUT)【Neutrons】%20Type:018>`__)。
+后变为钚(\ `*PLUT* <#plut-plutonium-type-019>`__)。Tmp值大于等于5之后不再释放中子(\ `*NEUT* <#neut-neutrons-type-018>`__)。
 
 **导热率:**\ 251
 
@@ -2214,7 +2213,7 @@ Special特殊
 虚空(VOID)【Void】 Type:022
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 可以吸收物质并产生少量压力。TPT的默认边界实际上就是这种物质。可以用复制体(\ `*CLNE* <#复制体(CLNE)【Clone】%20Type:009>`__)与虚空或黑洞(\ `*BHOL* <#黑洞(BHOL)【Black%20Hole】%20Type:150>`__)相结合来制作一个温度控制器。
+**描述:**\ 可以吸收物质并产生少量压力。TPT的默认边界实际上就是这种物质。可以用复制体(\ `*CLNE* <#clne-clone-type-009>`__)与虚空或黑洞(\ `*BHOL* <#bhol-black-hole-type-150>`__)相结合来制作一个温度控制器。
 
 **导热率:**\ 251
 
@@ -2250,7 +2249,7 @@ Special特殊
 火柴人(STKM)【Stickman】 Type:055 火柴人出生点(SPWN) Type:118
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 受重力和压力影响，使用方向键来控制其运动，可以在水下呼吸，受到压力、高温、放射性物质等各种危险的东西会损失生命值，吃(走近)植物(\ `*PLNT* <#植物(PLNT)【Plant】%20Type:020>`__)可以恢复生命值，修改life值可以修改生命值上限，以下是火柴人的几项能力:
+**描述:**\ 受重力和压力影响，使用方向键来控制其运动，可以在水下呼吸，受到压力、高温、放射性物质等各种危险的东西会损失生命值，吃(走近)植物(\ `*PLNT* <#plnt-plant-type-020>`__)可以恢复生命值，修改life值可以修改生命值上限，以下是火柴人的几项能力:
 
 1. 复制
 
@@ -2262,7 +2261,7 @@ Special特殊
 
 1. 火箭鞋(88.0beta加入)
 
-当火柴人碰到重力墙时，会拥有火箭鞋(喷出高温的等离子体\ `*PLSM* <#等离子体(PLSM)【Plasma】%20Type:049>`__)，同样用方向键控制，碰到电锁体(\ `*E-Hole* <#电锁体【E-Hole】>`__)时会恢复原状。
+当火柴人碰到重力墙时，会拥有火箭鞋(喷出高温的等离子体\ `*PLSM* <#plsm-plasma-type-049>`__)，同样用方向键控制，碰到电锁体(\ `*E-Hole* <#e-hole>`__)时会恢复原状。
 
 **导热率:**\ 0/0
 
@@ -2273,7 +2272,7 @@ Special特殊
 转化器(CONV)【Converter】 Type:085
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 固体，可以转换它接触到的物质的Type值为它自身的Ctype值，使用方法类似复制体(\ `*CLNE* <#复制体(CLNE)【Clone】%20Type:009>`__)。
+**描述:**\ 固体，可以转换它接触到的物质的Type值为它自身的Ctype值，使用方法类似复制体(\ `*CLNE* <#clne-clone-type-009>`__)。
 
 91.0beta后，可以通过tmp值设定待转化原料物质。
 
@@ -2284,7 +2283,7 @@ Special特殊
 可破坏复制体(BCLN)【Breakable Clone】 Type:093
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 在较大压力(不论是正压还是负压)下会消失的复制体(就像粘土\ `*GOO* <#粘土(GOO)【Goo】%20Type:012>`__\ 一样)。
+**描述:**\ 在较大压力(不论是正压还是负压)下会消失的复制体(就像粘土\ `*GOO* <#goo-goo-type-012>`__\ 一样)。
 
 **导热率:**\ 251
 
@@ -2293,7 +2292,7 @@ Special特殊
 传送门入口(PRTI)【Portal IN】 Type:109
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 可以传送物质和电脉冲，和Wi-Fi(\ `*WIFI* <#Wi-Fi(WIFI)【WiFi】%20Type:124>`__)相似，通过改变自身温度可以产生不同频道，产生一个负压，从这里进入的物质将被传送至传送门出口(\ `*PRTO* <#传送门出口(PRTO)【Portal%20OUT】%20Type:110>`__)，如果暂时没有传送门出口，它可以先储存一部分物质。其表面积越大，传送速度越快。
+**描述:**\ 可以传送物质和电脉冲，和Wi-Fi(\ `*WIFI* <#wi-fi-wifi-wifi-type-124>`__)相似，通过改变自身温度可以产生不同频道，产生一个负压，从这里进入的物质将被传送至传送门出口(\ `*PRTO* <#prto-portal-out-type-110>`__)，如果暂时没有传送门出口，它可以先储存一部分物质。其表面积越大，传送速度越快。
 
 **导热率:**\ 0
 
@@ -2302,7 +2301,7 @@ Special特殊
 传送门出口(PRTO)【Portal OUT】 Type:110
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 和传送门入口(\ `*PRTI* <#传送门入口(PRTI)【Portal%20IN】%20Type:109>`__)配套，物质从这里出来，形成正压力。
+**描述:**\ 和传送门入口(\ `*PRTI* <#prti-portal-in-type-109>`__)配套，物质从这里出来，形成正压力。
 
 **导热率:**\ 0
 
@@ -2311,7 +2310,7 @@ Special特殊
 火柴人二号(STK2)【Second Stickman】Type:128火柴人二号出生点(SPWN2) Type:117
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 用WASD控制，其余和火柴人(\ `*STKM* <#火柴人(STKM)【Stickman】%20Type:055%20火柴人出生点(SPWN)%20Type:118>`__)相同。
+**描述:**\ 用WASD控制，其余和火柴人(\ `*STKM* <#stkm-stickman-type-055-spwn-type-118>`__)相同。
 
 **导热率:**\ 0/0
 
@@ -2353,7 +2352,7 @@ Special特殊
 打手(FIGH)【Fighter】 Type:158
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 电脑控制的小人，会通过喷东西来杀死火柴人(\ `*STKM* <#火柴人(STKM)【Stickman】%20Type:055%20火柴人出生点(SPWN)%20Type:118>`__)，其它身体属性和火柴人是相同的，最多可以制造100个打手。
+**描述:**\ 电脑控制的小人，会通过喷东西来杀死火柴人(\ `*STKM* <#stkm-stickman-type-055-spwn-type-118>`__)，其它身体属性和火柴人是相同的，最多可以制造100个打手。
 
 **燃点:**\ 346.85℃/620k
 
@@ -2711,7 +2710,7 @@ Secrets隐藏元素
 烟尘(MORT)【Mortvert】 Type:077
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 以玩家名字命名的元素。会释放烟雾并缓慢的飘落下来。可以通过控制台创建。只能被炸弹(\ `*BOMB* <#炸药(BOMB)【Bomb】%20Type:129%20火花(EMBR)【Ember】%20Type:147>`__)、反物质(\ `*AMTR* <#反物质(AMTR)【Antimatter】%20Type:072>`__)和奇点(\ `*SING* <#奇点(SING)【Singularity】%20Type:131>`__)摧毁。
+**描述:**\ 以玩家名字命名的元素。会释放烟雾并缓慢的飘落下来。可以通过控制台创建。只能被炸弹(\ `*BOMB* <#bomb-bomb-type-129-embr-ember-type-147>`__)、反物质(\ `*AMTR* <#反物质(AMTR)【Antimatter】%20Type:072>`__)和奇点(\ `*SING* <#sing-singularity-type-131>`__)摧毁。
 
 **导热率:**\ 60
 
@@ -2876,7 +2875,7 @@ HUD(heads-up-display)，其实就是位于窗口上方的一行数据显示区�
 
 当前屏幕刷新率(FPS)，这个数值越高，游戏运行越流畅，受硬件影响较大
 
-当前光标位置上的元素(这里是粘土\ `*GOO* <#粘土(GOO)【Goo】%20Type:012>`__):当光标指向空白时，这项数值显示为Empty
+当前光标位置上的元素(这里是粘土\ `*GOO* <#goo-goo-type-012>`__):当光标指向空白时，这项数值显示为Empty
 
 当前光标位置上的温度(这里是22.00℃)
 
@@ -2895,9 +2894,9 @@ FPS数值
 
 当前主界面中全部的粒子数量:每一像素物质就是一个粒子
 
-当前光标位置上的元素(这里是复制体\ `*CLNE* <#复制体(CLNE)【Clone】%20Type:009>`__)
+当前光标位置上的元素(这里是复制体\ `*CLNE* <#clne-clone-type-009>`__)
 
-当前光标位置上元素的Ctype值(这里是柴油\ `*DESL* <#柴油(DESL)【Diesel】%20Type:058>`__)
+当前光标位置上元素的Ctype值(这里是柴油\ `*DESL* <#desl-diesel-type-058>`__)
 
 当前光标位置上的温度(这里是22.00℃)
 
@@ -3094,7 +3093,7 @@ Life显示模式(Life display)
 -------------------
 
 单快捷键(Single Hotkeys)
-^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Delete——滤镜，只删除笔刷范围内特定的元素
 
@@ -3122,18 +3121,18 @@ G——开启/关闭网格
 
 H——显示/隐藏HUD
 
-D(+shift)——开启/关闭调试模式[(\ `*STK2* <#火柴人二号(STK2)【Second%20Stickman】Type:128火柴人二号出生点(SPWN2)%20Type:117>`__\ 存在时需加shift)
+D(+shift)——开启/关闭调试模式[(\ `*STK2* <#stk2-second-stickmantype-128-spwn2-type-117>`__\ 存在时需加shift)
 
 I——反转所有的气压和速度
 
 W(+shift)——切换重力模式(正常/中心/无)(
-`*STK2* <#火柴人二号(STK2)【Second%20Stickman】Type:128火柴人二号出生点(SPWN2)%20Type:117>`__\ 存在时需加shift)
+`*STK2* <#stk2-second-stickmantype-128-spwn2-type-117>`__\ 存在时需加shift)
 
 Y——切换气压模式(正常/无压力/无速度/关闭/停止)
 
 U——打开/关闭空气导热模式
 
-R——重置\ `*LIFE* <#life生命游戏>`__\ 的代数(只有在调试模式下有效)
+R——重置\ `*LIFE* <#id2>`__\ 的代数(只有在调试模式下有效)
 
 ~——打开Lua控制台
 
@@ -3148,7 +3147,7 @@ B——进入装饰模式
 E——查找元素
 
 组合快捷键(Key Combinations)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Ctrl+C/V/X——复制/粘贴/剪切
 
