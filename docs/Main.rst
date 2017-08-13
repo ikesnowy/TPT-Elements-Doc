@@ -2163,7 +2163,6 @@ VIBR)，之后删去剩余的奇异物质，冷却即可得到振金。
 
 **相关反应:**
 
-质子+电子(\ `*ELEC* <#elec-electrons-type-136>`__)=氢气(\ `*HYGH* <#hygn-hydrogen-type-148>`__)；质子+虚无(\ `*INVS* <#invs-invisible-type-115>`__)=中子(\ `*NEUT* <#neut-neutrons-type-018>`__)；质子+液晶(\ `*LCRY* <#lcry-liquid-crystal-type-054>`__)=光子(\ `*PHOT* <#phot-photons-type-031>`__)
 质子+电子(\ `*ELEC* <#elec-electrons-type-136>`__)=氢气(\ `*HYGN* <#hygn-hydrogen-type-148>`__)；质子+虚无(\ `*INVS* <#invs-invisible-type-115>`__)=中子(\ `*NEUT* <#neut-neutrons-type-018>`__)；质子+液晶(\ `*LCRY* <#lcry-liquid-crystal-type-054>`__)=光子(\ `*PHOT* <#phot-photons-type-031>`__)
 
 **其他:**\ 与重水(\ `*DEUT* <#deut-deuterium-oxide-type-095>`__)反应生成质子；碰到奇异物质(\ `*EXOT* <#exot-exotic-matter-type-145>`__)会使其不断降温并最终生成冷焰(\ `*CFLM* <#cflm-sub-zero-flame-type-068>`__)。
