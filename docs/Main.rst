@@ -1946,7 +1946,7 @@ PLUT)，并带来最高的温度和少量的火焰。冷却之后将会形成石
 
 **描述:**\ 沿直线传播，不受重力影响，受牛顿万有引力影响。可以被反射，或散射。用于点燃物质或传递热量。经过滤镜(\ `*FILT* <#filt-filter-type-125>`__)时会改变颜色，经过棱镜时会色散。透过非隐形状态下的虚无(\ `*INVS* <#invs-invisible-type-115>`__)时会转变成中子(\ `*NEUT* <#neut-neutrons-type-018>`__)。透过奇特气体/液体/固体(\ `*BIZG/BIZR/BIZS* <#bizr-type-103-bizg-type-104-bizs-bizarretype-105>`__)时会转换成电子(\ `*ELEC* <#elec-electrons-type-136>`__)。
 
-**相关反应:**\ 光子(PHOT)+氢气(\ `*HYGH* <#hygn-hydrogen-type-148>`__)=质子(\ `*PROT* <#prot-protons-type-173>`__)+电子(\ `*ELEC* <#elec-electrons-type-136>`__)
+**相关反应:**\ 光子(PHOT)+氢气(\ `*HYGN* <#hygn-hydrogen-type-148>`__)=质子(\ `*PROT* <#prot-protons-type-173>`__)+电子(\ `*ELEC* <#elec-electrons-type-136>`__)
 
 存在时间(life):680帧
 
@@ -2164,6 +2164,7 @@ VIBR)，之后删去剩余的奇异物质，冷却即可得到振金。
 **相关反应:**
 
 质子+电子(\ `*ELEC* <#elec-electrons-type-136>`__)=氢气(\ `*HYGH* <#hygn-hydrogen-type-148>`__)；质子+虚无(\ `*INVS* <#invs-invisible-type-115>`__)=中子(\ `*NEUT* <#neut-neutrons-type-018>`__)；质子+液晶(\ `*LCRY* <#lcry-liquid-crystal-type-054>`__)=光子(\ `*PHOT* <#phot-photons-type-031>`__)
+质子+电子(\ `*ELEC* <#elec-electrons-type-136>`__)=氢气(\ `*HYGN* <#hygn-hydrogen-type-148>`__)；质子+虚无(\ `*INVS* <#invs-invisible-type-115>`__)=中子(\ `*NEUT* <#neut-neutrons-type-018>`__)；质子+液晶(\ `*LCRY* <#lcry-liquid-crystal-type-054>`__)=光子(\ `*PHOT* <#phot-photons-type-031>`__)
 
 **其他:**\ 与重水(\ `*DEUT* <#deut-deuterium-oxide-type-095>`__)反应生成质子；碰到奇异物质(\ `*EXOT* <#exot-exotic-matter-type-145>`__)会使其不断降温并最终生成冷焰(\ `*CFLM* <#cflm-sub-zero-flame-type-068>`__)。
 
