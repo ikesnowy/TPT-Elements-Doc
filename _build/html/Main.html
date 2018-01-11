@@ -1,0 +1,2819 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>TPT元素说明(Version 92.5 Snapshot 110) &mdash; TPT 元素说明 1.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="genindex.html"/>
+        <link rel="search" title="搜索" href="search.html"/>
+    <link rel="top" title="TPT 元素说明 1.0 文档" href="index.html"/>
+        <link rel="prev" title="欢迎来到 TPT 元素说明！" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> TPT 元素说明
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">TPT 元素说明</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">TPT元素说明(Version 92.5 Snapshot 110)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#instruction">Instruction前言</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#variable">Variable元素参数</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#type">Type值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#life">Life值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ctype">Ctype值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#x-y">X,Y值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vx-vy">V<sub>x</sub>,V<sub>y</sub>值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#temp">Temp值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flags">Flags值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tmp">Tmp值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tmp2">Tmp2值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dcolour">Dcolour值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pavg0">Pavg0值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pavg1">Pavg1值</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#wall">Wall墙类</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#erases-walls">橡皮擦(墙专用)【Erases Walls】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conductive-wall">墙(可导电)【Conductive Wall】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#e-wall">电控墙【E-wall】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#detector">探测器【Detector】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#streamline">风向计【Streamline】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fan">风扇【Fan】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#liquid-permeable">液体墙【Liquid Permeable】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#absorbing-wall">吸收墙【Absorbing Wall】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">墙(绝缘体)【Wall】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#non-permeable-wall">压力墙【Non-permeable Wall】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#powder-permeable-wall">粉末墙【Powder-Permeable Wall】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conductor">导体墙【Conductor】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#e-hole">电锁体【E-Hole】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gas-permeable-wall">气体墙【Gas permeable Wall】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gravity-wall">引力墙【Gravity Wall】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#energy-wall">能量墙【Energy Wall】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pressure-wall">气压墙【Pressure Wall】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eraser">橡皮擦【Eraser】</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#electronics">Electronics电子类</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#metl-metal-type-014">金属(METL)【Metal】 Type:014</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sprk-spark-type-015">电脉冲(SPRK)【Spark】 Type:015</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#p-pscn-p-type-silicon-type-035">P型硅(PSCN)【P-type Silicon】 Type:035</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#n-nscn-n-type-silicon-type-036">N型硅(NSCN)【N-type Silicon】 Type:036</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#insl-insulator-type-038">绝缘体(INSL)【Insulator】 Type:038</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ntct-negative-temperature-coefficient-thermistor-type-043">负温度系数热敏电阻(NTCT)【Negative Temperature Coefficient Thermistor】 Type:043</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ptct-positive-temperature-coefficient-thermistor-type-046">正温度系数热敏电阻(PTCT) 【Positive Temperature Coefficient Thermistor】 Type:046</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etrd-electrode-type-050">电极(ETRD)【Electrode】 Type:050</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#btry-battery-type-053">电池(BTRY)【Battery】 Type:053</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#swch-switch-type-056">开关(SWCH)【Switch】 Type:056</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#inwr-insulated-wire-type-062">绝缘线(INWR)【Insulated Wire】 Type:062</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tesc-tesla-coil-type-088">特斯拉线圈(TESC)【Tesla Coil】 Type:088</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#inst-instant-conductor-instantly-conducts-type-106">超导线(INST)【Instant Conductor (Instantly Conducts)】 Type:106</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wi-fi-wifi-wifi-type-124">Wi-Fi(WIFI)【WiFi】 Type:124</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a-aray-a-type-ray-emitter-type-126-b-bray-type-127">A射线发射器(ARAY)【A-type Ray Emitter】 Type:126 B射线(BRAY) Type:127</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emp-electromagnetic-pulse-type-134">电磁脉冲武器(EMP)【Electromagnetic Pulse】 Type:134</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wire-world-wwld-wireworld-wire-type-156">Wire World线(WWLD)【WireWorld Wire】 Type:156</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cray-c-ray-emitter-particle-ray-emitter-type-167">物质射线发射器(CRAY)【C-Ray Emitter(Particle Ray Emitter)】 Type:167</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tung-87-2-tungsten-type-171">钨(TUNG)(87.2版本后出现)【Tungsten】 Type:171</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dray-duplicator-ray-emitter-90-0beta-type-178">复印机(DRAY)【Duplicator Ray Emitter】(90.0beta版本后出现) Type:178</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#powered-material-49-0">Powered Material可控材料(49.0版本后出现)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#lcry-liquid-crystal-type-054">液晶(LCRY)【Liquid Crystal】 Type:054</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pcln-powered-clone-type-074">可控复制体(PCLN)【Powered Clone】 Type:074</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hswc-heat-switch-type-075">热开关(HSWC)【Heat Switch】 Type:075</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dlay-delay-type-079">延时计(DLAY)【Delay】 Type:079</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stor-store-type-083">堆栈(STOR)【Store】 Type:083</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pvod-powered-void-type-084">可控虚空(PVOD)【Powered Void】 Type:084</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pump-pressure-pump-type-097">压力泵(PUMP)【Pressure Pump】 Type:097</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pbcn-breakable-powered-clone-type-153">可控可破坏复制体(PBCN)【Breakable Powered Clone】 Type:153</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gpmp-gravity-pump-type-154">引力泵(GPMP)【Gravity Pump】 Type:154</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ppip-powered-pipe-type-161">可控动力管(PPIP)【Powered Pipe】 Type:161</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sensors-84-0">Sensors传感器(84.0版本后出现)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#invs-invisible-type-115">虚无(INVS)【Invisible】 Type:115</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dtec-detector-type-162">探测器(DTEC)【Detector】 Type:162</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tsns-temperature-sensor-type-164">温度传感器(TSNS)【Temperature Sensor】 Type:164</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#psns-pressure-sensor-type-172">压力传感器(PSNS)【Pressure Sensor】 Type:172</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lsns-life-sensor-type-185">衰减传感器(LSNS)【Life Sensor】 Type:185</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#force-74-0">Force动力材料(74.0版本后出现)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pipe-pipe-type-099">动力管(PIPE)【Pipe】 Type:099</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#acel-accelerator-type-137">加速器(ACEL)【Accelerator】 Type:137</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dcel-decelerator-type-138">减速器(DCEL)【Decelerator】 Type:138</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fray-force-ray-emitter-type-159">力射线发射器(FRAY)【Force Ray Emitter】 Type:159</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rpel-repeller-type-160">反射极(RPEL)【Repeller】 Type:160</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dmg-damage-type-163">压力炸弹(DMG)【Damage】 Type:163</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pstn-piston-type-168">活塞(PSTN)【Piston】 Type:168</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#frme-frame-type-169">支架(FRME)【Frame】 Type:169</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#explosives">Explosives爆炸物</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fire-fire-type-004">火焰(FIRE)【Fire】 Type:004</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gun-gunpowder-type-007">黑火药(GUN)【Gunpowder】 Type:007</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nitr-nitroglycerin-type-008">硝化甘油(NITR)【Nitroglycerin】 Type:008</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#c-4-c-4-c-4-type-011">C-4塑胶炸药(C-4)【C-4】 Type:011</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rbdm-rubidium-type-041">固态铷(RBDM)【Rubidium】 Type:041</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lrbd-liquid-rubidium-type-042">液态铷(LRBD)【Liquid Rubidium】 Type:042</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#thdr-thunder-type-048">电光火球/球状闪电(THDR)【Thunder】 Type:048</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#thrm-thermite-type-065">铝热剂(THRM)【Thermite】 Type:065</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cflm-sub-zero-flame-type-068">冷焰(CFLM)【Sub-zero Flame】 Type:068</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#firw-fireworks-type-069">烟花(FIRW)【Fireworks】 Type:069</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fuse-fuse-type-070">导火线(FUSE)【Fuse】 Type:070</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fsep-fuse-powder-type-071">导火线粉尘(FSEP)【Fuse powder】 Type:071</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ligh-lightning-type-087">闪电(LIGH)【Lightning】 Type:087</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dest-destructive-bomb-type-089">高爆炸药(DEST)【Destructive Bomb】 Type:089</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fwrk-original-fireworks-type-098">传统烟花(FWRK)【Original Fireworks】 Type:098</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bomb-bomb-type-129-embr-ember-type-147">炸药(BOMB)【Bomb】 Type:129 火花(EMBR)【Ember】 Type:147</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#c-5-c-5-c-5-type-130">C-5低温炸药(C-5)【C-5】 Type:130</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tnt-trinitrotoluene-type-139">三硝基甲苯(TNT)【Trinitrotoluene】 Type:139</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ignc-ignition-cord-type-140">导火索(IGNC)【Ignition Cord】 Type:140</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gbmb-gravity-bomb-type-157">引力炸弹(GBMB)【Gravity Bomb】 Type:157</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#gases">Gases气体</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#gas-gas-type-010">石油气(GAS)【Gas】 Type:010</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wtrv-water-vapor-type-023">水蒸气(WTRV)【Water Vapor】 Type:023</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#plsm-plasma-type-049">等离子体(PLSM)【Plasma】 Type:049</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nble-noble-gas-type-052">惰性气体(NBLE)【Noble Gas】 Type:052</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#smke-smoke-type-057">烟(SMKE)【Smoke】 Type:057</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#oxyg-oxygen-type-061">氧气(OXYG)【Oxygen】 Type:061</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#co2-carbon-dioxide-type-080">二氧化碳(CO2)【Carbon Dioxide】 Type:080</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#caus-caustic-gas-type-086">酸气(CAUS)【Caustic Gas】 Type:086</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fog-fog-type-092">雾(FOG)【Fog】 Type:092</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#boyl-boyle-type-141">波义耳气(BOYL)【Boyle】 Type:141</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hygn-hydrogen-type-148">氢气(HYGN)【Hydrogen】 Type:148</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rfrg-refrigerant-gas-type-183-rfrl-type-184">制冷气(RFRG)【Refrigerant Gas】 Type:183 制冷液(RFRL) Type:184</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#liquids">Liquids液体</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#watr-water-type-002">水(WATR)【Water】 Type:002</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#oil-oil-type-003">石油(OIL)【Oil】 Type:003</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lava-lava-type-006">岩浆(LAVA)【Lava】 Type:006</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#acid-acid-type-021">酸(ACID)【Acid】 Type:021</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dstw-distilled-water-type-025">蒸馏水(DSTW)【Distilled Water】 Type:025</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sltw-salt-water-type-027">盐水(SLTW)【Salt Water】 Type:027</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mwax-molten-wax-type-034">蜡油(MWAX)【Molten Wax】 Type:034</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ln2-liquid-nitrogen-type-037">液氮(LN2)【Liquid Nitrogen】 Type:037</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#desl-diesel-type-058">柴油(DESL)【Diesel】 Type:058</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#loxy-liquid-oxygen-type-060">液氧(LOXY)【Liquid Oxygen】 Type:060</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#glow-glow-type-066">荧光液(GLOW)【Glow】 Type:066</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bubw-bubbled-water-carbonated-water-type-082">苏打水(BUBW)【Bubbled Water(Carbonated Water)】 Type:082</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bizr-type-103-bizg-type-104-bizs-bizarretype-105">奇特液体(BIZR)Type:103奇特气体(BIZG)Type:104奇特固体(BIZS)【Bizarre】Type:105</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pste-paste-type-111-psts-type-112">浆糊(PSTE)【Paste】 Type:111 固体浆糊(PSTS) Type:112</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gel-gel-type-142">胶体(GEL)【Gel】 Type:142</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#soap-soap-type-149">肥皂(SOAP)【Soap】 Type:149</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#merc-mercury-type-152">水银(MERC)【Mercury】 Type:152</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#virs-virustype-174-vrss-type-175-vrsg-type-176">病毒(VIRS)【Virus】Type:174 病毒块(VRSS)Type:175 病毒气(VRSG)Type:176</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#powders">Powders粉末</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dust-dust-type-001">尘埃(DUST)【Dust】 Type:001</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stne-stone-type-005">石粉(STNE)【Stone】 Type:005</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#snow-snow-type-016">雪(SNOW)【Snow】 Type:016</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cnct-concrete-type-024">混凝土(CNCT)【Concrete】 Type:024</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#salt-salt-type-026">盐(SALT)【Salt】 Type:026</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#brmt-broken-metal-type-030">金属粉(BRMT)【Broken Metal】 Type:030</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sand-sand-type-044">沙子(SAND)【Sand】 Type:044</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bgla-broken-glass-type-047">碎玻璃(BGLA)【Broken Glass】 Type:047</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#yest-yeast-type-063-dyst-dead-yeast-type-064">酵母(YEST)【Yeast】 Type:063 菌尸(DYST)【Dead Yeast】 Type:064</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bcol-broken-coal-type-073">煤粉(BCOL)【Broken Coal】 Type:073</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#frzz-freeze-type-100">寒尘(FRZZ)【Freeze】 Type:100</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#grav-gravity-type-102">引力尘(GRAV)【Gravity】 Type:102</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#anar-anti-air-particle-type-113">反引力尘(ANAR)【Anti-Air Particle】 Type:113</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pqrt-broken-quartz-type-133">石英砂(PQRT)【Broken Quartz】 Type:133</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#brel-broken-electronics-type-135">电渣(BREL)【Broken Electronics】 Type:135</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clst-clay-dust-type-155">粘土砂(CLST)【Clay Dust】 Type:155</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sawd-sawdust-type-181">木屑(SAWD)【Sawdust】 Type:181</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#solids">Solids固体</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#goo-goo-type-012">粘土(GOO)【Goo】 Type:012</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ice-ice-type-013">冰(ICE)【Ice】 Type:013</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wood-wood-type-017">木材(WOOD)【Wood】 Type:017</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#plnt-plant-type-020">植物(PLNT)【Plant】 Type:020</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bmtl-breakable-metal-type-029">脆金属(BMTL)【Breakable Metal】 Type:029</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wax-wax-type-033">蜡(WAX)【Wax】 Type:033</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#glas-glass-type-045">玻璃(GLAS)【Glass】 Type:045</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nice-nitrogen-ice-type-051">氮冰(NICE)【Nitrogen Ice】 Type:051</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#coal-coal-type-059">煤(COAL)【Coal】 Type:059</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#brck-brick-type-067">砖块(BRCK)【Brick】 Type:067</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#iron-iron-type-076">铁(IRON)【Iron】 Type:076</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dric-dry-ice-type-081">干冰(DRIC)【Dry Ice】 Type:081</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#spng-sponge-type-090">海绵(SPNG)【Sponge】 Type:090</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rime-rime-type-091">霜(RIME)【Rime】 Type:091</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vine-vine-type-114">藤蔓(VINE)【Vine】 Type:114</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#shld-shieldtype-119-2-3-4-shd2-3-4-type-120-121-122">自修复膜(SHLD)【Shield】Type:119 修复膜2/3/4(SHD2/3/4)Type:120/121/122</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#filt-filter-type-125">滤镜(FILT)【Filter】 Type:125</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#qrtz-quartz-type-132">石英(QRTZ)【Quartz】 Type:132</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ttan-titanium-type-144">钛(TTAN)【Titanium】 Type:144</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gold-gold-type-170">金(GOLD)【Gold】 Type:170</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#crmc-ceramic-type-179">陶瓷(CRMC) 【Ceramic】 Type:179</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heac-rapid-heat-conductor-type-180">导热体(HEAC) 【Rapid Heat Conductor】 Type:180</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#radioactive">Radioactive放射性物质</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#neut-neutrons-type-018">中子(NEUT)【Neutrons】 Type:018</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#plut-plutonium-type-019">钚(PLUT)【Plutonium】 Type:019</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#phot-photons-type-031">光子(PHOT)【Photons】 Type:031</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#uran-uranium-type-032">铀(URAN)【Uranium】 Type:032</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#amtr-antimatter-type-072">反物质(AMTR)【Antimatter】 Type:072</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deut-deuterium-oxide-type-095">重水(DEUT)【Deuterium Oxide】 Type:095</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#warp-warp-type-096">迁跃粉(WARP)【Warp】 Type:096</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#z-isoz-isotope-z-type-107">同位素-Z(ISOZ)【Isotope-Z】 Type:107</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#z-iszs-solid-isoz-type-108">固态同位素-Z(ISZS)【Solid ISOZ】 Type:108</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sing-singularity-type-131">奇点(SING)【Singularity】 Type:131</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elec-electrons-type-136">电子(ELEC)【Electrons】 Type:136</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#exot-exotic-matter-type-145">奇异物质(EXOT)【Exotic Matter】 Type:145</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vibr-vibranium-type-165">振金(VIBR)【Vibranium】 Type:165</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bvbr-broken-vibranium-type-166">振金粉(BVBR)【Broken Vibranium】 Type:166</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prot-protons-type-173">质子(PROT)【Protons】 Type:173</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#grvt-90-0beta-graviton-type-177">引力子(GRVT)(90.0beta版本后出现)【Graviton】 Type:177</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#polo-polonium-type-182">钋(POLO)【Polonium】 Type:182</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#special">Special特殊</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#clne-clone-type-009">复制体(CLNE)【Clone】 Type:009</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#void-void-type-022">虚空(VOID)【Void】 Type:022</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dmnd-diamond-type-028">钻石(DMND)【Diamond】 Type:028</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vacu-vacuum-type-039">吸气孔(VACU)【Vacuum】 Type:039</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vent-air-vent-type-040">排气孔(VENT)【Air Vent】 Type:040</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stkm-stickman-type-055-spwn-type-118">火柴人(STKM)【Stickman】 Type:055 火柴人出生点(SPWN) Type:118</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conv-converter-type-085">转化器(CONV)【Converter】 Type:085</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bcln-breakable-clone-type-093">可破坏复制体(BCLN)【Breakable Clone】 Type:093</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prti-portal-in-type-109">传送门入口(PRTI)【Portal IN】 Type:109</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prto-portal-out-type-110">传送门出口(PRTO)【Portal OUT】 Type:110</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stk2-second-stickmantype-128-spwn2-type-117">火柴人二号(STK2)【Second Stickman】Type:128火柴人二号出生点(SPWN2) Type:117</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tron-tron-type-143">智能微粒(TRON)【Tron】 Type:143</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bhol-black-hole-type-150">黑洞(BHOL)【Black Hole】 Type:150</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#whol-white-hole-type-151">白洞(WHOL)【White Hole】 Type:151</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#figh-fighter-type-158">打手(FIGH)【Fighter】 Type:158</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Life生命游戏</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#gol-game-of-life-type-078-ctype-0">生命游戏(GOL)【Game of Life】 Type:078 Ctype:0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hlif-high-life-ctype-1">高等生命(HLIF)【High Life】 Ctype:1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#asim-assimilation-ctype-2">同化(ASIM)【Assimilation】 Ctype:2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#x2-2x2-2x2-ctype-3">2X2(2X2)【2X2】 Ctype:3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dani-day-and-night-ctype-4">日以继夜(DANI)【Day and Night】 Ctype:4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#amoe-amoeba-ctype-5">阿米巴(AMOE)【Amoeba】 Ctype:5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#move-move-ctype-6">移动(MOVE)【Move】 Ctype:6</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pgol-pseudo-ctype-7">假货(PGOL)【Pseudo】 Ctype:7</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dmoe-diamoeba-ctype-8">方片(DMOE)【Diamoeba】 Ctype:8</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ctype-9">34(34)【34】 Ctype:9</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#llif-long-life-ctype-10">长生(LLIF)【Long Life】 Ctype:10</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stan-stains-ctype-11">染色剂(STAN)【Stains】 Ctype:11</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#seed-seeds-ctype-12">种子(SEED)【Seeds】 Ctype:12</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#maze-maze-ctype-13">迷宫(MAZE)【Maze】 Ctype:13</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#coag-coagulations-ctype-14">凝固物(COAG)【Coagulations】 Ctype:14</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wall-walled-cities-ctype-15">城墙(WALL)【Walled cities】 Ctype:15</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gnar-gnarl-ctype-16">木节(GNAR)【Gnarl】 Ctype:16</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#repl-replicator-ctype-17">复制基因(REPL)【Replicator】 Ctype:17</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#myst-mystery-ctype-18">谜(MYST)【Mystery】 Ctype:18</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lote-living-on-the-edge-ctype-19">边缘人(LOTE)【Living on the Edge】 Ctype:19</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#frg2-like-frogs-rule-ctype-20">青蛙变体(FRG2)【Like Frogs Rule】 Ctype:20</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#star-star-wars-ctype-21">星球大战(STAR)【Star Wars】 Ctype:21</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#frog-frogs-ctype-22">青蛙(FROG)【Frogs】 Ctype:22</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bran-brian-6-ctype-23">布莱恩6号(BRAN)【Brian 6】 Ctype:23</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tools">Tools工具</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#heat-heat">升温笔(HEAT)【Heat】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cool-cool">降温笔(COOL)【Cool】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#air-air">加压笔(AIR)【Air】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vac-vacuum">减压笔(VAC)【Vacuum】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pgrv-positive-gravity-tool">引力笔(PGRV)【Positive Gravity Tool】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ngrv-negative-gravity-tool">斥力笔(NGRV)【Negative Gravity Tool】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mix-mix">混合工具(MIX)【Mix】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wind-wind">风(WIND)【Wind】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prop-edit-property-tool">属性笔(PROP)【Edit Property Tool】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sign">气泡【Sign】</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#secrets">Secrets隐藏元素</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#none-none-type-0">空白(NONE)【None】 Type:0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mort-mortvert-type-077">烟尘(MORT)【Mortvert】 Type:077</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#frzw-frozen-water-type-101">寒水(FRZW)【Frozen Water】 Type:101</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eqve-equal-velocity-type-116">速度尘(EQVE) 【Equal Velocity】 Type:116</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#laugh-out-loud-lolz-laugh-out-loud-type-123">大声笑！Laugh Out Loud！(LOLZ)【Laugh Out Loud】 Type:123</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#love-love-type-094">爱心(LOVE)【Love】 Type:094</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bran-brian-6-type-146">布莱恩6号(BRAN)【Brian 6】 Type:146</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#decoration-tools-49-0">Decoration tools装饰工具(49.0版本后出现)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#favorites">Favorites 收藏夹</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#search-for-element">Search for element 查找元素</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reference-more">Reference&amp;More 参考资料及延伸阅读</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-the-console">附1:控制台的基本用法(Using the console)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#set">Set命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#quit">Quit命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create">Create命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#delete">Delete命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bubble">Bubble命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reset">Reset命令</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#hud-heads-up-display">附2:HUD(heads-up-display)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">基本说明</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#debug-d">调试模式(Debug)【快捷键D】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">快捷键</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#display-modes">附3:显示模式(Display Modes)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#velocity-diaplay">气流显示模式(Velocity diaplay)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id5">快捷键</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">显示内容</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pressure-diaplay">气压显示模式(Pressure diaplay)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id7">快捷键</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">显示内容</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#persistent-diaplay">轨迹显示模式(Persistent diaplay)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id9">快捷键</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">显示内容</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#fire-diaplay">标准显示模式(Fire diaplay)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id11">快捷键</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id12">显示内容</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#blob-display">模糊显示模式(Blob display)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id13">快捷键</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id14">显示内容</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#heat-display">温度显示模式(Heat display)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id15">快捷键</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id16">显示内容</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id17">环境温度显示和物质温度显示</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#fancy-display">特效显示模式(Fancy display)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id18">快捷键</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id19">显示内容</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#nothing-display">无特效显示模式(Nothing display)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id20">快捷键</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id21">显示内容</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#heat-gradient-display">热传导显示模式(Heat gradient display)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id22">快捷键</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id23">显示内容</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#alternate-velocity-display">速压混合显示模式(Alternate velocity display)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id24">快捷键</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id25">显示内容</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#life-life-display">Life显示模式(Life display)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id26">快捷键</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id27">显示内容</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#grid">网格工具(Grid)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id28">快捷键</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id29">显示内容</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#hotkeys">附4:快捷键(Hotkeys)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#single-hotkeys">单快捷键(Single Hotkeys)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#key-combinations">组合快捷键(Key Combinations)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">TPT 元素说明</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>TPT元素说明(Version 92.5 Snapshot 110)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Main.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tpt-version-92-5-snapshot-110">
+<h1>TPT元素说明(Version 92.5 Snapshot 110)<a class="headerlink" href="#tpt-version-92-5-snapshot-110" title="永久链接至标题">¶</a></h1>
+<div class="section" id="instruction">
+<h2>Instruction前言<a class="headerlink" href="#instruction" title="永久链接至标题">¶</a></h2>
+<p>本文是针对TPT初学者的初级教程，包含TPT中各元素的性质、制作方法以及一些简单用途。</p>
+<p>你现在看到的是在线版，离线版(.docx)可以前往<a class="reference external" href="http://pan.baidu.com/s/1jILySZW">这个链接</a>下载。</p>
+<p>大部分元素均附有该元素的<strong>Type</strong>值(TPT中各元素的唯一编码，一个Type值对应一种元素)。</p>
+<p>本文以翻译官方Wiki中的内容为主，对一些明显错误做了修改，同时加入了一些额外补充。</p>
+<p>感谢&#64;白左，本文中的一些译名参考了其撰写的《元素说明V83.9.20121014》。</p>
+<p>感谢&#64;氢氧化氢对91.0版本新功能的修订和其他错误的改正。</p>
+<p>感谢&#64;流汗进行时、&#64;crazyboy2000和TPT交流群的群友们对本文中错误的指正。</p>
+<p>如果发现错误可以给我发邮件:<em>ikesnowy&#64;outlook.com</em></p>
+<p>TPT交流群:179225194</p>
+<p>Ike</p>
+<p>2018.1.11</p>
+</div>
+<div class="section" id="variable">
+<h2>Variable元素参数<a class="headerlink" href="#variable" title="永久链接至标题">¶</a></h2>
+<p>以下是一些元素参数的解释及常见作用。</p>
+<div class="section" id="type">
+<h3>Type值<a class="headerlink" href="#type" title="永久链接至标题">¶</a></h3>
+<p>元素的唯一编号，用于表示该元素的种类。</p>
+</div>
+<div class="section" id="life">
+<h3>Life值<a class="headerlink" href="#life" title="永久链接至标题">¶</a></h3>
+<p>(用于记录时间/寿命/损耗的参数，一般单位为帧，但也可用于记录强度/状态)</p>
+<p>表示病毒(<a class="reference external" href="#virs-virustype-174-vrss-type-175-vrsg-type-176">*VIRS*</a>)的存在帧数。</p>
+<p>表示酸(<a class="reference external" href="#acid-acid-type-021">*ACID*</a>)还能腐蚀多少物质。</p>
+<p>表示开关(<a class="reference external" href="#swch-switch-type-056">*SWCH*</a>)的状态。</p>
+<p>表示火柴人(<a class="reference external" href="#stkm-stickman-type-055-spwn-type-118">*STKM*</a>)的生命值。</p>
+<p>表示燃烧时间(<a class="reference external" href="#fire-fire-type-004">*FIRE*</a>)。</p>
+<p>表示传送门(<a class="reference external" href="#prti-portal-in-type-109">*PRTI*</a>/<a class="reference external" href="#prto-portal-out-type-110">*PRTO*</a>)产生的气压影响。</p>
+</div>
+<div class="section" id="ctype">
+<h3>Ctype值<a class="headerlink" href="#ctype" title="永久链接至标题">¶</a></h3>
+<p>(用于记录物质，等于被记录物质的Type值)</p>
+<p>复制体(<a class="reference external" href="#bcln-breakable-clone-type-093">*BCLN*</a>,<a class="reference external" href="#pcln-powered-clone-type-074">*PCLN*</a>,<a class="reference external" href="#pbcn-breakable-powered-clone-type-153">*PBCN*</a>,<a class="reference external" href="#clne-clone-type-009">*CLNE*</a>):代表复制体正在复制的元素种类。</p>
+<p>制造凝固物(<a class="reference external" href="#ice-ice-type-013">*ICE*</a>):比如将冰(<a class="reference external" href="#ice-ice-type-013">*ICE*</a>)的Ctype值改为中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)，熔化后会变为中子。</p>
+<p>制造熔融物(<a class="reference external" href="#lava-lava-type-006">*LAVA*</a>):比如将岩浆(<a class="reference external" href="#lava-lava-type-006">*LAVA*</a>)的Ctype设置为钻石(<a class="reference external" href="#dmnd-diamond-type-028">*DMND*</a>)即可得到熔融的钻石。</p>
+<p>电脉冲(<a class="reference external" href="#sprk-spark-type-015">*SPRK*</a>):Ctype表示它正流经物质的种类。</p>
+<p>颜色(<a class="reference external" href="#phot-photons-type-031">*PHOT*</a>,<a class="reference external" href="#filt-filter-type-125">*FILT*</a>,<a class="reference external" href="#fwrk-original-fireworks-type-098">*FWRK*</a>,<a class="reference external" href="#glow-glow-type-066">*GLOW*</a>,<a class="reference external" href="#a-aray-a-type-ray-emitter-type-126-b-bray-type-127">*BRAY*</a>):用于储存这些物质的颜色数值。</p>
+<p>动力管(<a class="reference external" href="#pipe-pipe-type-099">*PIPE*</a>):用于修改其模式(红，绿，蓝以及未激活)。</p>
+<p>石英(<a class="reference external" href="#qrtz-quartz-type-132">*QRTZ*</a>):用于记录石英的生长速度，改变其Ctype可改变其生长速度。</p>
+<p>World
+wire线(<a class="reference external" href="#wire-world-wwld-wireworld-wire-type-156">*WWLD*</a>):改变其状态(头、尾、空)。</p>
+</div>
+<div class="section" id="x-y">
+<h3>X,Y值<a class="headerlink" href="#x-y" title="永久链接至标题">¶</a></h3>
+<p>(用于记录物质的位置坐标)</p>
+<p>用于改变物质的位置。</p>
+<p>通过把大量物质的坐标设为相同点可以制造出黑洞(<a class="reference external" href="#bhol-black-hole-type-150">*BHOL*</a>)。</p>
+</div>
+<div class="section" id="vx-vy">
+<h3>V<sub>x</sub>,V<sub>y</sub>值<a class="headerlink" href="#vx-vy" title="永久链接至标题">¶</a></h3>
+<p>(用于记录物质的速度)</p>
+<p>用于改变物质在X,Y方向上的分速率。</p>
+</div>
+<div class="section" id="temp">
+<h3>Temp值<a class="headerlink" href="#temp" title="永久链接至标题">¶</a></h3>
+<p>(用于记录物质的温度)</p>
+<p>用于改变物质的温度，单位是开尔文(K)。</p>
+</div>
+<div class="section" id="flags">
+<h3>Flags值<a class="headerlink" href="#flags" title="永久链接至标题">¶</a></h3>
+<p>(用于标记某些物质，使程序忽略它们)</p>
+<p>该值应用在程序内部，会<strong>自动复原</strong>且<strong>不会随存档保存。</strong></p>
+<p>用于标记液体团内部的液体颗粒，使得这些颗粒不会被运动模拟模块计算进去，从而节省CPU使用量。</p>
+</div>
+<div class="section" id="tmp">
+<h3>Tmp值<a class="headerlink" href="#tmp" title="永久链接至标题">¶</a></h3>
+<p>(特征参数，根据元素种类有不同的作用)</p>
+<p>动力管(<a class="reference external" href="#pipe-pipe-type-099">*PIPE*</a>):用于表示其内运送的元素种类。</p>
+<p>物质射线发射器(<a class="reference external" href="#cray-c-ray-emitter-particle-ray-emitter-type-167">*CRAY*</a>):用于表示射线长度。</p>
+<p>生命元素(<a class="reference external" href="#id2">*LIFE*</a>):用于某些生命元素的颜色表示。</p>
+</div>
+<div class="section" id="tmp2">
+<h3>Tmp2值<a class="headerlink" href="#tmp2" title="永久链接至标题">¶</a></h3>
+<p>(特征参数2，与Tmp值作用相同)</p>
+<p>探测器(<a class="reference external" href="#dtec-detector-type-162">*DTEC*</a>):用于调节侦测范围。</p>
+<p>活塞(<a class="reference external" href="#pstn-piston-type-168">*PSTN*</a>):用于调节活塞的最大长度。</p>
+<p>病毒(<a class="reference external" href="#virs-virustype-174-vrss-type-175-vrsg-type-176">*VIRS*</a>):用于记录被感染物质的Type值。</p>
+<p>奇异物质(<a class="reference external" href="#exot-exotic-matter-type-145">*EXOT*</a>):表示奇异物质最大所能接受的辐射量。</p>
+</div>
+<div class="section" id="dcolour">
+<h3>Dcolour值<a class="headerlink" href="#dcolour" title="永久链接至标题">¶</a></h3>
+<p>(用于记录物质的外加颜色)</p>
+<p>用于记录物质的外加颜色(用装饰工具decoration tools染上去的颜色)。</p>
+<p>只接受16进制颜色码，如0xFF000000为黑色。</p>
+</div>
+<div class="section" id="pavg0">
+<h3>Pavg0值<a class="headerlink" href="#pavg0" title="永久链接至标题">¶</a></h3>
+<p>(新的特征值)</p>
+<p>在堆栈(<a class="reference external" href="#stor-store-type-083">*STOR*</a>)中用于记录被吸收元素的tmp值。</p>
+</div>
+<div class="section" id="pavg1">
+<h3>Pavg1值<a class="headerlink" href="#pavg1" title="永久链接至标题">¶</a></h3>
+<p>(新的特征值)</p>
+<p>在堆栈(<a class="reference external" href="#stor-store-type-083">*STOR*</a>)中用于记录被吸收元素的ctype值。</p>
+</div>
+</div>
+<div class="section" id="wall">
+<h2>Wall墙类<a class="headerlink" href="#wall" title="永久链接至标题">¶</a></h2>
+<p><strong>注:</strong>所有墙的最小面积都是4x4像素。</p>
+<div class="section" id="erases-walls">
+<h3>橡皮擦(墙专用)【Erases Walls】<a class="headerlink" href="#erases-walls" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>用于擦除墙。</p>
+</div>
+<div class="section" id="conductive-wall">
+<h3>墙(可导电)【Conductive Wall】<a class="headerlink" href="#conductive-wall" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>阻挡一切。导体。</p>
+<p><strong>特性:</strong>可以传导电脉冲(<a class="reference external" href="#sprk-spark-type-015">*SPRK*</a>)；A射线发射器(<a class="reference external" href="#a-aray-a-type-ray-emitter-type-126-b-bray-type-127">*ARAY*</a>)的射线可以通过。</p>
+</div>
+<div class="section" id="e-wall">
+<h3>电控墙【E-wall】<a class="headerlink" href="#e-wall" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>通电时允许物质通过，反之阻挡一切。</p>
+<p><strong>特性:</strong>通电时可以传导电脉冲。</p>
+</div>
+<div class="section" id="detector">
+<h3>探测器【Detector】<a class="headerlink" href="#detector" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>当有物质通过时向直接接触的导体传送电脉冲并发出红光。</p>
+</div>
+<div class="section" id="streamline">
+<h3>风向计【Streamline】<a class="headerlink" href="#streamline" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>设置起点，然后指示风向。</p>
+<p><strong>特性:</strong>只指示气流方向，不与任何物质发生作用。</p>
+</div>
+<div class="section" id="fan">
+<h3>风扇【Fan】<a class="headerlink" href="#fan" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>加速气流，使用直线工具来设置方向和强度，不阻挡任何物质。</p>
+<p><strong>使用方法:</strong>设置风扇的位置，不要选择其他的元素，按住shift，鼠标(左键)按住你设置好的风扇，拖动鼠标，直线的方向(风扇到光标位置)和长度即为气流的方向和强度。</p>
+</div>
+<div class="section" id="liquid-permeable">
+<h3>液体墙【Liquid Permeable】<a class="headerlink" href="#liquid-permeable" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>只允许液体、压力通过，可以导电。</p>
+</div>
+<div class="section" id="absorbing-wall">
+<h3>吸收墙【Absorbing Wall】<a class="headerlink" href="#absorbing-wall" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>吸收所有物质，只允许压力通过。</p>
+</div>
+<div class="section" id="id1">
+<h3>墙(绝缘体)【Wall】<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>阻挡一切(包括压力)。</p>
+<p><strong>特性:</strong>允许射线发射器(<a class="reference external" href="#a-aray-a-type-ray-emitter-type-126-b-bray-type-127">*ARAY*</a>)的射线通过。</p>
+</div>
+<div class="section" id="non-permeable-wall">
+<h3>压力墙【Non-permeable Wall】<a class="headerlink" href="#non-permeable-wall" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>只允许压力通过。</p>
+</div>
+<div class="section" id="powder-permeable-wall">
+<h3>粉末墙【Powder-Permeable Wall】<a class="headerlink" href="#powder-permeable-wall" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>只允许粉末和压力通过。</p>
+</div>
+<div class="section" id="conductor">
+<h3>导体墙【Conductor】<a class="headerlink" href="#conductor" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>允许所有物质通过，可以传导电脉冲(<a class="reference external" href="#sprk-spark-type-015">*SPRK*</a>)。</p>
+</div>
+<div class="section" id="e-hole">
+<h3>电锁体【E-Hole】<a class="headerlink" href="#e-hole" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>未通电时会吸收进入其中的物质，通电时释放。允许压力和电脉冲通过。</p>
+<p><strong>特性:</strong>当太多的物质进入其中时会形成黑洞。</p>
+</div>
+<div class="section" id="gas-permeable-wall">
+<h3>气体墙【Gas permeable Wall】<a class="headerlink" href="#gas-permeable-wall" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>只允许气体和压力通过。</p>
+<p><strong>特性:</strong>火焰(<a class="reference external" href="#fire-fire-type-004">*FIRE*</a>、<a class="reference external" href="#cflm-sub-zero-flame-type-068">*CFLM*</a>)也一样可以通过。</p>
+</div>
+<div class="section" id="gravity-wall">
+<h3>引力墙【Gravity Wall】<a class="headerlink" href="#gravity-wall" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>阻挡万有引力，允许其他一切物质通过。当火柴人【<a class="reference external" href="#stkm-stickman-type-055-spwn-type-118">*STKM*</a>/<a class="reference external" href="#stk2-second-stickmantype-128-spwn2-type-117">*STK2*</a>】碰触它时会得到火箭鞋。</p>
+<p><strong>特性:</strong>如果你用它画一个圈，那么圈内将不受万有引力影响。</p>
+</div>
+<div class="section" id="energy-wall">
+<h3>能量墙【Energy Wall】<a class="headerlink" href="#energy-wall" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>只允许压力和能量形式的粒子通过，例如光子(<a class="reference external" href="#phot-photons-type-031">*PHOT*</a>)、中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)、电子(<a class="reference external" href="#elec-electrons-type-136">*ELEC*</a>)以及射线发射器(<a class="reference external" href="#a-aray-a-type-ray-emitter-type-126-b-bray-type-127">*ARAY*</a>)的射线。</p>
+</div>
+<div class="section" id="pressure-wall">
+<h3>气压墙【Pressure Wall】<a class="headerlink" href="#pressure-wall" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>允许所有粒子通过，阻挡压力。</p>
+</div>
+<div class="section" id="eraser">
+<h3>橡皮擦【Eraser】<a class="headerlink" href="#eraser" title="永久链接至标题">¶</a></h3>
+<p><strong>描述：</strong>可以擦掉任何东西的橡皮擦，包括墙、元素和标志。</p>
+</div>
+</div>
+<div class="section" id="electronics">
+<h2>Electronics电子类<a class="headerlink" href="#electronics" title="永久链接至标题">¶</a></h2>
+<p><strong>操作技巧:</strong>CTRL+等号可以移除屏幕上的所有电脉冲。</p>
+<div class="section" id="metl-metal-type-014">
+<h3>金属(METL)【Metal】 Type:014<a class="headerlink" href="#metl-metal-type-014" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>最基础的导体，可以熔化。</p>
+<p><strong>制取:</strong>铁(<a class="reference external" href="#iron-iron-type-076">*IRON*</a>)熔化后倒在煤(<a class="reference external" href="#coal-coal-type-059">*COAL*</a>)或者煤粉(<a class="reference external" href="#bcol-broken-coal-type-073">*BCOL*</a>)上并冷却可得到金属(METL)。</p>
+<p><strong>熔点:</strong>999.85℃/1273k，变为Molten METL</p>
+<p><strong>特性:</strong>有电脉冲(<a class="reference external" href="#sprk-spark-type-015">*SPRK*</a>)通过时会升温并产生少量压力。</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>22℃/295.15k</p>
+</div>
+<div class="section" id="sprk-spark-type-015">
+<h3>电脉冲(SPRK)【Spark】 Type:015<a class="headerlink" href="#sprk-spark-type-015" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>电脉冲，不能单独存在，仅当点选在导体上(除了墙)时才能产生，会加热流经的物质。两段导体之间空隙不超过一个像素时，电脉冲可以跳过空隙继续传播。</p>
+<p><strong>初始温度:</strong>22℃/295.15k</p>
+<p><strong>导热率:</strong>251</p>
+</div>
+<div class="section" id="p-pscn-p-type-silicon-type-035">
+<h3>P型硅(PSCN)【P-type Silicon】 Type:035<a class="headerlink" href="#p-pscn-p-type-silicon-type-035" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>可以传导电脉冲给任意导体，可以熔化。P型硅与N型硅(<a class="reference external" href="#n-nscn-n-type-silicon-type-036">*NSCN*</a>)紧贴可以形成一个太阳能电池板(PN结)，有光子撞击P型硅的时候会产生电脉冲。另外，P型硅也可以用来激活动力材料及制作二极管。</p>
+<p><strong>熔点:</strong>1413.85℃/1687k，变成Molten PSCN</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>22℃/295.15k</p>
+</div>
+<div class="section" id="n-nscn-n-type-silicon-type-036">
+<h3>N型硅(NSCN)【N-type Silicon】 Type:036<a class="headerlink" href="#n-nscn-n-type-silicon-type-036" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>不能向P型硅(<em>PSCN</em>)传递电脉冲(即电脉冲只能从<a class="reference external" href="#p-pscn-p-type-silicon-type-035">*PSCN*</a>单向传导到NSCN)，可以熔化，可以与<a class="reference external" href="#p-pscn-p-type-silicon-type-035">*PSCN*</a>结合形成PN结使用。用于关闭一些可控材料和制作二极管。</p>
+<p><strong>熔点:</strong>1413.85℃/1687k，变成Molten NSCN</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>22℃/295.15k</p>
+</div>
+<div class="section" id="insl-insulator-type-038">
+<h3>绝缘体(INSL)【Insulator】 Type:038<a class="headerlink" href="#insl-insulator-type-038" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>固体，阻隔热量和电脉冲，一个像素的宽度就能起效，但是易燃(不能碰到明火和熔融物)，谨慎使用。</p>
+<p><strong>导热率:</strong>0</p>
+<p><strong>初始温度:</strong>22℃/295.15k</p>
+</div>
+<div class="section" id="ntct-negative-temperature-coefficient-thermistor-type-043">
+<h3>负温度系数热敏电阻(NTCT)【Negative Temperature Coefficient Thermistor】 Type:043<a class="headerlink" href="#ntct-negative-temperature-coefficient-thermistor-type-043" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>半导体，只有超过100℃时才导电，没有其他热源时会自动冷却(2.5k/帧)到22℃左右，可以用于给其他物质降温。可以熔化。可以通过P型硅/N型硅(<a class="reference external" href="#p-pscn-p-type-silicon-type-035">*PSCN*</a>/<a class="reference external" href="#n-nscn-n-type-silicon-type-036">*NSCN*</a>)输入/输出电脉冲，当一个像素的NTCT周围3x3的范围内有通电的金属(<a class="reference external" href="#metl-metal-type-014">*METL*</a>)时其温度自动上升至199.85℃。</p>
+<p><strong>熔点:</strong>1413.85℃/1687k，变成Molten NTCT</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>22℃/295.15k。(利用NTCT实现的“与”门)</p>
+</div>
+<div class="section" id="ptct-positive-temperature-coefficient-thermistor-type-046">
+<h3>正温度系数热敏电阻(PTCT) 【Positive Temperature Coefficient Thermistor】 Type:046<a class="headerlink" href="#ptct-positive-temperature-coefficient-thermistor-type-046" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>半导体，只有低于100℃时才导电，也能自动冷却(2.5k/帧)到22℃左右，可以熔化。可以通过P型硅/N型硅(<a class="reference external" href="p-pscn-p-type-silicon-type-035">*PSCN*</a>/<a class="reference external" href="#n-nscn-n-type-silicon-type-036">*NSCN*</a>)输入/输出电脉冲，当一个像素的PTCT周围3x3的范围内有通电的金属(<a class="reference external" href="#metl-metal-type-014">*METL*</a>)时温度自动上升至199.85℃。</p>
+<p><strong>熔点:</strong>1140.85℃/1414k时变成Molten PTCT</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>22℃/295.15k(利用PTCT实现的“非”门)</p>
+</div>
+<div class="section" id="etrd-electrode-type-050">
+<h3>电极(ETRD)【Electrode】 Type:050<a class="headerlink" href="#etrd-electrode-type-050" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>一旦通电，相邻两个电极之间会产生等离子体(<a class="reference external" href="#plsm-plasma-type-049">*PLSM*</a>，9000+℃)，每次持续20帧。</p>
+<p><strong>其他:</strong>墙不会干扰等离子体的产生，不过有可能会隔开(视具体的墙而定)；如果两个电极之间有绝缘体(<a class="reference external" href="#insl-insulator-type-038">*INSL*</a>)阻隔则不会产生等离子体。</p>
+<p><strong>元素参数:</strong>life值为产生等离子体的持续时间(需要同时修改两边的电极)。</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>22℃/295.15k</p>
+</div>
+<div class="section" id="btry-battery-type-053">
+<h3>电池(BTRY)【Battery】 Type:053<a class="headerlink" href="#btry-battery-type-053" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>固体，能提供稳定的电脉冲给导电元素，沸腾后变成等离子体(<a class="reference external" href="#plsm-plasma-type-049">*PLSM*</a>)。</p>
+<p><strong>沸点:</strong>1999.85℃/2273k</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>22℃/295.15k</p>
+</div>
+<div class="section" id="swch-switch-type-056">
+<h3>开关(SWCH)【Switch】 Type:056<a class="headerlink" href="#swch-switch-type-056" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>仅当开关打开时导电。P型硅(<a class="reference external" href="#p-pscn-p-type-silicon-type-035">*PSCN*</a>)输入电脉冲可以打开开关(变亮)，N型硅(<a class="reference external" href="#n-nscn-n-type-silicon-type-036">*NSCN*</a>)输入电脉冲可以关闭开关(变暗)。</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>22℃/295.15k</p>
+</div>
+<div class="section" id="inwr-insulated-wire-type-062">
+<h3>绝缘线(INWR)【Insulated Wire】 Type:062<a class="headerlink" href="#inwr-insulated-wire-type-062" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>只能在P型硅(<em>PSCN</em>)与N型硅(<a class="reference external" href="#n-nscn-n-type-silicon-type-036">*NSCN*</a>)之间传递电脉冲(<strong>双向</strong>)，可以熔化。</p>
+<p><strong>熔点:</strong>1413.85℃/1687k，变成Molten INWR</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>22℃/295.15k</p>
+</div>
+<div class="section" id="tesc-tesla-coil-type-088">
+<h3>特斯拉线圈(TESC)【Tesla Coil】 Type:088<a class="headerlink" href="#tesc-tesla-coil-type-088" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>通电可以产生闪电(<a class="reference external" href="#ligh-lightning-type-087">*LIGH*</a>，高温，可以穿透一切，产生较大的压力并使一些导电材料产生电脉冲)。将它做成线圈状(默认状态下，先左键点击空白处，再缩小光标，右键，再缩小光标，左键……)效果更佳。</p>
+<p><strong>元素参数:</strong>Tmp值用于设定闪电的长度</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>22℃/295.15k</p>
+</div>
+<div class="section" id="inst-instant-conductor-instantly-conducts-type-106">
+<h3>超导线(INST)【Instant Conductor (Instantly Conducts)】 Type:106<a class="headerlink" href="#inst-instant-conductor-instantly-conducts-type-106" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>导电速度和导电墙相同，只能通过P型硅(<a class="reference external" href="#p-pscn-p-type-silicon-type-035">*PSCN*</a>)输入电脉冲，N型硅(<a class="reference external" href="#n-nscn-n-type-silicon-type-036">*NSCN*</a>)输出电脉冲。</p>
+<p>不会被高压破坏，也不能熔融。</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>22℃/295.15k</p>
+</div>
+<div class="section" id="wi-fi-wifi-wifi-type-124">
+<h3>Wi-Fi(WIFI)【WiFi】 Type:124<a class="headerlink" href="#wi-fi-wifi-wifi-type-124" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>能无线转移电脉冲，可使用大多数导电物质输入电脉冲(除了N型硅)，只能由N型硅(<a class="reference external" href="#n-nscn-n-type-silicon-type-036">*NSCN*</a>)、绝缘线(<a class="reference external" href="#inwr-insulated-wire-type-062">*INWR*</a>)或P型硅(<a class="reference external" href="#p-pscn-p-type-silicon-type-035">*PSCN*</a>)输出电脉冲。不导热。在高压下会损坏。89.0版本后传导电脉冲时会延迟一帧。</p>
+<p><strong>频道:</strong></p>
+<p>Wi-Fi有99个频道，频道之间互不干扰，Wi-Fi只会向相同频道的Wi-Fi传输电脉冲。相邻频道之间相隔100℃(会变颜色)。在调试模式(Debug，热键“D”)下，相同频道的WIFI之间会出现连接线。</p>
+<p>可以使用升温笔/降温笔(<a class="reference external" href="#heat-heat">*HEAT*</a>/<a class="reference external" href="#cool-cool">*COOL*</a>)来调整Wi-Fi的频道。</p>
+<p><strong>压力极限:</strong>15pressure，会碎裂成金属粉(<a class="reference external" href="#brmt-broken-metal-type-030">*BRMT*</a>)</p>
+<p><strong>导热率:</strong>0</p>
+<p><strong>初始温度:</strong>22℃/295.15k</p>
+</div>
+<div class="section" id="a-aray-a-type-ray-emitter-type-126-b-bray-type-127">
+<h3>A射线发射器(ARAY)【A-type Ray Emitter】 Type:126 B射线(BRAY) Type:127<a class="headerlink" href="#a-aray-a-type-ray-emitter-type-126-b-bray-type-127" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>能射出B射线(BRAY)，可以从任意导电物质中接受电脉冲，之后会沿着电脉冲的方向发射射线，多个射线相撞会产生固体B射线(会慢慢消失)
+。</p>
+<p>其他模式:</p>
+<p>由P型硅(<a class="reference external" href="#p-pscn-p-type-silicon-type-035">*PSCN*</a>)输入电脉冲时会产生另一种不能导电的射线，会清除其他的BRAY，并很快消失。</p>
+<p>由超导线(<a class="reference external" href="#inst-instant-conductor-instantly-conducts-type-106">*INST*</a>)输入电脉冲时产生的射线具有穿透性，可以穿透多个导电材料。</p>
+<p><strong>其他:</strong>在69版本之后，ARAY不再导热，其产生的B射线(BRAY)温度将会是ARAY的温度。这一特性被用来制作恒温器。</p>
+<p><strong>染色:</strong>射线(BRAY)经过滤镜(<a class="reference external" href="#filt-filter-type-125">*FILT*</a>)时会被染色，染色方式取决于滤镜的设定方式。</p>
+<p><strong>导热率:</strong>0</p>
+<p><strong>初始温度:</strong>22℃/295.15k</p>
+</div>
+<div class="section" id="emp-electromagnetic-pulse-type-134">
+<h3>电磁脉冲武器(EMP)【Electromagnetic Pulse】 Type:134<a class="headerlink" href="#emp-electromagnetic-pulse-type-134" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>EMP会随机摧毁所有正在工作(通电)的电子产品。有几率使受到EMP影响的Wi-Fi(<a class="reference external" href="#wi-fi-wifi-wifi-type-124">*WIFI*</a>)的频道改变。同样的，延时计(<a class="reference external" href="#dlay-delay-type-079">*DLAY*</a>)的延时时间也可能被随机改变。A射线发射器(<a class="reference external" href="#a-aray-a-type-ray-emitter-type-126-b-bray-type-127">*ARAY*</a>)、开关(<a class="reference external" href="#swch-switch-type-056">*SWCH*</a>)、金属(<a class="reference external" href="#metl-metal-type-014">*METL*</a>)、脆金属(<a class="reference external" href="#bmtl-breakable-metal-type-029">*BMTL*</a>)、Wi-Fi(<a class="reference external" href="#wi-fi-wifi-wifi-type-124">*WIFI*</a>)等可能会发热或损坏。</p>
+<p>(注:EMP是全屏幕有效的)</p>
+<p><strong>元素参数:</strong>恢复时间(life)默认为220帧。</p>
+<p><strong>导热率:</strong>121</p>
+<p><strong>初始温度:</strong>22℃/295.15k</p>
+</div>
+<div class="section" id="wire-world-wwld-wireworld-wire-type-156">
+<h3>Wire World线(WWLD)【WireWorld Wire】 Type:156<a class="headerlink" href="#wire-world-wwld-wireworld-wire-type-156" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>来自wire
+world，细胞自动机的一种，可以将电脉冲从P型硅(<a class="reference external" href="#p-pscn-p-type-silicon-type-035">*PSCN*</a>)传导至N型硅(<a class="reference external" href="#n-nscn-n-type-silicon-type-036">*NSCN*</a>)。难以摧毁(除了炸弹<a class="reference external" href="#bomb-bomb-type-129-embr-ember-type-147">*BOMB*</a>)。使用方法可以参考TPT吧中的帖子及维基百科中的有关内容。</p>
+<p><strong>导热率:</strong>250</p>
+<p><strong>初始温度:</strong>22℃/295.15k(四循环时钟 4-Cycle Clock)</p>
+</div>
+<div class="section" id="cray-c-ray-emitter-particle-ray-emitter-type-167">
+<h3>物质射线发射器(CRAY)【C-Ray Emitter(Particle Ray Emitter)】 Type:167<a class="headerlink" href="#cray-c-ray-emitter-particle-ray-emitter-type-167" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>又称C射线发射器，会沿着电脉冲的方向发射它第一个接触到的物质(设定方式类似于复制体<a class="reference external" href="#clne-clone-type-009">*CLNE*</a>)，通过修改Ctype值可以改变发射的粒子种类，修改Tmp(0~255)值可以修改粒子束长度。91.0beta版本后，物质射线发射器的Tmp2值有和复印机(<a class="reference external" href="#dray-duplicator-ray-emitter-90-0beta-type-178">*DRAY*</a>)类似的作用，可设定生成的粒子与自身之间的空隙。</p>
+<p><strong>两种模式:</strong></p>
+<p>如果使用P型硅(<a class="reference external" href="#p-pscn-p-type-silicon-type-035">*PSCN*</a>)输入电脉冲，它将会删除沿途阻挡的物质(除了钻石<a class="reference external" href="#dmnd-diamond-type-028">*DMND*</a>)。</p>
+<p>使用超导线(<a class="reference external" href="#inst-instant-conductor-instantly-conducts-type-106">*INST*</a>)输入电脉冲，在发射射线时会跳过任何阻挡的物质，直到到达TMP值上限。</p>
+<p>(86.1版本前是无视Tmp上限的)</p>
+<p><strong>射线染色:</strong>在射线的路径上放置一块滤镜(<a class="reference external" href="#filt-filter-type-125">*FILT*</a>)，射线经过滤镜时会染上滤镜的颜色。</p>
+<p><strong>导热率:</strong>0</p>
+<p><strong>初始温度:</strong>22℃/295.15k</p>
+</div>
+<div class="section" id="tung-87-2-tungsten-type-171">
+<h3>钨(TUNG)(87.2版本后出现)【Tungsten】 Type:171<a class="headerlink" href="#tung-87-2-tungsten-type-171" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>脆性金属，具有很高的熔点，但不耐压，通电后温度会不断上升至3324℃，同时白热化，可以用于加热或者制作灯泡。</p>
+<p><strong>制取:</strong>把金属粉(<a class="reference external" href="#brmt-broken-metal-type-030">*BRMT*</a>)加热至1000℃会变成钨(<em>TUNG</em>)(旧版本是熔化)。</p>
+<p><strong>压力极限:</strong>当压强变化&gt;1pressure时碎裂成金属粉(<a class="reference external" href="#brmt-broken-metal-type-030">*BRMT*</a>)。</p>
+<p><strong>熔点:</strong>3421.85℃/3695k</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>22℃/295.15k</p>
+</div>
+<div class="section" id="dray-duplicator-ray-emitter-90-0beta-type-178">
+<h3>复印机(DRAY)【Duplicator Ray Emitter】(90.0beta版本后出现) Type:178<a class="headerlink" href="#dray-duplicator-ray-emitter-90-0beta-type-178" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>又称D射线发射器，可使用P型硅(<a class="reference external" href="#p-pscn-p-type-silicon-type-035">*PSCN*</a>)激活，会将沿电流方向对前方的所有粒子(不论种类是否相同)都复制一份，如果中途有阻碍则会直接删除挡路的粒子并继续复制。</p>
+<p><strong>元素参数:</strong></p>
+<p>Tmp:设定复制序列的最小长度，如果这个值小于复印机面前的粒子长度，则复制不会发生。</p>
+<p>Tmp2:设定新物质与旧物质之间的空隙，复制产生的新物质序列将会与原来的物质隔开一定距离。</p>
+<p><strong>导热率:</strong>0</p>
+<p><strong>初始温度:</strong>22℃/295.15k(复制一次, 复制序列为 空白 + ICE + WOOD + ICE,
+tmp = 4, tmp2 = 1)</p>
+</div>
+</div>
+<div class="section" id="powered-material-49-0">
+<h2>Powered Material可控材料(49.0版本后出现)<a class="headerlink" href="#powered-material-49-0" title="永久链接至标题">¶</a></h2>
+<p><strong>操作技巧:</strong>大部分可控材料都是用P型硅(<a class="reference external" href="#p-pscn-p-type-silicon-type-035">*PSCN*</a>)激活/输入，N型硅(<a class="reference external" href="#n-nscn-n-type-silicon-type-036">*NSCN*</a>)关闭/输出。</p>
+<p><strong>元素参数:</strong>大部分可控材料都是life≥10=激活；life＜10=关闭。</p>
+<div class="section" id="lcry-liquid-crystal-type-054">
+<h3>液晶(LCRY)【Liquid Crystal】 Type:054<a class="headerlink" href="#lcry-liquid-crystal-type-054" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>液晶，激活时改变颜色。激活时允许光子(<a class="reference external" href="#phot-photons-type-031">*PHOT*</a>)缓慢通过，极高温度(999.85℃/1273k)下会变成碎玻璃(<a class="reference external" href="#bgla-broken-glass-type-047">*BGLA*</a>)。激活后，部分通过它的质子(<a class="reference external" href="#prot-protons-type-173">*PROT*</a>)会被转变为光子(<a class="reference external" href="#phot-photons-type-031">*PHOT*</a>)。</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="pcln-powered-clone-type-074">
+<h3>可控复制体(PCLN)【Powered Clone】 Type:074<a class="headerlink" href="#pcln-powered-clone-type-074" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>激活时变得和复制体(<a class="reference external" href="#clne-clone-type-009">*CLNE*</a>)一样，可以复制与之接触的物质。也可以通过修改Ctype值来改变复制的物质种类。</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="hswc-heat-switch-type-075">
+<h3>热开关(HSWC)【Heat Switch】 Type:075<a class="headerlink" href="#hswc-heat-switch-type-075" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>当激活时才可以导热，不可摧毁。Tmp=1 时且处于激活状态下时，热开关会读取周围滤镜(<a class="reference external" href="#filt-filter-type-125">*FILT*</a>)、光子(<a class="reference external" href="#phot-photons-type-031">*PHOT*</a>)、射线(<a class="reference external" href="#a-aray-a-type-ray-emitter-type-126-b-bray-type-127">*ARAY*</a>)的 ctype 值，并让自身温度变成这个值。</p>
+<p><strong>导热率:</strong>激活后=251</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="dlay-delay-type-079">
+<h3>延时计(DLAY)【Delay】 Type:079<a class="headerlink" href="#dlay-delay-type-079" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>当电脉冲通过延时计时会延迟X帧，X等于延时计的温度，不导热，可以使用升温笔(<a class="reference external" href="#heat-heat">*HEAT*</a>)和降温笔(<a class="reference external" href="#cool-cool">*COOL*</a>)来改变温度，最低为1℃。</p>
+<p>过程描述:</p>
+<p>电脉冲输入</p>
+<p>life值变为当前温度，颜色变亮</p>
+<p>每过一帧，life – 1，直到life = 0，颜色变暗</p>
+<p>电脉冲输出</p>
+<p><strong>导热率:</strong>0</p>
+<p><strong>初始温度:</strong>4.00℃/277.15k(第1~4帧)</p>
+</div>
+<div class="section" id="stor-store-type-083">
+<h3>堆栈(STOR)【Store】 Type:083<a class="headerlink" href="#stor-store-type-083" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>固体，吸收一个像素的与之接触的物质，修改它的Ctype值可以使它吸收特定的物质，用P型硅(<a class="reference external" href="#p-pscn-p-type-silicon-type-035">*PSCN*</a>)或A射线发射器(<a class="reference external" href="#a-aray-a-type-ray-emitter-type-126-b-bray-type-127">*ARAY*</a>)的射线激活后释放，也可以传递给动力管(<a class="reference external" href="#pipe-pipe-type-099">*PIPE*</a>)。</p>
+<p>91.0beta后，堆栈也可以将物质传递给传送门入口(<a class="reference external" href="#prti-portal-in-type-109">*PRTI*</a>)。</p>
+<p><strong>元素参数:</strong></p>
+<p>Tmp值 = 被吸收元素的type值</p>
+<p>Temp值 = 被吸收元素的temp值</p>
+<p>Tmp2值 = 被吸收元素的life值</p>
+<p>Pavg[0]值 = 被吸收元素的tmp值</p>
+<p>Pavg[1]值 = 被吸收元素的ctype值</p>
+<p><strong>导热率:</strong>0</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="pvod-powered-void-type-084">
+<h3>可控虚空(PVOD)【Powered Void】 Type:084<a class="headerlink" href="#pvod-powered-void-type-084" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>固体，一旦激活就如同虚空(<a class="reference external" href="#void-void-type-022">*VOID*</a>)一样，吸收一切物质。Tmp值为0时会只吸收Ctype值代表的物质，Tmp值为1时则不吸收Ctype代表的物质。</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k(ctype值为尘埃DUST, tmp =
+0)(ctype值为尘埃DUST, tmp = 1)</p>
+</div>
+<div class="section" id="pump-pressure-pump-type-097">
+<h3>压力泵(PUMP)【Pressure Pump】 Type:097<a class="headerlink" href="#pump-pressure-pump-type-097" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>不导热，激活时改变使周围压力值变为自身温度值，自身温度可用[升温/降温笔(<a class="reference external" href="#heat-heat">*HEAT*</a>/<a class="reference external" href="#cool-cool">*COOL*</a>)控制。</p>
+<p><strong>导热率:</strong>0</p>
+<p><strong>初始温度:</strong>0.00℃/273.15k</p>
+<p><strong>温度范围:</strong>-256~256℃</p>
+</div>
+<div class="section" id="pbcn-breakable-powered-clone-type-153">
+<h3>可控可破坏复制体(PBCN)【Breakable Powered Clone】 Type:153<a class="headerlink" href="#pbcn-breakable-powered-clone-type-153" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>激活时和可破坏复制体(<a class="reference external" href="#bcln-breakable-clone-type-093">*BCLN*</a>)相同，复制与之相接触的物质，但可以被破坏。</p>
+<p><strong>压力极限:</strong>5pressure</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="gpmp-gravity-pump-type-154">
+<h3>引力泵(GPMP)【Gravity Pump】 Type:154<a class="headerlink" href="#gpmp-gravity-pump-type-154" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>不导热，使用需开启牛顿万有引力(热键“N”)，激活时改变其万有引力为自身温度值，可以使用升温/降温笔(<a class="reference external" href="#heat-heat">*HEAT*</a>/<a class="reference external" href="#cool-cool">*COOL*</a>)来改变自身温度。温度升高会使自身引力增加，吸引其他粒子，反之亦然。从91.0Snapshot21开始，光子(<a class="reference external" href="#phot-photons-type-031">*PHOT*</a>)通过未通电的引力泵(<a class="reference external" href="#gpmp-gravity-pump-type-154">*GPMP*</a>)会转变成引力子(<a class="reference external" href="#grvt-90-0beta-graviton-type-177">*GRVT*</a>)，生成引力子的tmp值取决于引力泵的温度值。</p>
+<p><strong>导热率:</strong>0</p>
+<p><strong>初始温度:</strong>0.00℃/273.15k</p>
+<p><strong>温度范围:</strong>-256~256℃(温度为24.65℃的引力泵GPMP)</p>
+</div>
+<div class="section" id="ppip-powered-pipe-type-161">
+<h3>可控动力管(PPIP)【Powered Pipe】 Type:161<a class="headerlink" href="#ppip-powered-pipe-type-161" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>动力管(<a class="reference external" href="#pipe-pipe-type-099">*PIPE*</a>)的可控形式，利用P型硅(<a class="reference external" href="#p-pscn-p-type-silicon-type-035">*PSCN*</a>)激活时其中的物质将会运输，用N型硅(<a class="reference external" href="#n-nscn-n-type-silicon-type-036">*NSCN*</a>)则会停止其中物质的运输，用超导线(<a class="reference external" href="#inst-instant-conductor-instantly-conducts-type-106">*INST*</a>)会使物质向反方向运输。当激活时，周围包裹的砖块(<a class="reference external" href="#brck-brick-type-067">*BRCK*</a>)会发出蓝光。其他使用方法请参考动力管(<a class="reference external" href="#pipe-pipe-type-099">*PIPE*</a>)。</p>
+<p><strong>导热率:</strong>0</p>
+<p><strong>初始温度:</strong>0.00℃/273.15k</p>
+</div>
+</div>
+<div class="section" id="sensors-84-0">
+<h2>Sensors传感器(84.0版本后出现)<a class="headerlink" href="#sensors-84-0" title="永久链接至标题">¶</a></h2>
+<div class="section" id="invs-invisible-type-115">
+<h3>虚无(INVS)【Invisible】 Type:115<a class="headerlink" href="#invs-invisible-type-115" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>88.
+1Beta版中移动到传感器一栏。当施加压力时隐形，使物质通过。在不施加压力时，光子(<a class="reference external" href="#phot-photons-type-031">*PHOT*</a>)可以通过它并变成中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)，在4pressure左右时隐形。</p>
+<p><strong>元素参数:</strong> tmp值不为零时代表其压力阈值。隐形时tmp2=1，否则tmp2=0。</p>
+<p><strong>导热率:</strong>164</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="dtec-detector-type-162">
+<h3>探测器(DTEC)【Detector】 Type:162<a class="headerlink" href="#dtec-detector-type-162" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>83.0版本后出现，和使用复制体(<a class="reference external" href="#clne-clone-type-009">*CLNE*</a>)的方法差不多，放置好探测器后，将需要探测的物质与之直接接触就能设置它的探测目标，之后每当有相同的物质与之接触时它都会产生一个电脉冲，可以由金属或导电体输出(导电墙不行)。是探测墙的缩小化替代品。</p>
+<p><strong>元素参数:</strong>Tmp2=侦测范围，最大25像素</p>
+<p><strong>导热率:</strong>0</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k(Ctype = SMKE)</p>
+</div>
+<div class="section" id="tsns-temperature-sensor-type-164">
+<h3>温度传感器(TSNS)【Temperature Sensor】 Type:164<a class="headerlink" href="#tsns-temperature-sensor-type-164" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>不导热，可以用升温/降温笔(<a class="reference external" href="#heat-heat">*HEAT*</a>/<a class="reference external" href="#cool-cool">*COOL*</a>)来改变自身温度，当周围(2x2)有温度比它高的物质时，温度传感器会发出电脉冲给周围的导电体(水<a class="reference external" href="#watr-water-type-002">*WATR*</a>、盐水<a class="reference external" href="#sltw-salt-water-type-027">*SLTW*</a>、热敏电阻<a class="reference external" href="#ntct-negative-temperature-coefficient-thermistor-type-043">*NTCT*</a>&amp;<a class="reference external" href="#ptct-positive-temperature-coefficient-thermistor-type-046">*PTCT*</a>、绝缘线<a class="reference external" href="#inwr-insulated-wire-type-062">*INWR*</a>)。</p>
+<p><strong>元素参数:</strong>Tmp=1时，温度传感器会在发出电脉冲的同时改变周围的滤镜(<a class="reference external" href="#filt-filter-type-125">*FILT*</a>)的颜色。</p>
+<p><strong>导热率:</strong>0</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="psns-pressure-sensor-type-172">
+<h3>压力传感器(PSNS)【Pressure Sensor】 Type:172<a class="headerlink" href="#psns-pressure-sensor-type-172" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>不导热，可以用升温/降温笔(<a class="reference external" href="#heat-heat">*HEAT*</a>/<a class="reference external" href="#cool-cool">*COOL*</a>)来改变自身温度，当压力大于其温度值时，压力传感器会发出电脉冲给周围的导电体(水<a class="reference external" href="#watr-water-type-002">*WATR*</a>、盐水<a class="reference external" href="#sltw-salt-water-type-027">*SLTW*</a>、热敏电阻<a class="reference external" href="#ntct-negative-temperature-coefficient-thermistor-type-043">*NTCT*</a>&amp;<a class="reference external" href="#ptct-positive-temperature-coefficient-thermistor-type-046">*PTCT*</a>、绝缘线<a class="reference external" href="#inwr-insulated-wire-type-062">*INWR*</a>)。</p>
+<p><strong>导热率:</strong>0</p>
+<p><strong>初始温度:</strong>4.00℃/277.15k</p>
+</div>
+<div class="section" id="lsns-life-sensor-type-185">
+<h3>衰减传感器(LSNS)【Life Sensor】 Type:185<a class="headerlink" href="#lsns-life-sensor-type-185" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>不导热，可以用升温/降温笔(<a class="reference external" href="#heat-heat">*HEAT*</a>/<a class="reference external" href="#cool-cool">*COOL*</a>)来改变自身温度，当周围(2x2)有life值大于其温度值的粒子时，衰减传感器会发出电脉冲给周围的导电体(水<a class="reference external" href="#watr-water-type-002">*WATR*</a>、盐水<a class="reference external" href="#sltw-salt-water-type-027">*SLTW*</a>、热敏电阻<a class="reference external" href="#ntct-negative-temperature-coefficient-thermistor-type-043">*NTCT*</a>&amp;<a class="reference external" href="#ptct-positive-temperature-coefficient-thermistor-type-046">*PTCT*</a>、绝缘线<a class="reference external" href="#inwr-insulated-wire-type-062">*INWR*</a>)。Snapshot75
+之后加入。</p>
+<p><strong>导热率:</strong>0</p>
+<p><strong>初始温度:</strong>4.00℃/277.15k</p>
+</div>
+</div>
+<div class="section" id="force-74-0">
+<h2>Force动力材料(74.0版本后出现)<a class="headerlink" href="#force-74-0" title="永久链接至标题">¶</a></h2>
+<div class="section" id="pipe-pipe-type-099">
+<h3>动力管(PIPE)【Pipe】 Type:099<a class="headerlink" href="#pipe-pipe-type-099" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>可以用于向一个方向运输物质，自带动力，放置完毕后会在周围自动出现一圈砖块(<a class="reference external" href="#brck-brick-type-067">*BRCK*</a>)。不过在其中的东西可能会改一下名字(如:Molten
+<a class="reference external" href="#p-pscn-p-type-silicon-type-035">*PSCN*</a>会变成岩浆<a class="reference external" href="#lava-lava-type-006">*LAVA*</a>)。</p>
+<p><strong>使用方法:</strong>放置好动力管之后，在确定为<strong>出口</strong>的地方擦去一部分砖块(<a class="reference external" href="#brck-brick-type-067">*BRCK*</a>)，之后动力管会自动开始形成，等到完全形成之后将另一头的砖块(<a class="reference external" href="#brck-brick-type-067">*BRCK*</a>)擦去即可使用。可以用于运输或制造一个单向门。</p>
+<p><strong>压力极限:</strong>10pressure，变为金属粉(<a class="reference external" href="#brmt-broken-metal-type-030">*BRMT*</a>)。</p>
+<p><strong>导热率:</strong>0</p>
+<p><strong>初始温度:</strong>0.00℃/273.15k(利用动力管制作的单向门)</p>
+</div>
+<div class="section" id="acel-accelerator-type-137">
+<h3>加速器(ACEL)【Accelerator】 Type:137<a class="headerlink" href="#acel-accelerator-type-137" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>可以加速物质(除了固体)，有效范围1个像素，默认状态下能加速粒子10%的速度，通过修改Life值可以改变加速程度。</p>
+<p><strong>元素参数:</strong>Life值非零时，加速程度从0.01%-10%范围内改变，负值时为减速，Life=0时默认加速10%</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="dcel-decelerator-type-138">
+<h3>减速器(DCEL)【Decelerator】 Type:138<a class="headerlink" href="#dcel-decelerator-type-138" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>和加速器(<a class="reference external" href="#acel-accelerator-type-137">*ACEL*</a>)相反，但是只能减速能量粒子(光子<a class="reference external" href="#phot-photons-type-031">*PHOT*</a>、中子<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>、电子<a class="reference external" href="#elec-electrons-type-136">*ELEC*</a>等)</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="fray-force-ray-emitter-type-159">
+<h3>力射线发射器(FRAY)【Force Ray Emitter】 Type:159<a class="headerlink" href="#fray-force-ray-emitter-type-159" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>又称F射线发射器。通电后，会沿着电流方向寻找物质并施加力(这与射线发射器<a class="reference external" href="#a-aray-a-type-ray-emitter-type-126-b-bray-type-127">*ARAY*</a>的方向判定规则一样)，当物质温度大于动力射线发射器的温度时，物质将会被动力射线发射器给吸引，反之，则物质会被动力射线发射器推开。不导热，可以使用升温/降温笔(<a class="reference external" href="#heat-heat">*HEAT*</a>/<a class="reference external" href="#cool-cool">*COOL*</a>)来改变自身温度。修改tmp值可以改变其作用范围，tmp值为零时作用范围为默认的10个像素。</p>
+<p><strong>导热率:</strong>0</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="rpel-repeller-type-160">
+<h3>反射极(RPEL)【Repeller】 Type:160<a class="headerlink" href="#rpel-repeller-type-160" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>不需通电，和动力射线发射器(<a class="reference external" href="#fray-force-ray-emitter-type-159">*FRAY*</a>)一样，根据温度来吸引或推开物质，有效范围为20像素。</p>
+<p><strong>速度计算公式:</strong>temp (℃)/10=vX=vY</p>
+<p><strong>元素参数:</strong>从Snapshot54开始，Ctype值记录被反射的物质种类</p>
+<p><strong>导热率:</strong>0</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="dmg-damage-type-163">
+<h3>压力炸弹(DMG)【Damage】 Type:163<a class="headerlink" href="#dmg-damage-type-163" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>对碰到它的物质表面产生一个破坏性的压力(除了钻石<a class="reference external" href="#dmnd-diamond-type-028">*DMND*</a>)。</p>
+<p><strong>导热率:</strong>29</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="pstn-piston-type-168">
+<h3>活塞(PSTN)【Piston】 Type:168<a class="headerlink" href="#pstn-piston-type-168" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>活塞，至少需要2像素才能起作用，当用P型硅(<a class="reference external" href="#p-pscn-p-type-silicon-type-035">*PSCN*</a>)激活时，活塞会变长，碰到物质后它不会停止而是继续推动物质以上升，使用N型硅(<a class="reference external" href="#n-nscn-n-type-silicon-type-036">*NSCN*</a>)激活可以使它缩短。通过使用支架(<a class="reference external" href="#frme-frame-type-169">*FRME*</a>)可以一次性推动更多物质。设置活塞的Tmp值可以改变活塞能推动的物质数量，Tmp2值可以设置活塞的最大长度。</p>
+<p>91.0beta后，活塞的初始温度设为10.00°C/283.15k，其温度可以设定活塞每次伸长的长度，每10°C增加一格，例如设为300°C则每次激活都会伸长30格。</p>
+<p><strong>导热率:</strong>0</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="frme-frame-type-169">
+<h3>支架(FRME)【Frame】 Type:169<a class="headerlink" href="#frme-frame-type-169" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>用于增加活塞一次性推动物质的数量，至少需要1像素厚度，最多能向一个方向延长15像素，用活塞(<a class="reference external" href="#pstn-piston-type-168">*PSTN*</a>)推动其中一个像素就可以推动和收回整个支架(以及支架上方的物质)。如果某一个像素的支架被挡住(比如墙)，那么整个支架都不会移动。</p>
+<p><strong>注意事项:</strong>只有位于活塞上方第一层的支架能起作用，第二层之后的支架是不起支撑作用的(也就是说你不能建造一个树杈状的支架并整体移动它)。同时，如果你使用了两个以上的活塞来推动支架，那么在收回时它们会互相挡住。</p>
+<p><strong>Tmp:</strong>令Tmp=1可以使支架变为“非粘性”，也就是说此时支架被推出后就不能被收回。</p>
+<p><strong>导热率:</strong>0</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+</div>
+<div class="section" id="explosives">
+<h2>Explosives爆炸物<a class="headerlink" href="#explosives" title="永久链接至标题">¶</a></h2>
+<div class="section" id="fire-fire-type-004">
+<h3>火焰(FIRE)【Fire】 Type:004<a class="headerlink" href="#fire-fire-type-004" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>明火，用于点燃或加热，火焰本身温度升高至一定程度(2499.85℃/2773k左右)会变成等离子体(<a class="reference external" href="#plsm-plasma-type-049">*PLSM*</a>)。当火焰温度低于351.85℃/625k时会产生烟(<a class="reference external" href="#smke-smoke-type-057">*SMKE*</a>)。</p>
+<p><strong>存在时间(life):</strong>100-200之间随机</p>
+<p><strong>元素参数:</strong>TMP=3时燃烧产生蒸馏水(<a class="reference external" href="#dstw-distilled-water-type-025">*DSTW*</a>)</p>
+<p><strong>导热率:</strong>88</p>
+<p><strong>初始温度:</strong>422.00℃/295.15k</p>
+</div>
+<div class="section" id="gun-gunpowder-type-007">
+<h3>黑火药(GUN)【Gunpowder】 Type:007<a class="headerlink" href="#gun-gunpowder-type-007" title="永久链接至标题">¶</a></h3>
+<p><strong>爆炸点:</strong>399.85℃/673k</p>
+<p><strong>描述:</strong>以粉末形式爆炸，温度到达爆炸点时爆炸,也可以被明火或电脉冲引爆。</p>
+<p><strong>导热率:</strong>97</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="nitr-nitroglycerin-type-008">
+<h3>硝化甘油(NITR)【Nitroglycerin】 Type:008<a class="headerlink" href="#nitr-nitroglycerin-type-008" title="永久链接至标题">¶</a></h3>
+<p><strong>燃点:</strong>399.85℃/673k</p>
+<p><strong>描述:</strong>炸药，压力下(3Pressure左右)、电脉冲、明火都可以引起爆炸。爆炸点与压力有关，压力越小爆炸点越低。暴露在中子下产生石油气(<a class="reference external" href="#gas-gas-type-010">*GAS*</a>)和柴油(<a class="reference external" href="#desl-diesel-type-058">*DESL*</a>)。可以与粘土砂(<a class="reference external" href="#clst-clay-dust-type-155">*CLST*</a>)混合形成三硝基甲苯(<a class="reference external" href="#tnt-trinitrotoluene-type-139">*TNT*</a>)。</p>
+<p><strong>导热率:</strong>50</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="c-4-c-4-c-4-type-011">
+<h3>C-4塑胶炸药(C-4)【C-4】 Type:011<a class="headerlink" href="#c-4-c-4-c-4-type-011" title="永久链接至标题">¶</a></h3>
+<p><strong>爆炸点:</strong>399.85℃/673k</p>
+<p><strong>描述:</strong>压力敏感型炸药，暴露在高压(3Pressure左右)下、电脉冲或者达到爆炸点都可以引发爆炸。暴露在中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)下会变成粘土(<a class="reference external" href="#goo-goo-type-012">*GOO*</a>)。</p>
+<p><strong>导热率:</strong>88</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="rbdm-rubidium-type-041">
+<h3>固态铷(RBDM)【Rubidium】 Type:041<a class="headerlink" href="#rbdm-rubidium-type-041" title="永久链接至标题">¶</a></h3>
+<p><strong>熔点:</strong>38.85℃/312k</p>
+<p><strong>描述:</strong>低熔点，遇水爆炸，可与水(<a class="reference external" href="#watr-water-type-002">*WATR*</a>)、蒸馏水(<a class="reference external" href="#dstw-distilled-water-type-025">*DSTW*</a>)、盐水(<a class="reference external" href="#sltw-salt-water-type-027">*SLTW*</a>)、苏打水(<a class="reference external" href="#bubw-bubbled-water-carbonated-water-type-082">*BUBW*</a>)、酸(<a class="reference external" href="#acid-acid-type-021">*ACID*</a>)、火焰(<a class="reference external" href="#fire-fire-type-004">*FIRE*</a>)反应，可以导电而不爆炸。</p>
+<p><strong>导热率:</strong>240</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="lrbd-liquid-rubidium-type-042">
+<h3>液态铷(LRBD)【Liquid Rubidium】 Type:042<a class="headerlink" href="#lrbd-liquid-rubidium-type-042" title="永久链接至标题">¶</a></h3>
+<p><strong>凝固点:</strong>37.85℃/311k</p>
+<p><strong>描述:</strong>液态铷，压力越大，爆炸点越低，其他性质和固态铷一样</p>
+<p><strong>爆炸点:</strong>0pressure时，687.85℃/961k</p>
+<p><strong>导热率:</strong>170</p>
+<p><strong>初始温度:</strong>67.00℃/340.15k</p>
+</div>
+<div class="section" id="thdr-thunder-type-048">
+<h3>电光火球/球状闪电(THDR)【Thunder】 Type:048<a class="headerlink" href="#thdr-thunder-type-048" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>很热的类液体物质，高温(9000.00℃)带电，与物质接触时产生巨大压力(256pressure)。球状闪电的运动不受压力影响。</p>
+<p><strong>导热率:</strong>1</p>
+<p><strong>初始温度:</strong>9000℃/9273.15k</p>
+</div>
+<div class="section" id="thrm-thermite-type-065">
+<h3>铝热剂(THRM)【Thermite】 Type:065<a class="headerlink" href="#thrm-thermite-type-065" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>只能与火焰(<a class="reference external" href="#fire-fire-type-004">*FIRE*</a>)、等离子体(<a class="reference external" href="#plsm-plasma-type-049">*PLSM*</a>)、岩浆(<a class="reference external" href="#lava-lava-type-006">*LAVA*</a>)、生命(<a class="reference external" href="#id2">*LIFE*</a>)反应，产生巨大的热量(点燃时产生3000℃高温)。最后生成的Molten
+Thermite冷却后产生脆金属(<a class="reference external" href="#bmtl-breakable-metal-type-029">*BMTL*</a>)。</p>
+<p><strong>制取方法:</strong>将金属粉(<a class="reference external" href="#brmt-broken-metal-type-030">*BRMT*</a>)与电渣(<a class="reference external" href="#brel-broken-electronics-type-135">*BREL*</a>)共热至250℃/523.15k以上能制得铝热剂(THRM)。</p>
+<p><strong>导热率:</strong>211</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="cflm-sub-zero-flame-type-068">
+<h3>冷焰(CFLM)【Sub-zero Flame】 Type:068<a class="headerlink" href="#cflm-sub-zero-flame-type-068" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>绝对零度(-273.15℃)的火焰，可以引爆C-5低温炸药(<a class="reference external" href="#c-5-c-5-c-5-type-130">*C-5*</a>)。</p>
+<p><strong>导热率:</strong>88</p>
+<p><strong>初始温度:</strong>-273.15℃/0k</p>
+</div>
+<div class="section" id="firw-fireworks-type-069">
+<h3>烟花(FIRW)【Fireworks】 Type:069<a class="headerlink" href="#firw-fireworks-type-069" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>用明火点燃后，烟花会升高并爆炸，产生高温(6000℃-9000℃)。</p>
+<p><strong>元素参数:</strong>tmp=2时引爆</p>
+<p><strong>导热率:</strong>70</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="fuse-fuse-type-070">
+<h3>导火线(FUSE)【Fuse】 Type:070<a class="headerlink" href="#fuse-fuse-type-070" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>高温下或通电能缓慢燃烧，燃烧温度4000-6000℃左右，在2.71pressure下碎裂成导火索粉尘(<a class="reference external" href="#fsep-fuse-powder-type-071">*FSEP*</a>)</p>
+<p><strong>元素参数:</strong>Tmp小于40时碎裂</p>
+<p><strong>燃点:</strong>700℃/973.15k</p>
+<p><strong>导热率:</strong>200</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="fsep-fuse-powder-type-071">
+<h3>导火线粉尘(FSEP)【Fuse powder】 Type:071<a class="headerlink" href="#fsep-fuse-powder-type-071" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>燃烧缓慢，需要较高温度才能点燃，比如使用等离子体(<a class="reference external" href="#plsm-plasma-type-049">*PLSM*</a>)或者电脉冲(<a class="reference external" href="#sprk-spark-type-015">*SPRK*</a>)。燃烧时温度很高(3000+℃)，因此燃烧时火焰是等离子体。</p>
+<p><strong>燃点:</strong>400℃/673.15k</p>
+<p><strong>导热率:</strong>70</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="ligh-lightning-type-087">
+<h3>闪电(LIGH)【Lightning】 Type:087<a class="headerlink" href="#ligh-lightning-type-087" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>仿真的闪电，改变笔刷大小可以调整闪电大小和威力，可以穿过墙。物质射线发射器(<a class="reference external" href="#cray-c-ray-emitter-particle-ray-emitter-type-167">*CRAY*</a>)复制的闪电默认
+Life 值为30。</p>
+<p>参数设定:</p>
+<p><strong>Tmp:</strong>闪电的角度(逆时针旋转，单位:度)</p>
+<p><strong>Tmp2:</strong></p>
+<p>-1:删除碰到的物质</p>
+<p>0:变成极小的电火花(此时闪电只会局限于周围4x4的范围)</p>
+<p>1:弯曲的闪电</p>
+<p>2:产生大量分叉的闪电</p>
+<p>3:传递电脉冲并造成破坏(此时闪电只会局限于周围4x4的范围)</p>
+<p>4:初始模式</p>
+<p><strong>导热率:</strong>0</p>
+<p><strong>初始温度:</strong>与笔刷大小有关，最小时为-273.15℃/0k，最大为7976.85℃/8250k</p>
+</div>
+<div class="section" id="dest-destructive-bomb-type-089">
+<h3>高爆炸药(DEST)【Destructive Bomb】 Type:089<a class="headerlink" href="#dest-destructive-bomb-type-089" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>升级版炸药(<a class="reference external" href="#bomb-bomb-type-129-embr-ember-type-147">*BOMB*</a>)，只有钻石(<a class="reference external" href="#dmnd-diamond-type-028">*DMND*</a>)、复制体(<a class="reference external" href="#clne-clone-type-009">*CLNE*</a>)、可破坏复制体(<a class="reference external" href="#bcln-breakable-clone-type-093">*BCLN*</a>)、可控复制体(<a class="reference external" href="#pcln-powered-clone-type-074">*PCLN*</a>)、可控可破坏复制体(<a class="reference external" href="#pbcn-breakable-powered-clone-type-153">*PBCN*</a>)和墙(<a class="reference external" href="#wall墙类">*Wall*</a>)等可以与其直接接触且不触发爆炸。产生高温高压，和重水(<a class="reference external" href="#deut-deuterium-oxide-type-095">*DEUT*</a>)或钚(<a class="reference external" href="#plut-plutonium-type-019">*PLUT*</a>)接触会触发其裂变反应。</p>
+<p><strong>元素参数:</strong>当高爆炸药被触发后，life值会变为37并随帧数而减少，减至0是高爆炸药消失，通过修改其life值可以修改其爆炸的持续时间。</p>
+<p><strong>导热率:</strong>150</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="fwrk-original-fireworks-type-098">
+<h3>传统烟花(FWRK)【Original Fireworks】 Type:098<a class="headerlink" href="#fwrk-original-fireworks-type-098" title="永久链接至标题">¶</a></h3>
+<p><strong>燃点:</strong>126.85℃/400k</p>
+<p><strong>描述:</strong>由中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)或者达到燃点时激发，比烟花(<a class="reference external" href="#firw-fireworks-type-069">*FIRW*</a>)升的更高，但火焰苍白。</p>
+<p><strong>制取方法:</strong>尘埃(<a class="reference external" href="#dust-dust-type-001">*DUST*</a>)在中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)轰击下可以转变为传统烟花(FWRK)。</p>
+<p><strong>导热率:</strong>100</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="bomb-bomb-type-129-embr-ember-type-147">
+<h3>炸药(BOMB)【Bomb】 Type:129 火花(EMBR)【Ember】 Type:147<a class="headerlink" href="#bomb-bomb-type-129-embr-ember-type-147" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>和高爆炸药类似，但威力要小一点，不能摧毁钻石等物质。爆炸时在8个像素的范围内产生9725.85℃的高温，同时产生的火花(EMBR)。</p>
+<p><strong>导热率:</strong>29/29</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="c-5-c-5-c-5-type-130">
+<h3>C-5低温炸药(C-5)【C-5】 Type:130<a class="headerlink" href="#c-5-c-5-c-5-type-130" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>在压力、冷焰(<a class="reference external" href="#cflm-sub-zero-flame-type-068">*CLFM*</a>)、液氧(<a class="reference external" href="#loxy-liquid-oxygen-type-060">*LOXY*</a>)、液氮(<a class="reference external" href="#ln2-liquid-nitrogen-type-037">*LN2*</a>)、冷焰(<a class="reference external" href="#cflm-sub-zero-flame-type-068">*CFLM*</a>)、智能微粒(<a class="reference external" href="#tron-tron-type-143">*TRON*</a>)，以及其他温度低于-174℃的液体接触时爆炸。对压力不敏感。在Snapshot72之后的版本中，通过C-5的光子(<a class="reference external" href="#phot-photons-type-031">*PHOT*</a>)波长将会减半(频率加倍)。</p>
+<p><strong>导热率:</strong>88</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="tnt-trinitrotoluene-type-139">
+<h3>三硝基甲苯(TNT)【Trinitrotoluene】 Type:139<a class="headerlink" href="#tnt-trinitrotoluene-type-139" title="永久链接至标题">¶</a></h3>
+<p><strong>爆炸点:</strong>399.85℃/673k</p>
+<p><strong>描述:</strong>69.0beta版之后出现，和C-4塑胶炸药(<a class="reference external" href="#c-4-c-4-c-4-type-011">*C-4*</a>)相似，但产生的压力更高且火焰更少。爆炸时产生的高热(1000+℃)足以融化金属(<a class="reference external" href="#metl-metal-type-014">*METL*</a>)。它只能用明火点燃。爆炸时会产生类似炸药(<a class="reference external" href="#bomb-bomb-type-129-embr-ember-type-147">*BOMB*</a>)爆炸时的火花(<a class="reference external" href="#bomb-bomb-type-129-embr-ember-type-147">*EMBR*</a>)
+。</p>
+<p><strong>导热率:</strong>88</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="ignc-ignition-cord-type-140">
+<h3>导火索(IGNC)【Ignition Cord】 Type:140<a class="headerlink" href="#ignc-ignition-cord-type-140" title="永久链接至标题">¶</a></h3>
+<p><strong>燃点:</strong>399.85℃/673k</p>
+<p><strong>描述:</strong>70.0版本后加入，电脉冲或者明火或者达到燃烧点都能点燃它，能缓慢燃烧，在水中也可以燃烧。通过改变其Tmp值可以改变它的燃烧速度。Tmp值越高燃烧时间越长。中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)可以穿过导火索但会使导火索朝中子来源方向运动。</p>
+<p><strong>导热率:</strong>88</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="gbmb-gravity-bomb-type-157">
+<h3>引力炸弹(GBMB)【Gravity Bomb】 Type:157<a class="headerlink" href="#gbmb-gravity-bomb-type-157" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>使用需要启用牛顿万有引力。碰到物质时会吸附在物质上并产生一个巨大的引力，随后再突然变为巨大的斥力从而破坏物质。</p>
+<p><strong>爆炸过程:</strong>碰触物质后life值变为60，发光并附着在物质上，产生引力(20)，当life值降至20以下时，瞬间改变周围引力值为-80。</p>
+<p><strong>导热率:</strong>29</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+</div>
+<div class="section" id="gases">
+<h2>Gases气体<a class="headerlink" href="#gases" title="永久链接至标题">¶</a></h2>
+<div class="section" id="gas-gas-type-010">
+<h3>石油气(GAS)【Gas】 Type:010<a class="headerlink" href="#gas-gas-type-010" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>易燃气体</p>
+<p><strong>燃点:</strong>299.85℃/573k</p>
+<p><strong>液化压力:</strong>6pressure</p>
+<p><strong>制取方法:</strong>中子轰击石油(<a class="reference external" href="#oil-oil-type-003">*C-4*</a>)或柴油(<a class="reference external" href="#desl-diesel-type-058">*DESL*</a>)。在低压/加热下石油会变成石油气。</p>
+<p><strong>导热率:</strong>42</p>
+<p><strong>初始温度:</strong>24.00℃/297.15k</p>
+</div>
+<div class="section" id="wtrv-water-vapor-type-023">
+<h3>水蒸气(WTRV)【Water Vapor】 Type:023<a class="headerlink" href="#wtrv-water-vapor-type-023" title="永久链接至标题">¶</a></h3>
+<p>[<strong>描述:</strong>水蒸气，水加热到100℃以上或者盐水加热到109.85℃以上时产生。当水受强热时，水蒸气产生时会附带较大压力，水蒸气冷却后变成蒸馏水(<a class="reference external" href="#dstw-distilled-water-type-025">*DSTW*</a>)。水蒸气遇到酸(<a class="reference external" href="#acid-acid-type-021">*ACID*</a>)会变成酸气(<a class="reference external" href="#caus-caustic-gas-type-086">*CAUS*</a>)。</p>
+<p><strong>液化点:</strong>371℃/97.85k</p>
+<p><strong>导热率:</strong>48</p>
+<p><strong>初始温度:</strong>122.00℃/295.15k</p>
+</div>
+<div class="section" id="plsm-plasma-type-049">
+<h3>等离子体(PLSM)【Plasma】 Type:049<a class="headerlink" href="#plsm-plasma-type-049" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>炽热的气体，9725.85℃，基本和火焰(<a class="reference external" href="#fire-fire-type-004">*FIRE*</a>)相同。</p>
+<p><strong>存在时间(life)</strong>:200以内随机</p>
+<p><strong>导热率:</strong>5</p>
+<p><strong>初始温度:</strong>9725.85℃/9999k</p>
+</div>
+<div class="section" id="nble-noble-gas-type-052">
+<h3>惰性气体(NBLE)【Noble Gas】 Type:052<a class="headerlink" href="#nble-noble-gas-type-052" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>通电后能电离成等离子体(<a class="reference external" href="#plsm-plasma-type-049">*PLSM*</a>)，但只有1600℃左右，不断通电能增大其温度。冷却后等离子体将变回惰性气体。</p>
+<p><strong>聚变:</strong>高温(大于5000℃)高压(100pressure)下，惰性气体将聚变产生等离子体(<a class="reference external" href="#plsm-plasma-type-049">*PLSM*</a>)、一份中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)、一份光子(<a class="reference external" href="#phot-photons-type-031">*PHOT*</a>)(红色)、一份二氧化碳(<a class="reference external" href="#co2-carbon-dioxide-type-080">*CO2*</a>)。同时聚变会产生50pressure的压力和9000℃的高温。</p>
+<p><strong>导热率:</strong>106</p>
+<p><strong>初始温度:</strong>24.00℃/297.15k</p>
+</div>
+<div class="section" id="smke-smoke-type-057">
+<h3>烟(SMKE)【Smoke】 Type:057<a class="headerlink" href="#smke-smoke-type-057" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>火焰冷却到较低温度时会产生烟。可以燃烧。烟接触较热物质时会产生轻微压力。烟可以被植物(<a class="reference external" href="#plnt-plant-type-020">*PLNT*</a>)吸收产生氧气(<a class="reference external" href="#oxyg-oxygen-type-061">*OXYG*</a>)。</p>
+<p><strong>燃点:</strong>351.85℃/625k</p>
+<p><strong>导热率:</strong>88</p>
+<p><strong>初始温度:</strong>342.00℃/615.15k</p>
+</div>
+<div class="section" id="oxyg-oxygen-type-061">
+<h3>氧气(OXYG)【Oxygen】 Type:061<a class="headerlink" href="#oxyg-oxygen-type-061" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>高度易燃的气体，可以被火焰(<a class="reference external" href="#fire-fire-type-004">*FIRE*</a>)点燃，在低温或高压(大于100Pressure)下会液化成液氧(<a class="reference external" href="#loxy-liquid-oxygen-type-060">*LOXY*</a>)。烟(<a class="reference external" href="#smke-smoke-type-057">*SMKE*</a>)或者二氧化碳(<a class="reference external" href="#co2-carbon-dioxide-type-080">*CO2*</a>)被植物(<a class="reference external" href="#plnt-plant-type-020">*PLNT*</a>)吸收后能产生氧气用来模拟光合作用。</p>
+<p><strong>聚变:</strong>氧气暴露在高引力、高温度(9700℃/9973.15k以上)和压力(250pressure以上)下时会聚变成熔融态的脆金属(Molten
+<a class="reference external" href="#bmtl-breakable-metal-type-029">*BMTL*</a>)，同时产生光子(<a class="reference external" href="#phot-photons-type-031">*PHOT*</a>)、等离子体(<a class="reference external" href="#plsm-plasma-type-049">*PLSM*</a>)、引力子(<a class="reference external" href="#grvt-90-0beta-graviton-type-177">*GRVT*</a>)。</p>
+<p><strong>液化点</strong>:-183.15℃/90k</p>
+<p><strong>导热率:</strong>70</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="co2-carbon-dioxide-type-080">
+<h3>二氧化碳(CO2)【Carbon Dioxide】 Type:080<a class="headerlink" href="#co2-carbon-dioxide-type-080" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>高密度气体。真空中会下沉。与水反应生成苏打水(<a class="reference external" href="#bubw-bubbled-water-carbonated-water-type-082">*BUBW*</a>)，低温下会变成干冰(<a class="reference external" href="#dric-dry-ice-type-081">*DRIC*</a>)。不支持燃烧，可用于灭火。被植物(<a class="reference external" href="#plnt-plant-type-020">*PLNT*</a>)吸收后形成氧气(<a class="reference external" href="#oxyg-oxygen-type-061">*OXYG*</a>)。</p>
+<p><strong>聚变:</strong>二氧化碳在高温(9500℃以上)、高压(200Pressure以上)下会发生聚变，产生等离子体(<a class="reference external" href="#plsm-plasma-type-049">*PLSM*</a>)、极度高温高压的冲击波、一份中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)、一份电子(<a class="reference external" href="#elec-electrons-type-136">*ELEC*</a>)和一份氧气(<a class="reference external" href="#oxyg-oxygen-type-061">*OXYG*</a>)。</p>
+<p><strong>凝固点:</strong>-78.5℃/194.65k</p>
+<p><strong>导热率:</strong>88</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="caus-caustic-gas-type-086">
+<h3>酸气(CAUS)【Caustic Gas】 Type:086<a class="headerlink" href="#caus-caustic-gas-type-086" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>酸性气体，性质和酸(<em>ACID</em>)相似，能腐蚀几乎所有物质并产生热量。本身不能引爆炸药，但通过腐蚀物质积累足够多的热量后可能引爆某些爆炸物。</p>
+<p><strong>导热率:</strong>70</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="fog-fog-type-092">
+<h3>雾(FOG)【Fog】 Type:092<a class="headerlink" href="#fog-fog-type-092" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>雾，原为隐藏元素，88.1版本后可以直接制造，升温时(到达100℃/373.15k)会变成水蒸气(<a class="reference external" href="#wtrv-water-vapor-type-023">*WTRV*</a>)。</p>
+<p><strong>制取方法:</strong>波义尔气(<a class="reference external" href="#boyl-boyle-type-141">*BOYL*</a>)和水(<a class="reference external" href="#watr-water-type-002">*WATR*</a>)或者氧气(<a class="reference external" href="#oxyg-oxygen-type-061">*OXYG*</a>)混合时能产生雾(FOG)。霜(<a class="reference external" href="#rime-rime-type-091">*RIME*</a>)受到电脉冲刺激会形成雾(FOG)。</p>
+<p><strong>导热率:</strong>100</p>
+<p><strong>初始温度:</strong>-30℃/243.15k</p>
+</div>
+<div class="section" id="boyl-boyle-type-141">
+<h3>波义耳气(BOYL)【Boyle】 Type:141<a class="headerlink" href="#boyl-boyle-type-141" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>不可燃气体，热胀冷缩。也可用于核反应堆，在容器内放入铀(<a class="reference external" href="#uran-uranium-type-032">*URAN*</a>)和波义尔气，铀会在压力下产生大量热，而热量又使波义尔气膨胀产生更高压力，因此这个反应就能一直进行下去。波义耳气和氧气(<a class="reference external" href="#oxyg-oxygen-type-061">*OXYG*</a>)反应能生成水(<a class="reference external" href="#watr-water-type-002">*WATR*</a>)，和水反应能生成雾(<a class="reference external" href="#fog-fog-type-092">*FOG*</a>)。</p>
+<p><strong>导热率:</strong>42</p>
+<p><strong>初始温度:</strong>24.00℃/297.15k</p>
+</div>
+<div class="section" id="hygn-hydrogen-type-148">
+<h3>氢气(HYGN)【Hydrogen】 Type:148<a class="headerlink" href="#hygn-hydrogen-type-148" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>可以用火焰(<a class="reference external" href="#fire-fire-type-004">*FIRE*</a>)点燃，能与氧气(<a class="reference external" href="#oxyg-oxygen-type-061">*OXYG*</a>)燃烧形成水蒸气(<a class="reference external" href="#wtrv-water-vapor-type-023">*WTRV*</a>)。氢气没有气压，因此在温度小于零时能触碰石英(<a class="reference external" href="#qrtz-quartz-type-132">*QRTZ*</a>)而不使其破碎。</p>
+<p><strong>聚变:</strong>高温(2000℃)高压(50pressure)下，产生等离子体(<a class="reference external" href="#plsm-plasma-type-049">*PLSM*</a>)并释放一份中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)，一份光子(<a class="reference external" href="#phot-photons-type-031">*PHOT*</a>)(黄色)和1(或2)份惰性气体(<a class="reference external" href="#nble-noble-gas-type-052">*NBLE*</a>)。同时产生50pressure的压力和4000℃的高温。</p>
+<p><strong>制取方法:</strong>中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)+电子(<a class="reference external" href="#elec-electrons-type-136">*ELEC*</a>)=氢气(HYGN)</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="rfrg-refrigerant-gas-type-183-rfrl-type-184">
+<h3>制冷气(RFRG)【Refrigerant Gas】 Type:183 制冷液(RFRL) Type:184<a class="headerlink" href="#rfrg-refrigerant-gas-type-183-rfrl-type-184" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>制冷气，当周围环境压力变大时(&gt;2pressure)会液化成制冷液(RFRL)并把热量传导给别的物质。遇到中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)会释放出石油气(<a class="reference external" href="#gas-gas-type-010">*GAS*</a>)和酸气(<a class="reference external" href="#caus-caustic-gas-type-086">*CAUS*</a>)。(产生两种气体的可能性分别为一半一半)</p>
+<p><strong>制取方法:</strong>石油气(<a class="reference external" href="#gas-gas-type-010">*GAS*</a>)+酸气(<a class="reference external" href="#caus-caustic-gas-type-086">*CAUS*</a>)+压力(&gt;3pressure)=制冷气(RFRG)</p>
+<p><strong>导热率:</strong>3</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+</div>
+<div class="section" id="liquids">
+<h2>Liquids液体<a class="headerlink" href="#liquids" title="永久链接至标题">¶</a></h2>
+<div class="section" id="watr-water-type-002">
+<h3>水(WATR)【Water】 Type:002<a class="headerlink" href="#watr-water-type-002" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>能导电的水，蒸馏水(<a class="reference external" href="#dstw-distilled-water-type-025">*DSTW*</a>)与大多数物质接触后都会变成这种水，植物(<a class="reference external" href="#plnt-plant-type-020">*PLNT*</a>)可以吸收这种水生长。</p>
+<p><strong>沸点:</strong>99.85℃/373.0k</p>
+<p><strong>凝固点:</strong>0℃/273.15k</p>
+<p><strong>导热率:</strong>29</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="oil-oil-type-003">
+<h3>石油(OIL)【Oil】 Type:003<a class="headerlink" href="#oil-oil-type-003" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>液体，易燃，较低压力/加热下会变成石油气(<a class="reference external" href="#gas-gas-type-010">*GAS*</a>)。</p>
+<p><strong>沸点:</strong>59.85℃/333k</p>
+<p><strong>导热率:</strong>42</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="lava-lava-type-006">
+<h3>岩浆(LAVA)【Lava】 Type:006<a class="headerlink" href="#lava-lava-type-006" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>冷却后变成固体，所有熔融物都是一个样子，区别在于其Ctype，熔融物也是核反应的副产物之一。</p>
+<p><strong>导热率:</strong>60</p>
+<p><strong>初始温度:</strong>1522.00℃/1795.15k</p>
+</div>
+<div class="section" id="acid-acid-type-021">
+<h3>酸(ACID)【Acid】 Type:021<a class="headerlink" href="#acid-acid-type-021" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>可以腐蚀几乎所有物质，除了:岩浆(<a class="reference external" href="#lava-lava-type-006">*LAVA*</a>)、液氮(<a class="reference external" href="#ln2-liquid-nitrogen-type-037">*LN2*</a>)、放射性元素、特殊元素、爆炸物、玻璃(<a class="reference external" href="#glas-glass-type-045">*GLAS*</a>)、石英(<a class="reference external" href="#qrtz-quartz-type-132">*QRTZ*</a>)、石英砂(<a class="reference external" href="#pqrt-broken-quartz-type-133">*PQRT*</a>)、钻石(<a class="reference external" href="#dmnd-diamond-type-028">*DMND*</a>)、金(<a class="reference external" href="#gold-gold-type-170">*GOLD*</a>)等。可燃，可以由明火、电脉冲、岩浆点燃，生成酸气(<a class="reference external" href="#caus-caustic-gas-type-086">*CAUS*</a>)。</p>
+<p><strong>导热率:</strong>34</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="dstw-distilled-water-type-025">
+<h3>蒸馏水(DSTW)【Distilled Water】 Type:025<a class="headerlink" href="#dstw-distilled-water-type-025" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>不导电的理论纯水，由水蒸气冷凝或中子轰击水(<a class="reference external" href="#watr-water-type-002">*WATR*</a>)获得。植物(<a class="reference external" href="#plnt-plant-type-020">*PLNT*</a>)不能吸收这种水。</p>
+<p><strong>沸点:</strong>99.85℃/373.0k</p>
+<p><strong>凝固点:</strong>0℃/273.15k</p>
+<p><strong>导热率:</strong>23</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="sltw-salt-water-type-027">
+<h3>盐水(SLTW)【Salt Water】 Type:027<a class="headerlink" href="#sltw-salt-water-type-027" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>盐(<a class="reference external" href="#salt-salt-type-026">*SALT*</a>)+水(<a class="reference external" href="#watr-water-type-002">*WATR*</a>)的产物，能更快的导电(比<a class="reference external" href="#watr-water-type-002">*WATR*</a>快)，具有更高沸点和更低的凝固点，沸腾后产生水蒸气(<a class="reference external" href="#wtrv-water-vapor-type-023">*WTRV*</a>)+盐(<a class="reference external" href="#salt-salt-type-026">*SALT*</a>)。同时它还会使植物(<a class="reference external" href="#plnt-plant-type-020">*PLNT*</a>)死亡和使石英(<a class="reference external" href="#qrtz-quartz-type-132">*QRTZ*</a>)缓慢生长.</p>
+<p><strong>沸点:</strong>109.85℃/383k</p>
+<p><strong>凝固点:</strong>-21.1℃/252.05k</p>
+<p><strong>导热率:</strong>75</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="mwax-molten-wax-type-034">
+<h3>蜡油(MWAX)【Molten Wax】 Type:034<a class="headerlink" href="#mwax-molten-wax-type-034" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>融化的蜡(<a class="reference external" href="#wax-wax-type-033">*WAX*</a>)，可以燃烧，45℃时凝固成蜡(<a class="reference external" href="#wax-wax-type-033">*WAX*</a>)。</p>
+<p><strong>燃点:</strong>399.85℃/673k</p>
+<p><strong>凝固点:</strong>44.85℃/318k</p>
+<p><strong>导热率:</strong>44</p>
+<p><strong>初始温度:</strong>50.00℃/323.15k</p>
+</div>
+<div class="section" id="ln2-liquid-nitrogen-type-037">
+<h3>液氮(LN2)【Liquid Nitrogen】 Type:037<a class="headerlink" href="#ln2-liquid-nitrogen-type-037" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>液氮，遇到比它热的物质后会消失并产生压力。</p>
+<p><strong>沸点:</strong>-196.15℃/77.0k(消失)</p>
+<p><strong>凝固点</strong>:-210.15℃/63k</p>
+<p><strong>导热率:</strong>70</p>
+<p><strong>初始温度:</strong>-205.00℃/68.15k</p>
+</div>
+<div class="section" id="desl-diesel-type-058">
+<h3>柴油(DESL)【Diesel】 Type:058<a class="headerlink" href="#desl-diesel-type-058" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>可燃液体，密度比水小，具有和硝化甘油一样的性质，但可以稳定燃烧而不爆炸。温度达到燃点或压力超过极限时自发燃烧。</p>
+<p><strong>燃点:</strong>61.85℃/335k</p>
+<p><strong>压力极限:</strong>5pressure</p>
+<p><strong>导热率:</strong>42</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="loxy-liquid-oxygen-type-060">
+<h3>液氧(LOXY)【Liquid Oxygen】 Type:060<a class="headerlink" href="#loxy-liquid-oxygen-type-060" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>点燃时产生2000℃/1726.85k的等离子体(<a class="reference external" href="#plsm-plasma-type-049">*PLSM*</a>)，升温时转变成氧气(<a class="reference external" href="#oxyg-oxygen-type-061">*OXYG*</a>)。</p>
+<p><strong>沸点:</strong>-183.05℃/90.1k</p>
+<p><strong>导热率:</strong>70</p>
+<p><strong>初始温度:</strong>-193.15[℃/80k</p>
+</div>
+<div class="section" id="glow-glow-type-066">
+<h3>荧光液(GLOW)【Glow】 Type:066<a class="headerlink" href="#glow-glow-type-066" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>荧光液，状态、压力或温度变化时改变颜色，与水混合产生重水(<a class="reference external" href="#deut-deuterium-oxide-type-095">*DEUT*</a>)。光子(<a class="reference external" href="#phot-photons-type-031">*PHOT*</a>)接触到它会增殖。</p>
+<p>颜色表:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="57%" />
+<col width="43%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">颜色</th>
+<th class="head">状态</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>灰色</td>
+<td>正常</td>
+</tr>
+<tr class="row-odd"><td>蓝色</td>
+<td>移动中</td>
+</tr>
+<tr class="row-even"><td>亮红色</td>
+<td>高温</td>
+</tr>
+<tr class="row-odd"><td>深绿/深蓝</td>
+<td>低温</td>
+</tr>
+<tr class="row-even"><td>翠绿</td>
+<td>低压</td>
+</tr>
+<tr class="row-odd"><td>黄色</td>
+<td>高温高压</td>
+</tr>
+<tr class="row-even"><td>亮粉</td>
+<td>高温低压</td>
+</tr>
+<tr class="row-odd"><td>暗一些的翠绿</td>
+<td>低温高压</td>
+</tr>
+<tr class="row-even"><td>深蓝</td>
+<td>低温低压</td>
+</tr>
+</tbody>
+</table>
+<p><strong>导热率:</strong>44</p>
+<p><strong>初始温度:</strong>42.00℃/315.15k</p>
+</div>
+<div class="section" id="bubw-bubbled-water-carbonated-water-type-082">
+<h3>苏打水(BUBW)【Bubbled Water(Carbonated Water)】 Type:082<a class="headerlink" href="#bubw-bubbled-water-carbonated-water-type-082" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>和其他物质接触时会释放出二氧化碳(<a class="reference external" href="#co2-carbon-dioxide-type-080">*CO2*</a>)并产生压力。</p>
+<p><strong>沸点:</strong>99.85℃/373.0k</p>
+<p><strong>凝固点:</strong>0℃/273.15k</p>
+<p><strong>导热率:</strong>29</p>
+<p><strong>初始温度:</strong>20.00℃/293.15k</p>
+</div>
+<div class="section" id="bizr-type-103-bizg-type-104-bizs-bizarretype-105">
+<h3>奇特液体(BIZR)Type:103奇特气体(BIZG)Type:104奇特固体(BIZS)【Bizarre】Type:105<a class="headerlink" href="#bizr-type-103-bizg-type-104-bizs-bizarretype-105" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>与一般物理规律相反的液体，高温时凝固，低温时汽化，用颜色工具改变它的颜色后，它将把其他与之相遇的物质染成它的颜色。同时，它还能将光子(<a class="reference external" href="#phot-photons-type-031">*PHOT*</a>)转换成电子(<a class="reference external" href="#elec-electrons-type-136">*ELEC*</a>)。</p>
+<p><strong>沸点:</strong>-173.15℃/100k</p>
+<p><strong>凝固点:</strong>126.85℃/400k</p>
+<p><strong>导热率:</strong>29/42/251</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="pste-paste-type-111-psts-type-112">
+<h3>浆糊(PSTE)【Paste】 Type:111 固体浆糊(PSTS) Type:112<a class="headerlink" href="#pste-paste-type-111-psts-type-112" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>胶体，在压力下变硬。高温下变成砖块(<a class="reference external" href="#brck-brick-type-067">*BRCK*</a>)。</p>
+<p><strong>烧制温度:</strong>473.85℃/747k</p>
+<p><strong>压力极限:</strong>0.5pressure，变为固体浆糊(PSTS)。</p>
+<p><strong>导热率:</strong>29/29</p>
+<p><strong>初始温度:</strong>20.00℃/293.15k</p>
+</div>
+<div class="section" id="gel-gel-type-142">
+<h3>胶体(GEL)【Gel】 Type:142<a class="headerlink" href="#gel-gel-type-142" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>75.0版本后加入，能够吸收水分，之后颜色会变深、变得不那么粘稠而且导热系数会增加。当碰到海绵(<a class="reference external" href="#spng-sponge-type-090">*SPNG*</a>)时，水会从胶体中移动到海绵里。碰到浆糊(<a class="reference external" href="#pste-paste-type-111-psts-type-112">*PSTE*</a>)时，水会从浆糊中转移到胶体中，浆糊会变成粘土砂(<a class="reference external" href="#clst-clay-dust-type-155">*CLST*</a>)。有气体接触胶体表面时，胶体会无序的扩散到气体中，可用于气体的干燥。</p>
+<p><strong>导热率:</strong>29</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="soap-soap-type-149">
+<h3>肥皂(SOAP)【Soap】 Type:149<a class="headerlink" href="#soap-soap-type-149" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>0.5pressure时产生肥皂泡，可以洗去染色。肥皂泡在-25℃/248.15k时会凝固。89.0版本之后可用于治愈病毒(<a class="reference external" href="#virs-virustype-174-vrss-type-175-vrsg-type-176">*VIRS*</a>)的感染，使其变为原来的物质或直接消失。</p>
+<p><strong>导热率:</strong>29</p>
+<p><strong>初始温度:</strong>20.00℃/293.15k</p>
+</div>
+<div class="section" id="merc-mercury-type-152">
+<h3>水银(MERC)【Mercury】 Type:152<a class="headerlink" href="#merc-mercury-type-152" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>液体，体积随温度变化，可以导电。水银是TPT里最重的液体，甚至可以让尘埃(<a class="reference external" href="#dust-dust-type-001">*DUST*</a>)浮起来。不可摧毁，不能燃烧，不会蒸发。它对火柴人(<a class="reference external" href="#stkm-stickman-type-055-spwn-type-118">*STKM*</a>)没有毒性。</p>
+<p><strong>元素参数:</strong>Tmp值过高时会增大自身体积。</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>22℃/295.15k</p>
+</div>
+<div class="section" id="virs-virustype-174-vrss-type-175-vrsg-type-176">
+<h3>病毒(VIRS)【Virus】Type:174 病毒块(VRSS)Type:175 病毒气(VRSG)Type:176<a class="headerlink" href="#virs-virustype-174-vrss-type-175-vrsg-type-176" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>89.0版本后加入，会将其碰触到的所有物质变成病毒(VIRS)，同样不会感染钻石(<a class="reference external" href="#dmnd-diamond-type-028">*DMND*</a>)，一段时间后会自己死亡。肥皂(<a class="reference external" href="#soap-soap-type-149">*SOAP*</a>)可以治愈病毒(VIRS)并使物质恢复。质子(<a class="reference external" href="#prot-protons-type-173">*PROT*</a>)可以使病毒(VIRS)不会自动死亡。只能被等离子体(<a class="reference external" href="#plsm-plasma-type-049">*PLSM*</a>)点燃。</p>
+<p><strong>沸点:</strong>399.85℃/673k变成病毒气(VRSG)</p>
+<p><strong>凝固点:</strong>31.85℃/305k变成病毒块(VRSS)</p>
+<p><strong>元素参数:</strong>Tmp2=感染物质的Type值</p>
+<p><strong>导热率:</strong>251/251/251</p>
+<p><strong>初始温度:</strong>72.00℃/345.15k</p>
+</div>
+</div>
+<div class="section" id="powders">
+<h2>Powders粉末<a class="headerlink" href="#powders" title="永久链接至标题">¶</a></h2>
+<div class="section" id="dust-dust-type-001">
+<h3>尘埃(DUST)【Dust】 Type:001<a class="headerlink" href="#dust-dust-type-001" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>轻粉末，难燃烧且火焰微弱。火柴人(<a class="reference external" href="#stkm-stickman-type-055-spwn-type-118">*STKM*</a>)一开始就能产生尘埃。</p>
+<p><strong>元素参数:</strong>点燃后默认燃烧10帧，修改life值可以改变其燃烧时间</p>
+<p><strong>导热率:</strong>70</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="stne-stone-type-005">
+<h3>石粉(STNE)【Stone】 Type:005<a class="headerlink" href="#stne-stone-type-005" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>重粉末，能熔化成为岩浆(<a class="reference external" href="#lava-lava-type-006">*LAVA*</a>)。</p>
+<p><strong>熔点:</strong>709.85℃/983k</p>
+<p><strong>导热率:</strong>150</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="snow-snow-type-016">
+<h3>雪(SNOW)【Snow】 Type:016<a class="headerlink" href="#snow-snow-type-016" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>轻粉末，冰(<a class="reference external" href="#ice-ice-type-013">*ICE*</a>)在压力下破坏形成雪，加热后变成水(<a class="reference external" href="#watr-water-type-002">*WATR*</a>)。可以使中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)减速。</p>
+<p><strong>熔点:</strong>-0.15℃/273k</p>
+<p><strong>导热率:</strong>46</p>
+<p><strong>初始温度:</strong>-8.00℃/265.15k</p>
+</div>
+<div class="section" id="cnct-concrete-type-024">
+<h3>混凝土(CNCT)【Concrete】 Type:024<a class="headerlink" href="#cnct-concrete-type-024" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>重粉末，比石粉坚固且更难熔化。和其他粉末不同，它是刚性的，可以竖直堆积而不会倒下。</p>
+<p><strong>熔点:</strong>849.85℃/1123k</p>
+<p><strong>导热率:</strong>100</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="salt-salt-type-026">
+<h3>盐(SALT)【Salt】 Type:026<a class="headerlink" href="#salt-salt-type-026" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>能溶于水(<a class="reference external" href="#watr-water-type-002">*WATR*</a>)形成盐水(<a class="reference external" href="#sltw-salt-water-type-027">*SLTW*</a>)，较高温度下能熔化，能腐蚀铁(<a class="reference external" href="#iron-iron-type-076">*IRON*</a>)变成脆金属(<a class="reference external" href="#bmtl-breakable-metal-type-029">*BMTL*</a>)和金属粉(<a class="reference external" href="#brmt-broken-metal-type-030">*BRMT*</a>)。</p>
+<p><strong>熔点:</strong>899.85℃/1173k</p>
+<p><strong>导热率:</strong>110</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="brmt-broken-metal-type-030">
+<h3>金属粉(BRMT)【Broken Metal】 Type:030<a class="headerlink" href="#brmt-broken-metal-type-030" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>重粉末，能导电。如果脆金属(<a class="reference external" href="#bmtl-breakable-metal-type-029">*BMTL*</a>)熔化后缓慢冷却就会形成金属粉。在电脉冲(<a class="reference external" href="#sprk-spark-type-015">*SPRK*</a>)通过时会升温。被腐蚀的铁(<a class="reference external" href="#iron-iron-type-076">*IRON*</a>)或者脆金属也能形成金属粉。另一种方式是将脆金属暴露在高压下使之碎裂。燃烧铝热剂能形成熔融态的脆金属(Molten
+<a class="reference external" href="#bmtl-breakable-metal-type-029">*BMTL*</a>)。</p>
+<p><strong>导热率:</strong>211</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="sand-sand-type-044">
+<h3>沙子(SAND)【Sand】 Type:044<a class="headerlink" href="#sand-sand-type-044" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>重粉末，熔化后冷却能形成玻璃(<a class="reference external" href="#glas-glass-type-045">*GLAS*</a>)。</p>
+<p><strong>熔点:</strong>1699.85℃/1973k</p>
+<p><strong>导热率:</strong>150</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="bgla-broken-glass-type-047">
+<h3>碎玻璃(BGLA)【Broken Glass】 Type:047<a class="headerlink" href="#bgla-broken-glass-type-047" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>碎玻璃，熔化后能重新变回玻璃(<a class="reference external" href="#glas-glass-type-045">*GLAS*</a>)。光子(<a class="reference external" href="#phot-photons-type-031">*PHOT*</a>)不能通过碎玻璃并且会被散射。</p>
+<p><strong>熔点:</strong>1699.85℃/1973k</p>
+<p><strong>制取方法:</strong>给玻璃(<a class="reference external" href="#glas-glass-type-045">*GLAS*</a>)加压或者加热液晶(<a class="reference external" href="#lcry-liquid-crystal-type-054">*LCRY*</a>)可以得到碎玻璃。</p>
+<p><strong>导热率:</strong>150</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="yest-yeast-type-063-dyst-dead-yeast-type-064">
+<h3>酵母(YEST)【Yeast】 Type:063 菌尸(DYST)【Dead Yeast】 Type:064<a class="headerlink" href="#yest-yeast-type-063-dyst-dead-yeast-type-064" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>酵母，在特定温度范围(29.85℃/303k~43.85℃/317k,不包括边界值)会繁殖。被中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)轰击或者温度太高(99.85℃/373k以上)会死掉变成菌尸(DYST)。菌尸在更高温度(199.85℃/473k以上)下会变成尘埃(<a class="reference external" href="#dust-dust-type-001">*DUST*</a>)。在任何温度下，酵母(YEST)触碰到菌尸(DYST)都会死亡。</p>
+<p><strong>元素参数:</strong>菌尸(DYST)可以燃烧20帧(暂停时修改火焰温度即可点燃)</p>
+<p><strong>导热率:</strong>70/70</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="bcol-broken-coal-type-073">
+<h3>煤粉(BCOL)【Broken Coal】 Type:073<a class="headerlink" href="#bcol-broken-coal-type-073" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>重粉末，只能用明火点燃，缓慢燃烧。</p>
+<p><strong>导热率:</strong>150</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="frzz-freeze-type-100">
+<h3>寒尘(FRZZ)【Freeze】 Type:100<a class="headerlink" href="#frzz-freeze-type-100" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>轻粉末，很冷，能立即冻住水。能将水(<a class="reference external" href="#watr-water-type-002">*WATR*</a>)转变成寒水(<a class="reference external" href="#frzw-frozen-water-type-101">*FRZW*</a>)，温度低于-223.15℃/50k时变为可以自动降温的冰(<a class="reference external" href="#ice-ice-type-013">*ICE*</a>)，当温度高于零度时变成寒水。寒水能将其他水变成寒水。</p>
+<p><strong>熔点:</strong>0℃/273.15k</p>
+<p><strong>转变温度:</strong>-223.15℃/50k</p>
+<p><strong>压力极限:</strong>1.8pressure，变为雪(<a class="reference external" href="#snow-snow-type-016">*SNOW*</a>)</p>
+<p><strong>导热率:</strong>46</p>
+<p><strong>初始温度:</strong>-20℃/253.15k</p>
+</div>
+<div class="section" id="grav-gravity-type-102">
+<h3>引力尘(GRAV)【Gravity】 Type:102<a class="headerlink" href="#grav-gravity-type-102" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>十分轻的粉末，随着速度改变颜色。接触火焰(<a class="reference external" href="#fire-fire-type-004">*FIRE*</a>)时燃烧。</p>
+<p><strong>导热率:</strong>70</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="anar-anti-air-particle-type-113">
+<h3>反引力尘(ANAR)【Anti-Air Particle】 Type:113<a class="headerlink" href="#anar-anti-air-particle-type-113" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>十分轻的粉尘，它遵循相反的引力/压力/速度定律，遇到冷焰(<a class="reference external" href="#cflm-sub-zero-flame-type-068">*CFLM*</a>)时燃烧。</p>
+<p><strong>导热率:</strong>70</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="pqrt-broken-quartz-type-133">
+<h3>石英砂(PQRT)【Broken Quartz】 Type:133<a class="headerlink" href="#pqrt-broken-quartz-type-133" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>石英砂，可以熔化。能够像石英(<a class="reference external" href="#qrtz-quartz-type-132">*QRTZ*</a>)一样散射光子(<a class="reference external" href="#phot-photons-type-031">*PHOT*</a>)。</p>
+<p><strong>熔点:</strong>2300℃/2573.15k</p>
+<p><strong>导热率:</strong>3</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="brel-broken-electronics-type-135">
+<h3>电渣(BREL)【Broken Electronics】 Type:135<a class="headerlink" href="#brel-broken-electronics-type-135" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>使用电磁脉冲武器(<a class="reference external" href="#emp-electromagnetic-pulse-type-134">*EMP*</a>)摧毁电子设备留下的物质，不能重铸。能导电。在10pressure以上压力下通电会不断升温，在30pressure以上压力下通电会形成奇异物质(<a class="reference external" href="#exot-exotic-matter-type-145">*EXOT*</a>)。</p>
+<p><strong>导热率:</strong>211</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="clst-clay-dust-type-155">
+<h3>粘土砂(CLST)【Clay Dust】 Type:155<a class="headerlink" href="#clst-clay-dust-type-155" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>和水结合时产生浆糊(<a class="reference external" href="#pste-paste-type-111-psts-type-112">*PSTE*</a>)。它能自然的结合在一起，温度越低越牢固，在大约-70℃时冻结，顶部就像混凝土一样牢固。</p>
+<p><strong>熔点:</strong>982.85℃/1256k</p>
+<p><strong>导热率:</strong>70</p>
+<p><strong>初始温度:</strong>22℃/295.15k</p>
+</div>
+<div class="section" id="sawd-sawdust-type-181">
+<h3>木屑(SAWD)【Sawdust】 Type:181<a class="headerlink" href="#sawd-sawdust-type-181" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>很轻的粉末，能够浮在水上。可以通过中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)撞击煤粉(<a class="reference external" href="#bcol-broken-coal-type-073">*BCOL*</a>)或用高速(<span class="math">\(v_{x}^{2} + v_{y}^{2} &gt; 5\)</span>)粒子撞击木头(<a class="reference external" href="#wood-wood-type-017">*WOOD*</a>)得到。中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)可以穿过这种元素。同时其他粉末元素不能穿过它，例如你可以在一堆木屑中间放置其他粉末而不用担心它们会掉下来。</p>
+<p><strong>导热率:</strong>70</p>
+<p><strong>初始温度:</strong>22℃/295.15k</p>
+</div>
+</div>
+<div class="section" id="solids">
+<h2>Solids固体<a class="headerlink" href="#solids" title="永久链接至标题">¶</a></h2>
+<div class="section" id="goo-goo-type-012">
+<h3>粘土(GOO)【Goo】 Type:012<a class="headerlink" href="#goo-goo-type-012" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>固体，在压力下会变形消失。中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)同样可以使粘土轻微变形。</p>
+<p><strong>压力极限:</strong>1pressure</p>
+<p><strong>导热率:</strong>75</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="ice-ice-type-013">
+<h3>冰(ICE)【Ice】 Type:013<a class="headerlink" href="#ice-ice-type-013" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>固体，冷冻的水，在压力下会破碎变成雪(<a class="reference external" href="#snow-snow-type-016">*SNOW*</a>)。可以熔化。可以使中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)减速。</p>
+<p><strong>熔点:</strong>0℃/273.15k</p>
+<p><strong>压力极限:</strong>0.8pressure</p>
+<p><strong>导热率:</strong>46</p>
+<p><strong>初始温度:</strong>-28.00℃/245.15k</p>
+</div>
+<div class="section" id="wood-wood-type-017">
+<h3>木材(WOOD)【Wood】 Type:017<a class="headerlink" href="#wood-wood-type-017" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>固体，可燃物，允许中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)通过。以一般速度燃烧。</p>
+<p><strong>燃点:</strong>599.85℃/873k</p>
+<p><strong>导热率:</strong>164</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="plnt-plant-type-020">
+<h3>植物(PLNT)【Plant】 Type:020<a class="headerlink" href="#plnt-plant-type-020" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>植物，吸收水分生长。可燃物。在中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)轰击下变成木材(<a class="reference external" href="#wood-wood-type-017">*WOOD*</a>)。盐水(<a class="reference external" href="#sltw-salt-water-type-027">*SLTW*</a>)会破坏植物。可以吸收二氧化碳(<a class="reference external" href="#co2-carbon-dioxide-type-080">*CO2*</a>)或者烟(<a class="reference external" href="#smke-smoke-type-057">*SMKE*</a>)并产生氧气，以模拟光合作用。火柴人(<a class="reference external" href="#stkm-stickman-type-055-spwn-type-118">*STKM*</a>/<a class="reference external" href="#stk2-second-stickmantype-128-spwn2-type-117">*STK2*</a>)可以吃(走近)植物来增加生命值。</p>
+<p><strong>燃点:</strong>299.85℃/573k</p>
+<p><strong>导热率:</strong>65</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="bmtl-breakable-metal-type-029">
+<h3>脆金属(BMTL)【Breakable Metal】 Type:029<a class="headerlink" href="#bmtl-breakable-metal-type-029" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>可以破坏的金属。在一定压力下破坏，高温下熔化。在电脉冲通过时会升温。经常用作可破坏建筑的建筑材料。仅能允许一半的光子(<a class="reference external" href="#phot-photons-type-031">*PHOT*</a>)通过。</p>
+<p><strong>熔点:</strong>999.85℃/1273k</p>
+<p><strong>压力极限:</strong>1pressure</p>
+<p><strong>制取方法:</strong>氧气(<a class="reference external" href="#oxyg-oxygen-type-061">*OXYG*</a>)+最高的温度、压力+引力。</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="wax-wax-type-033">
+<h3>蜡(WAX)【Wax】 Type:033<a class="headerlink" href="#wax-wax-type-033" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>蜡，加热会融化。反射中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)，在光子(<a class="reference external" href="#phot-photons-type-031">*PHOT*</a>)作用下会融化。可燃。</p>
+<p><strong>熔点:</strong>45.85℃/319k</p>
+<p><strong>导热率:</strong>44</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="glas-glass-type-045">
+<h3>玻璃(GLAS)【Glass】 Type:045<a class="headerlink" href="#glas-glass-type-045" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>固体，当压力变化&gt;0.25pressure时会破碎，可以熔化。光子(<a class="reference external" href="#phot-photons-type-031">*PHOT*</a>)可以通过玻璃并分散成不同波长的光。玻璃不能被酸(<a class="reference external" href="#acid-acid-type-021">*ACID*</a>/<a class="reference external" href="#caus-caustic-gas-type-086">*CAUS*</a>)腐蚀。中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)通过玻璃时会产生单色光子(<a class="reference external" href="#phot-photons-type-031">*PHOT*</a>)。电子(<a class="reference external" href="#elec-electrons-type-136">*ELEC*</a>)与玻璃接触时会生成无害的火花(<a class="reference external" href="#bomb-bomb-type-129-embr-ember-type-147">*EMBR*</a>)。</p>
+<p><strong>熔点:</strong>1699.85℃/1973k</p>
+<p><strong>导热率:</strong>150</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="nice-nitrogen-ice-type-051">
+<h3>氮冰(NICE)【Nitrogen Ice】 Type:051<a class="headerlink" href="#nice-nitrogen-ice-type-051" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>固态氮，很冷。</p>
+<p><strong>熔点:</strong>-210.05℃/63.1k</p>
+<p><strong>导热率:</strong>46</p>
+<p><strong>初始温度:</strong>-238.15℃/35k</p>
+</div>
+<div class="section" id="coal-coal-type-059">
+<h3>煤(COAL)【Coal】 Type:059<a class="headerlink" href="#coal-coal-type-059" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>煤，只能用明火点燃，可以缓慢燃烧。加热时会慢慢白热化，停止加热后会自身冷却变为浅灰色。这个性质在煤粉(<a class="reference external" href="#bcol-broken-coal-type-073">*BCOL*</a>)中也同样存在。被中子轰击时会变成木材(<a class="reference external" href="#wood-wood-type-017">*WOOD*</a>)，会吸收光子。在4.31pressure以上压力下会碎裂变成煤粉(<a class="reference external" href="#bcol-broken-coal-type-073">*BCOL*</a>)。</p>
+<p><strong>元素参数:</strong>life小于100时燃烧，Tmp小于40时碎裂</p>
+<p><strong>压力极限:</strong>4.31pressure</p>
+<p><strong>导热率:</strong>200</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="brck-brick-type-067">
+<h3>砖块(BRCK)【Brick】 Type:067<a class="headerlink" href="#brck-brick-type-067" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>可破坏的建筑材料。是石粉的固体形式，不能导电，可以熔化。在一定压力下会碎裂成石粉(<a class="reference external" href="#stne-stone-type-005">*STNE*</a>)。</p>
+<p><strong>元素参数:</strong>修改其Tmp值为1可以制得像可控动力管(<a class="reference external" href="#ppip-powered-pipe-type-161">*PPIP*</a>)那样的蓝光砖块。</p>
+<p><strong>制取方法:</strong>浆糊(<a class="reference external" href="#pste-paste-type-111-psts-type-112">*PSTE*</a>)加热至480℃/753.15k可以转化成砖块。</p>
+<p><strong>压力极限:</strong>8.8pressure</p>
+<p><strong>熔点:</strong>949.85℃/1223k</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="iron-iron-type-076">
+<h3>铁(IRON)【Iron】 Type:076<a class="headerlink" href="#iron-iron-type-076" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>会被以下物质腐蚀:盐(<a class="reference external" href="#salt-salt-type-026">*SALT*</a>)、盐水(<a class="reference external" href="#sltw-salt-water-type-027">*SLTW*</a>)、氧气(<a class="reference external" href="#oxyg-oxygen-type-061">*OXYG*</a>)、水(<a class="reference external" href="#watr-water-type-002">*WATR*</a>)、液氧(<a class="reference external" href="#loxy-liquid-oxygen-type-060">*LOXY*</a>)，腐蚀后变成脆金属(<a class="reference external" href="#bmtl-breakable-metal-type-029">*BMTL*</a>)。可用于电解水。</p>
+<p><strong>熔点:</strong>1413.85℃/1687k</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="dric-dry-ice-type-081">
+<h3>干冰(DRIC)【Dry Ice】 Type:081<a class="headerlink" href="#dric-dry-ice-type-081" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>干冰，当二氧化碳(<a class="reference external" href="#co2-carbon-dioxide-type-080">*CO2*</a>)温度为-78.5℃以下时形成。</p>
+<p><strong>升华点:</strong>-77.5℃/195.65k</p>
+<p><strong>导热率:</strong>2</p>
+<p><strong>初始温度:</strong>-100.50℃/172.65k</p>
+</div>
+<div class="section" id="spng-sponge-type-090">
+<h3>海绵(SPNG)【Sponge】 Type:090<a class="headerlink" href="#spng-sponge-type-090" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>可以从多种元素中(水<a class="reference external" href="#watr-water-type-002">*WATR*</a>、盐水<a class="reference external" href="#sltw-salt-water-type-027">*SLTW*</a>、蒸馏水<a class="reference external" href="#dstw-distilled-water-type-025">*DSTW*</a>、寒水<a class="reference external" href="#frzw-frozen-water-type-101">*FRZW*</a>、苏打水<a class="reference external" href="#bubw-bubbled-water-carbonated-water-type-082">*BUBW*</a>、胶体<a class="reference external" href="#pste-paste-type-111-psts-type-112">*PSTE*</a>)吸水，吸水之后颜色变暗。暴露在明火下或温度达到燃点时燃烧。高压下或灼烧时会释放出吸收的水。</p>
+<p><strong>燃点:</strong>2456.85℃/2730k</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="rime-rime-type-091">
+<h3>霜(RIME)【Rime】 Type:091<a class="headerlink" href="#rime-rime-type-091" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>霜，原为隐藏元素，可以通电升华成雾(<a class="reference external" href="#fog-fog-type-092">*FOG*</a>)。</p>
+<p><strong>熔点:</strong>0℃/273.15k</p>
+<p><strong>制取方法:</strong>如果水蒸气快速冷却凝华就有可能形成霜(RIME)。</p>
+<p><strong>导热率:</strong>100</p>
+<p><strong>初始温度:</strong>-30℃/243.15k</p>
+</div>
+<div class="section" id="vine-vine-type-114">
+<h3>藤蔓(VINE)【Vine】 Type:114<a class="headerlink" href="#vine-vine-type-114" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>藤蔓，吸水生长，中心部分是植物(<a class="reference external" href="#plnt-plant-type-020">*PLNT*</a>)，暴露在中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)下会变成木材(<a class="reference external" href="#wood-wood-type-017">*WOOD*</a>)并向中子方向生长。藤蔓以一种半随机方式生长，形状有点像草。</p>
+<p><strong>燃点:</strong>299.85℃/573k</p>
+<p><strong>导热率:</strong>65</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="shld-shieldtype-119-2-3-4-shd2-3-4-type-120-121-122">
+<h3>自修复膜(SHLD)【Shield】Type:119 修复膜2/3/4(SHD2/3/4)Type:120/121/122<a class="headerlink" href="#shld-shieldtype-119-2-3-4-shd2-3-4-type-120-121-122" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>通电时，会自动生长出保护膜，从内到外依次是SHD4、SHD3、SHD2、SHLD。分解压力分别为:40/25/15/7pressure。不导电，不导热。</p>
+<p><strong>导热率:</strong>0/0/0/0</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="filt-filter-type-125">
+<h3>滤镜(FILT)【Filter】 Type:125<a class="headerlink" href="#filt-filter-type-125" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>颜色会随温度改变(由冷到热依次:深蓝、浅蓝、绿色、橙色、棕色、红色)，可以改变光子(<a class="reference external" href="#phot-photons-type-031">*PHOT*</a>)的颜色。改变Tmp值可以改变作用模式，如下:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Tmp值</th>
+<th class="head">作用模式</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0(缺省)</td>
+<td>将进入的光子颜色变为自身颜色</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>吸收与自身颜色不一样的光子</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>将自身颜色添加到进入的光子光谱中</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>将自身颜色从进入的光子光谱中删去</td>
+</tr>
+<tr class="row-even"><td>4</td>
+<td>红移</td>
+</tr>
+<tr class="row-odd"><td>5</td>
+<td>蓝移</td>
+</tr>
+<tr class="row-even"><td>6</td>
+<td>不做任何改变</td>
+</tr>
+<tr class="row-odd"><td>7</td>
+<td>对光子的颜色进行异或运算</td>
+</tr>
+<tr class="row-even"><td>8</td>
+<td>反色，白色的光子会被直接吸收</td>
+</tr>
+<tr class="row-odd"><td>9</td>
+<td>随机模式</td>
+</tr>
+</tbody>
+</table>
+<p>当射线(<a class="reference external" href="#a-aray-a-type-ray-emitter-type-126-b-bray-type-127">*BRAY*</a>)经过时同样也会染上滤镜的颜色。</p>
+<p>滤镜不会受到环境温度的影响(即不受热辐射的影响)。</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="qrtz-quartz-type-132">
+<h3>石英(QRTZ)【Quartz】 Type:132<a class="headerlink" href="#qrtz-quartz-type-132" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>接近绝对零度时会变得很脆并碎裂成石英砂(<a class="reference external" href="#pqrt-broken-quartz-type-133">*PQRT*</a>)，允许一部分光子(<a class="reference external" href="#phot-photons-type-031">*PHOT*</a>)通过并散射掉另一部分。高温时缓慢熔化。遇到盐水(<a class="reference external" href="#sltw-salt-water-type-027">*SLTW*</a>)时会缓慢生长，修改Ctype值可以改变其生长速度。在压力下能够导电。</p>
+<p><strong>熔点:</strong>2300℃/2573.15k</p>
+<p><strong>元素参数:</strong>生长速度由Ctype值决定，Ctype值越高生长越快</p>
+<p><strong>导热率:</strong>3</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="ttan-titanium-type-144">
+<h3>钛(TTAN)【Titanium】 Type:144<a class="headerlink" href="#ttan-titanium-type-144" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>金属固体，坚固的材料。熔点很高，能导电。通电时允许压力通过。中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)通过时会被吸收50%。未通电时不传导压力，不论任何厚度都可以阻隔压力。</p>
+<p><strong>熔点:</strong>1667.85℃/1941k</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="gold-gold-type-170">
+<h3>金(GOLD)【Gold】 Type:170<a class="headerlink" href="#gold-gold-type-170" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>金属，十分牢固，具有高熔点，抗腐蚀(但通电时会受到酸的腐蚀)，可以保护铁(<a class="reference external" href="#iron-iron-type-076">*IRON*</a>)免受腐蚀。和钛(<a class="reference external" href="#ttan-titanium-type-144">*TTAN*</a>)一样，当中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)通过时会损失一半。具有良好的导电性，比一般导体导电速度快50%(只有超导线<a class="reference external" href="#inst-instant-conductor-instantly-conducts-type-106">*INST*</a>和电极<a class="reference external" href="#etrd-electrode-type-050">*ETRD*</a>比它快)，可以允许电脉冲(<a class="reference external" href="#sprk-spark-type-015">*SPRK*</a>)穿过3像素的空隙传导。</p>
+<p><strong>熔点:</strong>1063.85℃/1337k</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="crmc-ceramic-type-179">
+<h3>陶瓷(CRMC) 【Ceramic】 Type:179<a class="headerlink" href="#crmc-ceramic-type-179" title="永久链接至标题">¶</a></h3>
+<p><strong>描述：</strong>91.0beta后加入，固体，受压时熔点会增加。允许中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)、引力子(<a class="reference external" href="#grvt-90-0beta-graviton-type-177">*GRVT*</a>)以及质子(<a class="reference external" href="#prot-protons-type-173">*PROT*</a>)通过，会轻微散射光子(<a class="reference external" href="#phot-photons-type-031">*PHOT*</a>)。在一定的负压下(<span class="math">\(\leq\)</span>-30pressure)会转变成粘土砂(<a class="reference external" href="#clst-clay-dust-type-155">*CLST*</a>)。</p>
+<p><strong>制取方法:</strong>熔融的石英(<a class="reference external" href="#qrtz-quartz-type-132">*QRTZ*</a>)+熔融的粘土砂(<a class="reference external" href="#clst-clay-dust-type-155">*CLST*</a>)。</p>
+<p><strong>熔点：</strong>0 pressure，2614.00℃/2887.15k，压力每升高1熔点升高10°C。</p>
+<p><strong>导热率:</strong>35</p>
+<p><strong>初始温度：</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="heac-rapid-heat-conductor-type-180">
+<h3>导热体(HEAC) 【Rapid Heat Conductor】 Type:180<a class="headerlink" href="#heac-rapid-heat-conductor-type-180" title="永久链接至标题">¶</a></h3>
+<p><strong>描述：</strong>
+Snapshot79之后加入，理想的导热体，拥有最高的导热值(251)。不能被酸腐蚀，也不可以用常规方法熔化。使用闪电(<a class="reference external" href="#ligh-lightning-type-087">*LIGH*</a>)可以熔化导热体。</p>
+<p><strong>熔点：</strong>1614.00℃/1887.15k</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度：</strong>22.00℃/295.15k</p>
+</div>
+</div>
+<div class="section" id="radioactive">
+<h2>Radioactive放射性物质<a class="headerlink" href="#radioactive" title="永久链接至标题">¶</a></h2>
+<div class="section" id="neut-neutrons-type-018">
+<h3>中子(NEUT)【Neutrons】 Type:018<a class="headerlink" href="#neut-neutrons-type-018" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>不受重力影响的粒子，可以随意移动。可以由钚(<a class="reference external" href="#plut-plutonium-type-019">*PLUT*</a>)或重水(<a class="reference external" href="#deut-deuterium-oxide-type-095">*DEUT*</a>)裂变产生。中子受万有引力的作用。可以与某些物质作用，如:</p>
+<p>使钚(<a class="reference external" href="#plut-plutonium-type-019">*PLUT*</a>)裂变</p>
+<p>使重水(<a class="reference external" href="#deut-deuterium-oxide-type-095">*DEUT*</a>)裂变</p>
+<p>使黑火药(<a class="reference external" href="#gun-gunpowder-type-007">*GUN*</a>)变成尘埃(<a class="reference external" href="#dust-dust-type-001">*DUST*</a>)</p>
+<p>使植物(<a class="reference external" href="#plnt-plant-type-020">*PLNT*</a>)变成木材(<a class="reference external" href="#wood-wood-type-017">*WOOD*</a>)</p>
+<p>使尘埃(<a class="reference external" href="#dust-dust-type-001">*DUST*</a>)变成传统烟花(<a class="reference external" href="#fwrk-original-fireworks-type-098">*FWRK*</a>)</p>
+<p>使硝化甘油(<a class="reference external" href="#nitr-nitroglycerin-type-008">*NITR*</a>)变成石油气(<a class="reference external" href="#gas-gas-type-010">*GAS*</a>)</p>
+<p>使C-4塑胶炸药(<a class="reference external" href="#c-4-c-4-c-4-type-011">*C-4*</a>)变成粘土(<a class="reference external" href="#goo-goo-type-012">*GOO*</a>)</p>
+<p>使水(<a class="reference external" href="#watr-water-type-002">*WATR*</a>)变成蒸馏水(<a class="reference external" href="#dstw-distilled-water-type-025">*DSTW*</a>)</p>
+<p>使酸(<a class="reference external" href="#acid-acid-type-021">*ACID*</a>)变成同位素-Z(<a class="reference external" href="#z-isoz-isotope-z-type-107">*ISOZ*</a>)</p>
+<p>使柴油(<a class="reference external" href="#desl-diesel-type-058">*DESL*</a>)变成石油气</p>
+<p>使酵母(<a class="reference external" href="#yest-yeast-type-063-dyst-dead-yeast-type-064">*YEST*</a>)变成菌尸(<a class="reference external" href="#yest-yeast-type-063-dyst-dead-yeast-type-064">*DYST*</a>)</p>
+<p>使煤(<a class="reference external" href="#coal-coal-type-059">*COAL*</a>)变成木材(<a class="reference external" href="#wood-wood-type-017">*WOOD*</a>)</p>
+<p><strong>存在时间(life):</strong>1000以内数值随机。</p>
+<p><strong>导热率:</strong>60</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="plut-plutonium-type-019">
+<h3>钚(PLUT)【Plutonium】 Type:019<a class="headerlink" href="#plut-plutonium-type-019" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>裂变，在压力下、被闪电击中或大量的中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)轰击时更不稳定。反应产物是铀(<a class="reference external" href="#uran-uranium-type-032">*URAN*</a>)、中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)、熔融态的钚(Molten
+PLUT)，并带来最高的温度和少量的火焰。冷却之后将会形成石粉(<a class="reference external" href="#stne-stone-type-005">*STNE*</a>)。会杀死火柴人(<a class="reference external" href="#stkm-stickman-type-055-spwn-type-118">*STKM*</a>)。</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>26.00℃/299.15k</p>
+</div>
+<div class="section" id="phot-photons-type-031">
+<h3>光子(PHOT)【Photons】 Type:031<a class="headerlink" href="#phot-photons-type-031" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>沿直线传播，不受重力影响，受牛顿万有引力影响。可以被反射，或散射。用于点燃物质或传递热量。经过滤镜(<a class="reference external" href="#filt-filter-type-125">*FILT*</a>)时会改变颜色，经过棱镜时会色散。透过非隐形状态下的虚无(<a class="reference external" href="#invs-invisible-type-115">*INVS*</a>)时会转变成中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)。透过奇特气体/液体/固体(<a class="reference external" href="#bizr-type-103-bizg-type-104-bizs-bizarretype-105">*BIZG/BIZR/BIZS*</a>)时会转换成电子(<a class="reference external" href="#elec-electrons-type-136">*ELEC*</a>)。</p>
+<p><strong>相关反应:</strong>光子(PHOT)+氢气(<a class="reference external" href="#hygn-hydrogen-type-148">*HYGN*</a>)=质子(<a class="reference external" href="#prot-protons-type-173">*PROT*</a>)+电子(<a class="reference external" href="#elec-electrons-type-136">*ELEC*</a>)</p>
+<p>存在时间(life):680帧</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>922.00℃/295.15k</p>
+</div>
+<div class="section" id="uran-uranium-type-032">
+<h3>铀(URAN)【Uranium】 Type:032<a class="headerlink" href="#uran-uranium-type-032" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>核反应的副产品，在压力下会快速上升温度(指数关系)，在低压或没有压力时会缓慢冷却。</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>52.00℃/325.15k</p>
+</div>
+<div class="section" id="amtr-antimatter-type-072">
+<h3>反物质(AMTR)【Antimatter】 Type:072<a class="headerlink" href="#amtr-antimatter-type-072" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>Snapshot18后改为气体，可以破坏大多数物质并产生低压和光子，受到微弱的重力影响。</p>
+<p><strong>导热率:</strong>70</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="deut-deuterium-oxide-type-095">
+<h3>重水(DEUT)【Deuterium Oxide】 Type:095<a class="headerlink" href="#deut-deuterium-oxide-type-095" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>热胀冷缩，受热时膨胀颜色变暗，受冷时收缩颜色变浅。只能通过中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)、闪电(<a class="reference external" href="#ligh-lightning-type-087">*LIGH*</a>/<a class="reference external" href="#thdr-thunder-type-048">*THDR*</a>)或高爆炸药(<a class="reference external" href="#dest-destructive-bomb-type-089">*DEST*</a>)激发，会产生大量的中子和高压。受热时最多可以膨胀6000倍，在负压下不能进行裂变反应。电子(<a class="reference external" href="#elec-electrons-type-136">*ELEC*</a>)能使重水降温直到绝对零度。也可以通过施加引力来压缩重水。</p>
+<p><strong>制取:</strong>荧光液(<a class="reference external" href="#glow-glow-type-066">*GLOW*</a>)+水(<a class="reference external" href="#watr-water-type-002">*WATR*</a>)=重水(DEUT)</p>
+<p><strong>元素参数:</strong>life值代表压缩程度，数值越大，压缩程度越高</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="warp-warp-type-096">
+<h3>迁跃粉(WARP)【Warp】 Type:096<a class="headerlink" href="#warp-warp-type-096" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>不可见的气体，会随机将接触到的物质传送出去(除了钻石<a class="reference external" href="#dmnd-diamond-type-028">*DMND*</a>、火柴人<a class="reference external" href="#stkm-stickman-type-055-spwn-type-118">*STKM*</a>/<a class="reference external" href="#stk2-second-stickmantype-128-spwn2-type-117">*STK2*</a>、复制体<a class="reference external" href="#clne-clone-type-009">*CLNE*</a>/<a class="reference external" href="#bcln-breakable-clone-type-093">*BCLN*</a>/<a class="reference external" href="#pcln-powered-clone-type-074">*PCLN*</a>)，运动方式和中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)类似，存在时间很短，只有几秒钟。</p>
+<p><strong>导热率:</strong>100</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="z-isoz-isotope-z-type-107">
+<h3>同位素-Z(ISOZ)【Isotope-Z】 Type:107<a class="headerlink" href="#z-isoz-isotope-z-type-107" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>放射性液体，可以被光子(<a class="reference external" href="#phot-photons-type-031">*PHOT*</a>)或负压激发，会释放出更多的光子。</p>
+<p><strong>凝固点:</strong>-113.15℃/160k</p>
+<p><strong>制取方法:</strong>酸(<a class="reference external" href="#acid-acid-type-021">*ACID*</a>)被中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)轰击后会形成同位素-Z</p>
+<p><strong>导热率:</strong>29</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="z-iszs-solid-isoz-type-108">
+<h3>固态同位素-Z(ISZS)【Solid ISOZ】 Type:108<a class="headerlink" href="#z-iszs-solid-isoz-type-108" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>会随时间流逝慢慢衰减成光子(<a class="reference external" href="#phot-photons-type-031">*PHOT*</a>)，负压会加快衰变速度，和钚(<em>PLUT</em>)的性质相反。可以熔化成液态，这通常会在衰变过程中发生。</p>
+<p><strong>熔点:</strong>26.85℃/300k</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>-133.15℃/140k</p>
+</div>
+<div class="section" id="sing-singularity-type-131">
+<h3>奇点(SING)【Singularity】 Type:131<a class="headerlink" href="#sing-singularity-type-131" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>会产生超低压的粉末，可以破坏其它物质，本质上是粉末状的黑洞。吃下过多的物质之后，奇点会爆炸，产生中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)和电子(<a class="reference external" href="#elec-electrons-type-136">*ELEC*</a>)。使用控制台可以立即使奇点爆炸(set
+life sing 0 :: set Tmp sing 255)。关闭空气压力会导致奇点直接消失。</p>
+<p><strong>导热率:</strong>70</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="elec-electrons-type-136">
+<h3>电子(ELEC)【Electrons】 Type:136<a class="headerlink" href="#elec-electrons-type-136" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>一种能量粒子，有和中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)一样的运动方式，但是速度不会渐渐变慢。电子会给触碰到的导电物质一个电脉冲。和中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)接触会形成氢气。电子也可以用于电解水。在Snapshot中，电子接触荧光液(<a class="reference external" href="#glow-glow-type-066">*GLOW*</a>)后会转变成光子(<a class="reference external" href="#phot-photons-type-031">*PHOT*</a>)。</p>
+<p>存活时间(Life):680帧</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>222.00℃/295.15k</p>
+</div>
+<div class="section" id="exot-exotic-matter-type-145">
+<h3>奇异物质(EXOT)【Exotic Matter】 Type:145<a class="headerlink" href="#exot-exotic-matter-type-145" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong></p>
+<p><strong>1. 制作方法</strong></p>
+<p>将电渣(<a class="reference external" href="#brel-broken-electronics-type-135">*BREL*</a>)持续通电并加压到最大压力，加热到9000℃以上即可得到奇异物质。</p>
+<p><strong>2. 性质</strong></p>
+<p>奇异物质具有岩浆(<a class="reference external" href="#lava-lava-type-006">*LAVA*</a>)的密度和压力以及冰(<a class="reference external" href="#ice-ice-type-013">*ICE*</a>)的一些性质。冷却下来之后，奇异物质会以常温的一半速度闪烁，如果奇异物质没有被电子激发，且温度低于常温，那么它会产生负压；当温度高于常温时，它会逐渐递增的释放正压。奇异物质也能冷却(0℃)并变成固体，但受到大量电子冲击时依然会发生猛烈的爆炸。</p>
+<p><strong>3. 与电子(`*ELEC* &lt;#elec-electrons-type-136&gt;`__)的反应</strong></p>
+<p>在电子的轰击下，它会发出彩虹色的光并产生压力，产生的压力取决于它受到电子轰击的数量，并按一定比率散发到环境当中去，同时，当环境压力等于奇异物质的压力时它会立即停止产生压力。当奇异物质受到电子轰击超过一定限度(Tmp2值+1000)时，它将转变成拥有极高压力和温度的迁跃粉(<a class="reference external" href="#warp迁跃粉warpwarp-type096">*WARP*</a>)。</p>
+<p><strong>4. 与中子(`*NEUT* &lt;#neut-neutrons-type-018&gt;`__)的反应</strong></p>
+<p>当奇异物质被中子轰击时，它会很快失去颜色，但保留闪烁，如果中子太多，那么奇异物质就会变成与之直接相接触的物质(除了光子、中子、电子和墙)。</p>
+<p><strong>5. 性质参数</strong></p>
+<p>闪烁循环=Tmp值</p>
+<p>最大辐射接受量=Tmp2值</p>
+<p><strong>导热率:</strong>250</p>
+<p><strong>初始温度:</strong>20.00℃/293.15k</p>
+</div>
+<div class="section" id="vibr-vibranium-type-165">
+<h3>振金(VIBR)【Vibranium】 Type:165<a class="headerlink" href="#vibr-vibranium-type-165" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong></p>
+<p>源于漫威电影中用于制造美国队长盾牌的材料，也叫泛合金、奈布林等。</p>
+<p><strong>1、反应形式</strong></p>
+<p>能存储能量的物质，当超过限度之后就会以剧烈爆炸的形式释放出来，储存能量的变多会使它的颜色变亮，超过极限后会开始闪光，向所有与之直接相连的导体释放电脉冲，释放所有热量，750帧后爆炸。</p>
+<p><strong>2、性质参数</strong></p>
+<p>Tmp值-可吸收能量总数。</p>
+<p><strong>3、能量换算</strong></p>
+<p>3℃=1Tmp值 温度总保持在-2.5℃~2.5℃之间</p>
+<p>正压时1pressure=7Tmp值 负压时1pressure=2Tmp值 压力总保持在0pressure左右</p>
+<p>20个能量粒子=1Tmp值</p>
+<p><strong>4、制作方法</strong></p>
+<p>将奇异物质和熔融态的钛(Molten
+<a class="reference external" href="#ttan-titanium-type-144">*TTAN*</a>)混合在一起，会形成熔融态的振金(Molten
+VIBR)，之后删去剩余的奇异物质，冷却即可得到振金。</p>
+<p><strong>5、其它性质</strong></p>
+<p>和奇异物质接触会使振金变成奇异物质。</p>
+<p>当接触到反引力尘(<a class="reference external" href="#anar-anti-air-particle-type-113">*ANAR*</a>)时会变成振金粉(<a class="reference external" href="#bvbr-broken-vibranium-type-166">*BVBR*</a>)同时形成负压驱散反引力尘。</p>
+<p>振金到达极限时如果用冷焰(<a class="reference external" href="#cflm-sub-zero-flame-type-068">*CFLM*</a>)灼烧会变为蓝光，之后会恢复原状。</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>0.00℃/273.15k</p>
+</div>
+<div class="section" id="bvbr-broken-vibranium-type-166">
+<h3>振金粉(BVBR)【Broken Vibranium】 Type:166<a class="headerlink" href="#bvbr-broken-vibranium-type-166" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>具有和振金相似的性质，只不过是粉末状的。</p>
+<p><strong>导热率:</strong>164</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="prot-protons-type-173">
+<h3>质子(PROT)【Protons】 Type:173<a class="headerlink" href="#prot-protons-type-173" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>不能穿透绝缘体(<a class="reference external" href="#insl-insulator-type-038">*INSL*</a>)、虚空(<a class="reference external" href="#void-void-type-022">*VOID*</a>/<a class="reference external" href="#pvod可控虚空pvodpowered-void-type084">*PVOD*</a>)、钻石(<a class="reference external" href="#dmnd-diamond-type-028">*DMND*</a>)、振金(<a class="reference external" href="#vibr-vibranium-type-165">*VIBR*</a>)以及墙，会清除碰到电脉冲。</p>
+<p><strong>性质:</strong></p>
+<ol class="arabic simple">
+<li>当质子的温度＞500℃时可以引爆爆炸物。</li>
+<li>防止不易导电的导体导电(比如奇异物质<a class="reference external" href="#exot-exotic-matter-type-145">*EXOT*</a>)。</li>
+<li>当自身温度大于不导热物质的温度时，会使不导热物质的温度变为自身温度(如<a class="reference external" href="#cray-c-ray-emitter-particle-ray-emitter-type-167">*CRAY*</a>、<a class="reference external" href="#prti-portal-in-type-109">*PRTI*</a>、<a class="reference external" href="#prto-portal-out-type-110">*PRTO*</a>)，对<a class="reference external" href="#wi-fi-wifi-wifi-type-124">*WIFI*</a>的温度改变由质子自身的温度决定：如果质子温度超过200°C则将<a class="reference external" href="#wi-fi-wifi-wifi-type-124">*WIFI*</a>温度升高1000°C；若在100~200°C间则升高100°C；在-100~0°C间则降低100°C；在-200~-100°C间则降低1000°C。</li>
+<li>如果它不在某一物质内部的话，会缓慢消失(680帧)。</li>
+<li>当质子与其他质子对撞时会产生新物质，物质种类由两者的速度和(tmp值)决定：</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="47%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">平方和</th>
+<th class="head">产生物质</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>&gt;500000</td>
+<td>奇点(<a class="reference external" href="#sing-singularity-type-131">*SING*</a>)</td>
+</tr>
+<tr class="row-odd"><td>&gt;700</td>
+<td>钚(<a class="reference external" href="#plut-plutonium-type-019">*PLUT*</a>)</td>
+</tr>
+<tr class="row-even"><td>&gt;420</td>
+<td>铀(<a class="reference external" href="#uran-uranium-type-032">*URAN*</a>)</td>
+</tr>
+<tr class="row-odd"><td>&gt;310</td>
+<td>钋(<a class="reference external" href="#polo-polonium-type-182">*POLO*</a>)</td>
+</tr>
+<tr class="row-even"><td>&gt;250</td>
+<td>等离子体(<a class="reference external" href="#plsm-plasma-type-049">*PLSM*</a>)</td>
+</tr>
+<tr class="row-odd"><td>&gt;100</td>
+<td>氧气(<a class="reference external" href="#oxyg-oxygen-type-061">*OXYG*</a>)</td>
+</tr>
+<tr class="row-even"><td>&gt;50</td>
+<td>二氧化碳(<a class="reference external" href="#co2-carbon-dioxide-type-080">*CO2*</a>)</td>
+</tr>
+<tr class="row-odd"><td>&gt;10</td>
+<td>惰性气体(<a class="reference external" href="#nble-noble-gas-type-052">*NBLE*</a>)</td>
+</tr>
+<tr class="row-even"><td>&lt;10</td>
+<td>不反应</td>
+</tr>
+<tr class="row-odd"><td>只有两个质子速度方向几乎完全相反时才算作对撞。</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>相关反应:</strong></p>
+<p>质子+电子(<a class="reference external" href="#elec-electrons-type-136">*ELEC*</a>)=氢气(<a class="reference external" href="#hygn-hydrogen-type-148">*HYGN*</a>)；质子+虚无(<a class="reference external" href="#invs-invisible-type-115">*INVS*</a>)=中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)；质子+液晶(<a class="reference external" href="#lcry-liquid-crystal-type-054">*LCRY*</a>)=光子(<a class="reference external" href="#phot-photons-type-031">*PHOT*</a>)</p>
+<p><strong>其他:</strong>与重水(<a class="reference external" href="#deut-deuterium-oxide-type-095">*DEUT*</a>)反应生成质子；碰到奇异物质(<a class="reference external" href="#exot-exotic-matter-type-145">*EXOT*</a>)会使其不断降温并最终生成冷焰(<a class="reference external" href="#cflm-sub-zero-flame-type-068">*CFLM*</a>)。</p>
+<p><strong>导热率:</strong>61</p>
+<p><strong>初始温度:</strong>22℃/295.15k</p>
+</div>
+<div class="section" id="grvt-90-0beta-graviton-type-177">
+<h3>引力子(GRVT)(90.0beta版本后出现)【Graviton】 Type:177<a class="headerlink" href="#grvt-90-0beta-graviton-type-177" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>玻色子之一，会在周围产生额外的引力场。</p>
+<p><strong>计算公式:</strong>周围产生的引力场=0.2*Tmp值，Tmp值初始为7。</p>
+<p><strong>导热率:</strong>61</p>
+<p><strong>初始温度:</strong>22℃/295.15k</p>
+</div>
+<div class="section" id="polo-polonium-type-182">
+<h3>钋(POLO)【Polonium】 Type:182<a class="headerlink" href="#polo-polonium-type-182" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>高放射性物质，自身会释放出中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)(最多
+5 次)，吸收 10
+个质子(<a class="reference external" href="#prot-protons-type-173">*PROT*</a>)之后变为钚(<a class="reference external" href="#plut-plutonium-type-019">*PLUT*</a>)。自身温度低于115℃时会自动上升。</p>
+<p><strong>参数:</strong>Tmp2 &gt; 10
+后变为钚(<a class="reference external" href="#plut-plutonium-type-019">*PLUT*</a>)。Tmp值大于等于5之后不再释放中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)。</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>熔点:</strong>253.8℃/526.95k</p>
+<p><strong>初始温度:</strong>115℃/388.15k</p>
+</div>
+</div>
+<div class="section" id="special">
+<h2>Special特殊<a class="headerlink" href="#special" title="永久链接至标题">¶</a></h2>
+<div class="section" id="clne-clone-type-009">
+<h3>复制体(CLNE)【Clone】 Type:009<a class="headerlink" href="#clne-clone-type-009" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>可以复制它第一个触碰到的物质。它可以记住最后碰触到的物质并保存在Stamps/Saves中。</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>22℃/295.15k</p>
+</div>
+<div class="section" id="void-void-type-022">
+<h3>虚空(VOID)【Void】 Type:022<a class="headerlink" href="#void-void-type-022" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>可以吸收物质并产生少量压力。TPT的默认边界实际上就是这种物质。可以用复制体(<a class="reference external" href="#clne-clone-type-009">*CLNE*</a>)与虚空或黑洞(<a class="reference external" href="#bhol-black-hole-type-150">*BHOL*</a>)相结合来制作一个温度控制器。</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>22℃/295.15k</p>
+</div>
+<div class="section" id="dmnd-diamond-type-028">
+<h3>钻石(DMND)【Diamond】 Type:028<a class="headerlink" href="#dmnd-diamond-type-028" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>固体，不导电，不可摧毁。</p>
+<p><strong>导热率:</strong>186</p>
+<p><strong>初始温度:</strong>22℃/295.15k</p>
+</div>
+<div class="section" id="vacu-vacuum-type-039">
+<h3>吸气孔(VACU)【Vacuum】 Type:039<a class="headerlink" href="#vacu-vacuum-type-039" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>会产生负压，吸收物质之后会发热，在45.0版本之后，吸气孔不再可破坏。</p>
+<p><strong>导热率:</strong>255</p>
+<p><strong>初始温度:</strong>92℃/365.15k</p>
+</div>
+<div class="section" id="vent-air-vent-type-040">
+<h3>排气孔(VENT)【Air Vent】 Type:040<a class="headerlink" href="#vent-air-vent-type-040" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>固体，产生气压，在45.0版本之后，排气孔不再可破坏。</p>
+<p><strong>导热率:</strong>255</p>
+<p><strong>初始温度:</strong>6℃/279.15k</p>
+</div>
+<div class="section" id="stkm-stickman-type-055-spwn-type-118">
+<h3>火柴人(STKM)【Stickman】 Type:055 火柴人出生点(SPWN) Type:118<a class="headerlink" href="#stkm-stickman-type-055-spwn-type-118" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>受重力和压力影响，使用方向键来控制其运动，可以在水下呼吸，受到压力、高温、放射性物质等各种危险的东西会损失生命值，吃(走近)植物(<a class="reference external" href="#plnt-plant-type-020">*PLNT*</a>)可以恢复生命值，修改life值可以修改生命值上限，以下是火柴人的几项能力:</p>
+<ol class="arabic simple">
+<li>复制</li>
+</ol>
+<p>火柴人可以复制他的头碰到的物质，当碰到一个特定物质(或墙)时，他的头会改变颜色，此时按方向键↓，火柴人就会吐出该种物质。</p>
+<ol class="arabic simple">
+<li>使用电子产品</li>
+</ol>
+<p>当火柴人的头碰到金属时，按方向键↓可以给金属一个电脉冲，这样就可以使用电子产品了。</p>
+<ol class="arabic simple">
+<li>火箭鞋(88.0beta加入)</li>
+</ol>
+<p>当火柴人碰到重力墙时，会拥有火箭鞋(喷出高温的等离子体<a class="reference external" href="#plsm-plasma-type-049">*PLSM*</a>)，同样用方向键控制，碰到电锁体(<a class="reference external" href="#e-hole">*E-Hole*</a>)时会恢复原状。</p>
+<p><strong>导热率:</strong>0/0</p>
+<p><strong>燃点:</strong>346.85℃/620k</p>
+<p><strong>初始温度:</strong>36.6℃/309.75k</p>
+</div>
+<div class="section" id="conv-converter-type-085">
+<h3>转化器(CONV)【Converter】 Type:085<a class="headerlink" href="#conv-converter-type-085" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>固体，可以转换它接触到的物质的Type值为它自身的Ctype值，使用方法类似复制体(<a class="reference external" href="#clne-clone-type-009">*CLNE*</a>)。</p>
+<p>91.0beta后，可以通过tmp值设定待转化原料物质。</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>22℃/295.15k</p>
+</div>
+<div class="section" id="bcln-breakable-clone-type-093">
+<h3>可破坏复制体(BCLN)【Breakable Clone】 Type:093<a class="headerlink" href="#bcln-breakable-clone-type-093" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>在较大压力(不论是正压还是负压)下会消失的复制体(就像粘土<a class="reference external" href="#goo-goo-type-012">*GOO*</a>一样)。</p>
+<p><strong>导热率:</strong>251</p>
+<p><strong>初始温度:</strong>22℃/295.15k</p>
+</div>
+<div class="section" id="prti-portal-in-type-109">
+<h3>传送门入口(PRTI)【Portal IN】 Type:109<a class="headerlink" href="#prti-portal-in-type-109" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>可以传送物质和电脉冲，和Wi-Fi(<a class="reference external" href="#wi-fi-wifi-wifi-type-124">*WIFI*</a>)相似，通过改变自身温度可以产生不同频道，产生一个负压，从这里进入的物质将被传送至传送门出口(<a class="reference external" href="#prto-portal-out-type-110">*PRTO*</a>)，如果暂时没有传送门出口，它可以先储存一部分物质。其表面积越大，传送速度越快。</p>
+<p><strong>导热率:</strong>0</p>
+<p><strong>初始温度:</strong>22℃/295.15k</p>
+</div>
+<div class="section" id="prto-portal-out-type-110">
+<h3>传送门出口(PRTO)【Portal OUT】 Type:110<a class="headerlink" href="#prto-portal-out-type-110" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>和传送门入口(<a class="reference external" href="#prti-portal-in-type-109">*PRTI*</a>)配套，物质从这里出来，形成正压力。</p>
+<p><strong>导热率:</strong>0</p>
+<p><strong>初始温度:</strong>22℃/295.15k</p>
+</div>
+<div class="section" id="stk2-second-stickmantype-128-spwn2-type-117">
+<h3>火柴人二号(STK2)【Second Stickman】Type:128火柴人二号出生点(SPWN2) Type:117<a class="headerlink" href="#stk2-second-stickmantype-128-spwn2-type-117" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>用WASD控制，其余和火柴人(<a class="reference external" href="#stkm-stickman-type-055-spwn-type-118">*STKM*</a>)相同。</p>
+<p><strong>导热率:</strong>0/0</p>
+<p><strong>初始温度:</strong>36.6℃/309.75k</p>
+</div>
+<div class="section" id="tron-tron-type-143">
+<h3>智能微粒(TRON)【Tron】 Type:143<a class="headerlink" href="#tron-tron-type-143" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>绝对零度的粒子，会智能躲避障碍，随时间流逝尾巴会变长，可用于降温。</p>
+<p><strong>元素参数:</strong>颜色由Tmp值决定</p>
+<p><strong>导热率:</strong>40</p>
+<p><strong>初始温度:</strong>-273.15℃/0k</p>
+</div>
+<div class="section" id="bhol-black-hole-type-150">
+<h3>黑洞(BHOL)【Black Hole】 Type:150<a class="headerlink" href="#bhol-black-hole-type-150" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>使用需开启牛顿万有引力，产生引力吸入物质并升温。可以用控制台制造大量物质(&gt;225)压缩在同一点上制得。</p>
+<p><strong>元素参数:</strong>改变黑洞的tmp值可以改变其引力值，公式为引力=tmp*0.001，引力值至少为0.1，最多为51.2。</p>
+<p><strong>导热率:</strong>186</p>
+<p><strong>初始温度:</strong>22℃/295.15k</p>
+</div>
+<div class="section" id="whol-white-hole-type-151">
+<h3>白洞(WHOL)【White Hole】 Type:151<a class="headerlink" href="#whol-white-hole-type-151" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>使用需开启牛顿万有引力，产生斥力排斥物质。</p>
+<p><strong>元素参数:</strong>从Snapshot54开始，修改白洞的tmp值可以改变其斥力值，公式为斥力=tmp*0.001，斥力值至少为0.1，最多为51.2。</p>
+<p><strong>导热率:</strong>186</p>
+<p><strong>初始温度:</strong>22℃/295.15k</p>
+</div>
+<div class="section" id="figh-fighter-type-158">
+<h3>打手(FIGH)【Fighter】 Type:158<a class="headerlink" href="#figh-fighter-type-158" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>电脑控制的小人，会通过喷东西来杀死火柴人(<a class="reference external" href="#stkm-stickman-type-055-spwn-type-118">*STKM*</a>)，其它身体属性和火柴人是相同的，最多可以制造100个打手。</p>
+<p><strong>燃点:</strong>346.85℃/620k</p>
+<p><strong>导热率:</strong>0</p>
+<p><strong>初始温度:</strong>36.6℃/309.75k</p>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>Life生命游戏<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p><strong>注1:</strong>以下的“细胞”指一个像素</p>
+<p><strong>注2:</strong>所有生命类元素在活动时都带有高温，随时间过去温度降为绝对零度</p>
+<p><strong>注3:</strong>所有生命类元素都可以穿越屏幕(比如掉下去的会从顶端出现)</p>
+<p><strong>注4:</strong>所有生命类元素共用一个Type值，使用Ctype值进行区分</p>
+<p><strong>注5:</strong>所有生命类元素的导热率均为40，且不能被酸腐蚀</p>
+<div class="section" id="gol-game-of-life-type-078-ctype-0">
+<h3>生命游戏(GOL)【Game of Life】 Type:078 Ctype:0<a class="headerlink" href="#gol-game-of-life-type-078-ctype-0" title="永久链接至标题">¶</a></h3>
+<p><strong>基本规则:</strong></p>
+<p>每一帧系统都将检查每个细胞，分为两种情况:</p>
+<ol class="arabic simple">
+<li>如果一个细胞周围有两到三个活细胞，那么系统判定下一帧这个细胞还可以继续存在</li>
+<li>如果一个空白细胞周围有三个活细胞，那么系统判定下一帧这个空白细胞将变成活细胞</li>
+</ol>
+<p>当细胞随每一帧过去但形态不再变化时称为“稳定”状态。有一些细胞可以穿越整个屏幕而不以任何方式“爆发”，我们称其为“滑翔机”。</p>
+<p>以下的元素本质上都是生命游戏，但使用不同的规则。</p>
+</div>
+<div class="section" id="hlif-high-life-ctype-1">
+<h3>高等生命(HLIF)【High Life】 Ctype:1<a class="headerlink" href="#hlif-high-life-ctype-1" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>和生命游戏(GOL)有一样的规则，但多了额外一条:高等生命细胞被2~3个细胞包围时存活，被3~6个细胞包围时活化。</p>
+</div>
+<div class="section" id="asim-assimilation-ctype-2">
+<h3>同化(ASIM)【Assimilation】 Ctype:2<a class="headerlink" href="#asim-assimilation-ctype-2" title="永久链接至标题">¶</a></h3>
+<p><strong>基本规则:</strong></p>
+<ol class="arabic simple">
+<li>存活规则:当这个细胞周围有4/5/6/7个细胞时存活</li>
+<li>繁殖规则:当这个细胞有3/4/5个细胞时活化</li>
+</ol>
+<p>这种生命稳定后总能达到完美的钻石形状。</p>
+</div>
+<div class="section" id="x2-2x2-2x2-ctype-3">
+<h3>2X2(2X2)【2X2】 Ctype:3<a class="headerlink" href="#x2-2x2-2x2-ctype-3" title="永久链接至标题">¶</a></h3>
+<p><strong>基本规则:</strong></p>
+<ol class="arabic simple">
+<li>存活规则:当这个细胞被1/2/5个细胞围绕时存活</li>
+<li>繁殖规则:当这个细胞被3/6个围绕时活化</li>
+</ol>
+<p>这种生命能形成方形或线，让人眼花缭乱。</p>
+</div>
+<div class="section" id="dani-day-and-night-ctype-4">
+<h3>日以继夜(DANI)【Day and Night】 Ctype:4<a class="headerlink" href="#dani-day-and-night-ctype-4" title="永久链接至标题">¶</a></h3>
+<p><strong>基本规则:</strong></p>
+<ol class="arabic simple">
+<li>存活规则:当这个细胞被3/4/6/7/8和细胞围绕时存活</li>
+<li>繁殖规则:当这个细胞被3/6/7/8个细胞围绕时活化</li>
+</ol>
+</div>
+<div class="section" id="amoe-amoeba-ctype-5">
+<h3>阿米巴(AMOE)【Amoeba】 Ctype:5<a class="headerlink" href="#amoe-amoeba-ctype-5" title="永久链接至标题">¶</a></h3>
+<p><strong>基本规则:</strong></p>
+<ol class="arabic simple">
+<li>存活规则:当这个细胞被1/3/5/8个细胞围绕时存活</li>
+<li>繁殖规则:当这个细胞被3/5/7个细胞围绕时活化</li>
+</ol>
+</div>
+<div class="section" id="move-move-ctype-6">
+<h3>移动(MOVE)【Move】 Ctype:6<a class="headerlink" href="#move-move-ctype-6" title="永久链接至标题">¶</a></h3>
+<p><strong>基本规则:</strong></p>
+<ol class="arabic simple">
+<li>存活规则:当这个细胞被2/4/5个细胞围绕时存活</li>
+<li>繁殖规则:当这个细胞被3/6/8个细胞围绕时活化</li>
+</ol>
+<p>在某些情况下你能得到一个会不断移动的细胞组。(不断向两边移动的细胞组)</p>
+</div>
+<div class="section" id="pgol-pseudo-ctype-7">
+<h3>假货(PGOL)【Pseudo】 Ctype:7<a class="headerlink" href="#pgol-pseudo-ctype-7" title="永久链接至标题">¶</a></h3>
+<p>[<strong>基本规则:</strong></p>
+<ol class="arabic simple">
+<li>存活规则:当这个细胞被2/3/8个细胞围绕时存活</li>
+<li>繁殖规则:当这个细胞被3/5/7个细胞围绕时活化</li>
+</ol>
+<p>活动方式很像GOL，但其实不是。</p>
+</div>
+<div class="section" id="dmoe-diamoeba-ctype-8">
+<h3>方片(DMOE)【Diamoeba】 Ctype:8<a class="headerlink" href="#dmoe-diamoeba-ctype-8" title="永久链接至标题">¶</a></h3>
+<p><strong>基本规则:</strong></p>
+<ol class="arabic simple">
+<li>存活规则:当这个细胞被5/6/7/8个细胞围绕时存活</li>
+<li>繁殖规则:当这个细胞被3/5/6/7/8个细胞围绕时活化</li>
+</ol>
+<p>会形成不规则的菱形形状，如果垂直画两条直线的话，会形成一个规整的矩形。</p>
+</div>
+<div class="section" id="ctype-9">
+<h3>34(34)【34】 Ctype:9<a class="headerlink" href="#ctype-9" title="永久链接至标题">¶</a></h3>
+<p><strong>基本规则:</strong></p>
+<ol class="arabic simple">
+<li>存活规则:当这个细胞被3/4个细胞围绕时存活</li>
+<li>繁殖规则:当这个细胞被3/4个细胞围绕时活化(这就是它名字的由来)</li>
+</ol>
+</div>
+<div class="section" id="llif-long-life-ctype-10">
+<h3>长生(LLIF)【Long Life】 Ctype:10<a class="headerlink" href="#llif-long-life-ctype-10" title="永久链接至标题">¶</a></h3>
+<p><strong>基本规则:</strong></p>
+<ol class="arabic simple">
+<li>存活规则:当这个细胞被5个细胞围绕时存活</li>
+<li>繁殖规则:当这个细胞被3/4/5个细胞围绕时活化</li>
+</ol>
+<p>它们组成团块之后几乎不会减少。</p>
+</div>
+<div class="section" id="stan-stains-ctype-11">
+<h3>染色剂(STAN)【Stains】 Ctype:11<a class="headerlink" href="#stan-stains-ctype-11" title="永久链接至标题">¶</a></h3>
+<p><strong>基本规则:</strong></p>
+<ol class="arabic simple">
+<li>存活规则:当这个细胞被2/3/5/6/7/8个细胞围绕时存活</li>
+<li>繁殖规则:当这个细胞被3/6/7/8个细胞围绕时活化</li>
+</ol>
+<p><strong>元素参数:</strong>Tmp值控制其颜色，当Tmp值=1/2/3/4/大于等于5时，颜色不断变暗。</p>
+</div>
+<div class="section" id="seed-seeds-ctype-12">
+<h3>种子(SEED)【Seeds】 Ctype:12<a class="headerlink" href="#seed-seeds-ctype-12" title="永久链接至标题">¶</a></h3>
+<p><strong>基本规则:</strong></p>
+<p>每一代都会在当前所在的代际上死亡，有两个细胞围绕时繁殖，因此不是爆炸性增长就是完全停滞。</p>
+</div>
+<div class="section" id="maze-maze-ctype-13">
+<h3>迷宫(MAZE)【Maze】 Ctype:13<a class="headerlink" href="#maze-maze-ctype-13" title="永久链接至标题">¶</a></h3>
+<p><strong>基本规则:</strong></p>
+<ol class="arabic simple">
+<li>存活规则:当这个细胞被1/2/3/4/5个细胞围绕时存活</li>
+<li>繁殖规则:当这个细胞被3个细胞围绕时活化</li>
+</ol>
+</div>
+<div class="section" id="coag-coagulations-ctype-14">
+<h3>凝固物(COAG)【Coagulations】 Ctype:14<a class="headerlink" href="#coag-coagulations-ctype-14" title="永久链接至标题">¶</a></h3>
+<p><strong>基本规则:</strong></p>
+<ol class="arabic simple">
+<li>存活规则:当这个细胞被2/3/5/6/7/8个细胞围绕时存活</li>
+<li>繁殖规则:当这个细胞被3/7/8个细胞围绕时活化</li>
+</ol>
+</div>
+<div class="section" id="wall-walled-cities-ctype-15">
+<h3>城墙(WALL)【Walled cities】 Ctype:15<a class="headerlink" href="#wall-walled-cities-ctype-15" title="永久链接至标题">¶</a></h3>
+<p><strong>基本规则:</strong></p>
+<ol class="arabic simple">
+<li>存活规则:当这个细胞被2/3/4/5个细胞围绕时存活</li>
+<li>繁殖规则:当这个细胞被4/5/6/7/8个细胞围绕时活化</li>
+</ol>
+</div>
+<div class="section" id="gnar-gnarl-ctype-16">
+<h3>木节(GNAR)【Gnarl】 Ctype:16<a class="headerlink" href="#gnar-gnarl-ctype-16" title="永久链接至标题">¶</a></h3>
+<p><strong>基本规则:</strong></p>
+<ol class="arabic simple">
+<li>存活规则:当这个细胞被1个细胞围绕时存活</li>
+<li>繁殖规则:当这个细胞被1个细胞围绕时活化</li>
+</ol>
+</div>
+<div class="section" id="repl-replicator-ctype-17">
+<h3>复制基因(REPL)【Replicator】 Ctype:17<a class="headerlink" href="#repl-replicator-ctype-17" title="永久链接至标题">¶</a></h3>
+<p>[<strong>基本规则:</strong></p>
+<ol class="arabic simple">
+<li>存活规则:当这个细胞被1/3/5/7个细胞围绕时存活</li>
+<li>繁殖规则:当这个细胞被1/3/5/7个细胞围绕时活化</li>
+</ol>
+</div>
+<div class="section" id="myst-mystery-ctype-18">
+<h3>谜(MYST)【Mystery】 Ctype:18<a class="headerlink" href="#myst-mystery-ctype-18" title="永久链接至标题">¶</a></h3>
+<p><strong>基本规则:</strong></p>
+<ol class="arabic simple">
+<li>存活规则:当这个细胞被0/5/6/7/8个细胞围绕时存活</li>
+<li>繁殖规则:当这个细胞被3/4/5/8个细胞围绕时活化</li>
+</ol>
+</div>
+<div class="section" id="lote-living-on-the-edge-ctype-19">
+<h3>边缘人(LOTE)【Living on the Edge】 Ctype:19<a class="headerlink" href="#lote-living-on-the-edge-ctype-19" title="永久链接至标题">¶</a></h3>
+<p>[<strong>基本规则:</strong></p>
+<ol class="arabic simple">
+<li>存活规则:当这个细胞被3/4/5/8个细胞围绕时存活</li>
+<li>繁殖规则:当这个细胞被3/7个细胞围绕时活化</li>
+</ol>
+<p>死亡后能存在4帧</p>
+<p><strong>元素参数:</strong>Tmp值控制其颜色，Tmp=1/2时显示为黄色/橙色，其他Tmp值都为红色
+。</p>
+</div>
+<div class="section" id="frg2-like-frogs-rule-ctype-20">
+<h3>青蛙变体(FRG2)【Like Frogs Rule】 Ctype:20<a class="headerlink" href="#frg2-like-frogs-rule-ctype-20" title="永久链接至标题">¶</a></h3>
+<p><strong>基本规则:</strong></p>
+<p>1、存活规则:当这个细胞被1/2/4个细胞围绕时存活</p>
+<p>2、繁殖规则:当这个细胞被3个细胞围绕时活化</p>
+<p>死亡后能存在3帧</p>
+<p><strong>元素参数:</strong>Tmp值控制其颜色，Tmp=2时显示为深青色，其他Tmp值都显示为亮青色。</p>
+</div>
+<div class="section" id="star-star-wars-ctype-21">
+<h3>星球大战(STAR)【Star Wars】 Ctype:21<a class="headerlink" href="#star-star-wars-ctype-21" title="永久链接至标题">¶</a></h3>
+<p><strong>基本规则:</strong></p>
+<ol class="arabic simple">
+<li>存活规则:当这个细胞被3/4/5/6个细胞围绕时存活</li>
+<li>繁殖规则:当这个细胞被2/7/8个细胞围绕时活化</li>
+</ol>
+<p>死亡后能存在6帧</p>
+</div>
+<div class="section" id="frog-frogs-ctype-22">
+<h3>青蛙(FROG)【Frogs】 Ctype:22<a class="headerlink" href="#frog-frogs-ctype-22" title="永久链接至标题">¶</a></h3>
+<p><strong>基本规则:</strong></p>
+<ol class="arabic simple">
+<li>存活规则:当这个细胞被1/2个细胞围绕时存活</li>
+<li>繁殖规则:当这个细胞被3/4个细胞围绕时活化</li>
+</ol>
+<p>死亡后能存在3帧</p>
+<p><strong>元素参数:</strong>Tmp控制其颜色，Tmp=2时显示为深绿色，其他Tmp值都显示为亮绿色。</p>
+</div>
+<div class="section" id="bran-brian-6-ctype-23">
+<h3>布莱恩6号(BRAN)【Brian 6】 Ctype:23<a class="headerlink" href="#bran-brian-6-ctype-23" title="永久链接至标题">¶</a></h3>
+<p><strong>基本规则:</strong></p>
+<ol class="arabic simple">
+<li>存活规则:当这个细胞被6个细胞围绕时存活</li>
+<li>繁殖规则:当这个细胞被2/4/6个细胞围绕时活化</li>
+</ol>
+<p>死亡后能存在3帧</p>
+<p><strong>元素参数:</strong>Tmp值控制颜色，Tmp=2时显示为亮棕色，其他Tmp值都显示为棕色</p>
+</div>
+</div>
+<div class="section" id="tools">
+<h2>Tools工具<a class="headerlink" href="#tools" title="永久链接至标题">¶</a></h2>
+<div class="section" id="heat-heat">
+<h3>升温笔(HEAT)【Heat】<a class="headerlink" href="#heat-heat" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>升高温度，不会创造任何物质，但会升高环境温度，按住鼠标会以四倍速度升高温度。</p>
+</div>
+<div class="section" id="cool-cool">
+<h3>降温笔(COOL)【Cool】<a class="headerlink" href="#cool-cool" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>降低温度，不会创造任何物质，但会降低环境温度，[按住鼠标会以四倍速度降低温度。</p>
+</div>
+<div class="section" id="air-air">
+<h3>加压笔(AIR)【Air】<a class="headerlink" href="#air-air" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>增加压力，不会创造任何物质，但会增加环境压力，按住鼠标会以四倍速度增加压力。</p>
+</div>
+<div class="section" id="vac-vacuum">
+<h3>减压笔(VAC)【Vacuum】<a class="headerlink" href="#vac-vacuum" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>减少压力，不会创造任何物质，但会减少环境压力，按住鼠标会以四倍速度减少压力。</p>
+</div>
+<div class="section" id="pgrv-positive-gravity-tool">
+<h3>引力笔(PGRV)【Positive Gravity Tool】<a class="headerlink" href="#pgrv-positive-gravity-tool" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>提供引力，不会创造任何物质，但会增加引力，牛顿万有引力必须打开。</p>
+</div>
+<div class="section" id="ngrv-negative-gravity-tool">
+<h3>斥力笔(NGRV)【Negative Gravity Tool】<a class="headerlink" href="#ngrv-negative-gravity-tool" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>提供斥力，不会创造任何物质，但会增加斥力，牛顿万有引力必须打开。</p>
+</div>
+<div class="section" id="mix-mix">
+<h3>混合工具(MIX)【Mix】<a class="headerlink" href="#mix-mix" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>用于混合物质，直接在需要混合的物质上涂抹即可。从Snapshot53开始，混合工具不再能够混合状态不同的物质(例如固体和液体)。</p>
+</div>
+<div class="section" id="wind-wind">
+<h3>风(WIND)【Wind】<a class="headerlink" href="#wind-wind" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>按住并移动光标可以产生气流。</p>
+</div>
+<div class="section" id="prop-edit-property-tool">
+<h3>属性笔(PROP)【Edit Property Tool】<a class="headerlink" href="#prop-edit-property-tool" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>点击物质可以修改不同属性，89.2beta版本以后，可以直接作为笔刷操作，并能记住最后一次设定</p>
+<p><strong>注:</strong>属性笔修改temp(温度)值时使用的是开氏。从Snapshot52开始，通过在数字结尾加上C/F可以指定属性笔修改温度时的单位。(例如输入100C即为100℃)</p>
+</div>
+<div class="section" id="sign">
+<h3>气泡【Sign】<a class="headerlink" href="#sign" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>在画面上创造一个对话框，可以输入文字，不影响物质，输入特定代码可以显示特定内容，比如:</p>
+<p>{t}——实时显示当前位置的温度</p>
+<p>{p}——实时显示当前位置的压力</p>
+<p>{Type}——实时显示当前位置的Type值</p>
+<p>{life}——实时显示当前位置的life值</p>
+<p>{Ctype}——实时显示当前位置的Ctype值</p>
+<p>{b|你想要显示的内容}——创建一个开关，点击能释放一个电脉冲(89.0版本后出现)</p>
+<p><strong>注1:</strong>”|“符号可以使用shift+\输入</p>
+<p><strong>注2:</strong>气泡应放在你想要释放电脉冲的地方</p>
+</div>
+</div>
+<div class="section" id="secrets">
+<h2>Secrets隐藏元素<a class="headerlink" href="#secrets" title="永久链接至标题">¶</a></h2>
+<p>以下元素并不能通过常规方法制造</p>
+<div class="section" id="none-none-type-0">
+<h3>空白(NONE)【None】 Type:0<a class="headerlink" href="#none-none-type-0" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>所有HUD显示为“Empty”的地方都是这种元素，用于模拟气压、温度等。</p>
+<p><strong>导热率:</strong>0</p>
+<p><strong>初始温度:</strong>22℃/295.15k</p>
+</div>
+<div class="section" id="mort-mortvert-type-077">
+<h3>烟尘(MORT)【Mortvert】 Type:077<a class="headerlink" href="#mort-mortvert-type-077" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>以玩家名字命名的元素。会释放烟雾并缓慢的飘落下来。可以通过控制台创建。只能被炸弹(<a class="reference external" href="#bomb-bomb-type-129-embr-ember-type-147">*BOMB*</a>)、反物质(<a class="reference external" href="#反物质(AMTR)【Antimatter】%20Type:072">*AMTR*</a>)和奇点(<a class="reference external" href="#sing-singularity-type-131">*SING*</a>)摧毁。</p>
+<p><strong>导热率:</strong>60</p>
+<p><strong>初始温度:</strong>-8.00℃/265.15k</p>
+</div>
+<div class="section" id="frzw-frozen-water-type-101">
+<h3>寒水(FRZW)【Frozen Water】 Type:101<a class="headerlink" href="#frzw-frozen-water-type-101" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>寒尘(<em>FRZZ</em>)溶于水形成，能自身不断降温直到绝对零度，同时将更多的水变成寒水。</p>
+<p><strong>凝固点:</strong>-220.15℃/53k</p>
+<p><strong>导热率:</strong>29</p>
+<p><strong>初始温度:</strong>-154.15℃</p>
+</div>
+<div class="section" id="eqve-equal-velocity-type-116">
+<h3>速度尘(EQVE) 【Equal Velocity】 Type:116<a class="headerlink" href="#eqve-equal-velocity-type-116" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>一个失败的实验品，现在是一种难以破坏的粉末，可以通过控制台或属性笔创建。</p>
+<p><strong>导热率:</strong>70</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
+</div>
+<div class="section" id="laugh-out-loud-lolz-laugh-out-loud-type-123">
+<h3>大声笑！Laugh Out Loud！(LOLZ)【Laugh Out Loud】 Type:123<a class="headerlink" href="#laugh-out-loud-lolz-laugh-out-loud-type-123" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>请不要怀疑，这货就是来搞笑的。</p>
+<p><strong>导热率:</strong>40</p>
+<p><strong>初始温度:</strong>99.85℃/373.0k</p>
+</div>
+<div class="section" id="love-love-type-094">
+<h3>爱心(LOVE)【Love】 Type:094<a class="headerlink" href="#love-love-type-094" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>爱心形状，同样是类似于彩蛋的东西。</p>
+<p><strong>导热率:</strong>40</p>
+<p><strong>初始温度:</strong>99.85℃/373k</p>
+</div>
+<div class="section" id="bran-brian-6-type-146">
+<h3>布莱恩6号(BRAN)【Brian 6】 Type:146<a class="headerlink" href="#bran-brian-6-type-146" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>生命元素改为使用Ctype区分后的遗留</p>
+<p><strong>导热率:</strong>40</p>
+<p><strong>初始温度:</strong>8726.85℃/9000k</p>
+</div>
+</div>
+<div class="section" id="decoration-tools-49-0">
+<h2>Decoration tools装饰工具(49.0版本后出现)<a class="headerlink" href="#decoration-tools-49-0" title="永久链接至标题">¶</a></h2>
+<p><strong>重要提示:</strong>使用需开启装饰颜色显示开关(就是右上角的“D”或者快捷键Ctrl+B)</p>
+</div>
+<div class="section" id="favorites">
+<h2>Favorites 收藏夹<a class="headerlink" href="#favorites" title="永久链接至标题">¶</a></h2>
+<p>Snapshot45以后出现，同时按住Ctrl+Shift并左键/右键点选元素就可以将其加入/移出收藏夹。(被添加到收藏夹的元素会有爱心标志)</p>
+</div>
+<div class="section" id="search-for-element">
+<h2>Search for element 查找元素<a class="headerlink" href="#search-for-element" title="永久链接至标题">¶</a></h2>
+<p>可以快速查找并选中某一个元素，只知道其中的一个字母也可以。</p>
+</div>
+<div class="section" id="reference-more">
+<h2>Reference&amp;More 参考资料及延伸阅读<a class="headerlink" href="#reference-more" title="永久链接至标题">¶</a></h2>
+<ol class="arabic simple">
+<li>the Powder Toy - Wiki
+[<em>http://powdertoy.co.uk/Wiki/W/Main_Page.html</em></li>
+<li>TPT 源代码 - GetHub <a class="reference external" href="https://github.com/simtr/The-Powder-Toy/">https://github.com/simtr/The-Powder-Toy/</a></li>
+<li>the Powder Toy Snapshot – Starcatcher <a class="reference external" href="http://starcatcher.us/TPT/">http://starcatcher.us/TPT/</a></li>
+<li>元素说明V83.9 – 白左 <a class="reference external" href="http://sdrv.ms/10TAgsu">http://sdrv.ms/10TAgsu</a></li>
+</ol>
+</div>
+<div class="section" id="using-the-console">
+<h2>附1:控制台的基本用法(Using the console)<a class="headerlink" href="#using-the-console" title="永久链接至标题">¶</a></h2>
+<div class="section" id="set">
+<h3>Set命令<a class="headerlink" href="#set" title="永久链接至标题">¶</a></h3>
+<p>基本格式:!Set+需要设置的参数+需要设置的粒子+改变后的值</p>
+<p>例:</p>
+<p>如果需要设置第25号粒子(即#25)的Type值为METL，那么命令就是:</p>
+<p>!Set Type 25 metl</p>
+<p>为了更加方便，你可以使用关键字“ALL”或者一种元素的名字来快速设置，如:</p>
+<p>!Set Type all metl 这将会设置所有粒子变为METL</p>
+<p>!Set Type metl watr 这将会设置所有METL变为WATR</p>
+<p>!Set Type metl none 这将会删除所有的METL</p>
+<p>同时，命令中的“Type”也是可以替换的，对于常用参数的介绍文章开头已经给出，这里就不多说了，可以按照自己的需要任意设置</p>
+</div>
+<div class="section" id="quit">
+<h3>Quit命令<a class="headerlink" href="#quit" title="永久链接至标题">¶</a></h3>
+<p>该命令的效果只有一个，直接退出TPT</p>
+</div>
+<div class="section" id="create">
+<h3>Create命令<a class="headerlink" href="#create" title="永久链接至标题">¶</a></h3>
+<p>用于在指定地点创造一个粒子</p>
+<p>基本格式:!Create+需要创造的粒子种类+创造粒子的位置(x,y)</p>
+<p>例:</p>
+<p>!Create METL 200,100 这将会在200,100的位置创造一个METL</p>
+</div>
+<div class="section" id="delete">
+<h3>Delete命令<a class="headerlink" href="#delete" title="永久链接至标题">¶</a></h3>
+<p>用于删除某一个地方的所有元素</p>
+<p>基本格式:!Delete+需要清空的位置(x,y)</p>
+<p>例:</p>
+<p>!Delete 200,100 这将会删除200,100位置上的所有粒子</p>
+</div>
+<div class="section" id="bubble">
+<h3>Bubble命令<a class="headerlink" href="#bubble" title="永久链接至标题">¶</a></h3>
+<p>基本格式:!Bubble+需要产生泡泡的位置</p>
+<p>例:</p>
+<p>!bubble 100,100 在100,100的位置产生一个肥皂泡</p>
+</div>
+<div class="section" id="reset">
+<h3>Reset命令<a class="headerlink" href="#reset" title="永久链接至标题">¶</a></h3>
+<p>很有用的命令，可以恢复各种数值到默认状态</p>
+<p>基本格式:!Reset+要恢复的参数</p>
+<p>例:</p>
+<p>!Reset velocity 使所有粒子的速度都变为零</p>
+<p>[!Reset pressure 使所有压力都变为零</p>
+</div>
+</div>
+<div class="section" id="hud-heads-up-display">
+<h2>附2:HUD(heads-up-display)<a class="headerlink" href="#hud-heads-up-display" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id3">
+<h3>基本说明<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<p>HUD(heads-up-display)，其实就是位于窗口上方的一行数据显示区域，如下图所示:</p>
+<p>左起依次为(以下这些数据都会实时更新):</p>
+<p>当前屏幕刷新率(FPS)，这个数值越高，游戏运行越流畅，受硬件影响较大</p>
+<p>当前光标位置上的元素(这里是粘土<a class="reference external" href="#goo-goo-type-012">*GOO*</a>):当光标指向空白时，这项数值显示为Empty</p>
+<p>当前光标位置上的温度(这里是22.00℃)</p>
+<p>当前光标位置上的气压(这里是0pressure)</p>
+</div>
+<div class="section" id="debug-d">
+<h3>调试模式(Debug)【快捷键D】<a class="headerlink" href="#debug-d" title="永久链接至标题">¶</a></h3>
+<p>HUD的调试模式能够实时提供更多信息</p>
+<p>左起依次为:</p>
+<p>第一行:</p>
+<p>FPS数值</p>
+<p>当前主界面中全部的粒子数量:每一像素物质就是一个粒子</p>
+<p>当前光标位置上的元素(这里是复制体<a class="reference external" href="#clne-clone-type-009">*CLNE*</a>)</p>
+<p>当前光标位置上元素的Ctype值(这里是柴油<a class="reference external" href="#desl-diesel-type-058">*DESL*</a>)</p>
+<p>当前光标位置上的温度(这里是22.00℃)</p>
+<p>当前光标位置上元素的life值(这里是0)</p>
+<p>当前光标位置上的Tmp值(这里是0)</p>
+<p>当前光标位置上的气压(这里是-0.01)</p>
+<p>第二行:</p>
+<p>当前光标位置上粒子的序号(这里是0)</p>
+<p>当前光标所在的坐标:这里是(313,203)</p>
+</div>
+<div class="section" id="id4">
+<h3>快捷键<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<p>快捷键“H”可以打开/关闭HUD</p>
+<p>快捷键“D”可以打开/关闭调试(debug)模式</p>
+</div>
+</div>
+<div class="section" id="display-modes">
+<h2>附3:显示模式(Display Modes)<a class="headerlink" href="#display-modes" title="永久链接至标题">¶</a></h2>
+<div class="section" id="velocity-diaplay">
+<h3>气流显示模式(Velocity diaplay)<a class="headerlink" href="#velocity-diaplay" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id5">
+<h4>快捷键<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h4>
+<p>数字“1”</p>
+</div>
+<div class="section" id="id6">
+<h4>显示内容<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h4>
+<p>显示气流的速度与强度，蓝色代表竖直速度，红色代表水平速度(实际状况下显示的是两种颜色的混合色，即两个速度的合速度)。正压力用绿色表示，负压力不显示。如下图:</p>
+</div>
+</div>
+<div class="section" id="pressure-diaplay">
+<h3>气压显示模式(Pressure diaplay)<a class="headerlink" href="#pressure-diaplay" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id7">
+<h4>快捷键<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h4>
+<p>数字“2”</p>
+</div>
+<div class="section" id="id8">
+<h4>显示内容<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h4>
+<p>通过红色/蓝色来显示正压/负压，颜色的变化呈网格状，如下图所示:</p>
+</div>
+</div>
+<div class="section" id="persistent-diaplay">
+<h3>轨迹显示模式(Persistent diaplay)<a class="headerlink" href="#persistent-diaplay" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id9">
+<h4>快捷键<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h4>
+<p>数字“3”</p>
+</div>
+<div class="section" id="id10">
+<h4>显示内容<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h4>
+<p>能够显示物质移动的轨迹，如下图所示:</p>
+</div>
+</div>
+<div class="section" id="fire-diaplay">
+<h3>标准显示模式(Fire diaplay)<a class="headerlink" href="#fire-diaplay" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id11">
+<h4>快捷键<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h4>
+<p>数字“4”</p>
+</div>
+<div class="section" id="id12">
+<h4>显示内容<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h4>
+<p>标准的显示模式，能显示包括白热化在内的大部分效果，如下图所示:</p>
+</div>
+</div>
+<div class="section" id="blob-display">
+<h3>模糊显示模式(Blob display)<a class="headerlink" href="#blob-display" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id13">
+<h4>快捷键<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h4>
+<p>数字“5”</p>
+</div>
+<div class="section" id="id14">
+<h4>显示内容<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h4>
+<p>使所有物质模糊化，如下图所示:</p>
+</div>
+</div>
+<div class="section" id="heat-display">
+<h3>温度显示模式(Heat display)<a class="headerlink" href="#heat-display" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id15">
+<h4>快捷键<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h4>
+<p>数字“6”</p>
+</div>
+<div class="section" id="id16">
+<h4>显示内容<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h4>
+<p>对不同的温度用不同的颜色(深蓝色-粉红色)表示，如下图这个十分经典的存档所示:</p>
+</div>
+<div class="section" id="id17">
+<h4>环境温度显示和物质温度显示<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h4>
+<p>温度显示分为两种，位于左侧的是环境温度显示，右侧的是物质温度显示。</p>
+<p>环境温度显示需开启空气导热模式(快捷键A)，这样就可以显示所有空气的温度。</p>
+<p>(注:这里的空气不是指一种元素，而是指所有HUD显示为“Empty”的区域)</p>
+<p>物质温度显示没有使用条件，会显示所有HUD显示不为“Empty”的区域温度。</p>
+</div>
+</div>
+<div class="section" id="fancy-display">
+<h3>特效显示模式(Fancy display)<a class="headerlink" href="#fancy-display" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id18">
+<h4>快捷键<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h4>
+<p>数字“7”</p>
+</div>
+<div class="section" id="id19">
+<h4>显示内容<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h4>
+<p>这是一个复合显示模式，包含气体的火焰效果、炸弹的闪光效果、放射物的荧光效果、液体的模糊效果和引力场的扭曲效果，如下图:</p>
+</div>
+</div>
+<div class="section" id="nothing-display">
+<h3>无特效显示模式(Nothing display)<a class="headerlink" href="#nothing-display" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id20">
+<h4>快捷键<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h4>
+<p>数字“8”</p>
+</div>
+<div class="section" id="id21">
+<h4>显示内容<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h4>
+<p>只显示最基本的有色颗粒，无其他效果，如下图所示:</p>
+</div>
+</div>
+<div class="section" id="heat-gradient-display">
+<h3>热传导显示模式(Heat gradient display)<a class="headerlink" href="#heat-gradient-display" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id22">
+<h4>快捷键<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h4>
+<p>数字“9”</p>
+</div>
+<div class="section" id="id23">
+<h4>显示内容<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h4>
+<p>在原物质颜色不变的基础上用明暗变化的波纹来显示热量的扩散，如下图所示:</p>
+</div>
+</div>
+<div class="section" id="alternate-velocity-display">
+<h3>速压混合显示模式(Alternate velocity display)<a class="headerlink" href="#alternate-velocity-display" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id24">
+<h4>快捷键<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h4>
+<p>数字“0”</p>
+</div>
+<div class="section" id="id25">
+<h4>显示内容<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h4>
+<p>速度用白色表示，正压/负压用红色/蓝色表示，如下图所示:</p>
+</div>
+</div>
+<div class="section" id="life-life-display">
+<h3>Life显示模式(Life display)<a class="headerlink" href="#life-life-display" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id26">
+<h4>快捷键<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h4>
+<p>在调试模式下，按shift+1进入life显示模式</p>
+</div>
+<div class="section" id="id27">
+<h4>显示内容<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h4>
+<p>利用灰度来显示物质的life值大小，如下图所示:</p>
+</div>
+</div>
+<div class="section" id="grid">
+<h3>网格工具(Grid)<a class="headerlink" href="#grid" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id28">
+<h4>快捷键<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h4>
+<p>字母“G”</p>
+</div>
+<div class="section" id="id29">
+<h4>显示内容<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h4>
+<p>可以在主界面上显示参考网格，共有九种不同大小的网格可供选择，如下图:</p>
+</div>
+</div>
+</div>
+<div class="section" id="hotkeys">
+<h2>附4:快捷键(Hotkeys)<a class="headerlink" href="#hotkeys" title="永久链接至标题">¶</a></h2>
+<div class="section" id="single-hotkeys">
+<h3>单快捷键(Single Hotkeys)<a class="headerlink" href="#single-hotkeys" title="永久链接至标题">¶</a></h3>
+<p>Delete——滤镜，只删除笔刷范围内特定的元素</p>
+<p>Insert或者分号“；”——替换模式</p>
+<p>TAB——切换笔刷形状(圆形/方形/三角形)</p>
+<p>空格——暂停</p>
+<p>Q或者Esc——退出游戏</p>
+<p>Z——放大镜(在所需位置左键单击可固定)</p>
+<p>S(+ctrl)——将某一区域保存到剪贴板(STKM2存在时需要加ctrl)</p>
+<p>L——加载剪贴板中最近的存档</p>
+<p>K——打开剪贴板</p>
+<p>N——开启/关闭牛顿万有引力模拟</p>
+<p>F——帧进</p>
+<p>G——开启/关闭网格</p>
+<p>H——显示/隐藏HUD</p>
+<p>D(+shift)——开启/关闭调试模式[(<a class="reference external" href="#stk2-second-stickmantype-128-spwn2-type-117">*STK2*</a>存在时需加shift)</p>
+<p>I——反转所有的气压和速度</p>
+<p>W(+shift)——切换重力模式(正常/中心/无)(
+<a class="reference external" href="#stk2-second-stickmantype-128-spwn2-type-117">*STK2*</a>存在时需加shift)</p>
+<p>Y——切换气压模式(正常/无压力/无速度/关闭/停止)</p>
+<p>U——打开/关闭空气导热模式</p>
+<p>R——重置<a class="reference external" href="#id2">*LIFE*</a>的代数(只有在调试模式下有效)</p>
+<p>~——打开Lua控制台</p>
+<p>=——重置气压和速度</p>
+<p>[——降低笔刷大小</p>
+<p>]——增加笔刷大小</p>
+<p>B——进入装饰模式</p>
+<p>E——查找元素</p>
+</div>
+<div class="section" id="key-combinations">
+<h3>组合快捷键(Key Combinations)<a class="headerlink" href="#key-combinations" title="永久链接至标题">¶</a></h3>
+<p>Ctrl+C/V/X——复制/粘贴/剪切</p>
+<p>Ctrl+F——进入透视(Find)模式，能凸显所选元素</p>
+<p>Ctrl+Z——撤销</p>
+<p>Ctrl+G——显示/隐藏引力场</p>
+<p>Ctrl+B——显示/隐藏装饰色</p>
+<p>Ctrl+鼠标移动——绘制矩形</p>
+<p>Shift+鼠标移动——绘制直线</p>
+<p>Shift+Alt+鼠标移动——绘制45°直线</p>
+<p>鼠标中键/Alt+右键——切换到所选元素(类似PS中的吸管工具)</p>
+<p>鼠标滚轮——调整笔刷大小</p>
+<p>Ctrl+鼠标滚轮/+[]——调整笔刷竖直长度</p>
+<p>Shift+鼠标滚轮/+[]——调整笔刷水平长度</p>
+<p>Ctrl+Shift+R——水平翻转剪贴板中的存档(需要先选择存档)</p>
+<p>Ctrl+R——逆时针旋转剪贴板中的存档(需要先选择存档)</p>
+<p>Ctrl+方向键——移动剪贴板中的存档</p>
+<p>Ctrl+Alt+左键——从元素列表中选择需要特定删除的元素</p>
+<p>Ctrl+=——清除所有电脉冲</p>
+<p>Ctrl+Shift+左键/右键——填充工具</p>
+<p>Ctrl+I——安装TPT(创建与.cps文件的关联)</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="欢迎来到 TPT 元素说明！" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Ike.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
