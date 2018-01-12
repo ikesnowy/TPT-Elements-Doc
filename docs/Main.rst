@@ -6,7 +6,7 @@ Instruction前言
 
 本文是针对TPT初学者的初级教程，包含TPT中各元素的性质、制作方法以及一些简单用途。
 
-你现在看到的是在线版，离线版(.docx)可以前往\ `这个链接 <http://pan.baidu.com/s/1jILySZW>`__\ 下载。
+你现在看到的是在线版，离线版(.docx)可以前往\ `这个链接 <https://pan.baidu.com/s/1qYYs2io>`__\ 下载。
 
 大部分元素均附有该元素的\ **Type**\ 值(TPT中各元素的唯一编码，一个Type值对应一种元素)。
 
