@@ -47,7 +47,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'TPT 元素说明'
-copyright = '2017, Ike'
+copyright = '2019, Ike'
 author = 'Ike'
 
 # The version info for the project you're documenting, acts as replacement for
