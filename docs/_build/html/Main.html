@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>TPT元素说明(Version 92.1 Snapshot 95) &mdash; TPT 元素说明 1.0 文档</title>
+  <title>TPT元素说明(Version 93.3 Snapshot 149) &mdash; TPT 元素说明 1.0 文档</title>
   
 
   
@@ -91,7 +91,7 @@
             
               <p class="caption"><span class="caption-text">TPT 元素说明</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">TPT元素说明(Version 92.1 Snapshot 95)</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">TPT元素说明(Version 93.3 Snapshot 149)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#instruction">Instruction前言</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#variable">Variable元素参数</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#type">Type值</a></li>
@@ -127,6 +127,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#energy-wall">能量墙【Energy Wall】</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pressure-wall">气压墙【Pressure Wall】</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#eraser">橡皮擦【Eraser】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stasis-wall">时停墙【Stasis Wall】</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#electronics">Electronics电子类</a><ul>
@@ -171,6 +172,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#tsns-temperature-sensor-type-164">温度传感器(TSNS)【Temperature Sensor】 Type:164</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#psns-pressure-sensor-type-172">压力传感器(PSNS)【Pressure Sensor】 Type:172</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lsns-life-sensor-type-185">衰减传感器(LSNS)【Life Sensor】 Type:185</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ldtc-linear-detector-type-186">线性探测器(LDTC)【Linear Detector】 Type:186</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#force-74-0">Force动力材料(74.0版本后出现)</a><ul>
@@ -361,6 +363,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#pgrv-positive-gravity-tool">引力笔(PGRV)【Positive Gravity Tool】</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ngrv-negative-gravity-tool">斥力笔(NGRV)【Negative Gravity Tool】</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#mix-mix">混合工具(MIX)【Mix】</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cycl-cyclone">气旋(CYCL)【Cyclone】</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#wind-wind">风(WIND)【Wind】</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#prop-edit-property-tool">属性笔(PROP)【Edit Property Tool】</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#sign">气泡【Sign】</a></li>
@@ -510,7 +513,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>TPT元素说明(Version 92.1 Snapshot 95)</li>
+      <li>TPT元素说明(Version 93.3 Snapshot 149)</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -529,12 +532,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="tpt-version-92-1-snapshot-95">
-<h1>TPT元素说明(Version 92.1 Snapshot 95)<a class="headerlink" href="#tpt-version-92-1-snapshot-95" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="tpt-version-93-3-snapshot-149">
+<h1>TPT元素说明(Version 93.3 Snapshot 149)<a class="headerlink" href="#tpt-version-93-3-snapshot-149" title="永久链接至标题">¶</a></h1>
 <div class="section" id="instruction">
 <h2>Instruction前言<a class="headerlink" href="#instruction" title="永久链接至标题">¶</a></h2>
 <p>本文是针对TPT初学者的初级教程，包含TPT中各元素的性质、制作方法以及一些简单用途。</p>
-<p>你现在看到的是在线版，离线版(.docx)可以前往<a class="reference external" href="http://pan.baidu.com/s/1jILySZW">这个链接</a>下载。</p>
+<p>你现在看到的是在线版，离线版(.docx)可以前往<a class="reference external" href="https://pan.baidu.com/s/1qYYs2io">这个链接（旧版本 92.5）</a>下载。</p>
 <p>大部分元素均附有该元素的<strong>Type</strong>值(TPT中各元素的唯一编码，一个Type值对应一种元素)。</p>
 <p>本文以翻译官方Wiki中的内容为主，对一些明显错误做了修改，同时加入了一些额外补充。</p>
 <p>感谢&#64;白左，本文中的一些译名参考了其撰写的《元素说明V83.9.20121014》。</p>
@@ -543,7 +546,7 @@
 <p>如果发现错误可以给我发邮件:<em>ikesnowy&#64;outlook.com</em></p>
 <p>TPT交流群:179225194</p>
 <p>Ike</p>
-<p>2017.8.7</p>
+<p>2018.12.26</p>
 </div>
 <div class="section" id="variable">
 <h2>Variable元素参数<a class="headerlink" href="#variable" title="永久链接至标题">¶</a></h2>
@@ -711,6 +714,10 @@ wire线(<a class="reference external" href="#wire-world-wwld-wireworld-wire-type
 <div class="section" id="eraser">
 <h3>橡皮擦【Eraser】<a class="headerlink" href="#eraser" title="永久链接至标题">¶</a></h3>
 <p><strong>描述：</strong>可以擦掉任何东西的橡皮擦，包括墙、元素和标志。</p>
+</div>
+<div class="section" id="stasis-wall">
+<h3>时停墙【Stasis Wall】<a class="headerlink" href="#stasis-wall" title="永久链接至标题">¶</a></h3>
+<p><strong>描述：</strong>墙所覆盖的区域内时间是静止的，收到电脉冲时取消时停。只能接受其他导电墙（比如 <a class="reference external" href="#conductor">*导体墙*</a>、<a class="reference external" href="#e-hole">*电锁体*</a>）传来的电脉冲。</p>
 </div>
 </div>
 <div class="section" id="electronics">
@@ -893,9 +900,9 @@ tmp = 4, tmp2 = 1)</p>
 </div>
 <div class="section" id="hswc-heat-switch-type-075">
 <h3>热开关(HSWC)【Heat Switch】 Type:075<a class="headerlink" href="#hswc-heat-switch-type-075" title="永久链接至标题">¶</a></h3>
-<p><strong>描述:</strong>当激活时才可以导热，不可摧毁。</p>
-<p><strong>导热率:</strong>激活后=251</p>
-<p><strong>初始温度:</strong>22.00℃/295.15k(上方是岩浆LAVA, 下方是水WATR)</p>
+<p><strong>描述:</strong>当激活时才可以导热，不可摧毁。Tmp=1 时且处于激活状态下时，热开关会读取周围滤镜(<a class="reference external" href="#filt-filter-type-125">*FILT*</a>)的 ctype 值，并让自身温度变成这个值。</p>
+<p><strong>导热率:</strong>激活后=251，如果 Tmp=1 则不会向周围的滤镜(<a class="reference external" href="#filt-filter-type-125">*FILT*</a>)导热。</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
 </div>
 <div class="section" id="dlay-delay-type-079">
 <h3>延时计(DLAY)【Delay】 Type:079<a class="headerlink" href="#dlay-delay-type-079" title="永久链接至标题">¶</a></h3>
@@ -976,21 +983,61 @@ tmp = 4, tmp2 = 1)</p>
 <div class="section" id="tsns-temperature-sensor-type-164">
 <h3>温度传感器(TSNS)【Temperature Sensor】 Type:164<a class="headerlink" href="#tsns-temperature-sensor-type-164" title="永久链接至标题">¶</a></h3>
 <p><strong>描述:</strong>不导热，可以用升温/降温笔(<a class="reference external" href="#heat-heat">*HEAT*</a>/<a class="reference external" href="#cool-cool">*COOL*</a>)来改变自身温度，当周围(2x2)有温度比它高的物质时，温度传感器会发出电脉冲给周围的导电体(水<a class="reference external" href="#watr-water-type-002">*WATR*</a>、盐水<a class="reference external" href="#sltw-salt-water-type-027">*SLTW*</a>、热敏电阻<a class="reference external" href="#ntct-negative-temperature-coefficient-thermistor-type-043">*NTCT*</a>&amp;<a class="reference external" href="#ptct-positive-temperature-coefficient-thermistor-type-046">*PTCT*</a>、绝缘线<a class="reference external" href="#inwr-insulated-wire-type-062">*INWR*</a>)。</p>
+<p><strong>元素参数:</strong></p>
+<p>Tmp=1时，温度传感器会在发出电脉冲的同时改变周围的滤镜(<a class="reference external" href="#filt-filter-type-125">*FILT*</a>)的颜色。</p>
+<p>Tmp=2时，温度传感器会检测**低于**自身温度的物质（而非原本的高于）。</p>
 <p><strong>导热率:</strong>0</p>
 <p><strong>初始温度:</strong>22.00℃/295.15k</p>
 </div>
 <div class="section" id="psns-pressure-sensor-type-172">
 <h3>压力传感器(PSNS)【Pressure Sensor】 Type:172<a class="headerlink" href="#psns-pressure-sensor-type-172" title="永久链接至标题">¶</a></h3>
 <p><strong>描述:</strong>不导热，可以用升温/降温笔(<a class="reference external" href="#heat-heat">*HEAT*</a>/<a class="reference external" href="#cool-cool">*COOL*</a>)来改变自身温度，当压力大于其温度值时，压力传感器会发出电脉冲给周围的导电体(水<a class="reference external" href="#watr-water-type-002">*WATR*</a>、盐水<a class="reference external" href="#sltw-salt-water-type-027">*SLTW*</a>、热敏电阻<a class="reference external" href="#ntct-negative-temperature-coefficient-thermistor-type-043">*NTCT*</a>&amp;<a class="reference external" href="#ptct-positive-temperature-coefficient-thermistor-type-046">*PTCT*</a>、绝缘线<a class="reference external" href="#inwr-insulated-wire-type-062">*INWR*</a>)。</p>
+<p><strong>元素参数:</strong>Tmp=2时，压力传感器会在检测到压力**低于**自身温度值时发出电脉冲。</p>
 <p><strong>导热率:</strong>0</p>
 <p><strong>初始温度:</strong>4.00℃/277.15k</p>
 </div>
 <div class="section" id="lsns-life-sensor-type-185">
 <h3>衰减传感器(LSNS)【Life Sensor】 Type:185<a class="headerlink" href="#lsns-life-sensor-type-185" title="永久链接至标题">¶</a></h3>
-<p><strong>描述:</strong>不导热，可以用升温/降温笔(<a class="reference external" href="#heat-heat">*HEAT*</a>/<a class="reference external" href="#cool-cool">*COOL*</a>)来改变自身温度，当周围(2x2)有life值大于其温度值的粒子时，衰减传感器会发出电脉冲给周围的导电体(水<a class="reference external" href="#watr-water-type-002">*WATR*</a>、盐水<a class="reference external" href="#sltw-salt-water-type-027">*SLTW*</a>、热敏电阻<a class="reference external" href="#ntct-negative-temperature-coefficient-thermistor-type-043">*NTCT*</a>&amp;<a class="reference external" href="#ptct-positive-temperature-coefficient-thermistor-type-046">*PTCT*</a>、绝缘线<a class="reference external" href="#inwr-insulated-wire-type-062">*INWR*</a>)。Snapshot75
-之后加入。</p>
+<p><strong>描述:</strong>不导热，可以用升温/降温笔(<a class="reference external" href="#heat-heat">*HEAT*</a>/<a class="reference external" href="#cool-cool">*COOL*</a>)来改变自身温度，当周围(2x2)有life值大于其温度值的粒子时，衰减传感器会发出电脉冲给周围的导电体(水<a class="reference external" href="#watr-water-type-002">*WATR*</a>、盐水<a class="reference external" href="#sltw-salt-water-type-027">*SLTW*</a>、热敏电阻<a class="reference external" href="#ntct-negative-temperature-coefficient-thermistor-type-043">*NTCT*</a>&amp;<a class="reference external" href="#ptct-positive-temperature-coefficient-thermistor-type-046">*PTCT*</a>、绝缘线<a class="reference external" href="#inwr-insulated-wire-type-062">*INWR*</a>)。Snapshot75之后加入。</p>
 <p><strong>导热率:</strong>0</p>
 <p><strong>初始温度:</strong>4.00℃/277.15k</p>
+</div>
+<div class="section" id="ldtc-linear-detector-type-186">
+<h3>线性探测器(LDTC)【Linear Detector】 Type:186<a class="headerlink" href="#ldtc-linear-detector-type-186" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>原先叫 RAYT，不导热，只能使用属性笔（<a class="reference external" href="#prop-edit-property-tool">*PROP*</a>）修改其ctype值，当周围出现了与其ctyte值相同的元素时，线性探测器会向反方向（以探测器为原点对称，例如粒子出现在左上角就向右下角发送）发出电脉冲给周围的导电体。
+Snapshot125之后加入。</p>
+<p><strong>元素参数:</strong></p>
+<p>Life=屏蔽半径，例如 life=1 时搜索范围变为周围 3x3 以外的区域（即距离 LDTC 一个格子之外的元素），此时内部3x3范围是不被探测的。</p>
+<p>Tmp=搜索半径，在屏蔽半径之外需要探测的范围，如果为 0 则不加限制（全局有效）。例如 life=1，tmp=1 时只探测周围 5x5 边界（内部 3x3 屏蔽，3x3 以外 1 个格子范围内是探测区）。</p>
+<p>Tmp2=搜索模式，有以下几种取值：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="6%" />
+<col width="94%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">取值</th>
+<th class="head">效果</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>取反（检测 ctype 不相等的元素）</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>忽略能量粒子</td>
+</tr>
+<tr class="row-even"><td>4</td>
+<td>忽略滤镜（<a class="reference external" href="#filt-filter-type-125">*FILT*</a>）中的光子（<a class="reference external" href="##phot-photons-type-031">*PHOT*</a>)</td>
+</tr>
+<tr class="row-odd"><td>8</td>
+<td>检测到粒子之后继续搜寻</td>
+</tr>
+</tbody>
+</table>
+<p>你可以通过加法来同时应用多个条件，比如 9=8+1。</p>
+<p><strong>导热率:</strong>0</p>
+<p><strong>初始温度:</strong>22.00℃/295.15k</p>
 </div>
 </div>
 <div class="section" id="force-74-0">
@@ -1836,7 +1883,7 @@ PLUT)，并带来最高的温度和少量的火焰。冷却之后将会形成石
 <div class="section" id="phot-photons-type-031">
 <h3>光子(PHOT)【Photons】 Type:031<a class="headerlink" href="#phot-photons-type-031" title="永久链接至标题">¶</a></h3>
 <p><strong>描述:</strong>沿直线传播，不受重力影响，受牛顿万有引力影响。可以被反射，或散射。用于点燃物质或传递热量。经过滤镜(<a class="reference external" href="#filt-filter-type-125">*FILT*</a>)时会改变颜色，经过棱镜时会色散。透过非隐形状态下的虚无(<a class="reference external" href="#invs-invisible-type-115">*INVS*</a>)时会转变成中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)。透过奇特气体/液体/固体(<a class="reference external" href="#bizr-type-103-bizg-type-104-bizs-bizarretype-105">*BIZG/BIZR/BIZS*</a>)时会转换成电子(<a class="reference external" href="#elec-electrons-type-136">*ELEC*</a>)。</p>
-<p><strong>相关反应:</strong>光子(PHOT)+氢气(<a class="reference external" href="#hygn-hydrogen-type-148">*HYGH*</a>)=质子(<a class="reference external" href="#prot-protons-type-173">*PROT*</a>)+电子(<a class="reference external" href="#elec-electrons-type-136">*ELEC*</a>)</p>
+<p><strong>相关反应:</strong>光子(PHOT)+氢气(<a class="reference external" href="#hygn-hydrogen-type-148">*HYGN*</a>)=质子(<a class="reference external" href="#prot-protons-type-173">*PROT*</a>)+电子(<a class="reference external" href="#elec-electrons-type-136">*ELEC*</a>)</p>
 <p>存在时间(life):680帧</p>
 <p><strong>导热率:</strong>251</p>
 <p><strong>初始温度:</strong>922.00℃/295.15k</p>
@@ -1997,7 +2044,7 @@ VIBR)，之后删去剩余的奇异物质，冷却即可得到振金。</p>
 </tbody>
 </table>
 <p><strong>相关反应:</strong></p>
-<p>质子+电子(<a class="reference external" href="#elec-electrons-type-136">*ELEC*</a>)=氢气(<a class="reference external" href="#hygn-hydrogen-type-148">*HYGH*</a>)；质子+虚无(<a class="reference external" href="#invs-invisible-type-115">*INVS*</a>)=中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)；质子+液晶(<a class="reference external" href="#lcry-liquid-crystal-type-054">*LCRY*</a>)=光子(<a class="reference external" href="#phot-photons-type-031">*PHOT*</a>)</p>
+<p>质子+电子(<a class="reference external" href="#elec-electrons-type-136">*ELEC*</a>)=氢气(<a class="reference external" href="#hygn-hydrogen-type-148">*HYGN*</a>)；质子+虚无(<a class="reference external" href="#invs-invisible-type-115">*INVS*</a>)=中子(<a class="reference external" href="#neut-neutrons-type-018">*NEUT*</a>)；质子+液晶(<a class="reference external" href="#lcry-liquid-crystal-type-054">*LCRY*</a>)=光子(<a class="reference external" href="#phot-photons-type-031">*PHOT*</a>)</p>
 <p><strong>其他:</strong>与重水(<a class="reference external" href="#deut-deuterium-oxide-type-095">*DEUT*</a>)反应生成质子；碰到奇异物质(<a class="reference external" href="#exot-exotic-matter-type-145">*EXOT*</a>)会使其不断降温并最终生成冷焰(<a class="reference external" href="#cflm-sub-zero-flame-type-068">*CFLM*</a>)。</p>
 <p><strong>导热率:</strong>61</p>
 <p><strong>初始温度:</strong>22℃/295.15k</p>
@@ -2373,13 +2420,17 @@ VIBR)，之后删去剩余的奇异物质，冷却即可得到振金。</p>
 <h3>混合工具(MIX)【Mix】<a class="headerlink" href="#mix-mix" title="永久链接至标题">¶</a></h3>
 <p><strong>描述:</strong>用于混合物质，直接在需要混合的物质上涂抹即可。从Snapshot53开始，混合工具不再能够混合状态不同的物质(例如固体和液体)。</p>
 </div>
+<div class="section" id="cycl-cyclone">
+<h3>气旋(CYCL)【Cyclone】<a class="headerlink" href="#cycl-cyclone" title="永久链接至标题">¶</a></h3>
+<p><strong>描述:</strong>产生一个内旋（内部是负压）的气流。</p>
+</div>
 <div class="section" id="wind-wind">
 <h3>风(WIND)【Wind】<a class="headerlink" href="#wind-wind" title="永久链接至标题">¶</a></h3>
 <p><strong>描述:</strong>按住并移动光标可以产生气流。</p>
 </div>
 <div class="section" id="prop-edit-property-tool">
 <h3>属性笔(PROP)【Edit Property Tool】<a class="headerlink" href="#prop-edit-property-tool" title="永久链接至标题">¶</a></h3>
-<p><strong>描述:</strong>点击物质可以修改不同属性，89.2beta版本以后，可以直接作为笔刷操作，并能记住最后一次设定</p>
+<p><strong>描述:</strong>点击物质可以修改不同属性，89.2beta版本以后，可以直接作为笔刷操作，并能记住最后一次设定。快捷键 Ctrl+P（设置为左键元素）/Ctrl+Shift+P（设置为右键元素）。</p>
 <p><strong>注:</strong>属性笔修改temp(温度)值时使用的是开氏。从Snapshot52开始，通过在数字结尾加上C/F可以指定属性笔修改温度时的单位。(例如输入100C即为100℃)</p>
 </div>
 <div class="section" id="sign">
@@ -2695,7 +2746,8 @@ VIBR)，之后删去剩余的奇异物质，冷却即可得到振金。</p>
 <p>Insert或者分号“；”——替换模式</p>
 <p>TAB——切换笔刷形状(圆形/方形/三角形)</p>
 <p>空格——暂停</p>
-<p>Q或者Esc——退出游戏</p>
+<p>Q——退出游戏，只在主界面有效</p>
+<p>Esc——返回上层，在主界面时等于退出游戏</p>
 <p>Z——放大镜(在所需位置左键单击可固定)</p>
 <p>S(+ctrl)——将某一区域保存到剪贴板(STKM2存在时需要加ctrl)</p>
 <p>L——加载剪贴板中最近的存档</p>
@@ -2725,6 +2777,9 @@ VIBR)，之后删去剩余的奇异物质，冷却即可得到振金。</p>
 <p>Ctrl+Z——撤销</p>
 <p>Ctrl+G——显示/隐藏引力场</p>
 <p>Ctrl+B——显示/隐藏装饰色</p>
+<p>Ctrl+Q——退出游戏（全局有效）</p>
+<p>Ctrl+P——将属性笔（<a class="reference external" href="#prop-edit-property-tool">*PROP*</a>）设置为左键元素</p>
+<p>Ctrl+Shift+P——将属性笔（<a class="reference external" href="#prop-edit-property-tool">*PROP*</a>）设置为右键元素</p>
 <p>Ctrl+鼠标移动——绘制矩形</p>
 <p>Shift+鼠标移动——绘制直线</p>
 <p>Shift+Alt+鼠标移动——绘制45°直线</p>
@@ -2786,7 +2841,6 @@ VIBR)，之后删去剩余的奇异物质，冷却即可得到振金。</p>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
             VERSION:'1.0',
-            LANGUAGE:'zh_CN',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

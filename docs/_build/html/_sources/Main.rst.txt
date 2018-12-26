@@ -1,4 +1,4 @@
-TPT元素说明(Version 92.1 Snapshot 95)
+TPT元素说明(Version 93.3 Snapshot 149)
 =====================================
 
 Instruction前言
@@ -6,7 +6,7 @@ Instruction前言
 
 本文是针对TPT初学者的初级教程，包含TPT中各元素的性质、制作方法以及一些简单用途。
 
-你现在看到的是在线版，离线版(.docx)可以前往\ `这个链接 <http://pan.baidu.com/s/1jILySZW>`__\ 下载。
+你现在看到的是在线版，离线版(.docx)可以前往\ `这个链接（旧版本 92.5） <https://pan.baidu.com/s/1qYYs2io>`__\ 下载。
 
 大部分元素均附有该元素的\ **Type**\ 值(TPT中各元素的唯一编码，一个Type值对应一种元素)。
 
@@ -24,7 +24,7 @@ TPT交流群:179225194
 
 Ike
 
-2017.8.7
+2018.12.26
 
 Variable元素参数
 ----------------
@@ -264,6 +264,11 @@ Wall墙类
 ~~~~~~~~~~~~~~~~
 
 **描述：**\ 可以擦掉任何东西的橡皮擦，包括墙、元素和标志。
+
+时停墙【Stasis Wall】
+~~~~~~~~~~~~~~~~
+
+**描述：**\ 墙所覆盖的区域内时间是静止的，收到电脉冲时取消时停。只能接受其他导电墙（比如 `*导体墙* <#conductor>`__、`*电锁体* <#e-hole>`__）传来的电脉冲。
 
 Electronics电子类
 -----------------
@@ -551,11 +556,11 @@ Powered Material可控材料(49.0版本后出现)
 热开关(HSWC)【Heat Switch】 Type:075
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 当激活时才可以导热，不可摧毁。
+**描述:**\ 当激活时才可以导热，不可摧毁。Tmp=1 时且处于激活状态下时，热开关会读取周围滤镜(\ `*FILT* <#filt-filter-type-125>`__)的 ctype 值，并让自身温度变成这个值。
 
-**导热率:**\ 激活后=251
+**导热率:**\ 激活后=251，如果 Tmp=1 则不会向周围的滤镜(\ `*FILT* <#filt-filter-type-125>`__)导热。
 
-**初始温度:**\ 22.00℃/295.15k(上方是岩浆LAVA, 下方是水WATR)
+**初始温度:**\ 22.00℃/295.15k
 
 延时计(DLAY)【Delay】 Type:079
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -682,6 +687,12 @@ Sensors传感器(84.0版本后出现)
 
 **描述:**\ 不导热，可以用升温/降温笔(\ `*HEAT* <#heat-heat>`__/`*COOL* <#cool-cool>`__)来改变自身温度，当周围(2x2)有温度比它高的物质时，温度传感器会发出电脉冲给周围的导电体(水\ `*WATR* <#watr-water-type-002>`__\ 、盐水\ `*SLTW* <#sltw-salt-water-type-027>`__\ 、热敏电阻\ `*NTCT* <#ntct-negative-temperature-coefficient-thermistor-type-043>`__\ &\ `*PTCT* <#ptct-positive-temperature-coefficient-thermistor-type-046>`__\ 、绝缘线\ `*INWR* <#inwr-insulated-wire-type-062>`__)。
 
+**元素参数:**
+
+Tmp=1时，温度传感器会在发出电脉冲的同时改变周围的滤镜(\ `*FILT* <#filt-filter-type-125>`__)的颜色。
+
+Tmp=2时，温度传感器会检测**低于**自身温度的物质（而非原本的高于）。
+
 **导热率:**\ 0
 
 **初始温度:**\ 22.00℃/295.15k
@@ -691,6 +702,9 @@ Sensors传感器(84.0版本后出现)
 
 **描述:**\ 不导热，可以用升温/降温笔(\ `*HEAT* <#heat-heat>`__/`*COOL* <#cool-cool>`__)来改变自身温度，当压力大于其温度值时，压力传感器会发出电脉冲给周围的导电体(水\ `*WATR* <#watr-water-type-002>`__\ 、盐水\ `*SLTW* <#sltw-salt-water-type-027>`__\ 、热敏电阻\ `*NTCT* <#ntct-negative-temperature-coefficient-thermistor-type-043>`__\ &\ `*PTCT* <#ptct-positive-temperature-coefficient-thermistor-type-046>`__\ 、绝缘线\ `*INWR* <#inwr-insulated-wire-type-062>`__)。
 
+**元素参数:**\ 
+Tmp=2时，压力传感器会在检测到压力**低于**自身温度值时发出电脉冲。
+
 **导热率:**\ 0
 
 **初始温度:**\ 4.00℃/277.15k
@@ -698,12 +712,43 @@ Sensors传感器(84.0版本后出现)
 衰减传感器(LSNS)【Life Sensor】 Type:185
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 不导热，可以用升温/降温笔(\ `*HEAT* <#heat-heat>`__/`*COOL* <#cool-cool>`__)来改变自身温度，当周围(2x2)有life值大于其温度值的粒子时，衰减传感器会发出电脉冲给周围的导电体(水\ `*WATR* <#watr-water-type-002>`__\ 、盐水\ `*SLTW* <#sltw-salt-water-type-027>`__\ 、热敏电阻\ `*NTCT* <#ntct-negative-temperature-coefficient-thermistor-type-043>`__\ &\ `*PTCT* <#ptct-positive-temperature-coefficient-thermistor-type-046>`__\ 、绝缘线\ `*INWR* <#inwr-insulated-wire-type-062>`__)。Snapshot75
-之后加入。
+**描述:**\ 不导热，可以用升温/降温笔(\ `*HEAT* <#heat-heat>`__/`*COOL* <#cool-cool>`__)来改变自身温度，当周围(2x2)有life值大于其温度值的粒子时，衰减传感器会发出电脉冲给周围的导电体(水\ `*WATR* <#watr-water-type-002>`__\ 、盐水\ `*SLTW* <#sltw-salt-water-type-027>`__\ 、热敏电阻\ `*NTCT* <#ntct-negative-temperature-coefficient-thermistor-type-043>`__\ &\ `*PTCT* <#ptct-positive-temperature-coefficient-thermistor-type-046>`__\ 、绝缘线\ `*INWR* <#inwr-insulated-wire-type-062>`__)。Snapshot75之后加入。
 
 **导热率:**\ 0
 
 **初始温度:**\ 4.00℃/277.15k
+
+线性探测器(LDTC)【Linear Detector】 Type:186
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**描述:**\ 原先叫 RAYT，不导热，只能使用属性笔（\ `*PROP* <#prop-edit-property-tool>`__）修改其ctype值，当周围出现了与其ctyte值相同的元素时，线性探测器会向反方向（以探测器为原点对称，例如粒子出现在左上角就向右下角发送）发出电脉冲给周围的导电体。
+Snapshot125之后加入。
+
+**元素参数:**
+
+Life=屏蔽半径，例如 life=1 时搜索范围变为周围 3x3 以外的区域（即距离 LDTC 一个格子之外的元素），此时内部3x3范围是不被探测的。
+
+Tmp=搜索半径，在屏蔽半径之外需要探测的范围，如果为 0 则不加限制（全局有效）。例如 life=1，tmp=1 时只探测周围 5x5 边界（内部 3x3 屏蔽，3x3 以外 1 个格子范围内是探测区）。
+
+Tmp2=搜索模式，有以下几种取值：
+
++------+-------------------------------------------------------------------------------------------------+
+| 取值 |                                              效果                                               |
++======+=================================================================================================+
+| 1    | 取反（检测 ctype 不相等的元素）                                                                 |
++------+-------------------------------------------------------------------------------------------------+
+| 2    | 忽略能量粒子                                                                                    |
++------+-------------------------------------------------------------------------------------------------+
+| 4    | 忽略滤镜（`*FILT* <#filt-filter-type-125>`__）中的光子（\ `*PHOT* <##phot-photons-type-031>`__) |
++------+-------------------------------------------------------------------------------------------------+
+| 8    | 检测到粒子之后继续搜寻                                                                          |
++------+-------------------------------------------------------------------------------------------------+
+
+你可以通过加法来同时应用多个条件，比如 9=8+1。
+
+**导热率:**\ 0
+
+**初始温度:**\ 22.00℃/295.15k
 
 Force动力材料(74.0版本后出现)
 -----------------------------
@@ -1946,7 +1991,7 @@ PLUT)，并带来最高的温度和少量的火焰。冷却之后将会形成石
 
 **描述:**\ 沿直线传播，不受重力影响，受牛顿万有引力影响。可以被反射，或散射。用于点燃物质或传递热量。经过滤镜(\ `*FILT* <#filt-filter-type-125>`__)时会改变颜色，经过棱镜时会色散。透过非隐形状态下的虚无(\ `*INVS* <#invs-invisible-type-115>`__)时会转变成中子(\ `*NEUT* <#neut-neutrons-type-018>`__)。透过奇特气体/液体/固体(\ `*BIZG/BIZR/BIZS* <#bizr-type-103-bizg-type-104-bizs-bizarretype-105>`__)时会转换成电子(\ `*ELEC* <#elec-electrons-type-136>`__)。
 
-**相关反应:**\ 光子(PHOT)+氢气(\ `*HYGH* <#hygn-hydrogen-type-148>`__)=质子(\ `*PROT* <#prot-protons-type-173>`__)+电子(\ `*ELEC* <#elec-electrons-type-136>`__)
+**相关反应:**\ 光子(PHOT)+氢气(\ `*HYGN* <#hygn-hydrogen-type-148>`__)=质子(\ `*PROT* <#prot-protons-type-173>`__)+电子(\ `*ELEC* <#elec-electrons-type-136>`__)
 
 存在时间(life):680帧
 
@@ -2163,7 +2208,7 @@ VIBR)，之后删去剩余的奇异物质，冷却即可得到振金。
 
 **相关反应:**
 
-质子+电子(\ `*ELEC* <#elec-electrons-type-136>`__)=氢气(\ `*HYGH* <#hygn-hydrogen-type-148>`__)；质子+虚无(\ `*INVS* <#invs-invisible-type-115>`__)=中子(\ `*NEUT* <#neut-neutrons-type-018>`__)；质子+液晶(\ `*LCRY* <#lcry-liquid-crystal-type-054>`__)=光子(\ `*PHOT* <#phot-photons-type-031>`__)
+质子+电子(\ `*ELEC* <#elec-electrons-type-136>`__)=氢气(\ `*HYGN* <#hygn-hydrogen-type-148>`__)；质子+虚无(\ `*INVS* <#invs-invisible-type-115>`__)=中子(\ `*NEUT* <#neut-neutrons-type-018>`__)；质子+液晶(\ `*LCRY* <#lcry-liquid-crystal-type-054>`__)=光子(\ `*PHOT* <#phot-photons-type-031>`__)
 
 **其他:**\ 与重水(\ `*DEUT* <#deut-deuterium-oxide-type-095>`__)反应生成质子；碰到奇异物质(\ `*EXOT* <#exot-exotic-matter-type-145>`__)会使其不断降温并最终生成冷焰(\ `*CFLM* <#cflm-sub-zero-flame-type-068>`__)。
 
@@ -2660,6 +2705,11 @@ Tools工具
 
 **描述:**\ 用于混合物质，直接在需要混合的物质上涂抹即可。从Snapshot53开始，混合工具不再能够混合状态不同的物质(例如固体和液体)。
 
+气旋(CYCL)【Cyclone】
+~~~~~~~~~~~~~~~~
+
+**描述:**\ 产生一个内旋（内部是负压）的气流。
+
 风(WIND)【Wind】
 ~~~~~~~~~~~~~~~~
 
@@ -2668,7 +2718,7 @@ Tools工具
 属性笔(PROP)【Edit Property Tool】
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**描述:**\ 点击物质可以修改不同属性，89.2beta版本以后，可以直接作为笔刷操作，并能记住最后一次设定
+**描述:**\ 点击物质可以修改不同属性，89.2beta版本以后，可以直接作为笔刷操作，并能记住最后一次设定。快捷键 Ctrl+P（设置为左键元素）/Ctrl+Shift+P（设置为右键元素）。
 
 **注:**\ 属性笔修改temp(温度)值时使用的是开氏。从Snapshot52开始，通过在数字结尾加上C/F可以指定属性笔修改温度时的单位。(例如输入100C即为100℃)
 
@@ -3103,7 +3153,9 @@ TAB——切换笔刷形状(圆形/方形/三角形)
 
 空格——暂停
 
-Q或者Esc——退出游戏
+Q——退出游戏，只在主界面有效
+
+Esc——返回上层，在主界面时等于退出游戏
 
 Z——放大镜(在所需位置左键单击可固定)
 
@@ -3158,6 +3210,12 @@ Ctrl+Z——撤销
 Ctrl+G——显示/隐藏引力场
 
 Ctrl+B——显示/隐藏装饰色
+
+Ctrl+Q——退出游戏（全局有效）
+
+Ctrl+P——将属性笔（\ `*PROP* <#prop-edit-property-tool>`__）设置为左键元素
+
+Ctrl+Shift+P——将属性笔（\ `*PROP* <#prop-edit-property-tool>`__）设置为右键元素
 
 Ctrl+鼠标移动——绘制矩形
 

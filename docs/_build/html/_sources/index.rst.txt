@@ -6,7 +6,7 @@
 欢迎来到 TPT 元素说明！
 ===========================================
 
-你现在看到的是在线版，离线版(.docx)可以从\ `这个链接 <http://pan.baidu.com/s/1jILySZW>`__\ 下载。
+你现在看到的是在线版，离线版(.docx)可以从\ `这个链接 <https://pan.baidu.com/s/1qYYs2io>`__\ 下载。
 
 .. toctree::
    :maxdepth: 2
